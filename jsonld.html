@@ -1,0 +1,454 @@
+<html>
+<head>
+	<title>JSON-LD to hexastore</title>
+	<meta charset="UTF-8" />
+	<script src="jquery.js">
+	</script>
+	<style>
+		td { border: 1px solid red; }
+		</style>
+</head>
+<body>
+<h1>
+	JSON-LD to hexastore
+</h1>
+<div>
+	<div style="width:100%;height:auto;">
+		<h2>
+			JSON
+		</h2>
+<!--
+
+{
+    "@context": {
+        "@vocab": "http://schema.org/",
+        "creator": {
+            "@id": "http://schema.org/creator",
+            "@container": "@set"
+        },
+        "identifier": {
+            "@id": "http://schema.org/identifier",
+            "@container": "@set"
+        },
+        "sameAs": {
+            "@id": "http://schema.org/sameAs",
+            "@container": "@set"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://www.wikidata.org/wiki/Q58838447",
+            "@type": "ScholarlyArticle",
+            "creator": [
+                {
+                    "@id": "_:b0",
+                    "@type": "Person",
+                    "name": "J Bosser"
+                },
+                {
+                    "@id": "_:b1",
+                    "@type": "Person",
+                    "name": "P Morat"
+                }
+            ],
+            "datePublished": "1971-00-00",
+            "isPartOf": {
+                "@id": "https://www.wikidata.org/wiki/Q58814054",
+                "@type": "Periodical",
+                "issn": "0001-804X",
+                "name": {
+                    "@language": "fr",
+                    "@value": "Adansonia nouvelle série"
+                }
+            },
+            "issueNumber": "2",
+            "name": {
+                "@language": "fr",
+                "@value": "Sur deux Asclépiadacées nouvelles du Sud de Madagascar"
+            },
+            "pagination": "337-342",
+            "volumeNumber": "11"
+        }
+    ]
+}
+-->
+<!-- 
+
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/zookeys.806.30051.map1", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Beijing Forestry University, Beijing, China", 
+      "name": "Shi, Hongliang"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Universit\u00e0 di Sassari, Sassari, Italy", 
+      "name": "Casale, Achille"
+    }
+  ], 
+  "datePublished": "2018-12-21", 
+  "description": "Map 1 Distributions for species in the C.discoidalis group: C.fukiensis Jedli\u010dka (blue); C.piligera sp. n. (red).", 
+  "identifier": "https://doi.org/10.3897/zookeys.806.30051.map1", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/zookeys.806.30051", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Animalia", 
+    "Arthropoda", 
+    "Insecta", 
+    "Coleoptera", 
+    "Caraboidea", 
+    "Carabidae", 
+    "Calleida", 
+    "Calleida discoidalis", 
+    "Calleida onoha", 
+    "Calleida", 
+    "character evolution", 
+    "Oriental", 
+    "spermatheca", 
+    "taxonomy"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Map 1 from: Shi H, Casale A (2018) Revision of the Oriental species of Calleida Latreille (sensu lato). Part 2: the C. discoidalis species group (Coleoptera, Carabidae, Lebiini). ZooKeys 806: 87-120. https://doi.org/10.3897/zookeys.806.30051", 
+  "url": "https://zenodo.org/record/2470361"
+}
+
+-->
+		<textarea id="json" style="width:100%;background-color:#224FBC;color:#FFFF66;" rows="20">
+			
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/zookeys.806.30051.map1", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Beijing Forestry University, Beijing, China", 
+      "name": "Shi, Hongliang"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Universit\u00e0 di Sassari, Sassari, Italy", 
+      "name": "Casale, Achille"
+    }
+  ], 
+  "datePublished": "2018-12-21", 
+  "description": "Map 1 Distributions for species in the C.discoidalis group: C.fukiensis Jedli\u010dka (blue); C.piligera sp. n. (red).", 
+  "identifier": "https://doi.org/10.3897/zookeys.806.30051.map1", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/zookeys.806.30051", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Animalia", 
+    "Arthropoda", 
+    "Insecta", 
+    "Coleoptera", 
+    "Caraboidea", 
+    "Carabidae", 
+    "Calleida", 
+    "Calleida discoidalis", 
+    "Calleida onoha", 
+    "Calleida", 
+    "character evolution", 
+    "Oriental", 
+    "spermatheca", 
+    "taxonomy"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Map 1 from: Shi H, Casale A (2018) Revision of the Oriental species of Calleida Latreille (sensu lato). Part 2: the C. discoidalis species group (Coleoptera, Carabidae, Lebiini). ZooKeys 806: 87-120. https://doi.org/10.3897/zookeys.806.30051", 
+  "url": "https://zenodo.org/record/2470361"
+}
+			
+			</textarea>
+		<br />
+		<button onclick="convert()">Convert</button> 
+	</div>
+	<div style="clear:both;">
+	</div>
+	<div style="width:100%;">
+		<h2>
+			Triples
+		</h2>
+		<div id="output" style="width:100%;color:#222;">
+		</div>
+	</div>
+</div>
+<script>
+
+//----------------------------------------------------------------------------------------
+// START COUCHDB VIEW
+var triples = [];
+
+//----------------------------------------------------------------------------------------
+// Based on https://gist.github.com/gordonbrander/2230317
+
+// Generate unique IDs for use as pseudo-private/protected names.
+// Similar in concept to
+// <http: /wiki.ecmascript.org/doku.php?id="strawman:names">.
+//
+// The goals of this function are twofold:
+// 
+// * Provide a way to generate a string guaranteed to be unique when compared
+//   to other strings generated by this function.
+// * Make the string complex enough that it is highly unlikely to be
+//   accidentally duplicated by hand (this is key if you're using `ID`
+//   as a private/protected name on an object).
+//
+// Use:
+//
+//     var privateName = ID();
+//     var o = { 'public': 'foo' };
+//     o[privateName] = 'bar';
+var bnode = function() {
+    // Math.random should be unique because of its seeding algorithm.
+    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+    // after the decimal.
+    return Math.random().toString(36).substr(2, 9);
+};
+
+
+//----------------------------------------------------------------------------------------
+// http://stackoverflow.com/a/25715455
+function isObject(item) {
+    return (typeof item === "object" && !Array.isArray(item) && item !== null);
+}
+
+//----------------------------------------------------------------------------------------
+// http://stackoverflow.com/a/21445415
+function uniques(arr) {
+    var a = [];
+    for (var i = 0, l = arr.length; i < l; i++)
+        if (a.indexOf(arr[i]) === -1 && arr[i] !== '')
+            a.push(arr[i]);
+    return a;
+}
+
+
+//----------------------------------------------------------------------------------------
+// Store a triple with optional language code
+function triple(subject, predicate, object, language) {
+    var triple = [];
+    triple[0] = subject;
+    triple[1] = predicate;
+
+    // Object may be URI or literal
+    if (object.match(/^(http|urn|_:)/)) {
+        triple[2] = object;
+    } else {
+        var literal = object;
+        if (typeof language === 'undefined') {} else {
+            literal += '@' + language;
+        }
+        triple[2] = literal;
+    }
+
+    return triple;
+}
+
+//----------------------------------------------------------------------------------------
+function property_to_uri(context, property) {
+    var uri = property;
+    var m = property.match(/([a-z]+):([a-z]+)/i);
+    if (m) {
+        if (context[m[1]]) {
+            uri = context[m[1]] + property;
+        }
+    } else {
+        if (context['@vocab']) {
+            uri = context['@vocab'] + property;
+        } else {
+            if (typeof context === 'string') {
+                uri = context + property;
+            }
+        }
+    }
+
+    return uri;
+}
+
+//----------------------------------------------------------------------------------------
+function subtree(context, root, subject) {
+
+    for (var i in root) {
+
+        //console.log(i);
+
+        // Simple literal
+        if (typeof root[i] === 'string') {
+            switch (i) {
+                case '@context':
+                case '@id':
+                    break;
+
+                case '@type':
+                    triples.push(triple(subject, 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', property_to_uri(context, root[i])));
+                    break;
+
+                default:
+                    // simple literal
+                    triples.push(
+                        triple(
+                            subject,
+                            property_to_uri(context, i),
+                            '"' + root[i].replace(/"/g, '\\"') + '"'
+                        )
+                    );
+                    break;
+            }
+        }
+
+        if (isObject(root[i])) {
+            if (root[i]['@value'] && root[i]['@language']) {
+                // literal with language code
+
+                triples.push(
+                    triple(
+                        subject,
+                        property_to_uri(context, i),
+                        '"' + root[i]['@value'].replace(/"/g, '\\"') + '"',
+                        root[i]['@language']
+                    )
+                );
+
+            } else {
+                // object
+                if (root[i]['@id'] || root[i]['@type']) {
+
+                    var id = '';
+                    if (root[i]['@id']) {
+                        id = root[i]['@id'];
+
+                        // PHP JSON-LD framed creates bnodes _:b\d+
+                        if (id.match(/_:b\d+/)) {
+                            id = '';
+                        }
+
+                    }
+                    if (id == '') {
+                        id = subject + '#' + bnode();
+                    }
+
+                    triples.push(
+                        triple(
+                            subject,
+                            property_to_uri(context, i),
+                            id
+                        )
+                    );
+
+                    subtree(context, root[i], id);
+                }
+            }
+        }
+
+
+        if (Array.isArray(root[i])) {
+            for (var j in root[i]) {
+                if (isObject(root[i][j])) {
+
+                    if (root[i][j]['@value'] && root[i][j]['@language']) {
+                        // literal with language code
+
+                        triples.push(
+                            triple(
+                                subject,
+                                property_to_uri(context, i),
+                                '"' + root[i][j]['@value'].replace(/"/g, '\\"') + '"',
+                                root[i][j]['@language']
+                            )
+                        );
+
+                    } else {
+                        // object
+                        if (root[i][j]['@id'] || root[i][j]['@type']) {
+
+                            var id = '';
+                            if (root[i][j]['@id']) {
+                                id = root[i][j]['@id'];
+
+                                // PHP JSON-LD framed creates bnodes _:b\d+
+                                if (id.match(/_:b\d+/)) {
+                                    id = '';
+                                }
+
+                            }
+                            if (id == '') {
+                                id = subject + '#' + bnode();
+                            }
+
+                            triples.push(
+                                triple(
+                                    subject,
+                                    property_to_uri(context, i),
+                                    id
+                                )
+                            );
+
+                            subtree(context, root[i][j], id);
+                        }
+                    }
+
+                }
+
+                if (typeof root[i][j] === 'string') {
+                    // simple literal					
+                    triples.push(
+                        triple(
+                            subject,
+                            property_to_uri(context, i),
+                            '"' + root[i][j].replace(/"/g, '\\"') + '"'
+                        )
+                    );
+                }
+
+            }
+        }
+
+
+    }
+
+}
+
+
+//----------------------------------------------------------------------------------------
+function couchdb(doc) {
+
+    if (doc['@graph']) {
+        for (var i in doc['@graph']) {
+            subtree(doc['@context'], doc['@graph'][i], doc['@graph'][i]['@id']);
+        }
+    } else {
+        subtree(doc['@context'], doc, doc['@id']);
+    }
+
+    //console.log(JSON.stringify(triples, null, 2));
+
+    //$('#output').html(JSON.stringify(triples, null, 2));
+
+
+}
+
+// END COUCHDB VIEW		
+//----------------------------------------------------------------------------------------
+
+function convert() {
+    var jsonld = $('#json').val();
+    var doc = JSON.parse(jsonld);
+    couchdb(doc);
+
+
+}
+		
+</script>
+</body>
+</html>

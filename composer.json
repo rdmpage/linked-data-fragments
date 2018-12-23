@@ -1,0 +1,5 @@
+{
+    "require": {
+        "digitalbazaar/json-ld": "^0.4.7"
+    }
+}
