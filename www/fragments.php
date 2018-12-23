@@ -1,8 +1,8 @@
 <?php
 
-require_once 'vendor/autoload.php';
+require_once dirname(dirname(__FILE__)) . '/vendor/autoload.php';
 
-require_once (dirname(__FILE__) . '/documentstore/query.php');
+require_once dirname(dirname(__FILE__)) . '/documentstore/query.php';
 
 $page = 1;
 $s = '';
