@@ -27,4 +27,5 @@ Can test using [jQuery widget to query Triple Pattern Fragments interfaces](http
 
 ## Web 
 
-CouchDB list view can be used to mimic SPARQL DESCRIBE by simply  returning source document in JSON-LD.
+CouchDB list view can be used to mimic SPARQL DESCRIBE by simply returning source document in JSON-LD. Note that this will FAIL if there is more than one document with information about the same entity (in other words, it’s going to fail).
+ 
