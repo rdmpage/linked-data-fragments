@@ -37,7 +37,11 @@ function microcitation_reference ($guid)
 {
 	$data = null;
 	
-	$nt = get('http://localhost/~rpage/microcitation/www/rdf.php?guid=' . $guid);
+	$url = 'http://localhost/~rpage/microcitation/www/rdf.php?guid=' . $guid;
+	
+	//echo $url . "\n";
+	
+	$nt = get($url);
 
 	$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
 
@@ -77,7 +81,7 @@ function microcitation_reference ($guid)
 //----------------------------------------------------------------------------------------
 function resolve_url($url)
 {
-	$doc = null;
+	$doc = null;	
 	
 	$guid = '';
 	
@@ -87,10 +91,17 @@ function resolve_url($url)
 		$guid = $m['guid'];
 	}
 	
+	// fall back
+	if ($guid == '')
+	{
+		$guid = $url;
+	}
+	
+	
 	if ($guid != '')
 	{	
 		$data = microcitation_reference($guid);
-		
+				
 		if ($data)
 		{	
 			$doc = new stdclass;
