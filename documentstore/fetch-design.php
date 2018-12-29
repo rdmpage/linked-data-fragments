@@ -26,7 +26,7 @@ function get($url)
 }
 
 $views = array(
-	'fragments' => array('triples')
+	'fragments' => array('export', 'queue', 'triples')
 );
 
 
@@ -36,8 +36,11 @@ foreach ($views as $database => $views)
 	{
 		$url = 'http://127.0.0.1:5984/' . $database . '/_design/' . $view;
 		$resp = get($url);
+		
+		$obj = json_decode($resp);
+		
 	
-		file_put_contents('couchdb/' . $view . '.js', $resp);
+		file_put_contents('couchdb/' . $view . '.js', json_encode($obj, JSON_PRETTY_PRINT));
 	}
 }
 		
