@@ -1,5 +1,6 @@
 {
     "require": {
-        "digitalbazaar/json-ld": "^0.4.7"
+        "digitalbazaar/json-ld": "^0.4.7",
+        "semsol/arc2": "^2"
     }
 }

@@ -3,3 +3,4 @@ documentstore/.DS_Store
 .DS_Store
 junk
 vendor
+*.lock
