@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:20002425-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:20002425-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Distichochlamys orlowii K.Larsen &amp; M.F.Newman</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2003-07-02 00:00:00.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Distichochlamys orlowii</tn:nameComplete>
+<tn:genusPart>Distichochlamys</tn:genusPart>        
+<tn:specificEpithet>orlowii</tn:specificEpithet>                
+<tn:authorship>K.Larsen &amp; M.F.Newman</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>K.Larsen &amp; M.F.Newman</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:5295-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:36913-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Nat. Hist. Bull. Siam Soc. 49(1): 77 (2001). </tcom:publishedIn>    
+<tn:year>2001</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Bogner 2435, AAU (holo)</dc:title>
+<tn:typeSpecimen>Bogner 2435, AAU</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Bogner 2435, M (iso)</dc:title>
+<tn:typeSpecimen>Bogner 2435, M</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

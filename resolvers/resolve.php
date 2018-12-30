@@ -30,6 +30,143 @@ function get($url, $user_agent='', $content_type = '')
 	return $data;
 }
 
+//----------------------------------------------------------------------------------------
+function rdf_to_triples($xml)
+{	
+	// Parse RDF into triples
+	$parser = ARC2::getRDFParser();		
+	$base = 'http://example.com/';
+	$parser->parse($base, $xml);	
+	
+	$triples = $parser->getTriples();
+	
+	//print_r($triples);
+	
+	// clean up
+	
+	$cleaned_triples = array();
+	foreach ($triples as $triple)
+	{
+		$add = true;
+
+		if ($triple['s'] == 'http://example.com/')
+		{
+			$add = false;
+		}
+		
+		if ($add)
+		{
+			$cleaned_triples[] = $triple;
+		}
+	}
+	
+	print_r($cleaned_triples);
+	
+	return $parser->toNTriples($cleaned_triples);
+}
+
+//----------------------------------------------------------------------------------------
+// IPNI LSID
+function ipni_lsid($lsid, $cache_dir = '')
+{
+	$data = null;
+	
+	$id = str_replace('urn:lsid:ipni.org:names:', '', $lsid);
+	$id = preg_replace('/-\d+$/', '', $id);
+
+	// Either use an existing cache (e.g., on external hard drive)
+	// or cache locally
+	if ($cache_dir != '')
+	{
+	}
+	else
+	{
+		$cache_dir = dirname(__FILE__) . "/cache";
+		if (!file_exists($cache_dir))
+		{
+			$oldumask = umask(0); 
+			mkdir($cache_dir, 0777);
+			umask($oldumask);
+		}
+	
+		$cache_dir .= '/ipni';
+	
+		if (!file_exists($cache_dir))
+		{
+			$oldumask = umask(0); 
+			mkdir($cache_dir, 0777);
+			umask($oldumask);
+		}
+	}
+		
+	$dir = $cache_dir . '/' . floor($id / 1000);
+	if (!file_exists($dir))
+	{
+		$oldumask = umask(0); 
+		mkdir($dir, 0777);
+		umask($oldumask);
+	}
+	
+	$filename = $dir . '/' . $id . '.xml';
+
+	if (!file_exists($filename))
+	{
+		$url = 'http://ipni.org/' . $lsid;
+		$xml = get($url);
+		
+		file_put_contents($filename, $xml);	
+	}
+	
+	$xml = file_get_contents($filename);
+	
+	if (($xml != '') && preg_match('/<\?xml/', $xml))
+	{
+		// fix
+		
+		// convert
+		$nt = rdf_to_triples($xml);
+		$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
+
+		// Context to set vocab to schema
+		$context = new stdclass;
+
+		$context->{'@vocab'} = "http://rs.tdwg.org/ontology/voc/TaxonName#";
+
+		$context->tcom = "http://rs.tdwg.org/ontology/voc/Common#";
+		$context->tm = "http://rs.tdwg.org/ontology/voc/Team#";
+		$context->tp = "http://rs.tdwg.org/ontology/voc/Person#";
+
+		$context->owl = "http://www.w3.org/2002/07/owl#";
+		$context->dcterms = "http://purl.org/dc/terms/";
+		$context->dc = "http://purl.org/dc/elements/1.1/";
+
+		// hasMember is always an array
+		$hasMember = new stdclass;
+		$hasMember->{'@id'} = "http://rs.tdwg.org/ontology/voc/Team#hasMember";
+		$hasMember->{'@container'} = "@set";
+
+		$typifiedBy= new stdclass;
+		$typifiedBy->{'@id'} = "http://rs.tdwg.org/ontology/voc/TaxonName#typifiedBy";
+		$typifiedBy->{'@container'} = "@set";
+
+		$context->{'tm:hasMember'} = $hasMember;
+		$context->{'typifiedBy'} = $typifiedBy;
+
+		$frame = (object)array(
+			'@context' => $context,
+
+			// Root on article
+			'@type' => 'http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName',
+		);	
+
+
+		$data = jsonld_frame($doc, $frame);
+
+	}
+	
+	return $data;	
+}
+
 
 //----------------------------------------------------------------------------------------
 function microcitation_reference ($guid)
@@ -83,6 +220,27 @@ function resolve_url($url)
 	$doc = null;	
 	
 	$done = false;
+	
+	
+	// IPNI
+	if (!$done)
+	{
+		if (preg_match('/urn:lsid:ipni.org:names:/', $url))
+		{
+			$data = ipni_lsid($url);
+
+			if ($data)
+			{
+				$doc = new stdclass;
+				$doc->{'message-source'} = 'http://ipni.org/' . $url;
+				$doc->{'message-format'} = 'application/ld+json';
+				$doc->message = $data;
+			}
+			
+			$done = true;
+		}
+	}
+	
 	
 	// DBPedia
 	if (!$done)
@@ -156,6 +314,11 @@ if (0)
 	$url = 'https://doi.org/10.3969/j.issn.1000-3142.2007.06.001';
 	
 	$url = 'http://dbpedia.org/resource/Distichochlamys';
+	
+	$url = 'urn:lsid:ipni.org:names:981552-1';
+	$url = 'urn:lsid:ipni.org:names:77122780-1';
+	
+	$url = 'https://doi.org/10.1017/S096042860000192X';
 	
 	$doc = resolve_url($url);
 	print_r($doc);

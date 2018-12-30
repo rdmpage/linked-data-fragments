@@ -5,7 +5,7 @@
 require_once(dirname(dirname(__FILE__)) . '/queue/queue.php');
 
 $force = false;
-//$force = true;
+$force = true;
 
 $urls = array();
 
@@ -40,6 +40,21 @@ $urls = array(
 'http://dbpedia.org/resource/Distichochlamys',
 'http://dbpedia.org/resource/Caulokaempferia'
 );
+
+// IPNI
+$urls = array(
+'urn:lsid:ipni.org:names:327798-2',
+'urn:lsid:ipni.org:names:981551-1',
+'urn:lsid:ipni.org:names:77122780-1',
+'urn:lsid:ipni.org:names:981552-1',
+'urn:lsid:ipni.org:names:20002425-1',
+'urn:lsid:ipni.org:names:70029259-1',
+);
+
+$urls = array(
+'https://doi.org/10.1017/S096042860000192X',
+);
+
 
 // Add items to the queue
 foreach ($urls as $url)
