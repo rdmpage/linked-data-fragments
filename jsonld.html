@@ -258,21 +258,24 @@ function triple(subject, predicate, object, language) {
 //----------------------------------------------------------------------------------------
 function property_to_uri(context, property) {
     var uri = property;
-    var m = property.match(/([a-z]+):([a-z]+)/i);
-    if (m) {
-        if (context[m[1]]) {
-            uri = context[m[1]] + property;
-        }
-    } else {
-        if (context['@vocab']) {
-            uri = context['@vocab'] + property;
-        } else {
-            if (typeof context === 'string') {
-                uri = context + property;
-            }
-        }
-    }
-
+    
+	if (context) {
+		var m = property.match(/([a-z]+):([a-z]+)/i);
+		if (m) {
+			if (context[m[1]]) {
+				uri = context[m[1]] + property;
+			}
+		} else {
+			if (context['@vocab']) {
+				uri = context['@vocab'] + property;
+			} else {
+				if (typeof context === 'string') {
+					uri = context + property;
+				}
+			}
+		}
+	}
+	
     return uri;
 }
 
@@ -281,7 +284,7 @@ function subtree(context, root, subject) {
 
     for (var i in root) {
 
-        //console.log(i);
+        console.log(i);
 
         // Simple literal
         if (typeof root[i] === 'string') {
@@ -353,12 +356,14 @@ function subtree(context, root, subject) {
 
 
         if (Array.isArray(root[i])) {
+        
+        	//console.log('array');
+        
             for (var j in root[i]) {
                 if (isObject(root[i][j])) {
 
+					// literal with language code
                     if (root[i][j]['@value'] && root[i][j]['@language']) {
-                        // literal with language code
-
                         triples.push(
                             triple(
                                 subject,
@@ -367,37 +372,79 @@ function subtree(context, root, subject) {
                                 root[i][j]['@language']
                             )
                         );
-
-                    } else {
-                        // object
-                        if (root[i][j]['@id'] || root[i][j]['@type']) {
-
-                            var id = '';
-                            if (root[i][j]['@id']) {
-                                id = root[i][j]['@id'];
-
-                                // PHP JSON-LD framed creates bnodes _:b\d+
-                                if (id.match(/_:b\d+/)) {
-                                    id = '';
-                                }
-
-                            }
-                            if (id == '') {
-                                id = subject + '#' + bnode();
-                            }
-
-                            triples.push(
-                                triple(
-                                    subject,
-                                    property_to_uri(context, i),
-                                    id
-                                )
-                            );
-
-                            subtree(context, root[i][j], id);
-                        }
                     }
+                    
+					// typed entity, as in DBPedia JSON-LD
+                    if (root[i][j]['value'] && root[i][j]['type']) {
+                    	console.log(j);
+                    	switch (root[i][j]['type']) {
+                    	
+                    		case 'uri':
+								triples.push(
+									triple(
+										subject,
+										property_to_uri(context, i),
+										root[i][j]['value']
+									)
+								);                    		
+                    			break;
 
+                    		case 'literal':
+                    			if (root[i][j]['lang']) {
+                    				// string
+									triples.push(
+										triple(
+											subject,
+											property_to_uri(context, i),
+											'"' + root[i][j]['value'].replace(/"/g, '\\"') + '"',
+											root[i][j]['lang']
+										)
+									);                    		
+                    			} else {
+                    				// other datatype, e.g. integer
+									triples.push(
+										triple(
+											subject,
+											property_to_uri(context, i),
+											'"' + String(root[i][j]['value']).replace(/"/g, '\\"') + '"'
+											
+										)
+									);                    		                    			
+                    			}
+                    			break;
+                    	
+                    		default:
+                    			break;
+                    	}
+                    }
+                    
+					// object
+					if (root[i][j]['@id'] || root[i][j]['@type']) {
+
+						var id = '';
+						if (root[i][j]['@id']) {
+							id = root[i][j]['@id'];
+
+							// PHP JSON-LD framed creates bnodes _:b\d+
+							if (id.match(/_:b\d+/)) {
+								id = '';
+							}
+
+						}
+						if (id == '') {
+							id = subject + '#' + bnode();
+						}
+
+						triples.push(
+							triple(
+								subject,
+								property_to_uri(context, i),
+								id
+							)
+						);
+
+						subtree(context, root[i][j], id);
+					}
                 }
 
                 if (typeof root[i][j] === 'string') {
@@ -423,17 +470,38 @@ function subtree(context, root, subject) {
 //----------------------------------------------------------------------------------------
 function couchdb(doc) {
 
-    if (doc['@graph']) {
-        for (var i in doc['@graph']) {
-            subtree(doc['@context'], doc['@graph'][i], doc['@graph'][i]['@id']);
-        }
-    } else {
-        subtree(doc['@context'], doc, doc['@id']);
+	var done = false;
+	
+	// Multiple graphs
+	if (!done) {
+	    if (doc['@graph']) {
+	        for (var i in doc['@graph']) {
+ 	           subtree(doc['@context'], doc['@graph'][i], doc['@graph'][i]['@id']);
+   	     	}
+   	 		done = true;
+   	 	}
+    }
+    
+    // Default graph with @id
+	if (!done) {
+    	if (doc['@id']) {
+	        subtree(doc['@context'], doc, doc['@id']);
+	        done = true;
+	    }
+	    
+    }
+
+	// DBPedia-style
+	if (!done) {
+		for (var i in doc) {
+		   subtree(null, doc[i], i);
+		}
+	    done = true;
     }
 
     //console.log(JSON.stringify(triples, null, 2));
 
-    //$('#output').html(JSON.stringify(triples, null, 2));
+    $('#output').html(JSON.stringify(triples, null, 2));
 
 
 }

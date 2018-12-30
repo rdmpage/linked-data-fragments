@@ -3,7 +3,6 @@
 // Resolve one object
 
 require_once dirname(dirname(__FILE__)) . '/vendor/autoload.php';
-
 require_once(dirname(dirname(__FILE__)) . '/documentstore/couchsimple.php');
 
 //----------------------------------------------------------------------------------------
@@ -83,36 +82,71 @@ function resolve_url($url)
 {
 	$doc = null;	
 	
-	$guid = '';
+	$done = false;
 	
-	// keep things simple 
-	if (preg_match('/https?:\/\/(dx\.)?doi.org\/(?<guid>.*)/', $url, $m))
+	// DBPedia
+	if (!$done)
 	{
-		$guid = $m['guid'];
+		if (preg_match('/dbpedia.org/', $url))
+		{
+			$q = 'http://dbpedia.org/sparql?default-graph-uri=http://dbpedia.org'
+			. '&query=' . urlencode('DESCRIBE <' . $url . '>') . '&format=application/json-ld';
+			
+			$json = get($q);
+
+			if ($json != '')
+			{
+				$data = json_decode($json);
+
+				$doc = new stdclass;
+				$doc->{'message-source'} = $q;
+				$doc->{'message-format'} = 'application/ld+json';
+				$doc->message = $data;
+			}
+			
+			$done = true;
+		}
 	}
-	
-	// fall back
-	if ($guid == '')
-	{
-		$guid = $url;
-	}
-	
-	
-	if ($guid != '')
+		
+	// Microcitation
+	if (!$done)
 	{	
-		$data = microcitation_reference($guid);
-				
-		if ($data)
-		{	
-			$doc = new stdclass;
-			$doc->{'message-source'} = 'http://localhost/~rpage/microcitation/www/rdf.php?guid=' . $guid;
-			$doc->{'message-format'} = 'application/ld+json';
-			$doc->message = $data;
+		$guid = '';
+	
+		// keep things simple 
+		if (preg_match('/https?:\/\/(dx\.)?doi.org\/(?<guid>.*)/', $url, $m))
+		{
+			$guid = $m['guid'];
 		}
 	
+		// fall back
+		if ($guid == '')
+		{
+			$guid = $url;
+		}
+	
+	
+		if ($guid != '')
+		{	
+			$data = microcitation_reference($guid);
+			
+			// make nice
+			
+				
+			if ($data)
+			{	
+				$doc = new stdclass;
+				$doc->{'message-source'} = 'http://localhost/~rpage/microcitation/www/rdf.php?guid=' . $guid;
+				$doc->{'message-format'} = 'application/ld+json';
+				$doc->message = $data;
+			}
+	
+			$done = true;
+		}
+		
 		
 	}
-
+	
 	return $doc;
 }
 
@@ -120,6 +154,8 @@ function resolve_url($url)
 if (0)
 {
 	$url = 'https://doi.org/10.3969/j.issn.1000-3142.2007.06.001';
+	
+	$url = 'http://dbpedia.org/resource/Distichochlamys';
 	
 	$doc = resolve_url($url);
 	print_r($doc);

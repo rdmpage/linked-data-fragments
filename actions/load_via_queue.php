@@ -35,6 +35,12 @@ $urls = array(
 'http://old.ssbg.asu.ru/turcz/turcz_14_3_14-27.pdf'
 );
 
+// DBPedia
+$urls = array(
+'http://dbpedia.org/resource/Distichochlamys',
+'http://dbpedia.org/resource/Caulokaempferia'
+);
+
 // Add items to the queue
 foreach ($urls as $url)
 {
