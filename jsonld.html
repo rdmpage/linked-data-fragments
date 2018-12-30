@@ -259,11 +259,26 @@ function triple(subject, predicate, object, language) {
 function property_to_uri(context, property) {
     var uri = property;
     
+   
+    
+    console.log(context);
+    console.log(property);
+    
 	if (context) {
 		var m = property.match(/([a-z]+):([a-z]+)/i);
+		
+		
+		
 		if (m) {
+		
+		
+		console.log(m);
+		console.log(m[1]);
+		console.log(context[m[1]]);
+		
+		
 			if (context[m[1]]) {
-				uri = context[m[1]] + property;
+				uri = context[m[1]] + m[2];
 			}
 		} else {
 			if (context['@vocab']) {
@@ -276,6 +291,8 @@ function property_to_uri(context, property) {
 		}
 	}
 	
+	console.log('uri=' + uri);
+	
     return uri;
 }
 
@@ -284,7 +301,7 @@ function subtree(context, root, subject) {
 
     for (var i in root) {
 
-        console.log(i);
+        //console.log(i);
 
         // Simple literal
         if (typeof root[i] === 'string') {
@@ -376,7 +393,7 @@ function subtree(context, root, subject) {
                     
 					// typed entity, as in DBPedia JSON-LD
                     if (root[i][j]['value'] && root[i][j]['type']) {
-                    	console.log(j);
+                    	//console.log(j);
                     	switch (root[i][j]['type']) {
                     	
                     		case 'uri':
