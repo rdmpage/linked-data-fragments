@@ -260,6 +260,48 @@ function cinii_rdf($url, $cache_dir = '')
 	return $data;	
 }
 
+//----------------------------------------------------------------------------------------
+// Raw JSON-LD
+function fetch_jsonld($url, $cache_name = 'jsonid', $id = 0)
+{
+	$data = null;
+	
+	
+	$cache_dir = dirname(__FILE__) . "/cache/" . $cache_name;
+	if (!file_exists($cache_dir))
+	{
+		$oldumask = umask(0); 
+		mkdir($cache_dir, 0777);
+		umask($oldumask);
+	}
+			
+	$dir = $cache_dir . '/' . floor($id / 1000);
+	if (!file_exists($dir))
+	{
+		$oldumask = umask(0); 
+		mkdir($dir, 0777);
+		umask($oldumask);
+	}
+	
+	$filename = $dir . '/' . $id . '.json';
+
+	if (!file_exists($filename))
+	{
+		$json = get($url);
+		
+		file_put_contents($filename, $json);	
+	}
+	
+	$json = file_get_contents($filename);
+	
+	if ($json != '')
+	{
+		$data = json_decode($json);
+	}
+	
+	return $data;	
+}
+
 
 //----------------------------------------------------------------------------------------
 function microcitation_reference ($guid)
@@ -313,6 +355,32 @@ function resolve_url($url)
 	$doc = null;	
 	
 	$done = false;
+	
+	
+	// WorldCat JSON-LD
+	if (!$done)
+	{
+		if (preg_match('/https?:\/\/www.worldcat.org\/oclc\/(?<id>\d+)/', $url, $m))
+		{
+			// <http://www.worldcat.org/oclc/1281768>
+			// http://experiment.worldcat.org/oclc/1281768.jsonld
+			
+			$id = $m['id'];
+			$jsonld_url = 'http://experiment.worldcat.org/oclc/' . $id . '.jsonld';
+			
+			$data =  fetch_jsonld($jsonld_url, 'worldcat', $id);
+
+			if ($data)
+			{
+				$doc = new stdclass;
+				$doc->{'message-source'} = $jsonld_url;
+				$doc->{'message-format'} = 'application/ld+json';
+				$doc->message = $data;
+			}
+			
+			$done = true;
+		}
+	}
 	
 	
 	// IPNI
@@ -433,6 +501,8 @@ if (0)
 	$url = 'https://doi.org/10.1017/S096042860000192X';
 	
 	$url = 'https://ci.nii.ac.jp/naid/110003758629#article';
+	
+	$url = 'http://www.worldcat.org/oclc/1281768';
 	
 	$doc = resolve_url($url);
 	print_r($doc);

@@ -1,0 +1,159 @@
+{
+  "@graph" : [ {
+    "@id" : "http://dewey.info/class/583.9251/",
+    "@type" : "schema:Intangible"
+  }, {
+    "@id" : "http://experiment.worldcat.org/entity/work/data/2213313#Agent/university_of_illinois_press",
+    "@type" : "bgn:Agent",
+    "name" : "University of Illinois Press"
+  }, {
+    "@id" : "http://experiment.worldcat.org/entity/work/data/2213313#Place/urbana",
+    "@type" : "schema:Place",
+    "name" : "Urbana"
+  }, {
+    "@id" : "http://id.loc.gov/vocabulary/countries/ilu",
+    "@type" : "schema:Place",
+    "identifier" : "ilu"
+  }, {
+    "@id" : "http://id.worldcat.org/fast/1064701",
+    "@type" : "schema:Intangible",
+    "name" : {
+      "@language" : "en",
+      "@value" : "Piperaceae"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/27853586",
+    "@type" : "schema:Person",
+    "birthDate" : "1857",
+    "deathDate" : "1945",
+    "familyName" : "Trelease",
+    "givenName" : "William",
+    "name" : "William Trelease"
+  }, {
+    "@id" : "http://viaf.org/viaf/76564018",
+    "@type" : "schema:Person",
+    "birthDate" : "1891",
+    "deathDate" : "1964,",
+    "familyName" : "Yuncker",
+    "givenName" : [ "T. G.", "Truman George" ],
+    "name" : "Truman George Yuncker"
+  }, {
+    "@id" : "http://www.worldcat.org/oclc/1281768",
+    "@type" : [ "schema:Book", "schema:CreativeWork" ],
+    "oclcnum" : "1281768",
+    "placeOfPublication" : [ "http://experiment.worldcat.org/entity/work/data/2213313#Place/urbana", "http://id.loc.gov/vocabulary/countries/ilu" ],
+    "about" : [ "http://dewey.info/class/583.9251/", "http://id.worldcat.org/fast/1064701" ],
+    "author" : "http://viaf.org/viaf/76564018",
+    "bookFormat" : "bgn:PrintBook",
+    "creator" : "http://viaf.org/viaf/27853586",
+    "datePublished" : "1950",
+    "exampleOfWork" : "http://worldcat.org/entity/work/id/2213313",
+    "inLanguage" : "en",
+    "isSimilarTo" : "http://www.worldcat.org/oclc/595389110",
+    "name" : {
+      "@language" : "en",
+      "@value" : "The Piperaceae of northern South America,"
+    },
+    "productID" : "1281768",
+    "publication" : "http://www.worldcat.org/title/-/oclc/1281768#PublicationEvent/urbana_university_of_illinois_press_1950",
+    "publisher" : "http://experiment.worldcat.org/entity/work/data/2213313#Agent/university_of_illinois_press",
+    "describedby" : "http://www.worldcat.org/title/-/oclc/1281768"
+  }, {
+    "@id" : "http://www.worldcat.org/oclc/595389110",
+    "@type" : "schema:CreativeWork",
+    "description" : "Online version:",
+    "isSimilarTo" : "http://www.worldcat.org/oclc/1281768",
+    "label" : "Piperaceae of northern South America."
+  }, {
+    "@id" : "http://www.worldcat.org/title/-/oclc/1281768",
+    "@type" : [ "genont:ContentTypeGenericResource", "genont:InformationResource" ],
+    "inDataset" : "http://purl.oclc.org/dataset/WorldCat",
+    "about" : "http://www.worldcat.org/oclc/1281768",
+    "dateModified" : "2018-11-11"
+  }, {
+    "@id" : "http://www.worldcat.org/title/-/oclc/1281768#PublicationEvent/urbana_university_of_illinois_press_1950",
+    "@type" : "schema:PublicationEvent",
+    "location" : "http://experiment.worldcat.org/entity/work/data/2213313#Place/urbana",
+    "organizer" : "http://experiment.worldcat.org/entity/work/data/2213313#Agent/university_of_illinois_press",
+    "startDate" : "1950"
+  } ],
+  "@context" : {
+    "familyName" : "http://schema.org/familyName",
+    "givenName" : "http://schema.org/givenName",
+    "name" : "http://schema.org/name",
+    "birthDate" : "http://schema.org/birthDate",
+    "deathDate" : "http://schema.org/deathDate",
+    "describedby" : {
+      "@id" : "http://www.w3.org/2007/05/powder-s#describedby",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "inLanguage" : "http://schema.org/inLanguage",
+    "datePublished" : "http://schema.org/datePublished",
+    "bookFormat" : {
+      "@id" : "http://schema.org/bookFormat",
+      "@type" : "@id"
+    },
+    "oclcnum" : "http://purl.org/library/oclcnum",
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "isSimilarTo" : {
+      "@id" : "http://schema.org/isSimilarTo",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "publication" : {
+      "@id" : "http://schema.org/publication",
+      "@type" : "@id"
+    },
+    "placeOfPublication" : {
+      "@id" : "http://purl.org/library/placeOfPublication",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://schema.org/publisher",
+      "@type" : "@id"
+    },
+    "productID" : "http://schema.org/productID",
+    "dateModified" : "http://schema.org/dateModified",
+    "inDataset" : {
+      "@id" : "http://rdfs.org/ns/void#inDataset",
+      "@type" : "@id"
+    },
+    "identifier" : "http://purl.org/dc/terms/identifier",
+    "location" : {
+      "@id" : "http://schema.org/location",
+      "@type" : "@id"
+    },
+    "organizer" : {
+      "@id" : "http://schema.org/organizer",
+      "@type" : "@id"
+    },
+    "startDate" : "http://schema.org/startDate",
+    "label" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "description" : "http://schema.org/description",
+    "schema" : "http://schema.org/",
+    "library" : "http://purl.org/library/",
+    "genont" : "http://www.w3.org/2006/gen/ont#",
+    "void" : "http://rdfs.org/ns/void#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "bgn" : "http://bibliograph.net/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "wdrs" : "http://www.w3.org/2007/05/powder-s#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "pto" : "http://www.productontology.org/id/"
+  }
+}

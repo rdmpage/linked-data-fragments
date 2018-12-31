@@ -61,6 +61,10 @@ $urls = array(
 'https://ci.nii.ac.jp/naid/110003758629#article'
 );
 
+$urls = array(
+'http://www.worldcat.org/oclc/1281768'
+);
+
 
 // Add items to the queue
 foreach ($urls as $url)
