@@ -167,6 +167,99 @@ function ipni_lsid($lsid, $cache_dir = '')
 	return $data;	
 }
 
+//----------------------------------------------------------------------------------------
+// CiNII RDF
+function cinii_rdf($url, $cache_dir = '')
+{
+	$data = null;
+	
+	$id = preg_replace('/https?:\/\/ci.nii.ac.jp\/naid\//', '', $url);
+	$id = preg_replace('/#article/', '', $id);
+
+	// Either use an existing cache (e.g., on external hard drive)
+	// or cache locally
+	if ($cache_dir != '')
+	{
+	}
+	else
+	{
+		$cache_dir = dirname(__FILE__) . "/cache";
+		if (!file_exists($cache_dir))
+		{
+			$oldumask = umask(0); 
+			mkdir($cache_dir, 0777);
+			umask($oldumask);
+		}
+	
+		$cache_dir .= '/cinii';
+	
+		if (!file_exists($cache_dir))
+		{
+			$oldumask = umask(0); 
+			mkdir($cache_dir, 0777);
+			umask($oldumask);
+		}
+	}
+		
+	$dir = $cache_dir . '/' . floor($id / 1000);
+	if (!file_exists($dir))
+	{
+		$oldumask = umask(0); 
+		mkdir($dir, 0777);
+		umask($oldumask);
+	}
+	
+	$filename = $dir . '/' . $id . '.xml';
+
+	if (!file_exists($filename))
+	{
+		$url = $url . '.rdf';
+		$xml = get($url);
+		
+		file_put_contents($filename, $xml);	
+	}
+	
+	$xml = file_get_contents($filename);
+	
+	if (($xml != '') && preg_match('/<\?xml/', $xml))
+	{
+		// fix
+		
+		// convert
+		$nt = rdf_to_triples($xml);
+		$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
+
+		// Context 
+		$context = new stdclass;
+
+
+		$context->rdf 		= "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+		$context->rdfs 		= "http://www.w3.org/2000/01/rdf-schema#";
+
+		$context->dc 		= "http://purl.org/dc/elements/1.1/";
+		$context->dcterms 	= "http://purl.org/dc/terms/";
+
+		$context->foaf 		= "http://xmlns.com/foaf/0.1/";
+		$context->prism 	= "http://prismstandard.org/namespaces/basic/2.0/";
+		$context->con 		= "http://www.w3.org/2000/10/swap/pim/contact#";
+		$context->cinii 	= "https://ci.nii.ac.jp/ns/1.0/";
+		$context->bibo 		= "http://purl.org/ontology/bibo/";
+
+		$frame = (object)array(
+			'@context' => $context,
+			
+			// Root on article
+			'@type' => 'http://purl.org/ontology/bibo/Article',
+			
+		);	
+
+		$data = jsonld_frame($doc, $frame);
+
+	}
+	
+	return $data;	
+}
+
 
 //----------------------------------------------------------------------------------------
 function microcitation_reference ($guid)
@@ -233,6 +326,25 @@ function resolve_url($url)
 			{
 				$doc = new stdclass;
 				$doc->{'message-source'} = 'http://ipni.org/' . $url;
+				$doc->{'message-format'} = 'application/ld+json';
+				$doc->message = $data;
+			}
+			
+			$done = true;
+		}
+	}
+	
+	// CiNii
+	if (!$done)
+	{
+		if (preg_match('/https?:\/\/ci.nii.ac.jp\/naid\/\d+#article/', $url))
+		{
+			$data = cinii_rdf($url);
+
+			if ($data)
+			{
+				$doc = new stdclass;
+				$doc->{'message-source'} = $url . '.rdf';
 				$doc->{'message-format'} = 'application/ld+json';
 				$doc->message = $data;
 			}
@@ -320,8 +432,14 @@ if (0)
 	
 	$url = 'https://doi.org/10.1017/S096042860000192X';
 	
+	$url = 'https://ci.nii.ac.jp/naid/110003758629#article';
+	
 	$doc = resolve_url($url);
 	print_r($doc);
+	
+	echo json_encode($doc->message, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+	echo "\n";
+
 
 }
 

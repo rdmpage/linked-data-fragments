@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:con="http://www.w3.org/2000/10/swap/pim/contact#" xmlns:cinii="https://ci.nii.ac.jp/ns/1.0/" xmlns:bibo="http://purl.org/ontology/bibo/">
+<rdf:Description rdf:about="https://ci.nii.ac.jp/naid/110003758629#article">
+<rdf:type rdf:resource="http://purl.org/ontology/bibo/Article"/>
+<foaf:isPrimaryTopicOf rdf:resource="https://ci.nii.ac.jp/naid/110003758629.rdf" />
+<dc:title>新潟県とその隣県に分布するカンアオイ属植物, 特にコシノカンアオイとその近縁種に関する分類学的研究</dc:title>
+<dc:creator>菅原 敬</dc:creator>
+<dc:publisher>日本植物分類学会</dc:publisher>
+<prism:publicationName>植物分類，地理</prism:publicationName>
+<prism:issn>0001-6799</prism:issn>
+<prism:volume>49</prism:volume>
+<prism:number>1</prism:number>
+<prism:startingPage>1</prism:startingPage>
+<prism:endingPage>17</prism:endingPage>
+<prism:publicationDate>1998</prism:publicationDate>
+<dc:description>1996年新潟県北部の荒川流域で奇妙なカンアオイ属植物が確認された。この植物は,同地城周辺から従来報告されていたコシノカンアオイ(Asarum megacalyx F.Maek.),あるいはユキグニカンアオイ(A.ikegamii [F.Maek.ex Y.Maek.] T.Sugaw.)によく似るが,花の形態はそれらの中間型のようにみえる。一方,新潟県西部から富山県東部の地域には未記載種クロヒメカンアオイ(Heterotropa yoshikawai nom. nud.)が知られていた。この植物もコシノカンアオイに近縁と見なされてきたが,いまだその実体は充分に解明されていない。そこでこれら問題の植物の分類学的位置づけ,ならびに既存の2種との関連を明らかにするため,花の形態ならびに染色体からの比較研究を進めた。その結果,未記載種クロヒメカンアオイは独立種とみなしうることが判明したので,Asarum yoshikawae T. Sugaw.の学名で正式な記載を行った,また荒川流域の問題のカンアオイ属植物はユキグニカンアオイの新変種と位置づけられ,アラカワカンアオイ(A. ikegamii var. fujimakii T. Sugaw.)として記載した。クロヒメカンアオイは萼筒が上方に狭まった筒形で,萼筒口が径4mm以下と著しく狭く,萼筒内壁の襞は著しく複雑化する。また中期染色体でも4本の次中部型染色体を含む固有の核型をもつ特異な種である。一方新変種のアラカワカンアオイは狭義のユキグニカンアオイ(var. ikegamii)に比べて萼筒がより大きく,口環もより発達して目だつ。また,花柱附属突起はユキグニカンアオイのように萼筒口の高さにまで達することはなく,常に萼筒内におさまっている。この新変種は荒川流域に沿って新潟県関川村から山形県小国町付近まで分布する。</dc:description>
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/Aristolochiaceae" dc:title="Aristolochiaceae" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/Asarum" dc:title="Asarum" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/Heterotropa" dc:title="Heterotropa" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/karyotype" dc:title="karyotype" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/morphological+variation" dc:title="morphological variation" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/new+taxa" dc:title="new taxa" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/taxonomy" dc:title="taxonomy" />
+<dc:date>1998</dc:date>
+<cinii:naid>110003758629</cinii:naid>
+<cinii:ncid>AN00118019</cinii:ncid>
+<cinii:ndljpi>4564628</cinii:ndljpi>
+<dc:language>ENG</dc:language>
+<dc:source>CJP</dc:source>
+<dc:source>CJPref</dc:source>
+<dc:source>NDL</dc:source>
+<dc:source>NII-ELS</dc:source>
+<cinii:references>17</cinii:references>
+<cinii:citedBy>1</cinii:citedBy>
+<dcterms:isPartOf rdf:resource="https://ci.nii.ac.jp/ncid/AN00118019#entity" dc:title="植物分類，地理" />
+<rdfs:seeAlso rdf:resource="http://id.ndl.go.jp/bib/4564628" dc:title="NDL ONLINE" />
+<rdfs:seeAlso rdf:resource="http://dx.doi.org/10.18942/bunruichiri.KJ00001077363" dc:title="DOI" />
+<prism:doi>10.18942/bunruichiri.KJ00001077363</prism:doi></rdf:Description>
+<rdf:Description rdf:about="https://ci.nii.ac.jp/naid/110003758629#article" xml:lang="en">
+<rdf:type rdf:resource="http://purl.org/ontology/bibo/Article"/>
+<dc:title>A Taxonomic Study of Asarum megacalyx F. Maek. and Related Taxa (Aristolochiaceae) Distributed in Niigata Prefecture and Adjacent Areas of Japan</dc:title>
+<dc:creator>SUGAWARA TAKASHI</dc:creator>
+<dc:publisher>Japanese Society for Plant Systematics</dc:publisher>
+<prism:publicationName>Acta Phytotaxonomica et Geobotanica</prism:publicationName>
+<dc:description>This study makes clear the taxonomic disposition of unusual plants of Asarum (Aristolochiaceae) in Niigata Prefecture and adjacent areas previously referred to as Heterotropa yoshikawai, an illegitimate name. Chromosomes and morphological features of 66 populations, including populations of Asarum megacalyx and A. ikegamii, which bear a close resemblance to the plants in question, were examined. Morphological and karyological investigations revealed that Heterotropa yoshikawai was obviously different from the above two species in karyotype, shape of the calyx tube and reticulation of the ridges within the calyx tube. I therefore recognize it as a distinct species, and validated it with the name Asarum yoshikawae. Additionally, the unusual plants from the northern part of Niigata Prefecture and southwestern Yamagata Prefecture are recognized as a new variety of A. ikegamii, and described as A. ikegamii Var. fujimakii. In connection with the taxonomic consideration. relationships among the three species are also discussed.</dc:description>
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/Aristolochiaceae" dc:title="Aristolochiaceae" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/Asarum" dc:title="Asarum" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/Heterotropa" dc:title="Heterotropa" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/karyotype" dc:title="karyotype" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/morphological+variation" dc:title="morphological variation" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/new+taxa" dc:title="new taxa" />
+<foaf:topic rdf:resource="https://ci.nii.ac.jp/keyword/taxonomy" dc:title="taxonomy" />
+</rdf:Description>
+<rdf:Description rdf:about="https://ci.nii.ac.jp/naid/110003758629#article">
+<rdf:type rdf:resource="http://purl.org/ontology/bibo/Article"/>
+<foaf:maker>
+<foaf:Person rdf:about="https://ci.nii.ac.jp/nrid/9000005394335#me">
+<foaf:name>菅原 敬</foaf:name>
+<foaf:name xml:lang="en">SUGAWARA TAKASHI</foaf:name>
+<con:organization>
+<foaf:Organization rdf:about="https://ci.nii.ac.jp/org/%E4%BF%A1%E5%B7%9E%E5%A4%A7%E5%AD%A6%E7%90%86%E5%AD%A6%E9%83%A8%E7%94%9F%E7%89%A9%E7%A7%91%E5%AD%A6%E6%95%99%E5%AE%A4">
+<foaf:name>信州大学理学部生物科学教室</foaf:name>
+<foaf:name xml:lang="en">Department of Biology, Faculty of Science, Shinshu University</foaf:name>
+</foaf:Organization>
+</con:organization>
+</foaf:Person>
+</foaf:maker>
+</rdf:Description>
+</rdf:RDF>

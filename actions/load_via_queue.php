@@ -53,6 +53,12 @@ $urls = array(
 
 $urls = array(
 'https://doi.org/10.1017/S096042860000192X',
+'https://doi.org/10.1663/0007-196X(2003)055[0205:DRZANS]2.0.CO;2',
+'https://doi.org/10.2307/4135607'
+);
+
+$urls = array(
+'https://ci.nii.ac.jp/naid/110003758629#article'
 );
 
 
