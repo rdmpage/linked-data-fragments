@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EmbeddedEditorHidden:rpage</key>
+	<false/>
+	<key>ExpandedEditorWidth:rpage:displays([(0, 0), (1440, 900)])</key>
+	<integer>750</integer>
+	<key>ExpandedItems:rpage</key>
+	<array/>
+	<key>FileFilterMode:rpage</key>
+	<integer>0</integer>
+	<key>OpenDocuments:rpage</key>
+	<array/>
+	<key>OpenDocumentsExpanded</key>
+	<true/>
+	<key>OpenDocumentsSplitterProportion</key>
+	<real>0.83976608187134505</real>
+	<key>ProjectItemsExpanded</key>
+	<true/>
+	<key>ProjectViewVisible</key>
+	<true/>
+	<key>RecentItems:rpage</key>
+	<array>
+		<dict>
+			<key>Date</key>
+			<date>2019-01-01T21:43:35Z</date>
+			<key>Location</key>
+			<dict>
+				<key>BookmarkData</key>
+				<data>
+				Ym9va/QDAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAA5AIAAAUAAAABAQAAVXNlcnMA
+				AAAFAAAAAQEAAHJwYWdlAAAABQAAAAEBAABTaXRlcwAA
+				ABUAAAABAQAAbGlua2VkLWRhdGEtZnJhZ21lbnRzAAAA
+				CQAAAAEBAABSRUFETUUubWQAAAAUAAAAAQYAAAQAAAAU
+				AAAAJAAAADQAAABUAAAACAAAAAQDAAAQZwIAAAAAAAgA
+				AAAEAwAAhXQNAAAAAAAIAAAABAMAAARWTAAAAAAACAAA
+				AAQDAABV23AAAwAAAAgAAAAEAwAAJ051AAMAAAAUAAAA
+				AQYAAIQAAACUAAAApAAAALQAAADEAAAACAAAAAAEAABB
+				wOf5SHNIMhgAAAABAgAAAQAAAAAAAAAPAAAAAAAAAAAA
+				AAAAAAAACAAAAAQDAAADAAAAAAAAAAQAAAADAwAA9QEA
+				AAgAAAABCQAAZmlsZTovLy8MAAAAAQEAAE1hY2ludG9z
+				aCBIRAgAAAAEAwAAALCfPmkAAAAIAAAAAAQAAEG+3V1i
+				AAAAJAAAAAEBAAAyNUU0Mjg2RC03MTJDLTM4OTktQjQz
+				Ri01RDNGNkE4QkQxMjEYAAAAAQIAAIEAAAABAAAA7xMA
+				AAEAAAAAAAAAAAAAAAEAAAABAQAALwAAAAAAAAABBQAA
+				GgAAAAEBAABOU1VSTERvY3VtZW50SWRlbnRpZmllcktl
+				eQAABAAAAAMDAAB5SgAAzAAAAAECAAAyOTU1YTM5ZmE1
+				NTc4ZWNhNjc3ZjliNjgwOGZlNWRmMDMyZWUxZjI5OzAw
+				OzAwMDAwMDAwOzAwMDAwMDAwOzAwMDAwMDAwOzAwMDAw
+				MDAwMDAwMDAwMjA7Y29tLmFwcGxlLmFwcC1zYW5kYm94
+				LnJlYWQtd3JpdGU7MDE7MDEwMDAwMDU7MDAwMDAwMDMw
+				MDc1NGUyNzswMTsvdXNlcnMvcnBhZ2Uvc2l0ZXMvbGlu
+				a2VkLWRhdGEtZnJhZ21lbnRzL3JlYWRtZS5tZADYAAAA
+				/v///wEAAAAAAAAAEQAAAAQQAABoAAAAAAAAAAUQAADU
+				AAAAAAAAABAQAAAAAQAAAAAAAEAQAADwAAAAAAAAAAIg
+				AADMAQAAAAAAAAUgAAA8AQAAAAAAABAgAABMAQAAAAAA
+				ABEgAACAAQAAAAAAABIgAABgAQAAAAAAABMgAABwAQAA
+				AAAAACAgAACsAQAAAAAAADAgAADYAQAAAAAAAAHAAAAg
+				AQAAAAAAABHAAAAUAAAAAAAAABLAAAAwAQAAAAAAAIDw
+				AAAQAgAAAAAAAOABAIAEAgAAAAAAAA==
+				</data>
+				<key>FileURL</key>
+				<string>file:///Users/rpage/Sites/linked-data-fragments/README.md</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+	</array>
+	<key>ScratchpadItemsExpanded</key>
+	<true/>
+	<key>ScratchpadItemsVisible</key>
+	<true/>
+	<key>ShowSCMData:rpage</key>
+	<false/>
+	<key>ToolbarVisible:rpage</key>
+	<false/>
+	<key>ViewSplitterPosition:rpage</key>
+	<real>0.21301154792308807</real>
+	<key>WindowFrame:rpage:displays([(0, 0), (1440, 900)])</key>
+	<string>rect(45,0,900,953)</string>
+</dict>
+</plist>
