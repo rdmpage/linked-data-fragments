@@ -1,0 +1,191 @@
+SELECT * WHERE {
+  <urn:lsid:ipni.org:names:70029259-1><http://rs.tdwg.org/ontology/voc/TaxonName#authorteam> ?authorteam  .
+   ?authorteam <http://rs.tdwg.org/ontology/voc/Team#hasMember> ?member .
+   ?member <http://rs.tdwg.org/ontology/voc/Team#index> ?order.
+   ?member <http://rs.tdwg.org/ontology/voc/Team#role> ?memberRole.
+}
+
+
+
+SELECT * WHERE {
+  <https://doi.org/10.1663/0007-196x(2003)055[0205:drzans]2.0.co;2> <http://schema.org/creator> ?role .
+?role <http://schema.org/creator> ?creator .
+   ?role <http://schema.org/roleName> ?roleName .
+   ?creator <http://schema.org/name> ?name .
+}
+
+
+SELECT * WHERE {
+  <https://doi.org/10.1663/0007-196x(2003)055[0205:drzans]2.0.co;2> <http://schema.org/identifier> ?identifier .
+  ?identifier <http://schema.org/value> ?value .
+}
+
+PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ref: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT * WHERE {
+	?person rdf:type <http://schema.org/Person> .
+	?person schema:name ?name .
+}
+
+PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ref: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT * WHERE {
+	?s dc:description ?o .
+}
+
+PREFIX schema: <http://schema.org/>
+SELECT * WHERE {
+	?s schema:name ?name .
+}
+
+PREFIX schema: <http://schema.org/>
+SELECT * WHERE {
+	?s schema:name ?name .
+        FILTER(lang(?name)="zh")
+}
+
+
+
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+SELECT * WHERE {
+	?name tcom:publishedInCitation ?pub .
+        ?name <http://schema.org/name> ?label .
+        ?cluster   <http://schema.org/dataFeedElement> ?name .
+?pub <http://schema.org/name> ?title .
+}
+
+
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+SELECT DISTINCT ?periodical ?issn WHERE {
+	?name tcom:publishedInCitation ?pub .
+        ?name <http://schema.org/name> ?label .
+        ?cluster   <http://schema.org/dataFeedElement> ?name .
+?pub <http://schema.org/name> ?title .
+?pub <http://schema.org/isPartOf> ?journal . 
+?journal   <http://schema.org/name> ?periodical .
+
+
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+SELECT * WHERE {
+?s tn:nameComplete "Anisotes spectabilis" .
+?s tn:hasBasionym ?basionym . 
+
+?basionym tcom:publishedInCitation ?pub .
+?pub <http://schema.org/name> ?title .
+       
+
+}
+
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+SELECT * WHERE {
+	?name tcom:publishedInCitation ?pub .
+        ?name <http://schema.org/name> ?label .
+        ?cluster   <http://schema.org/dataFeedElement> ?name .
+?pub <http://schema.org/name> ?title .
+?pub <http://schema.org/datePublished> ?date .
+}
+
+
+# match IPNI authors to publication authors,
+# not that RDF means that multiple triples may match some of these queries
+# need to think carefully about this
+
+prefix tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+prefix tm: <http://rs.tdwg.org/ontology/voc/Team#>
+prefix tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>	
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+SELECT *
+where
+{
+  # ipni
+  
+   <urn:lsid:ipni.org:names:77088053-1> tn:authorteam ?authorteam  .
+   ?authorteam tm:hasMember ?member .
+   ?member tm:index ?order.
+   ?member tm:role ?memberRole.
+   ?member dc:title ?title .
+  
+   # my mapping
+   <urn:lsid:ipni.org:names:77088053-1> tcom:publishedInCitation ?publication .
+  
+   # publication
+   ?publication schema:creator ?role .
+   ?role schema:creator ?creator .
+   ?role schema:roleName ?order .
+   ?creator schema:name ?name .
+
+
+}
+
+# publications for an IPNI author
+prefix tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+prefix tm: <http://rs.tdwg.org/ontology/voc/Team#>
+prefix tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>	
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+SELECT *
+where
+{
+  # ipni
+    ?authorteam tm:hasMember   <urn:lsid:ipni.org:authors:37149-1> .
+<urn:lsid:ipni.org:authors:37149-1> dc:title ?title .
+    ?name tn:authorteam ?authorteam  .
+    ?name tcom:publishedInCitation ?publication .
+?publication schema:name ?pubtitle .
+
+}
+
+
+
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+SELECT * WHERE {
+?s tn:genusPart "Begonia" .
+
+?s tcom:publishedInCitation ?pub .
+?pub <http://schema.org/name> ?title .
+OPTIONAL {
+?pub <http://schema.org/datePublished> ?datePublished .
+}
+}
+
+
+
+
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX schema: <http://schema.org/>
+SELECT * WHERE {
+
+?identifier schema:value "10.26492/gbs69(1).2017-06" .
+?pub schema:identifier ?identifier .
+?pub schema:itemListElement ?list .
+?list schema:position ?position .
+?list schema:item ?item .
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

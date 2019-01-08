@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:893742-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:893742-1:1.1.2.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.2.2</owl:versionInfo>
+<dc:title>Anisotes sect. Bracteati Baden</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2007-02-15 19:19:08.0</dcterms:modified>
+<tn:rankString>sect.</tn:rankString>
+<tn:nameComplete>Anisotes sect. Bracteati</tn:nameComplete>
+<tn:genusPart>Anisotes</tn:genusPart>        
+<tn:infragenericEpithet>Bracteati</tn:infragenericEpithet>                        
+<tn:authorship>Baden</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Baden</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:13129-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Nordic J. Bot. 1(1): 35 (1981). </tcom:publishedIn>    
+<tn:year>1981</tn:year>        
+</tn:TaxonName>  
+</rdf:RDF>

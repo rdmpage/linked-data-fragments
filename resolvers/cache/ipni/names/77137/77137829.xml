@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77137829-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77137829-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Anisotes perplexus T.F.Daniel, Letsara &amp; Martín-Bravo</dc:title>                        
+<dcterms:created>2014-04-15 11:55:30.0</dcterms:created>
+<dcterms:modified>2014-04-22 14:49:55.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Anisotes perplexus</tn:nameComplete>
+<tn:genusPart>Anisotes</tn:genusPart>        
+<tn:specificEpithet>perplexus</tn:specificEpithet>                
+<tn:authorship>T.F.Daniel, Letsara &amp; Martín-Bravo</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>T.F.Daniel, Letsara &amp; Martín-Bravo</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:12125-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20013045-2"
+tm:index="2"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20020154-1"
+tm:index="3"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Novon 22(4): 402. 2013 [18 Oct 2013] </tcom:publishedIn>    
+<tn:year>2013</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>S.Malcomber, J.Hutcheon, A.Razafimanantsoa &amp; M.Zjhra 1481, MO (holo)</dc:title>
+<tn:typeSpecimen>S.Malcomber, J.Hutcheon, A.Razafimanantsoa &amp; M.Zjhra 1481, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>S.Malcomber, J.Hutcheon, A.Razafimanantsoa &amp; M.Zjhra 1481, BM (iso)</dc:title>
+<tn:typeSpecimen>S.Malcomber, J.Hutcheon, A.Razafimanantsoa &amp; M.Zjhra 1481, BM</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>S.Malcomber, J.Hutcheon, A.Razafimanantsoa &amp; M.Zjhra 1481, K (iso)</dc:title>
+<tn:typeSpecimen>S.Malcomber, J.Hutcheon, A.Razafimanantsoa &amp; M.Zjhra 1481, K</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

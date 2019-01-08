@@ -1,0 +1,144 @@
+{
+  "@context": {
+    "@vocab": "http:\/\/schema.org\/",
+    "sameAs": {
+      "@id": "http:\/\/schema.org\/sameAs",
+      "@container": "@set"
+    },
+    "issn": {
+      "@id": "http:\/\/schema.org\/issn",
+      "@container": "@set"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "https:\/\/biostor.org\/reference\/167008",
+      "@type": [
+        "ScholarlyArticle",
+        "itemList"
+      ],
+      "creator": [
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#role\/1",
+          "@type": "Role",
+          "creator": {
+            "@id": "https:\/\/biostor.org\/reference\/167008#creator\/1",
+            "@type": "Person",
+            "familyName": "Burt-Utley",
+            "givenName": "K",
+            "name": "K Burt-Utley"
+          },
+          "roleName": "1"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#role\/2",
+          "@type": "Role",
+          "creator": {
+            "@id": "https:\/\/biostor.org\/reference\/167008#creator\/2",
+            "@type": "Person",
+            "familyName": "Utley",
+            "givenName": "J F",
+            "name": "J F Utley"
+          },
+          "roleName": "2"
+        }
+      ],
+      "datePublished": "2014-00-00",
+      "identifier": {
+        "@id": "https:\/\/biostor.org\/reference\/167008#biostor",
+        "@type": "PropertyValue",
+        "propertyID": "biostor",
+        "value": "167008"
+      },
+      "isPartOf": {
+        "@id": "http:\/\/worldcat.org\/issn\/2153-733X",
+        "issn": [
+          "2153-733X"
+        ],
+        "name": "Phytoneuron"
+      },
+      "itemListElement": [
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#listitem_1",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/44915081",
+            "@type": "ImageObject"
+          },
+          "position": "1"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#listitem_2",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/44915082",
+            "@type": "ImageObject"
+          },
+          "position": "2"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#listitem_3",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/44915083",
+            "@type": "ImageObject"
+          },
+          "position": "3"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#listitem_4",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/44915084",
+            "@type": "ImageObject"
+          },
+          "position": "4"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#listitem_5",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/44915085",
+            "@type": "ImageObject"
+          },
+          "position": "5"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#listitem_6",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/44915086",
+            "@type": "ImageObject"
+          },
+          "position": "6"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#listitem_7",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/44915087",
+            "@type": "ImageObject"
+          },
+          "position": "7"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/167008#listitem_8",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/44915088",
+            "@type": "ImageObject"
+          },
+          "position": "8"
+        }
+      ],
+      "name": "New species of Begonia (Begoniaceae) from Mexico and Central America",
+      "pageEnd": "8",
+      "pageStart": "1",
+      "sameAs": [
+        "https:\/\/biostor.org\/reference\/167008"
+      ],
+      "url": "https:\/\/biostor.org\/reference\/167008",
+      "volume": "2014-37"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:50426040-2">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:50426040-2:1.1.2.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.2.1</owl:versionInfo>
+<dc:title>Begonia arfakensis (Gibbs) L.L.Forrest &amp; Hollingsw.</dc:title>                        
+<dcterms:created>2003-12-22 06:26:55.0</dcterms:created>
+<dcterms:modified>2004-04-20 15:12:28.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia arfakensis</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>arfakensis</tn:specificEpithet>                
+<tn:authorship>(Gibbs) L.L.Forrest &amp; Hollingsw.</tn:authorship>
+<tn:basionymAuthorship>Gibbs</tn:basionymAuthorship>
+<tn:combinationAuthorship>L.L.Forrest &amp; Hollingsw.</tn:combinationAuthorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>(Gibbs) L.L.Forrest &amp; Hollingsw.</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20000032-2"
+tm:index="1"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20000033-2"
+tm:index="2"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:3128-1" 
+tm:index="1"
+tm:role="Basionym Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Pl. Syst. Evol. 241(3-4): 208 (2003). </tcom:publishedIn>    
+<tn:year>2003</tn:year>        
+<tn:hasBasionym rdf:resource="urn:lsid:ipni.org:names:106316-1"/>
+</tn:TaxonName>  
+</rdf:RDF>

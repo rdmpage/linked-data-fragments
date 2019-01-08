@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77095077-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77095077-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Begonia aguiabrancensis L.Kollmann</dc:title>                        
+<dcterms:created>2009-01-15 16:23:08.0</dcterms:created>
+<dcterms:modified>2009-01-16 09:55:36.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia aguiabrancensis</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>aguiabrancensis</tn:specificEpithet>                
+<tn:authorship>L.Kollmann</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>L.Kollmann</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:37591-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Rodriguésia 59(1): 155 (-156; fig. 1). 2008 </tcom:publishedIn>    
+<tn:year>2008</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>V.Demuner, L.F.S.Magnago, T.Cruz &amp; E.Bausen 2286, MBML (holo)</dc:title>
+<tn:typeSpecimen>V.Demuner, L.F.S.Magnago, T.Cruz &amp; E.Bausen 2286, MBML</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>V.Demuner, L.F.S.Magnago, T.Cruz &amp; E.Bausen 2286, RB (iso)</dc:title>
+<tn:typeSpecimen>V.Demuner, L.F.S.Magnago, T.Cruz &amp; E.Bausen 2286, RB</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

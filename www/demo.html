@@ -1,0 +1,37 @@
+<div id="output"></div>
+<!-- <script src="jquery.js"></script> -->
+<script src="ejs.js"></script>
+<script>
+  let people = ['geddy', 'neil', 'alex'],
+      html = ejs.render('<%= people.join(", "); %>', {people: people});
+      
+      var title = '云南秋海棠属三新种';
+      
+      
+      
+  var template = `
+  OK, so have fun! :D
+-------------------
+<%
+    var fruits = ["Apple", "Pear", "Orange", "Lemon"]
+      , random = " ".repeat(198).split("").map(x => Math.random())
+      ;
+%>
+
+These fruits are amazing:
+<% for(var i = 0; i < fruits.length; ++i) {%>
+  - <%=fruits[i]%>s<% } %>
+
+
+<h1><%=title%></h1>
+
+
+  `;      
+  
+      html = ejs.render(template);
+      
+  // With jQuery:
+  //$('#output').html(html);
+  // Vanilla JS:
+  document.getElementById('output').innerHTML = html;
+</script>

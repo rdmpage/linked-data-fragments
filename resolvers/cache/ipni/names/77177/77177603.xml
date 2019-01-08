@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77177603-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77177603-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Petrocodon asterocalyx F.Wen, Y.G.Wei &amp; R.L.Zhang</dc:title>                        
+<dcterms:created>2018-03-26 17:13:53.0</dcterms:created>
+<dcterms:modified>2018-03-26 17:13:53.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Petrocodon asterocalyx</tn:nameComplete>
+<tn:genusPart>Petrocodon</tn:genusPart>        
+<tn:specificEpithet>asterocalyx</tn:specificEpithet>                
+<tn:authorship>F.Wen, Y.G.Wei &amp; R.L.Zhang</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>F.Wen, Y.G.Wei &amp; R.L.Zhang</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20013722-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:37149-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20031438-1"
+tm:index="3"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Phytotaxa 343(3): 262. 2018 [12 Mar 2018] [epublished]</tcom:publishedIn>    
+<tn:year>2018</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>F.Wen WF120510, IBK (holo)</dc:title>
+<tn:typeSpecimen>F.Wen WF120510, IBK</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>F.Wen WF120510, IBK (iso)</dc:title>
+<tn:typeSpecimen>F.Wen WF120510, IBK</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

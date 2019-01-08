@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77161332-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77161332-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Begonia addrinii S.Julia &amp; Kiew</dc:title>                        
+<dcterms:created>2017-03-10 17:10:05.0</dcterms:created>
+<dcterms:modified>2017-03-10 17:13:20.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia addrinii</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>addrinii</tn:specificEpithet>                
+<tn:authorship>S.Julia &amp; Kiew</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>S.Julia &amp; Kiew</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:38528-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:13671-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Gard. Bull. Singapore 68(2): 258. 2016 [15 Nov 2016] </tcom:publishedIn>    
+<tn:year>2016</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Julia et al. SFC6653, SAR (holo)</dc:title>
+<tn:typeSpecimen>Julia et al. SFC6653, SAR</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Julia et al. SFC6653, KEP (iso)</dc:title>
+<tn:typeSpecimen>Julia et al. SFC6653, KEP</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Julia et al. SFC6653, SING (iso)</dc:title>
+<tn:typeSpecimen>Julia et al. SFC6653, SING</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Julia et al. SFC6653, SNP (iso)</dc:title>
+<tn:typeSpecimen>Julia et al. SFC6653, SNP</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

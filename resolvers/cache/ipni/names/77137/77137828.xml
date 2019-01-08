@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77137828-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77137828-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Anisotes hygroscopicus T.F.Daniel, Letsara &amp; Martín-Bravo</dc:title>                        
+<dcterms:created>2014-04-15 11:53:10.0</dcterms:created>
+<dcterms:modified>2014-04-15 11:53:10.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Anisotes hygroscopicus</tn:nameComplete>
+<tn:genusPart>Anisotes</tn:genusPart>        
+<tn:specificEpithet>hygroscopicus</tn:specificEpithet>                
+<tn:authorship>T.F.Daniel, Letsara &amp; Martín-Bravo</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>T.F.Daniel, Letsara &amp; Martín-Bravo</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:12125-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20013045-2"
+tm:index="2"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20020154-1"
+tm:index="3"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Novon 22(4): 398. 2013 [18 Oct 2013] </tcom:publishedIn>    
+<tn:year>2013</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, CAS (holo)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, CAS</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, BR (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, BR</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, G (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, G</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, K (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, K</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, MO (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, NY (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, NY</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, P (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, P</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, RSA (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, RSA</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, TAN (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, TAN</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, US (iso)</dc:title>
+<tn:typeSpecimen>T.Daniel, R.Letsara, H.Ranarivelo &amp; J.Razanatsoa 11842, US</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

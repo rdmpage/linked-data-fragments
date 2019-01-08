@@ -60,18 +60,32 @@ function rdf_to_triples($xml)
 		}
 	}
 	
-	print_r($cleaned_triples);
+	//print_r($cleaned_triples);
 	
 	return $parser->toNTriples($cleaned_triples);
 }
 
 //----------------------------------------------------------------------------------------
-// IPNI LSID
+// IPNI LSID, names or authors
 function ipni_lsid($lsid, $cache_dir = '')
 {
 	$data = null;
 	
-	$id = str_replace('urn:lsid:ipni.org:names:', '', $lsid);
+	$mode = 'names';
+	$id = '';
+	
+	if (preg_match('/urn:lsid:ipni.org:names:(?<id>\d+)/', $lsid, $m))
+	{
+		$mode = 'names';
+		$id = $m['id'];
+	}
+	
+	if (preg_match('/urn:lsid:ipni.org:authors:(?<id>\d+)/', $lsid, $m))
+	{
+		$mode = 'authors';
+		$id = $m['id'];
+	}
+
 	$id = preg_replace('/-\d+$/', '', $id);
 
 	// Either use an existing cache (e.g., on external hard drive)
@@ -97,6 +111,16 @@ function ipni_lsid($lsid, $cache_dir = '')
 			mkdir($cache_dir, 0777);
 			umask($oldumask);
 		}
+		
+		$cache_dir .= '/' . $mode;
+	
+		if (!file_exists($cache_dir))
+		{
+			$oldumask = umask(0); 
+			mkdir($cache_dir, 0777);
+			umask($oldumask);
+		}
+		
 	}
 		
 	$dir = $cache_dir . '/' . floor($id / 1000);
@@ -114,56 +138,78 @@ function ipni_lsid($lsid, $cache_dir = '')
 		$url = 'http://ipni.org/' . $lsid;
 		$xml = get($url);
 		
-		file_put_contents($filename, $xml);	
+		// only cache XML (if record not found or IPNI overloaded we get HTML)
+		if (preg_match('/<\?xml/', $xml))
+		{
+			file_put_contents($filename, $xml);	
+		}
 	}
 	
-	$xml = file_get_contents($filename);
-	
-	if (($xml != '') && preg_match('/<\?xml/', $xml))
+	if (file_exists($filename))
 	{
-		// fix
-		
-		// convert
-		$nt = rdf_to_triples($xml);
-		$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
-
-		// Context to set vocab to schema
-		$context = new stdclass;
-
-		$context->{'@vocab'} = "http://rs.tdwg.org/ontology/voc/TaxonName#";
-
-		$context->tcom = "http://rs.tdwg.org/ontology/voc/Common#";
-		$context->tm = "http://rs.tdwg.org/ontology/voc/Team#";
-		$context->tp = "http://rs.tdwg.org/ontology/voc/Person#";
-
-		$context->owl = "http://www.w3.org/2002/07/owl#";
-		$context->dcterms = "http://purl.org/dc/terms/";
-		$context->dc = "http://purl.org/dc/elements/1.1/";
-
-		// hasMember is always an array
-		$hasMember = new stdclass;
-		$hasMember->{'@id'} = "http://rs.tdwg.org/ontology/voc/Team#hasMember";
-		$hasMember->{'@container'} = "@set";
-
-		$typifiedBy= new stdclass;
-		$typifiedBy->{'@id'} = "http://rs.tdwg.org/ontology/voc/TaxonName#typifiedBy";
-		$typifiedBy->{'@container'} = "@set";
-
-		$context->{'tm:hasMember'} = $hasMember;
-		$context->{'typifiedBy'} = $typifiedBy;
-
-		$frame = (object)array(
-			'@context' => $context,
-
-			// Root on article
-			'@type' => 'http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName',
-		);	
-
-
-		$data = jsonld_frame($doc, $frame);
-
-	}
 	
+		$xml = file_get_contents($filename);
+	
+		if (($xml != '') && preg_match('/<\?xml/', $xml))
+		{
+			// fix
+		
+			$xml = str_replace('xmlns:p="http://rs.tdwg.org/ontology/voc/Person"', 'xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"', $xml);
+		
+			//echo $xml;
+		
+			// convert
+			$nt = rdf_to_triples($xml);
+			$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
+
+			// Context to set vocab to schema
+			$context = new stdclass;
+
+			$context->{'@vocab'} = "http://rs.tdwg.org/ontology/voc/TaxonName#";
+
+			$context->tcom = "http://rs.tdwg.org/ontology/voc/Common#";
+			$context->tm = "http://rs.tdwg.org/ontology/voc/Team#";
+			$context->tp = "http://rs.tdwg.org/ontology/voc/Person#";
+
+			$context->owl = "http://www.w3.org/2002/07/owl#";
+			$context->dcterms = "http://purl.org/dc/terms/";
+			$context->dc = "http://purl.org/dc/elements/1.1/";
+
+			// hasMember is always an array
+			$hasMember = new stdclass;
+			$hasMember->{'@id'} = "http://rs.tdwg.org/ontology/voc/Team#hasMember";
+			$hasMember->{'@container'} = "@set";
+
+			$typifiedBy= new stdclass;
+			$typifiedBy->{'@id'} = "http://rs.tdwg.org/ontology/voc/TaxonName#typifiedBy";
+			$typifiedBy->{'@container'} = "@set";
+
+			$context->{'tm:hasMember'} = $hasMember;
+			$context->{'typifiedBy'} = $typifiedBy;
+
+			$frame = (object)array(
+				'@context' => $context
+			);	
+
+			switch ($mode)
+			{
+				case 'authors':
+					// Root on person
+					$frame->{'@type'} = 'http://rs.tdwg.org/ontology/voc/Person#Person';
+					break;
+				
+				case 'names':
+				default:
+					// Root on name
+					$frame->{'@type'} = 'http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName';
+					break;		
+			}
+
+			$data = jsonld_frame($doc, $frame);
+
+		}
+	}
+		
 	return $data;	
 }
 
@@ -225,6 +271,8 @@ function cinii_rdf($url, $cache_dir = '')
 	{
 		// fix
 		
+	
+		
 		// convert
 		$nt = rdf_to_triples($xml);
 		$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
@@ -252,7 +300,6 @@ function cinii_rdf($url, $cache_dir = '')
 			'@type' => 'http://purl.org/ontology/bibo/Article',
 			
 		);	
-
 		$data = jsonld_frame($doc, $frame);
 
 	}
@@ -356,6 +403,80 @@ function resolve_url($url)
 	
 	$done = false;
 	
+	// BioStor JSON-LD
+	if (!$done)
+	{
+		if (preg_match('/https?:\/\/biostor.org\/reference\/(?<id>\d+)/', $url, $m))
+		{
+			
+			$id = $m['id'];
+			$jsonld_url = 'https://biostor.org/api.php?id=biostor/' . $id . '&format=jsonld';
+			
+			$data =  fetch_jsonld($jsonld_url, 'biostor', $id);
+
+			if ($data)
+			{
+				$doc = new stdclass;
+				$doc->{'message-source'} = $jsonld_url;
+				$doc->{'message-format'} = 'application/ld+json';
+				$doc->message = $data;
+			}
+			
+			$done = true;
+		}
+	}
+	
+	
+	// IPNI name clusters
+	if (!$done)
+	{
+		if (preg_match('/https?:\/\/bionames.org\/ipni\/cluster\/(?<id>\d+-\d+)/', $url, $m))
+		{
+			$id = $m['id'];
+			
+			$url = 'http://localhost/~rpage/ipni-names/jsonld-clusters.php?id=' . $id;
+			$json = get($url);
+			
+			if ($json != '')
+			{
+				$data = json_decode($json);
+				if ($data)
+				{
+					$doc = new stdclass;
+					$doc->{'message-source'} = $url;
+					$doc->{'message-format'} = 'application/ld+json';
+					$doc->message = $data;
+					
+					// process possible links
+					$doc->links = array();
+					if (isset($data->dataFeedElement))
+					{
+						foreach ($data->dataFeedElement as $dataFeedElement)
+						{
+							$doc->links[] = $dataFeedElement->{'@id'};
+							
+							if (isset($dataFeedElement->{'tcom:publishedInCitation'}))
+							{
+								$doc->links[] = $dataFeedElement->{'tcom:publishedInCitation'}->{'@id'};
+							}
+						}
+					}
+					
+					if (count($doc->links) == 0)
+					{
+						unset($doc->links);
+					}
+					else
+					{
+						$doc->links = array_unique($doc->links);
+					}
+										
+				}
+			}
+						
+			$done = true;
+		}
+	}	
 	
 	// WorldCat JSON-LD
 	if (!$done)
@@ -386,7 +507,7 @@ function resolve_url($url)
 	// IPNI
 	if (!$done)
 	{
-		if (preg_match('/urn:lsid:ipni.org:names:/', $url))
+		if (preg_match('/urn:lsid:ipni.org:/', $url))
 		{
 			$data = ipni_lsid($url);
 
@@ -396,6 +517,32 @@ function resolve_url($url)
 				$doc->{'message-source'} = 'http://ipni.org/' . $url;
 				$doc->{'message-format'} = 'application/ld+json';
 				$doc->message = $data;
+				
+				
+				// process possible links
+				$doc->links = array();
+				if (isset($data->{'@graph'}[0]->authorteam))
+				{
+					foreach ($data->{'@graph'}[0]->authorteam->{'tm:hasMember'} as $hasMember)
+					{
+						$doc->links[] = $hasMember->{'@id'};
+					}
+				}
+				
+				if (isset($data->{'@graph'}[0]->{'hasBasionym'}))
+				{
+					$doc->links[] = $data->{'@graph'}[0]->{'hasBasionym'}->{'@id'};
+				}								
+				
+				if (count($doc->links) == 0)
+				{
+					unset($doc->links);
+				}
+				else
+				{
+					$doc->links = array_unique($doc->links);
+				}
+				
 			}
 			
 			$done = true;
@@ -496,13 +643,24 @@ if (0)
 	$url = 'http://dbpedia.org/resource/Distichochlamys';
 	
 	$url = 'urn:lsid:ipni.org:names:981552-1';
-	$url = 'urn:lsid:ipni.org:names:77122780-1';
+	//$url = 'urn:lsid:ipni.org:names:77122780-1';
 	
-	$url = 'https://doi.org/10.1017/S096042860000192X';
+	//$url = 'https://doi.org/10.1017/S096042860000192X';
 	
-	$url = 'https://ci.nii.ac.jp/naid/110003758629#article';
+	//$url = 'https://ci.nii.ac.jp/naid/110003758629#article';
 	
-	$url = 'http://www.worldcat.org/oclc/1281768';
+	//$url = 'http://www.worldcat.org/oclc/1281768';
+	
+	//$url = 'urn:lsid:ipni.org:authors:37149-1';
+	//$url = 'urn:lsid:ipni.org:names:77122780-1';
+	
+	$url = 'http://bionames.org/ipni/cluster/1008144-1';
+	
+	$url = 'urn:lsid:ipni.org:names:77109775-1';
+	
+	$url = 'https://biostor.org/reference/146685';
+	
+	$url = 'http://biostor.org/reference/246525';
 	
 	$doc = resolve_url($url);
 	print_r($doc);

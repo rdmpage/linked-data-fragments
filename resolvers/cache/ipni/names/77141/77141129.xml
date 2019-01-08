@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77141129-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77141129-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Anisotes mayottensis T.F.Daniel</dc:title>                        
+<dcterms:created>2014-08-04 12:32:38.0</dcterms:created>
+<dcterms:modified>2014-08-05 10:04:06.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Anisotes mayottensis</tn:nameComplete>
+<tn:genusPart>Anisotes</tn:genusPart>        
+<tn:specificEpithet>mayottensis</tn:specificEpithet>                
+<tn:authorship>T.F.Daniel</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>T.F.Daniel</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:12125-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Candollea 69(1): 51. 2014 [15 Jul 2014] </tcom:publishedIn>    
+<tn:year>2014</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Pascal 936, CAS (holo)</dc:title>
+<tn:typeSpecimen>Pascal 936, CAS</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Pascal 936, K (iso)</dc:title>
+<tn:typeSpecimen>Pascal 936, K</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Pascal 936, P (iso)</dc:title>
+<tn:typeSpecimen>Pascal 936, P</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

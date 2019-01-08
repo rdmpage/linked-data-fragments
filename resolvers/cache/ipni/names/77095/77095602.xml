@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77095602-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77095602-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Begonia arachnoidea C.I Peng, Yan Liu &amp; S.M.Ku</dc:title>                        
+<dcterms:created>2009-02-10 15:18:44.0</dcterms:created>
+<dcterms:modified>2009-02-10 16:32:29.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia arachnoidea</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>arachnoidea</tn:specificEpithet>                
+<tn:authorship>C.I Peng, Yan Liu &amp; S.M.Ku</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>C.I Peng, Yan Liu &amp; S.M.Ku</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:15619-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20000076-2"
+tm:index="2"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20004464-1"
+tm:index="3"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Bot. Stud. (Taipei) 49(4): 406 (-408, 410; figs. 1-2, 5). 2008 [Oct 2008] </tcom:publishedIn>    
+<tn:year>2008</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Ching-I Peng et al. 19762-A, IBK (holo)</dc:title>
+<tn:typeSpecimen>Ching-I Peng et al. 19762-A, IBK</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Ching-I Peng et al. 19762-A, HAST (iso)</dc:title>
+<tn:typeSpecimen>Ching-I Peng et al. 19762-A, HAST</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

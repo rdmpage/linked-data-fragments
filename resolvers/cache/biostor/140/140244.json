@@ -1,0 +1,118 @@
+{
+  "@context": {
+    "@vocab": "http:\/\/schema.org\/",
+    "sameAs": {
+      "@id": "http:\/\/schema.org\/sameAs",
+      "@container": "@set"
+    },
+    "issn": {
+      "@id": "http:\/\/schema.org\/issn",
+      "@container": "@set"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "https:\/\/biostor.org\/reference\/140244",
+      "@type": [
+        "ScholarlyArticle",
+        "itemList"
+      ],
+      "creator": [
+        {
+          "@id": "https:\/\/biostor.org\/reference\/140244#role\/1",
+          "@type": "Role",
+          "creator": {
+            "@id": "https:\/\/biostor.org\/reference\/140244#creator\/1",
+            "@type": "Person",
+            "familyName": "H.",
+            "givenName": "Nguyen Q",
+            "name": "Nguyen Q H."
+          },
+          "roleName": "1"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/140244#role\/2",
+          "@type": "Role",
+          "creator": {
+            "@id": "https:\/\/biostor.org\/reference\/140244#creator\/2",
+            "@type": "Person",
+            "familyName": "Tebbitt",
+            "givenName": "M C",
+            "name": "M C Tebbitt"
+          },
+          "roleName": "2"
+        }
+      ],
+      "datePublished": "2005-00-00",
+      "identifier": {
+        "@id": "https:\/\/biostor.org\/reference\/140244#biostor",
+        "@type": "PropertyValue",
+        "propertyID": "biostor",
+        "value": "140244"
+      },
+      "isPartOf": {
+        "@id": "http:\/\/worldcat.org\/issn\/0374-7859",
+        "issn": [
+          "0374-7859"
+        ],
+        "name": "Gardens' Bulletin, Singapore"
+      },
+      "issueNumber": "2",
+      "itemListElement": [
+        {
+          "@id": "https:\/\/biostor.org\/reference\/140244#listitem_1",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/43646197",
+            "@type": "ImageObject"
+          },
+          "position": "1"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/140244#listitem_2",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/43646198",
+            "@type": "ImageObject"
+          },
+          "position": "2"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/140244#listitem_3",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/43646199",
+            "@type": "ImageObject"
+          },
+          "position": "3"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/140244#listitem_4",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/43646200",
+            "@type": "ImageObject"
+          },
+          "position": "4"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/140244#listitem_5",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/43646201",
+            "@type": "ImageObject"
+          },
+          "position": "5"
+        }
+      ],
+      "name": "An unusual new species of Begonia (Begoniaceae) from Vietnam",
+      "pageEnd": "251",
+      "pageStart": "247",
+      "sameAs": [
+        "https:\/\/biostor.org\/reference\/140244"
+      ],
+      "url": "https:\/\/biostor.org\/reference\/140244",
+      "volume": "57"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:1014341-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:1014341-1:1.4"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.4</owl:versionInfo>
+<dc:title>Begonia acutitepala K.Y.Guan &amp; D.K.Tian</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2007-09-21 16:19:54.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia acutitepala</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>acutitepala</tn:specificEpithet>                
+<tn:authorship>K.Y.Guan &amp; D.K.Tian</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>K.Y.Guan &amp; D.K.Tian</tm:name>
+<tm:hasMember>
+<tm:TeamMember tm:index="1" tm:role="Publishing Author">
+<tm:member>
+<p:Person>
+<p:alias>
+<p:PersonNameAlias>
+<p:standardForm>K.Y.Guan</p:standardForm>
+</p:PersonNameAlias>
+</p:alias> 
+</p:Person>
+</tm:member>
+</tm:TeamMember> 
+</tm:hasMember>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:39217-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Acta Bot. Yunnan. 22(2): 129. 2000 </tcom:publishedIn>    
+<tn:year>2000</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Tian Daike 9733, KUN (holo)</dc:title>
+<tn:typeSpecimen>Tian Daike 9733, KUN</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

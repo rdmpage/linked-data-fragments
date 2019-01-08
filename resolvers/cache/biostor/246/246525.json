@@ -1,0 +1,169 @@
+{
+  "@context": {
+    "@vocab": "http:\/\/schema.org\/",
+    "sameAs": {
+      "@id": "http:\/\/schema.org\/sameAs",
+      "@container": "@set"
+    },
+    "issn": {
+      "@id": "http:\/\/schema.org\/issn",
+      "@container": "@set"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525",
+      "@type": [
+        "ScholarlyArticle",
+        "itemList"
+      ],
+      "creator": [
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#role\/1",
+          "@type": "Role",
+          "creator": {
+            "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#creator\/1",
+            "@type": "Person",
+            "familyName": "Lin",
+            "givenName": "C-W ",
+            "name": "C-W Lin"
+          },
+          "roleName": "1"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#role\/2",
+          "@type": "Role",
+          "creator": {
+            "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#creator\/2",
+            "@type": "Person",
+            "familyName": "Thomas",
+            "givenName": "D C",
+            "name": "D C Thomas"
+          },
+          "roleName": "2"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#role\/3",
+          "@type": "Role",
+          "creator": {
+            "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#creator\/3",
+            "@type": "Person",
+            "familyName": "Ardi",
+            "givenName": "W H ",
+            "name": "W H Ardi"
+          },
+          "roleName": "3"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#role\/4",
+          "@type": "Role",
+          "creator": {
+            "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#creator\/4",
+            "@type": "Person",
+            "familyName": "Peng",
+            "givenName": "C-I",
+            "name": "C-I Peng"
+          },
+          "roleName": "4"
+        }
+      ],
+      "datePublished": "2017-00-00",
+      "identifier": [
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#biostor",
+          "@type": "PropertyValue",
+          "propertyID": "biostor",
+          "value": "246525"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#doi",
+          "@type": "PropertyValue",
+          "propertyID": "doi",
+          "value": "10.26492\/gbs69(1).2017-06"
+        }
+      ],
+      "isPartOf": {
+        "@id": "http:\/\/worldcat.org\/issn\/0374-7859",
+        "issn": [
+          "0374-7859"
+        ],
+        "name": "Gardens' Bulletin Singapore"
+      },
+      "issueNumber": "1",
+      "itemListElement": [
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_1",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/56622825",
+            "@type": "ImageObject"
+          },
+          "position": "1"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_2",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/56622826",
+            "@type": "ImageObject"
+          },
+          "position": "2"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_3",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/56622827",
+            "@type": "ImageObject"
+          },
+          "position": "3"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_4",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/56622828",
+            "@type": "ImageObject"
+          },
+          "position": "4"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_5",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/56622829",
+            "@type": "ImageObject"
+          },
+          "position": "5"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_6",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/56622830",
+            "@type": "ImageObject"
+          },
+          "position": "6"
+        },
+        {
+          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_7",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/56622831",
+            "@type": "ImageObject"
+          },
+          "position": "7"
+        }
+      ],
+      "name": "Begonia ignita (sect. Petermannia, Begoniaceae), a new species with orange flowers from Sulawesi, Indonesia",
+      "pageEnd": "95",
+      "pageStart": "89",
+      "sameAs": [
+        "https:\/\/biostor.org\/reference\/246525",
+        "https:\/\/doi.org\/10.26492\/gbs69(1).2017-06"
+      ],
+      "url": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525",
+      "volume": "69"
+    }
+  ]
+}

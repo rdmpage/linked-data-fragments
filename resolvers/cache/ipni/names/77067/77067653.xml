@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77067653-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77067653-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Begonia argenteomarginata Tebbitt</dc:title>                        
+<dcterms:created>2005-09-28 07:14:55.0</dcterms:created>
+<dcterms:modified>2005-09-28 07:14:55.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia argenteomarginata</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>argenteomarginata</tn:specificEpithet>                
+<tn:authorship>Tebbitt</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Tebbitt</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:39185-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Edinburgh J. Bot. 61(2-3): 98 (-99; fig. 1). 2005 [2004 publ. 12 Aug 2005] </tcom:publishedIn>    
+<tn:year>2005</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Reeve 595, E (holo)</dc:title>
+<tn:typeSpecimen>Reeve 595, E</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Reeve 595, L (iso)</dc:title>
+<tn:typeSpecimen>Reeve 595, L</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

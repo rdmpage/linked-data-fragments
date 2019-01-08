@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77085615-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77085615-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Begonia andersonii Kiew &amp; S.Julia</dc:title>                        
+<dcterms:created>2007-12-17 09:32:12.0</dcterms:created>
+<dcterms:modified>2007-12-17 09:32:12.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia andersonii</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>andersonii</tn:specificEpithet>                
+<tn:authorship>Kiew &amp; S.Julia</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Kiew &amp; S.Julia</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:13671-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:38528-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Gard. Bull. Singapore 58(2): 204 (-207; fig. 2). 2007 [20 Jun 2007] </tcom:publishedIn>    
+<tn:year>2007</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Kiew, Julia &amp; Tan S 93269, SAR (holo)</dc:title>
+<tn:typeSpecimen>Kiew, Julia &amp; Tan S 93269, SAR</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Kiew, Julia &amp; Tan S 93269, E (iso)</dc:title>
+<tn:typeSpecimen>Kiew, Julia &amp; Tan S 93269, E</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Kiew, Julia &amp; Tan S 93269, KEP (iso)</dc:title>
+<tn:typeSpecimen>Kiew, Julia &amp; Tan S 93269, KEP</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Kiew, Julia &amp; Tan S 93269, SING (iso)</dc:title>
+<tn:typeSpecimen>Kiew, Julia &amp; Tan S 93269, SING</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

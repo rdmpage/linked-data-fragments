@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77072229-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77072229-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Begonia cucphuongensis H.Q.Nguyen &amp; Tebbitt</dc:title>                        
+<dcterms:created>2006-07-25 08:23:30.0</dcterms:created>
+<dcterms:modified>2006-07-25 08:23:30.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia cucphuongensis</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>cucphuongensis</tn:specificEpithet>                
+<tn:authorship>H.Q.Nguyen &amp; Tebbitt</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>H.Q.Nguyen &amp; Tebbitt</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20001880-2"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:39185-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Gard. Bull. Singapore 57(2): 248 (247-251; fig. 1, pl. 1b). 2005 [30 Dec 2005] </tcom:publishedIn>    
+<tn:year>2005</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>M.A.Jaramillo et al. MAJ 493, HN (holo)</dc:title>
+<tn:typeSpecimen>M.A.Jaramillo et al. MAJ 493, HN</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>M.A.Jaramillo et al. MAJ 493, CPNP (iso)</dc:title>
+<tn:typeSpecimen>M.A.Jaramillo et al. MAJ 493, CPNP</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>M.A.Jaramillo et al. MAJ 493, F (iso)</dc:title>
+<tn:typeSpecimen>M.A.Jaramillo et al. MAJ 493, F</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>M.A.Jaramillo et al. MAJ 493, MO (iso)</dc:title>
+<tn:typeSpecimen>M.A.Jaramillo et al. MAJ 493, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

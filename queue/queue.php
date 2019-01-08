@@ -141,13 +141,33 @@ function fetch($item, $add_links = false)
 				}
 				*/
 				
+				// Add links for name clusters (names and publications, for example)
+				if (preg_match('/bionames.org/', $item->value))
+				{
+					$add_links = true;
+				}
+
+				// Add author names linked to names
+				if (preg_match('/urn:lsid:ipni.org/', $item->value))
+				{
+					$add_links = true;
+				}
+				
 				if ($add_links)
 				{
 					foreach ($data->links as $link)
 					{
 						// log
 						echo "Adding " . $link . " to queue\n";
-						enqueue($link);
+						
+						if (0)
+						{
+							enqueue($link); // normally we don't force as we may already have this in data lake
+						}
+						else
+						{
+							enqueue($link, true); // only do this if we're debugging and need to force everything to load from fresh
+						}
 					}
 				}
 			}

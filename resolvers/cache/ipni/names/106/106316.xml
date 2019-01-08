@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:106316-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:106316-1:1.1.2.1.1.1.1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.2.1.1.1.1.1</owl:versionInfo>
+<dc:title>Symbegonia arfakensis Gibbs</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2018-05-04 19:16:29.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Symbegonia arfakensis</tn:nameComplete>
+<tn:genusPart>Symbegonia</tn:genusPart>        
+<tn:specificEpithet>arfakensis</tn:specificEpithet>                
+<tn:authorship>Gibbs</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Gibbs</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:3128-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Fl. Arfak Mts. [Gibbs] 149. 1917 [Jul 1917] </tcom:publishedIn>    
+<tn:year>1917</tn:year>        
+</tn:TaxonName>  
+</rdf:RDF>

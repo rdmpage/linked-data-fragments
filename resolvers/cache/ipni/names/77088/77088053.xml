@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77088053-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77088053-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Elatostema microcarpum W.T.Wang &amp; Y.G.Wei</dc:title>                        
+<dcterms:created>2008-03-18 14:54:18.0</dcterms:created>
+<dcterms:modified>2008-03-18 14:54:18.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Elatostema microcarpum</tn:nameComplete>
+<tn:genusPart>Elatostema</tn:genusPart>        
+<tn:specificEpithet>microcarpum</tn:specificEpithet>                
+<tn:authorship>W.T.Wang &amp; Y.G.Wei</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>W.T.Wang &amp; Y.G.Wei</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:11392-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:37149-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Guihaia 27(6): 811 (-812; fig. 1E-H). 2007 [Nov 2007] </tcom:publishedIn>    
+<tn:year>2007</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Y.G.Wei 07106, PE (holo)</dc:title>
+<tn:typeSpecimen>Y.G.Wei 07106, PE</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Y.G.Wei 07106, IBK (iso)</dc:title>
+<tn:typeSpecimen>Y.G.Wei 07106, IBK</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>
