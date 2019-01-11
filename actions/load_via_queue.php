@@ -279,6 +279,138 @@ $urls = array(
 );
 
 
+$urls = array(
+'http://bionames.org/ipni/cluster/1019548-1',
+'http://bionames.org/ipni/cluster/20007423-1',
+'http://bionames.org/ipni/cluster/60437281-2',
+'http://bionames.org/ipni/cluster/156693-1',
+'http://bionames.org/ipni/cluster/268060-1',
+);
+
+$urls = array(
+'https://ci.nii.ac.jp/naid/110004697577#article',
+'https://hdl.handle.net/10125/501',
+);
+
+
+$urls = array(
+'http://bionames.org/ipni/cluster/938968-1',
+'http://bionames.org/ipni/cluster/77144914-1',
+'http://bionames.org/ipni/cluster/77144914-1',
+'http://bionames.org/ipni/cluster/77146175-1',
+'http://bionames.org/ipni/cluster/104280-1',
+'http://bionames.org/ipni/cluster/77160201-1',
+);
+
+
+$urls = array(
+'http://bionames.org/ipni/cluster/60437281-2',
+'http://bionames.org/ipni/cluster/77141141-1',
+'http://bionames.org/ipni/cluster/77109580-1',
+'http://bionames.org/ipni/cluster/77109581-1',
+'http://bionames.org/ipni/cluster/77109582-1',
+'http://bionames.org/ipni/cluster/77109583-1',
+'http://bionames.org/ipni/cluster/77109584-1',
+'http://bionames.org/ipni/cluster/77109585-1',
+'http://bionames.org/ipni/cluster/77109586-1',
+'http://bionames.org/ipni/cluster/77109587-1',
+);
+
+$urls = array(
+'http://bionames.org/ipni/cluster/45334-1',
+'http://bionames.org/ipni/cluster/45336-1',
+'http://bionames.org/ipni/cluster/45339-1',
+'http://bionames.org/ipni/cluster/45337-1',
+'http://bionames.org/ipni/cluster/77141128-1',
+'http://bionames.org/ipni/cluster/893742-1',
+'http://bionames.org/ipni/cluster/77086735-1',
+);
+
+$urls = array(
+//'https://hdl.handle.net/10125/501',
+"http://bionames.org/ipni/cluster/32217-1",
+"http://bionames.org/ipni/cluster/50425784-2",
+"http://bionames.org/ipni/cluster/60434067-2",
+"http://bionames.org/ipni/cluster/688314-1",
+"http://bionames.org/ipni/cluster/688315-1",
+"http://bionames.org/ipni/cluster/688316-1",
+"http://bionames.org/ipni/cluster/688317-1",
+"http://bionames.org/ipni/cluster/688318-1",
+"http://bionames.org/ipni/cluster/688319-1",
+"http://bionames.org/ipni/cluster/688320-1",
+"http://bionames.org/ipni/cluster/688321-1",
+"http://bionames.org/ipni/cluster/688322-1",
+"http://bionames.org/ipni/cluster/688323-1",
+"http://bionames.org/ipni/cluster/688324-1",
+"http://bionames.org/ipni/cluster/688325-1",
+"http://bionames.org/ipni/cluster/688326-1",
+"http://bionames.org/ipni/cluster/688327-1",
+"http://bionames.org/ipni/cluster/688328-1",
+"http://bionames.org/ipni/cluster/688329-1",
+"http://bionames.org/ipni/cluster/688330-1",
+"http://bionames.org/ipni/cluster/688331-1",
+"http://bionames.org/ipni/cluster/688332-1",
+"http://bionames.org/ipni/cluster/688333-1",
+"http://bionames.org/ipni/cluster/688334-1",
+"http://bionames.org/ipni/cluster/688335-1",
+"http://bionames.org/ipni/cluster/688336-1",
+"http://bionames.org/ipni/cluster/688337-1",
+"http://bionames.org/ipni/cluster/688338-1",
+"http://bionames.org/ipni/cluster/688339-1",
+"http://bionames.org/ipni/cluster/688340-1",
+"http://bionames.org/ipni/cluster/77066315-1",
+"http://bionames.org/ipni/cluster/77095168-1",
+"http://bionames.org/ipni/cluster/77096034-1",
+"http://bionames.org/ipni/cluster/894707-1",
+"http://bionames.org/ipni/cluster/904464-1",
+"http://bionames.org/ipni/cluster/904465-1",
+"http://bionames.org/ipni/cluster/904466-1",
+"http://bionames.org/ipni/cluster/904467-1",
+"http://bionames.org/ipni/cluster/904468-1",
+"http://bionames.org/ipni/cluster/904469-1",
+"http://bionames.org/ipni/cluster/904470-1",
+"http://bionames.org/ipni/cluster/904471-1",
+"http://bionames.org/ipni/cluster/904472-1",
+"http://bionames.org/ipni/cluster/904473-1",
+"http://bionames.org/ipni/cluster/904474-1",
+"http://bionames.org/ipni/cluster/904475-1",
+"http://bionames.org/ipni/cluster/904476-1",
+"http://bionames.org/ipni/cluster/904477-1",
+"http://bionames.org/ipni/cluster/904478-1",
+"http://bionames.org/ipni/cluster/904479-1",
+"http://bionames.org/ipni/cluster/904480-1",
+"http://bionames.org/ipni/cluster/907673-1",
+"http://bionames.org/ipni/cluster/914127-1",
+"http://bionames.org/ipni/cluster/914128-1",
+"http://bionames.org/ipni/cluster/77144183-1",
+);
+
+
+// GBIF
+$urls = array(
+'https://www.gbif.org/occurrence/574819276',
+'http://www.gbif.org/occurrence/1318162091',
+'http://www.gbif.org/occurrence/1261835122',
+'http://www.gbif.org/occurrence/1929275314',
+);
+
+// Fungi
+$urls = array(
+'urn:lsid:indexfungorum.org:names:814659',
+'urn:lsid:indexfungorum.org:names:814692'
+);
+
+// Article in Zenodo with images
+$urls = array(
+'https://zenodo.org/record/576067',
+'https://zenodo.org/record/918933',
+'https://zenodo.org/record/918937',
+'https://zenodo.org/record/918939',
+'https://zenodo.org/record/918935',
+);
+
+
+
 $force = false;
 $force = true;
 

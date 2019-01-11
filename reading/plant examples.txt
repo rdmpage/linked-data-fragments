@@ -1,0 +1,41 @@
+Plant example
+=============
+
+
+Sequence http://www.ncbi.nlm.nih.gov/nuccore/EU489176
+
+Publication J Bot Res Inst Tex 2 (1), 165-192 (2008)  - in BioStor
+
+Voucher /specimen_voucher="Peterson, Soreng & Romaschenko 20710
+                     US"
+                     
+in GBIF http://www.gbif.org/occurrence/888945479
+- http://n2t.net/ark:/65665/367664e27-15c1-4ca9-913f-1f05e2196ef4
+
+- US 10364878
+
+- recorded by P. M. Peterson, R. J. Soreng & K. Romashchenko 
+- record number 20710
+
+[can we do this via string matching?]
+
+At least one author has ORCID http://orcid.org/0000-0002-7248-4193
+
+Anatherostipa bomanii is in IPNI, combination in BioStor 
+
+From ORCID to GBIF would be nice example
+
+Taxon is in TreeBASE, but not this study, however should check if sequence has been reused                
+
+
+——————
+
+
+http://dx.doi.org/10.3417/2006179  also in BioStor http://biostor.org/reference/160234
+
+middle author has ORCID http://orcid.org/0000-0001-5844-3945, as does last author (but no publications listed)
+
+Example sequence from genbank
+
+http://www.ncbi.nlm.nih.gov/nuccore/AY730330.1  same as http://www.gbif.org/occurrence/328284309 (match via collector code)
+

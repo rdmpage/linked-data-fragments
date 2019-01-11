@@ -24,7 +24,7 @@
 			<key>parameter</key>
 			<string>startkey</string>
 			<key>value</key>
-			<string>["urn:lsid:ipni.org:names:77088053-1"]</string>
+			<string>["urn:lsid:ipni.org:names:77088053-1#b1"]</string>
 		</dict>
 		<dict>
 			<key>inUse</key>
@@ -32,7 +32,7 @@
 			<key>parameter</key>
 			<string>endkey</string>
 			<key>value</key>
-			<string>["urn:lsid:ipni.org:names:77088053-1", {}]</string>
+			<string>["urn:lsid:ipni.org:names:77088053-1#b1", {}]</string>
 		</dict>
 		<dict>
 			<key>inUse</key>

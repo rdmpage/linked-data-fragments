@@ -1,0 +1,64 @@
+digraph {
+	graph [bb="0 0 596 501",
+		layout=dot
+	];
+	node [label="\N"];
+	subgraph "cluster_ADF8568F-D686-4332-8513-B1D5E62924BC" {
+		graph [label=""];
+		"%5"		 [IVPosition="-232,-236",
+			label=Name,
+			shape=circle];
+		"%7"		 [IVPosition="-190,-199",
+			label=Team,
+			shape=circle];
+		"%5" -> "%7";
+		"%11"		 [IVPosition="116,186",
+			label="Author IPNI",
+			shape=circle];
+		"%7" -> "%11";
+		"%15"		 [IVPosition="42,207",
+			label="Author IPNI",
+			shape=circle];
+		"%7" -> "%15";
+		"%19"		 [IVPosition="155,509",
+			label=1,
+			shape=rectangle];
+		"%11" -> "%19";
+		"%23"		 [IVPosition="296,474",
+			label=2,
+			shape=rectangle];
+		"%15" -> "%23";
+	}
+	subgraph "cluster_8BDB13E7-B906-44DE-9550-4ECDFD6453DC" {
+		graph [label=""];
+		"%27"		 [IVPosition="-124,270",
+			label="Author IPNI",
+			shape=circle];
+		"%29"		 [IVPosition="-99,389",
+			label=Label,
+			shape=rectangle];
+		"%27" -> "%29";
+	}
+	subgraph "cluster_E7424B6E-2F5C-4598-821E-048D3927BFF2" {
+		graph [label=""];
+		"%33"		 [IVPosition="433,77",
+			label=ScholarlyArticle,
+			shape=circle];
+		"%35"		 [IVPosition="490,167",
+			label=Role,
+			shape=ellipse];
+		"%33" -> "%35";
+		"%39"		 [IVPosition="496,254",
+			label=Creator,
+			shape=ellipse];
+		"%35" -> "%39";
+		"%43"		 [IVPosition="467,279",
+			label=1,
+			shape=rectangle];
+		"%35" -> "%43";
+		"%47"		 [IVPosition="396,452",
+			label=Name,
+			shape=rectangle];
+		"%39" -> "%47";
+	}
+}

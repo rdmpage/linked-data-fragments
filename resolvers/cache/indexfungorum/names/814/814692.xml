@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:TaxonName="http://rs.tdwg.org/ontology/voc/TaxonName#" xmlns:ns="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:PublicationCitation="http://rs.tdwg.org/ontology/voc/PublicationCitation#" xmlns:Common="http://rs.tdwg.org/ontology/voc/Common#">
+  <TaxonName:TaxonName rdf:about="urn:lsid:indexfungorum.org:names:814692">
+    <ns:Title>Potamomyces mulleri (Nandi &amp; A. Sinha) Nuñez Otaño, M.M. di Pasquo &amp; Bianchin.2017</ns:Title>
+    <owl:versionInfo>1.1.2.1</owl:versionInfo>
+    <TaxonName:nameComplete>Potamomyces mulleri</TaxonName:nameComplete>
+    <TaxonName:genusPart>Potamomyces</TaxonName:genusPart>
+    <TaxonName:specificEpithet>mulleri</TaxonName:specificEpithet>
+    <TaxonName:authorship>(Nandi &amp; A. Sinha) Nuñez Otaño, M.M. di Pasquo &amp; Bianchin.</TaxonName:authorship>
+    <TaxonName:basionymAuthorship>Nandi &amp; A. Sinha</TaxonName:basionymAuthorship>
+    <TaxonName:combinationAuthorship>Nuñez Otaño, M.M. di Pasquo &amp; Bianchin.</TaxonName:combinationAuthorship>
+    <TaxonName:year>2017</TaxonName:year>
+    <TaxonName:microReference>272</TaxonName:microReference>
+    <Common:publishedInCitation rdf:nodeID="bnode0" />
+    <TaxonName:rankString>sp.</TaxonName:rankString>
+    <TaxonName:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+    <TaxonName:hasBasionym rdf:resource="urn:lsid:indexfungorum.org:names:568745" />
+  </TaxonName:TaxonName>
+  <PublicationCitation:PublicationCitation rdf:nodeID="bnode0">
+    <PublicationCitation:year>2017</PublicationCitation:year>
+    <PublicationCitation:title>Palynology</PublicationCitation:title>
+    <PublicationCitation:volume>41</PublicationCitation:volume>
+    <PublicationCitation:number>2</PublicationCitation:number>
+    <PublicationCitation:pages>272</PublicationCitation:pages>
+  </PublicationCitation:PublicationCitation>
+  <TaxonName:NomenclaturalCodeTerm rdf:about="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+  <TaxonName:TaxonName rdf:about="urn:lsid:indexfungorum.org:names:568745" />
+</rdf:RDF>

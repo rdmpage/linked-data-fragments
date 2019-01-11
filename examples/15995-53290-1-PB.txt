@@ -1,0 +1,699 @@
+Phytotaxa 73: 17­30 (2012)       Article  ISSN 1179-3155 (print edition)
+www.mapress.com/phytotaxa/
+                                          PHYTOTAXA
+Copyright © 2012 Magnolia Press
+                                          ISSN 1179-3163 (online edition)
+
+Stable citations for herbarium specimens on the internet: an illustration from a
+taxonomic revision of Duboscia (Malvaceae)
+
+ROGER HYAM1, ROBYN E. DRINKWATER1 & DAVID J. HARRIS1,2
+
+1Royal Botanic Garden Edinburgh, 20a Inverleith Row, Edinburgh EH3 5LR, UK
+2Email d.harris@rbge.org.uk
+
+Abstract
+
+A taxonomic revision of Duboscia (Malvaceae) with two species, D. macrocarpa and D. viridiflora, is presented and
+used to demonstrate a mechanism for linking from revisions to specimens held in herbaria using HTTP URIs. The
+implementation of this mechanism at the Royal Botanic Garden Edinburgh (E) is used as an example. Advantages of this
+approach include near universal support amongst web-connected devices. Hindrances to widespread adoption of such an
+approach are also discussed.
+
+Introduction
+
+Citation of sources is a requirement of good scientific writing. In paper-based publications, references to other
+works are designed to be read by a user who will visit a library to retrieve the target work. As journals move
+on-line, these references are increasingly hyperlinks of the kind used elsewhere on the World Wide Web. A
+reader simply clicks the link to gain access to the target work. Although there are many works still only in
+paper form, many publishers and complex copyright issues, it seems likely this way of navigating the
+literature will become ubiquitous.
+
+    Taxonomic publications also cite specimens. These references are designed for a human to find the
+associated specimen in a herbarium. They typically consist of collector name, collector number and Index
+Herbariorum code. Many herbaria are now digitising their holdings and making them available on-line. This
+digitisation process often includes high resolution images of the specimens. It seems reasonable that the
+reader of a taxonomic publication should expect to click on a reference to a specimen and see an image of that
+specimen immediately, just as they do with references to written works.
+
+    This paper contains linked references for specimens stored at the Royal Botanic Garden Edinburgh (E).
+By clicking on the specimen reference in a web browser or PDF viewer, the user will be taken to a web page
+containing more information and a zoomable, high-resolution image of the specimen. It is our intention that
+this paper serve as an example of how to link to our specimens, and--should it prove successful--a model for
+how other herbaria could provide specimen linking mechanisms. In this paper we concentrate on the linking
+method used at RBGE, and we do not attempt to link to the specimens cited from other collections.
+
+Introduction to the revision
+
+Duboscia (Bocquillon, 1866) is a small genus of trees in the family Malvaceae (formerly placed in Tiliaceae),
+found in forest from the Ivory Coast to the Democratic Republic of Congo. We follow the APG III (2009)
+circumscription of Malvaceae in this paper but note that this is not followed by all authors, for example Cheek
+(2007). Duboscia has been placed in the subfamily Grewioideae (Bayer & Kubitzki 2003). We are not aware
+of any DNA sequences for the genus and it was not included in molecular studies of the Malvaceae s.l. (Judd
+& Manchester 1997, Bayer et al. 1999 and Alverson et al. 1999).
+
+Accepted by Christopher Davis: 2 Nov. 2012; published online in PDF: 26 Nov. 2012  17
+    During inventory work in the Sangha Trinational area (a series of adjacent protected areas along the
+borders of the Central African Republic, Cameroon and Republic of Congo), it was noted that there was some
+disagreement between the observations of the one of the authors (DJH) and the literature, as to how many
+species were in the genus and how to separate them. In particular, the key by Keay (1958) did not work
+(Harris 2002), and the number of species in the genus varied from one to three.
+
+    Duboscia macrocarpa was considered as the only species in the genus by Cheek et al. (2004, 2011), Keay
+(1989), Lebrun & Stork (1997) and Hawthorne & Jongkind (2006), with D. viridiflora in synonymy. Lebrun
+& Stork (2003) subsequently changed their view of Duboscia to include two species, D. macrocarpa and D.
+polyantha, which they had previously placed in synonymy with D. macrocarpa. D. polyantha was also
+accepted by Louppe et al. (2008), who additionally recognised D. macrocarpa and D. viridiflora making a
+total of three species. In contrast, Harris (2002), Sosef et al. (2006), Harris & Wortley (2008) and Wilczek
+(1963) all treated the genus Duboscia as having two species, D. macrocarpa and D. viridiflora. These
+differences in taxonomic opinion were the reason for carrying out the revision of this genus, as part of a wider
+investigation on the provision of botanical information online (Drinkwater, 2011).
+
+Results of taxonomic revision
+
+From examination of material at BR, E, K and WAG it was concluded that the genus consists of two species:
+Duboscia macrocarpa and D. viridiflora. In general the two species can be easily separated from each other
+with a combination of characters. However, there were a few specimens which proved harder to determine,
+and for which the characters seemed to be intermediate. These were typically poorer quality, infertile
+specimens, and fallen leaves collected from under the tree. Seedling and sapling specimens were also difficult
+to determine with certainty. Floral and fruit characters give the clearest separation between these two species,
+although stem and leaf pubescence was often enough to separate them. Unless otherwise stated, colours are
+given for dried material.
+
+    The inflorescences consist of 0.5­3 cm long peduncles subtending a cluster of bracts below the pedicels
+(which are much shorter than the peduncles) and flowers. When examining the inflorescences, care should be
+taken to distinguish bracts from sepals. The petals are extremely small and not usually visible in specimens
+without dissecting the flower. The flowers of the two species show a difference in the colour of the calyx in
+dried specimens. Those of D. macrocarpa are quite distinct in that most specimens present obvious dense
+brown hairs. In D. viridiflora, the hairs on the outside of the calyx are shorter and lighter coloured. The
+inflorescences of the two species are also distinguishable by the difference in the length of the peduncle,
+which was long and slender in D. viridiflora and shorter and stouter in D. macrocarpa.
+
+    The fruit also provides good characters for separating the two species. The fruit of D. macrocarpa has a
+dense cover of stellate hairs, which can be readily seen when examined with a ×10 hand lens, and this fits
+some descriptions of the species in the literature that describe the fruit as velvety. Compared to this, the fruits
+of D. viridiflora have a more granular or rough appearance when examined with a ×10 hand lens. However,
+when the fruit of the two species are viewed with a higher magnification (e.g. ×40), the differences in the
+surface textures become harder to distinguish as the granular texture of D. viridiflora under ×10 is revealed as
+stellate hairs at the higher magnification.
+
+    Some characters of the leaves and petioles are useful for distinguishing the two species, however they are
+best used in conjunction with fertile characters, and when comparing specimens of the two species. D.
+macrocarpa tends to have a shorter petiole, less than 1 cm long. The petiole and main stems are covered with
+dense stellate hairs and long straight hairs, reddish-brown in colour. In D. viridiflora the petiole tends to be
+longer (over 1 cm long) and, along with the main stems, is covered in shorter stellate hairs; straight hairs are
+absent in this species. The density of stellate hairs on young twigs can also be useful in separating the two
+species. The stellate hairs are shorter and sparser in D. viridiflora and longer and denser in D. macrocarpa.
+The differences in the types of hair present can also be seen on the leaves of the two species, with D.
+
+18 · Phytotaxa 73 © 2012 Magnolia Press  HYAM ET AL.
+macrocarpa having both straight and stellate hairs on the underside of the leaf, particularly on the tertiary
+veins, whereas D. viridiflora only has stellate hairs, which tend to have shorter arms than those seen in D.
+macrocarpa. The hairs of D. macrocarpa seem to be lost easily in dried material, with older stems often
+appearing hairless; the hairs of D. viridiflora are retained in dried material.
+
+    There were also differences noticed in the texture of the leaves, with the specimens of D. viridiflora often
+having a papery feel to them, and a smoother underside. The specimens of D. macrocarpa appear to have
+thicker leaves, with a rougher texture to the underside. With sterile material, those characters given above for
+leaves and stems are not always clear, e.g. it became apparent when taking measurements of the specimens
+that the length of the petiole was often on the cusp of being one side of 1cm or the other, with both species
+having some measurements just above, or just below the lengths stated in the description and key. The
+presence of hairs is also sometimes difficult to determine, particularly in older specimens, from which they
+often seem to have been lost. All these sterile characters are most useful when comparing individuals of the
+two species, rather than for identifying a single specimen, because the differences are relative, and most
+apparent when specimens of the two are compared side by side.
+
+    Another character used in the literature, is the number of flowers and bracts per inflorescence. The
+combination of the number of bracts and flowers was used by Keay (1958) to separate two species of
+Duboscia, although this character was later described as "unworkable in both the field and the herbarium" by
+Harris (2002). Observations made during the examination of the specimens showed the numbers of bracts and
+flowers to vary within each species, and to overlap between the two species so we could not use these
+numbers to separate the species.
+
+    As the genus has not been previously included in molecular studies, it would be useful if this were done,
+to clarify the position of the genus within Malvaceae. As the two species grow sympatrically and overlap in
+habitat type, it would be interesting to identify specimens where there were difficulties in determining the
+species, to see whether there is evidence of hybridisation or introgression.
+
+    The specimens cited in this revision as held at E, are listed in Table 1, along with Hypertext Transport
+Protocol Uniform Resource Identifiers (HTTP URIs) to the specimens on the Royal Botanic Garden
+Edinburgh's herbarium web site. Clicking on these URIs will lead to more information about the specimens
+and images, provided an internet connection is available. Similar links are also included in the Additional
+Specimens Examined section for each species.
+
+Taxonomic Treatment
+Duboscia Bocquillon (1866: 50).
+
+Type:--Duboscia macrocarpa Bocquillon.
+
+Tree, with fluted bole. Leaves: alternate, entire, dentate in young specimens, often whitish below.
+Inflorescences: axillary cymes opposite leaves, enclosed by involucral bracts, resembling sepals. Flowers:
+sepals boat-shaped, corolla very small. Fruit: ellipsoid, ribbed, fibrous, indehiscent.
+
+Key to the species of Duboscia
+
+1. Inflorescence reddish-brown in colour. Fruit with short, stellate hairs, which give it a velvety appearance at ×10
+     magnification. Short stellate hairs on twigs, denser than in D. viridiflora. Long straight hairs on twigs, occasionally
+     falling off in older material. Petioles usually less than 1 cm long .........................................................D. macrocarpa
+
+- Inflorescence grey-green in colour. Fruit with very short hairs which give it a granular appearance at ×10
+     magnification. Short, stellate hairs on twigs, sparser than in D. macrocarpa. Long straight hairs on twigs absent.
+     Petioles usually more than 1 cm long .......................................................................................................D. viridiflora
+
+STABLE CITATIONS FOR HERBARIUM SPECIMENS  Phytotaxa 73 © 2012 Magnolia Press · 19
+TABLE 1. HTTP URIs of cited specimens held at Edinburgh (E)
+
+Species         Collector Name and No.                                    HTTP URI
+                                                                            http://data.rbge.org.uk/herb/E00435912
+D. macrocarpa Goldsmith, M. 207                                             http://data.rbge.org.uk/herb/E00435914
+                                                                            http://data.rbge.org.uk/herb/E00435922
+D. macrocarpa Harris, D.J. 5093                                             http://data.rbge.org.uk/herb/E00435918
+                                                                            http://data.rbge.org.uk/herb/E00435917
+D. macrocarpa Harris, D.J. 5488                                             http://data.rbge.org.uk/herb/E00435913
+                                                                            http://data.rbge.org.uk/herb/E00435920
+D. macrocarpa Harris, D.J. & Fay, J.M. 829                                  http://data.rbge.org.uk/herb/E00435911
+                                                                            http://data.rbge.org.uk/herb/E00435923
+D. macrocarpa Harris, D.J. & Fay, J.M. 848                                  http://data.rbge.org.uk/herb/E00435919
+                                                                            http://data.rbge.org.uk/herb/E00435924
+D. macrocarpa Harris, D.J. & Fay, J.M. 1540                                 http://data.rbge.org.uk/herb/E00435925
+                                                                            http://data.rbge.org.uk/herb/E00435915
+D. viridiflora  Fangounda, J. 506                                           http://data.rbge.org.uk/herb/E00435916
+                                                                            http://data.rbge.org.uk/herb/E00435926
+D. viridiflora  Fay, J.M. & Harris, D.J. 8548                               http://data.rbge.org.uk/herb/E00435921
+                                                                            http://data.rbge.org.uk/herb/E00435909
+D. viridiflora  Harris, D.J. 4960                                           http://data.rbge.org.uk/herb/E00435908
+                                                                            http://data.rbge.org.uk/herb/E00421511
+D. viridiflora  Harris, D.J. 6016                                           http://data.rbge.org.uk/herb/E00421512
+                                                                            http://data.rbge.org.uk/herb/E00421507
+D. viridiflora  Harris, D.J. 7716                                           http://data.rbge.org.uk/herb/E00421510
+                                                                            http://data.rbge.org.uk/herb/E00421508
+D. viridiflora  Harris, D.J. 7969                                           http://data.rbge.org.uk/herb/E00421509
+
+D. viridiflora  Harris, D.J. & Fay, J.M. 30
+
+D. viridiflora  Harris, D.J. & Fay, J.M. 730
+
+D. viridiflora  Moukassa, G. 43
+
+D. viridiflora  Nzolani Silaho, F.O. 393
+
+D. viridiflora  Nzolani Silaho, F.O. Moutsamboté, J.-M. & Harris, D.J. 2
+
+D. viridiflora  Remis, M. 112-95
+
+D. viridiflora  Zenker, G.A. 923
+
+D. viridiflora  Zenker, G.A. 1799
+
+D. viridiflora  Zenker, G.A. 1925
+
+D. viridiflora  Zenker, G.A. 3268
+
+D. viridiflora  Zenker, G.A. 3310
+
+D. viridiflora  Zenker, G.A. 4165
+
+FIGURE 1. Duboscia macrocarpa. The short, stout petiole and long, straight hairs on the petiole and stem can be clearly seen.
+
+20 · Phytotaxa 73 © 2012 Magnolia Press                                   HYAM ET AL.
+1. Duboscia macrocarpa Bocq., Bocquillon (1866: 50). Type:--GABON, 1862, G. Mann 1759 (holotype K!).
+
+= Duboscia polyantha Pierre ex Chev., Chevalier (1917: 81). Type:--GABON, 1896, Klaine 354 (holotype K!).
+
+= Diplanthemum brieyi De Wild., De Wildeman (1915: 65). Type:--DEMOCRATIC REPUBLIC OF CONGO, no date,
+J. de Brieyi 226 (holotype BR!).
+
+Tree to 30 m; trunk to 90 cm dbh, often fluted; bark grey-brown; young twigs with dense reddish-brown
+stellate and long straight hairs. Leaves alternate, entire, to 24 cm long, to 11 cm wide; petioles usually less
+than 1cm in length, usually with dense reddish-brown straight hairs; medium-bright green above, greyish
+green and rough below, tertiary veins with stellate and straight hairs. Inflorescence an axillary cyme opposite
+leaves. Flowers enclosed by involucral bracts, pale green to dull pink in colour when fresh, reddish-brown
+when dried; pedicel less than 1 cm long, stout in appearance, bract pale green, calyx pink-reddish brown when
+fresh, turning darker when dried, covered with dense brown hairs. Fruits indehiscent, ribbed, brown-green
+when fresh, red-orange when dried, surface looks velvety, with stellate hairs visible at ×10 magnification.
+
+    Distribution:--Angola, Cameroon, Central African Republic, Republic of Congo, Democratic Republic
+of Congo, Equatorial Guinea, Gabon, Nigeria (Map, Fig. 2.)
+
+    Habitat:--Forest including disturbed areas and river banks.
+    IUCN conservation assessment:--Least Concern (LC). This species has a large range, is locally
+common and recent herbarium specimens have been collected.
+
+FIGURE 2. Distribution map for Duboscia macrocarpa.
+
+    Additional specimens examined:--ANGOLA: Cabinda, J. Gossweiler 6560 (K); Cabinda, Chiluango,
+1919, J. Gossweiler 7656 (K). CAMEROON: Ma'an, road Ma'an- Bitoto, plantations bordering road just
+before entering Ma'an ville, 2º22' N, 10º38' E Alt: 500m, 12 February 2001, T.R. van Andel M. Menguele
+3136 (WAG); Dipikar, road Bongola-Ntem River, 2º17' N, 9º57' E Alt: 60m, 2 July 2001, T.R. van Andel B.
+Mva 3811 (WAG); Bitya, 3º00' N, 12º21' E, 19 January 1921, G.L. Bates 1702 (K); North bank of Lobe river,
+9km S of Kribi, 2º52' N, 9º54' E, 14 October 1968, J.J. Bos 3085 (K, WAG); E of Bwambe Catholic Mission,
+6 km S of Kribi, 2º53' N, 9º54' E, 8 November 1968, J.J. Bos 3252 (WAG); About 13km from Kribi, Edea
+road, 3º01' N, 9º57' E, 7 January 1969, J.J. Bos 3569 (K, WAG); E of Kribi S bank of Kienke river, 2º56' N,
+9º55' E, 12 May 1969, J.J. Bos 4492 (K, WAG); Kribi beach, about 500 m N. of Kienke river mouth, 2º56' N,
+9º54' E, November 1969, J.J. Bos 5894 (WAG); 8 km SE of Ebaka, 50km NW of Bertoua, 4º53' N, 13º22' E
+Alt: 680m, 23 May 1961, F.J. Breteler1420 (K, WAG); About 10 km N of Kribi. Secondary forest, 11 July
+1994, F.J. Breteler12773 (WAG); Korup national park, 5º01' N, 8º48' E Alt: 100m, 14 December 2005, X.M.
+van der Burgt, J. Motoh 820 (K, WAG); Kribi, beach north of the Kienke river mouth, 2º57' N, 9º54' E,
+September 1997, X.M. van der Burgt 202 (WAG); Korup National Park, P plot, subplot 23I, 5º01' N, 8º48' E
+Alt: 100m, 14 December 2005, X.M. van der Burgt, J. Motoh 820 (K,WAG); environs de Douala, 4º03' N,
+9º42' E, June 1917, A.J.B. Chevalier, F. Fleury (leg) 33161 (WAG); Groß-Batanga, 2º51' N, 9º52' E, 6 August
+
+STABLE CITATIONS FOR HERBARIUM SPECIMENS  Phytotaxa 73 © 2012 Magnolia Press · 21
+1890, M.J. Dinklage, 713 (WAG); 2º51' N, 9º52' E, 21 December 1891, M.J. Dinklage, 713 (WAG); Douala,
+4º03' N, 9º42' E, Fleury 33161 (K); 1935, Foury 91 (K); Lac Lobeke Reserve, ca. 40 km west of Djembe. In
+Gilbertiodendron dewevrei forest north of road, 2º09' N, 15º44' E, 18 October 1998, D.J. Harris, J.N.
+Asonganyi,; A. Koufani & J.-.M. Onana 5997 (E); km 5 Yokadouma-Moloundou road, 3º28' N, 15º04' E Alt:
+530m, 27 November 1982, A.P.M. de Kruif 736 (WAG); Left bank Boumba river 8km SW of Madjwe, which
+is 36km from Yokadouma to Moloundou, 3º13' N, 14º55' E Alt: 470m, 20 July 1965, A.J.M. Leeuwenberg,
+6197 (K, WAG); 14km to the W of Masea (village 50km SSW of Yokadouma), 3º09' N, 14º43' E, 2 July
+1963, R. Letouzey 5387 (K, WAG); Ekumbe Mofako, Alt: 200m, 21 May 1994, J.-.M. Mbani 385 (K); Etwa,
+95km NE of Yaounde, 4º33' N, 12º03' E, February 1914, G.W.J. Mildbraed 8189 (K); 28km on road
+Mbalmayo, 3º30' N, 11º30' E, 23 September 1953, B. Mpom 55 (K); 10km west of Banga, 4º25' N, 9º23' E
+Alt: 50m, 30 October 1985, D.W. Thomas 4882 (K); Campo, 2º22' N, 9º49' E, 1976, J. Webb 401 (K); 16 km
+on the road from Ebolowa to Minkok, 2º57' N, 11º15' E Alt: 640m, 12 June 1975, J.J. de Wilde 8287 (K,
+WAG); Hill facing N'Kolandom, 4 km on the road from N'Koemvone to Akoakas (counting from the crossing
+at N'Koemvone), 2º48' N, 11º10' E Alt: 750m, 3 February 1975, J.J.F.E. de Wilde 7950 (WAG); 16 km on the
+road from Ebolowa to Minkok. Short cut on the road to M'Balmayo, 2º57' N, 11º15' E Alt: 640m, 12 June
+1975, J.J.F.E. de Wilde 8287 (K, WAG); 40Km S of Badjob, 50km SW of Eseka near the Nyong river, 3º08'
+N, 10º37' E, 18 December 1963, W.J.O. de Wilde, B.E.E. de Wilde-Duyfjes 1530 (K, WAG); 40 km S. of
+Badjob, 50 km SW. of Eséka, near the Nyong river, 3º28' N, 10º30' E, 18 December 1963, W.J.O. de Wilde,
+B.E.E. de Wilde-Duyfjes 1530 (K, WAG); Nyong river near the new bridge about 65km SSW of Eseka, 3º06'
+N, 10º34' E, 18 June 1964, W.J.O. de Wilde, B.E.E. de Wilde-Duyfjes 2741 (K, WAG); c. 50 km South of
+Badjob, c. 60 km Southwest of Eseka. Along the Njong river, near the new bridge, 3º28' N, 10º30' E Alt:
+200m, 18 June 1964, W.J.O. de Wilde, B.E.E. de Wilde-Duyfjes 2741 (K, WAG,). CENTRAL AFRICAN
+REPUBLIC: Bai Hoku, 25 km E of Bayanga, 2º52' N, 16º28' E, 1995, M. Goldsmith 207 (E); Ndakan gorilla
+study area on trail from Njeke stream to Mambele clearing. Lowland forest with Entandrophragma spp,
+Drypetes gossweileri and Irvingia excelsa. Precp. 1400 m, 2º22' N, 16º12' E Alt: 350m, 2 June 1988, D.J.
+Harris, J.M. Fay 829 (E); Dzanga-Sangha Reserve. Ndakan gorilla study area from camp to above the
+Kénnié confluence on the East bank of the Sangha River. Riparian forest with Uapaca heudelotii, Irvingia
+smithii and Trichilia retusa. Precp. 1400 m, 2º21' N, 16º09' E Alt: 350m, 30 July 1988, D.J. Harris, J.M. Fay
+848 (E, WAG); Dzanga-Sangha Reserve. 45 km South of Lidjombo, East bank of Sangha River from
+NDAKAN. Riparian forest with Uapaca heudelotii and Irvingia smithii. Precp. 1400 m, 2º21' N, 16º09' E Alt:
+350m, 4 November 1988, D.J. Harris, J.M. Fay 1540 (E); Ca. 10 km from Kongana on the road to Bayanga,
+20 km SE of Bayanga, 2º47' N, 16º23' E, 7 June 1994, D.J. Harris 5093 (E); Sangha-Mbaere, Kongana camp,
+22 km SE of Bayanga, 2º47' N, 16º26' E, 7 March 1996, D.J. Harris 5488 (E); Sangha-Mbaere, Bai Hoku
+Camp, 25 km ESE of Bayanga, 2º52' N, 16º28' E, 15 May 1996, D.J. Harris 5529 (E); Safari camp at mouth
+of Babongo stream, 2º59' N, 16º13' E, 2 January 1998, D.J. Harris 5736 (E); Boukoko, 3º54' N, 17º56' E,
+1949, C. Tisserant (Équipe) 1595 (WAG); C. Tisserant 16 (K, WAG); C.Tisserant 1595 (K, WAG);
+Boukoko, 3º54' N, 17º56' E, C. Tisserant 1708 (K); Bayanga, 2º54' N, 16º16' E, 5 March 1976, Wraber 101
+(K). REPUBLIC OF CONGO: Old road from PK257 to Mayoko, 21 May 1965, A. Bouquet 1380 (K); 13km
+N of Placongo village, 2º56'02'' S, 13º18'24'' E Alt: 467m, 6 October 2009, E. Kami, C. Couch; X.M. van der
+Burgt, P. Manguila, P. Rostrand & R. Mayama 72 (K); région de Mayoko, chantier forestier Aubeville, 4º16'
+S, 13º33' E, 15 March 1973, P. Sita, 3538 (WAG). DEMOCRATIC REPUBLIC OF CONGO: Ganda Sundi,
+4º52'00'' S, 12º52'00'' E, 1913, C. de Briey 226 (BR); Bodjambi (territory Bomongo), 1º14' N, 18º18' E, 16
+March 1959, C.M. Evrard 5962 (BR, K); Libenge, 3º39' N, 18º38' E, October 1930, J. Le Brun 1531 (BR).
+EQUATORIAL GUINEA. Sofoge, 1º20' N, 9º28' E, 21 May 1998, Y. Y. Azizet Issembé 25 (WAG); Nkolon
+Fangan, Alt: 450m, 30 January 1908, G. Tessmann 306 (K); Bebai, 27 August 1908, G. Tessmann 512 (K).
+GABON: 14 km SE of Mitzic, FOREENEX forest exploitation, road from FOREENEX forestry camp to
+Madouaka village, c. 0º41'53'' N, 11º38'31'' E Alt: 481m, 7 November 2009, P. Bissiengou, F.J. Breteler, R.
+Niangadouma & J.-.N. Boussiengui 746 (WAG); c. 27 km Kessipoughou-Lifouta Gare, 0º59' S, 12º57' E Alt:
+600m, 24 November 1993, F.J. Breteler, B.J.M. Breteler-Klein Breteler, 12332 (WAG); about 5 km on road
+
+22 · Phytotaxa 73 © 2012 Magnolia Press  HYAM ET AL.
+FIGURE 3. Duboscia viridiflora, with longer petiole and short, stellate hairs on the petiole.
+
+from Yombi to Mandji, 1º25' S, 10º35' E, 17 September 1997, F.J. Breteler, M.E. Leal, J.-M. Moussavou & G.
+Nang-Essouma 13961 (WAG); Makande surroundings, c. 65 km SSW of Booué, 0º41' S, 11º55' E, 4 February
+1999, F.J. Breteler, G. Caballé, Y. Azizet Issembé, J.-M. Moussavou & O. Pascal 14915 (WAG); Makande
+surroundings, about 65 km SSW of Booué, 0º41' S, 11º55' E, 11 February 1999, F.J. Breteler, G. Caballé, Y.
+Azizet Issembé, J.-M. Moussavou, O. Pascal & R.H.M.J. Lemmens 15001 (WAG); CIRMF (Lopé), 0º18' S,
+11º40' E, 26 October 1987, J.J. Dibata 337 (WAG); c. 1 km southwest of Akaka camp, 2º13'38'' S, 9º40'40'' E
+Alt: 5m, 15 May 2005, D.J. Harris, K.E. Armstrong & R. Niangadouma 8668 (E, LBV, WAG); Doudou
+Mountains, Chantier SNF-Bakker, c. 2º51'30'' S, 10º30'33'' E Alt: 100m, 1 December 2003, C.C.H. Jongkind,
+J.L.C.H. van Valkenburg, R. Niangadouma & A.J. Mabicka 5866 (WAG); Environs de Libreville, 0º25' N,
+9º27' E, 1895, T.-J. Klaine 192 (P); 1896, T.-J. Klaine 354 (K, WAG); environs de Libreville, 0º25' N, 9º27' E,
+4 November 1895, T.-J. Klaine 354 (WAG); Libreville, 0º23' N, 9º27' E, 12 February 1902, T.-J. Klaine 2702
+(K); 0º23' N, 9º27' E, T.-J. Klaine 3251 (K); Area around Nyanga, 1914, G. Le Testu 1999 (K); Massif du
+Chaillu, Waka National Park, eastern slope canyon, 1º10' S, 11º05' E, 11 March 2005, M.E. Leal, D. Nguema
+Ekomo, A. Moundounga & P. Bissiemou 403 (WAG); Louga river, 30km N of forestry camp Waka, which is
+situated about 30km SE of Sindara, 0º56' S, 10º55' E, 11 December 1983, A.M. Louis, F.J. Breteler & J. de
+Bruijn 1275 (K); Muni river, 1º00' N, 9º38' E, August 1862, G. Mann 1759 (K); Lope reserve S of Ayem,
+0º25' S, 11º30' E Alt: 200m, 7 March 1989, G. McPherson G. 13731 (K, WAG); Réserve de la Lopé, au sud
+d'Ayem; chantier SOFORGA, 0º25' S, 11º30' E Alt: 200m, 7 March 1989, G.D. McPherson 13731 (WAG);
+Eastern border of Lopé-Okanda Reserve, along roads S of SEG lumber camp, W of Offoué River, 0º27' S,
+11º45' E Alt: 200m, 17 May 1992, G.D. McPherson 15788 (WAG); Near Booué-Makokou road, north of
+Koumameyong, along SHM lumber roads, 0º25' N, 11º55' E Alt: 200m, 31 January 1993, G.D. McPherson
+16120 (WAG); East of Lastoursville, near Bambidie, C.E.B. chantier. Tall forest, 0º49' S, 13º08' E Alt: 250m,
+28 September 1996, G.D. McPherson 16734 (MO, WAG); Ivindo National Park, Massouna 2000, route
+rivière Djidji, 0º10' S, 12º20' E, 2 May 2004, A. Moungazi, 1611 (WAG); chantier Rougier-Océan, Oveng,
+0º41' N, 11º09' E, 9 May 1985, J.M. Reitsma, B. Reitsma, F.J. Breteler & A.M. Louis 942 (E, WAG);
+
+STABLE CITATIONS FOR HERBARIUM SPECIMENS  Phytotaxa 73 © 2012 Magnolia Press · 23
+Secondary vegetation between Ntoum and Donguila, 0º15' N, 9º47' E, 20 May 1986, J.M. Reitsma, B. Reitsma
+2260 (WAG); Primary rain forest, Réserve de la Lopé, chantier SOFORGA; inventory, 0º30' S, 11º33' E, 26
+June 1986, J.M. Reitsma, B. Reitsma 2368 (WAG); Libreville. Arboretum de Sibang, Parcelle I, 0º25' N, 9º28'
+E Alt: 50m, 11 January 2000, E.L.A.N. Simons, R. Westerduijn 642 (WAG); c. ½km N of Evouta, 1º03'30'' S,
+11º11'28'' E Alt: 400m, 19 March 2007, M.S.M. Sosef, J.J. Wieringa, B. Nziengui, P. Bissiengou & E.P.
+Ngombou Mamadou 2416 (WAG); Komi, near Sindara. Forest with Aucoumea, 1º04' S, 10º48' E Alt: 100 -
+400m, 17 June 1986, D.W. Thomas, C.M. Wilks 6400 (WAG); Lopé-Okanda Reserve. Grand-Débardage Trail.
+Secondary growth bosque, c. 0º11'56'' S, 11º34'34'' E Alt: 238m, 2 November 2000, G.M. Walters, J.R. Stone,
+B. Nziengui & J.-M. Moussavou 482 (WAG); Reserve de Lopé-Okanda, SEGC, Rue des Cascades, 0º11' S,
+11º34' E Alt: 200m, 31 July 1990, L.J.T. White, 57 (WAG); Rabi-Kounga, 7 km NNE of 'Checkpoint-Charlie',
+1º48' S, 9º51' E Alt: 30m, 22 May 1992, J.J. Wieringa, T. Nzabi, 1028 (WAG); c.35 km ENE of Lastoursville,
+11 km on forestry road from Bambidie to Akieni, 0º39'19'' S, 12º58'32'' E Alt: 320m, 29 January 2008, J.J.
+Wieringa, P.H. Hoekstra, R. Niangadouma & J.-N. Boussiengui 6253 (WAG); Lopé Forest Reserve. About 1
+km. from the S.E.G.C. station, 0º11' S, 11º36' E Alt: 150m, 28 November 1995, J.J.F.E. de Wilde, L.J.G. van
+der Maesen, H.P. Bourobou & J.-.M. Moussavou 11488 (WAG); Lope reserve, 0º10' S, 11º35' E, April 1985,
+L. Williamson 59 (K). NIGERIA. Ikom, 5º58' N, 8º42' E, 24 November 1934, R. Catterall 58 (K); Ikom
+district. Afi river forest reserve, path from Boje to Iso Bendiga, 6º15' N, 8º51' E, 14 December 1950, R.W.J.
+Keay 28256 (K); Oban, 5º19' N, 8º34' E, 15 January 1912, P.A. Talbot, 1293 (K).
+
+2. Duboscia viridiflora (K.Schum.) Mildbr., Mildbraed (1922: 59). Diplanthemum viridiflorum K.Schum.,
+    Schumann (1897: 234). Type:--CAMEROON, Yaounde, no date, Zenker 764 (holotype K!).
+
+Tree to 25 m; trunk to 180 cm dbh, often deeply fluted; bark grey-brown; young twigs with short, sparse
+stellate, red-brown hairs. Leaves alternate, entire, to 22 cm long and 10 cm wide; petioles usually more than 1
+cm in length; papery, medium-dark green, glossy above, pale green below, tertiary veins with sparse stellate
+hairs. Inflorescence an axillary cyme opposite leaves. Flowers enclosed by involucral bract, pale green in
+colour, when fresh, grey-green when dried; pedicel, more than 1 cm, slender in appearance; bract pale-pinkish
+green in fresh material, calyx pale green to white/cream. Fruits indehiscent, often ribbed, green-brown when
+fresh, red-orange when dried, surface looks granular when examined with a ×10 hand lens, stellate hairs only
+visible at or above ×40 magnification.
+
+    Distribution:--Cameroon, Central African Republic, Republic of Congo, Democratic Republic of
+Congo, Equatorial Guinea, Gabon, Ghana, Guinea, Ivory Coast, Nigeria. (Map, Fig. 4.)
+
+    Habitat:--Forest, including disturbed areas and river banks.
+    IUCN conservation assessment:--Least Concern (LC). This species has a large range, is locally
+common and recent herbarium specimens have been collected.
+
+FIGURE 4. Distribution map for Duboscia viridiflora.  HYAM ET AL.
+
+24 · Phytotaxa 73 © 2012 Magnolia Press
+    Additional specimens examined:--CAMEROON: Main road to Kumba mile 53, 4º50' N, 9º20' E, 6
+April 1960, J.K. Adebusuyi 44012 (K); Batanga, 2º51' N, 9º52' E, 19 April 1895, G.L. Bates 185 (K); 6.5km
+S of Kribi, Gr. Batanga road, 2º53' N, 9º54' E, 30 October 1968, J.J. Bos 3174 (K, WAG); Yokadouma, 3º31'
+N, 15º03' E, 20 June 1961, F.J. Breteler 1530 (K, WAG); N'Kolbisson, 3º53' N, 11º27' E Alt: 700m, 12
+March 1962, F.J. Breteler 2627 (K, WAG); 20 km W of Bertoua, between 1 and 10km N of Mbang, 4º34' N,
+13º30' E Alt: 660m, 14 May 1962, F.J. Breteler 2944 (K, WAG); Kribi, beach north of the Kienke river
+mouth, 2º57' N, 9º54' E, September 1997, X.M. van der Burgt 446 (WAG); Bassin du Mungo, 4º27' N, 9º34'
+E, June 1917, A.J.B. Chevalier, F. Fleury (leg) 33443 (WAG); Boa Bakandu reserve, 4º48' N, 9º28' E Alt:
+250m, 12 November 1986, M. Etuge, D.W. Thomas, 384 (K, WAG); Bassin du Mungo village of Mayouka,
+at 59km on the railway line to the N, 4º17' N, 9º24' E, July 1917, Fleury 33443 (K); West on Sangha river,
+precp. 1400 mm. Lowland forest with Entandrophragma spp. Sterculiaceae and Megaphynium
+macrostachyum, 2º21' N, 16º07' E Alt: 350m, 30 December 1987, D.J. Harris, J.M. Fay 30 (E); Lobeke
+Reserve. Road head at start of path to Small Bai, 29 October 1998, D.J. Harris, J.N. Asonganyi, A. Koufani &
+J.-M. Onana 6016 (E); Dengdeng, 5º12' N, 13º31' E, July, Jacques-Félix, H. 4597 (K, WAG); Dengdeng,
+5º12' N, 13º31' E, July 1939, H. Jacques-Félix 4597 (WAG); 15km E of Dimako on Bertoua to Doume road,
+4º22' N, 13º42' E, 11 June 1965, A.J.M Leeuwenberg 5835 (K, WAG); Km 8 of road Yokadouma-
+Moloundou, 3º27' N, 15º03' E Alt: 520m, 15 July 1965, A.J.M. Leeuwenberg 6146 (WAG); 1 km W. of Kola,
+a village N. of Loum..4 º49' N 9 º45' E, 4º49' N, 9º45' E Alt: 500m, 26 April 1972, A.J.M. Leeuwenberg,
+C.C. Berg 9741 (WAG); Bolifamba, 4º10' N, 9º18' E, March 1929, T.D. Matland 584 (K); Etwa 105km NE
+of Yaounde, 4º30' N, 12º13' E, February 1914, G.W.J. Mildbraed 8220 (K); Dengdeng, 5º12' N, 13º31' E, P.
+Nana 80 (K); A 4,5 km au Nord du village d'Ebom, piste villageoise, 3º06' N, 10º43' E Alt: 400m, 24
+September 1996, D. Ndoum 127 (WAG); N'Kolbisson, 3º53' N, 11º27' E Alt: 600m, 30 May 1964, W.J.O. de
+Wilde, B.E.E. de Wilde-Duyfjes 2632 (K, WAG); Centre agronomique N'Kolbisson, 8 km W. of Yaoundé,
+3º53' N, 11º27' E Alt: 600m, 30 May 1964, W.J.O. de Wilde, B.E.E. de Wilde-Duyfjes 2632 (K, WAG);
+Bipindi, 3º05' N, 10º25' E, G.A. Zenker 130 (WAG); Yaounde, 3º25' N, 11º31' E Alt: 800m, G.A. Zenker, A.
+Staudt 280 (K); 3º25' N, 11º31' E, G.A. Zenker 764 (K); Bipindi, 3º05' N, 10º25' E, 1896, G.A. Zenker 923
+(E, K, WAG); 3º05' N, 10º25' E, 1898, G.A. Zenker 1799 (E, K, WAG); 3º05' N, 10º25' E, 1899, G.A. Zenker
+1925 (E, K); 3º05' N, 10º25' E, 1907, G.A. Zenker 3268 (E, K); 3º05' N, 10º25' E, 1907, G.A. Zenker 3310 (E,
+K); 3º05' N, 10º25' E, 1911, G.A. Zenker 4165 (E, K). CENTRAL AFRICAN REPUBLIC: Kongana camp,
+22 km SE of Bayanga, 0.9 km from Kongana bridge on the North side of the road, 2º47' N, 16º26' E, 3 April
+1996, J. Fangounda 506 (E); Ndakan gorilla study area, 2º21' N, 16º09' E Alt: 385m, 25 July 1988, J.M. Fay,
+D.J. Harris 8548 (E); Fay, J.M. 8723 (WAG); Sangha Economique Prefecture: Lindjombo, within 3 km
+radius of lindjombo, 2º42' N, 16º07' E Alt: 385m, 1 November 1988, J.M. Fay, D.J. Harris 8723 (WAG);
+Ndakan, gorilla study area, East bank of Sangha river from Riparian forest with Irvingia smithii and Trichilia
+retusa. Precp. 1400 mm, 2º23' N, 16º07' E Alt: 350m, 22 May 1988, D.J. Harris, J.M. Fay 730 (E); Kongana
+research camp, 25 km SE of Bayanga, 2º47' N, 16º25' E, 27 May 1994, D.J. Harris 4960 (E); W of Sangha
+River, 12 km NE of Bayanga, 3º01' N, 16º11' E, 13 May 2001, D.J. Harris 7716 (E); Bai Hoku Camp, 25 km
+ESE of Bayanga, 2º52' N, 16º28' E, 16 October 1995, M. Remis 112-95 (E); Berberati, 4º16' N, 15º47' E, C.
+Tisserant s.n. (K). CONGO: 2º10' N, 16º30' E, 10 June 2002, D.J. Harris 7969 (E); 12.5 km NE of Kabo,
+2º07'31'' N, 16º10'39'' E, 1 September 2006, G. Moukassa 43 (E); 3 km E of Kabo (PROGEPP HQ), 2º03'14''
+N, 16º05'52'' E, 17 August 2006, F.O. Nzolani Silaho, J.-M. Moutsamboté & D.J. Harris 2 (E); 2 km S of
+Kabo, 2º02'42'' N, 16º06'22'' E, 3 October 2006, F.O. Nzolani Silaho 393 (E). DEMOCRATIC REPUBLIC
+OF CONGO: Yangambi, 0º46' N, 24º27' E, 5 November 1959, C.M. Evrard 372 (BR, K); Yambata, 2º26' N,
+22º02' E, 1914, s. de Giorgi 1713 (BR, K); Epulu, 1º25' N, 28º35' E Alt: 750m, 8 March 1982, Hart, T.B. 219
+(BR, K); 1º25' N, 28º35' E Alt: 750m, 20 March 1982, T.B. Hart 231 (BR, K); 1º25' N, 28º35' E Alt: 750m, 5
+May 1982, T.B. Hart 274 (BR, K); Yangambi, 0º46' N, 24º27' E, 26 June 1958, A. Léonard 822 (BR, K,
+WAG); Temena, 27 May 1937, C. Leontowitch 3 (BR, K); Budjala, 2º39' N, 19º42' E, 31 June 1937, C.
+Leontowitch 4 (BR, K); Yangambi, 0º46' N, 24º27' E, 1937, J. Louis 3606 (BR, K); 0º46' N, 24º27' E, J.
+Louis 4118 (BR, K); 0º46' N, 24º27' E, 23 April 1938, J. Louis 9051 (BR, K); 0º46' N, 24º27' E Alt: 470m, 26
+
+STABLE CITATIONS FOR HERBARIUM SPECIMENS  Phytotaxa 73 © 2012 Magnolia Press · 25
+August 1938, J. Louis 11011 (BR, K). EQUATORIAL GUINEA: 'Bata - Utonde: Estrada kms 21­22. Area da
+povoacao de Ebeevang.', 13 June 1991, M.F. de Carvalho 4730 (WAG). GABON: forestry concession
+Bordamur, c. 50 km NE of Mitzic, c. 1º10'18'' N, 11º53'36'' E Alt: 550m, 11 February 2003, M.S.M. Sosef,
+C.P.C. Versteegh & B. Nziengui 2005 (WAG). GHANA. G.K. Akpabal 928 (K); Kade A.R.S, 6º09' N, 0º55'
+W, 25 March 1970, A.A. Enti 40150 (K, WAG); Atewa Range Forest Reserve, along Old Geological Survey
+road, c. 6º14'06'' N, 0º33'00'' W Alt: 400m, 26 October 1994, C.C.H. Jongkind, H.H. Schmidt & D.K. Abbiw
+1807 (WAG); Ofin Head waters reserve, 7º01' N, 1º28' W Alt: 457m, November 1934, C. Vigne 3419 (K).
+GUINEA: Simandou range, W of Pic de Fon, E of Banko village, 8º31'30'' N, 8º56'12'' W Alt: 580m, 15
+August 2008, P.K. Haba, X.M. van der Burgt, C. Couch & A. Traore 220 (K); Nimba mountains, plot
+WHRS23 near Tuo, 7º35'39'' N, 8º29'51'' W Alt: 580m, 6 July 2008, Nimba Botanic Team 459 (WAG).
+IVORY COAST: A. Aubréville 1039 (K); 1932, A. Aubréville 1039 (WAG); Tai Forest, 20 km S of Tai, left
+side of the Audrenisrou, 5º43' N, 7º24' W, 15 June 1981, M.M. Barink 27 (WAG); F.C. de la Niégré, sud,
+5º19' N, 6º11' W, 18 June 1996, C. Chatelain, H.G. Téré 1289 (WAG); Abidjan, seeds from Tai, 13
+December 1967, F. Hallé 1298 (K, WAG); Abidjan, seeds from Tai, 30 October 1967, F. Hallé 1298 (K);
+Road Sassandra to Monogaga. Rocky soil, 4º55' N, 6º20' W, 12 April 1973, J. de Koning 1455 (WAG);
+About 60km North of Sassandra, left bank Davo river, East of Bayo, 5º18' N, 6º00' W Alt: 100m, 27 January
+1959, A.J.M. Leeuwenberg 2597 (K, WAG); Keibli, 5º59' N, 7º28' W, 1 June 1986, A. de Rouw 330 (WAG);
+surroundings of Kodjina, 15 km south west of Abengourou, 6º39' N, 3º37' W, 28 July 1969, C. Versteegh,
+R.W. den Outer 578 (WAG). NIGERIA. Sapoba, 6º06' N, 5º53' E, s.n. (K); Okomu forest reserve, Nikrowa
+rest house, 6º14' N, 5º21' E, 18 December 1927, J.P.M. Brenan 8537 (K); Sapoba, 6º06' N, 5º53' E, 1932,
+J.D. Kennedy 2326 (K); Ikom district, Afi forest reserve, near pillar fd4 on the bank of the river Nwuwuan,
+6º11'54'' N, 8º58'36'' W, 23 May 1952, M.G. Latilo 30995 (K); Cross river North forest reserve between miles
+155 and 156, 5º34' N, 8º44' E, 11 June 1952, M.G. Latilo 31824 (K); Oban, 5º19' N, 8º34' E, 1912, P.A.
+Talbot 1729 (K).
+
+Discussion on persistent identifiers for cited specimens
+
+There has been much debate concerning adoption of identifiers for specimens in biological collections
+(Riccardi et al. 2009; Cryer et al. 2009). Here we limit ourselves to describing our own solution, and
+explaining why we adopted it.
+
+    Our primary aim is enabling the author to provide a link for reader to access more information about the
+specimens that they are citing. The difference between linking to the original specimens used by the author,
+and searching for all information about a particular specimen, is an important one. Linking requires there to be
+a resolution mechanism that will take the reader to the original source of the data--the herbarium where the
+specimen is curated. Searching may return more information, but does not discriminate between the original
+source and other resources that (although useful) may not have been used by the author.
+
+    Linking is also an important, machine-readable way for the author to credit the sources of research
+materials. The links act as tags, which could be used to discover which papers cite which specimens. In future,
+this could also be used to build links from specimens to the papers they are cited in.
+
+    For linking to work, the identifiers used for specimens need to be resolvable via a mechanism that is
+widely available and stable for the foreseeable future. If there is no resolution mechanism, or the piece of
+software the author is using does not understand the resolution mechanism or fails, then there is no way of
+retrieving the original specimen data.
+
+    We started with the premise that institutions, in this case RBGE, are responsible for curating all the
+collections they hold, and making them available to the research community in perpetuity. RBGE has already
+been doing this for over three hundred years. Today this includes making information, including images and
+data, available on-line. Although the institution can use third party service providers it is the one ultimately
+responsible for maintaining consistent availability of the data on the specimens it holds. In the last three
+
+26 · Phytotaxa 73 © 2012 Magnolia Press  HYAM ET AL.
+centuries, it has not had agreements with suppliers that have lasted more than a few decades, so its
+implementation of any solution to the linking problem has to be as independent as possible from any single
+supplier, if the solution is to persist.
+
+    Resources are always limited, and so our priority is to produce a simple, easy to maintain system that will
+work today and for the foreseeable future. A system will only attract the level of adoption necessary, to ensure
+the widespread uptake that will warrant its continued maintenance and eventual migration to future
+technologies, if it is shown to be of value now.
+
+    We have therefore adopted the use of Linked Data (Bizer et al. 2009) compliant HTTP URIs (Hypertext
+Transfer Protocol Uniform Resource Identifier) as our identifier technology. These represent the standard
+technology used to identify resources on the World Wide Web. They can be thought of as a subset of the
+regular web addresses familiar from the location bar on your web browser, but importantly they follow the set
+of recommendations given by the World Wide Web Consortium for "Cool URIs" (Ayers and Völkel 2008).
+For our purposes they have four key features:
+
+1. They hide the underlying server technology used to publish the data thus enabling us to change the way
+    we manage and publish data without changing the identifier (i.e. they can be maintained despite
+    technological and organisational change).
+
+2. They carry out a process called content negotiation. This means the response from our server depends on
+    the client who is requesting the information. Someone using a web browser will receive a web page whilst
+    a machine harvesting metadata will receive raw data.
+
+3. They will work on all web-connected devices currently available (e.g. desktops, laptops, tablets, eBook
+    readers, smart phones) and likely on those to be introduced in the foreseeable future.
+
+4. They depend for their resolution only on the existing web infrastructure currently available from multiple
+    suppliers. We could move to a new hosting provider, a new internet service provider or a new domain
+    name registrar. The only thing we depend on is continued legal rights to the rbge.org.uk domain name.
+
+    A major hindrance to the widespread adoption of HTTP URIs is a social one. There is a perception that,
+because HTTP URIs have been used to identify ephemeral resources, and broken links are often encountered
+whilst surfing the web, the technology must be inherently fragile. In fact, it is no more or less stable than any
+other identifier technology. For HTTP URIs to be resolvable to original data, the current World Wide Web
+infrastructure needs to be either maintained, or replaced by something that is compatible. The same applies to
+any other identifier technology--their resolution mechanisms need to be maintained or replaced with
+compatible versions. Currently, all identifier technologies use the World Wide Web and HTTP URIs as their
+only link to original data.
+
+    The lack of confidence in HTTP URIs is particularly important for publishers who may be reluctant to
+include them in publications. We hope that this paper will go some way to correcting this perception, and
+encourage other herbaria to adopt best practice in deploying HTTP URIs. In future, it may be worthwhile to
+establish a registry of stable specimen identifiers, possibly under the auspices of GBIF. We would welcome
+this.
+
+    Should social and technical support for the resolution of identifiers fail, all that would remain is the
+identifier consisting of a unique string of characters. In this case HTTP URIs provide an adequate mechanism
+for ensuring we are creating globally unique character strings for each of the specimens held at RBGE, so that
+they can be found using the search engines of the future.
+
+How to use our specimen identifiers
+
+Our identifiers for herbarium specimens take the form http://data.rbge.org.uk/herb/E00421503 where the part
+after the final forward slash is the barcode number which is physically on the specimen.
+
+STABLE CITATIONS FOR HERBARIUM SPECIMENS  Phytotaxa 73 © 2012 Magnolia Press · 27
+    The two key principles in citing our identifiers are to ensure that at least the first reference to a specimen
+is hyperlinked and that the HTTP URI itself is visible to the reader somewhere in the document if it is printed.
+The way we have done it in this exemplar paper is as follows:
+
+1. A reference to the specimen has been cited in the conventional way, as specified by the publication's
+    guidelines, and made a hyperlink to the IH herbarium code E, using our HTTP URI as the link.
+
+2. We have included a table that lists our HTTP URIs as the last column.
+3. Whenever our HTTP URI are included where they can be seen by the reader they are hyperlinked with the
+
+    URI set as the HTTP URI itself.
+4. Our identifiers are always cited in full including 'http://' at the beginning.
+5. The identifiers are case sensitive.
+6. We have avoided including our identifiers directly in prose text, as this would have made it hard to read.
+
+Implementation Notes
+
+Our implementation of this technology is very simple. We are, like many herbaria, in the fortunate position of
+having had a barcoding policy in place for the last 15 years, and so we have half a million databased
+specimens bearing unique barcode numbers, and we make data from our current collection management
+system available online, so that we have a herbarium catalogue with the equivalent of one webpage per
+specimen.
+
+    To implement the identifiers on top of this existing system, we set up a subdomain '/data' of our
+institutional domain name rbge.org.uk. This took a few minutes using our domain name registrar's
+administration panel and cost nothing. We then set up a website containing a simple script that detects whether
+or not a request is coming from a web browser, and then either redirects to the existing web page, or to raw
+data generated by second simple script. This was done on our existing web server at no additional cost. The
+whole identifier resolution system could be set up in less than a day by a competent web engineer, provided
+the prerequisites are in place. Should other herbaria wish to implement a similar solution, we would be happy
+to share our experience.
+
+    Our current system does not track version information. The user is presented with the current data RBGE
+holds on the specimen not the data held at the time any referring paper was written. Changes to information
+about specimens are typically additive (in the form of determination slips) and dated, so we don't see this as
+being of major concern. Should versioning become an issue in the future then we would continue using the
+same HTTP URIs as identifiers, but return multiple versions of metadata, linked together using the standard
+Dublin Core terms: "hasVersion"; "isVersionOf"; "replaces"; and "isReplacedBy" (DCMI Usage Board,
+2012).
+
+    In the UK the Engineering and Physical Sciences Research Council (EPSRC) has created a policy
+framework on research data that sets out a series of expectations for how institutions should manage their data
+(EPSRC, 2011). Expectation number 5 refers to the use of "robust digital object identifiers" for digital objects.
+It seems likely to us that other funding bodies will follow EPSRC's lead, and have similar expectations of the
+institutions they fund. We believe that the linking mechanism proposed here can provide a simple but suitably
+robust mechanism for herbarium specimens.
+
+Acknowledgements
+
+We would like to thank the biodiversity informatics community at RBGE for designing databases and entering
+data. The suggestions we are making here can only be made on the back of an enormous amount of work. In
+particular Martin Pullan is thanked for establishing the herbarium catalogue the HTTP URIs link to. At Kew
+
+28 · Phytotaxa 73 © 2012 Magnolia Press  HYAM ET AL.
+and Wageningen, Xander van der Burgt, Martin Cheek, George Gosline and Jan Wieringa provided us with
+encouragement and electronic specimen data. The curators of BR, K and WAG are thanked for allowing us
+access to their herbaria. Two anonymous people and Vince Smith made comments which improved the
+manuscript in review.
+
+References
+
+Alverson, W.S., Whitlock, B.A., Nyffler, R., Bayer, C. & Baum, D.A. (1999) Phylogeny of the Core Malvales: Evidence
+     from ndhF Sequence Data. American Journal of Botany 86: 1474-1486.
+
+Angiosperm Phylogeny Group [APG III] (2009) An update of the Angiosperm Phylogeny Group classification for the
+     orders and families of flowering plants: APG III. Botanical Journal of the Linnean Society 161: 105­121. DOI:
+     10.1111/j.1095-8339.2009.00996.x
+
+Ayers, D. & Völkel, M. (2008) Cool URIs for the Semantic Web. Available from: http://www.w3.org/TR/cooluris/.
+     (accessed: January 2012).
+
+Bayer, C., Fay, M.F., De Bruijn, A.Y., Savolainen, V., Morton, C.M., Kubitzki, K., Alverson, W.S. & Chase, M.W. (1999)
+     Support for an expanded family concept of Malvaceae within a recircumscribed order Malvales: a combined
+     analysis of plastid atpB and rbcL DNA sequences. Botanical Journal of the Linnean Society 129: 267-303.
+
+Bayer, C. & Kubitzki, K. (2003) Malvaceae In: Kubitzki, K. & Bayer, C. (eds) The Families and Genera of Vascular
+     Plants V: Flowering plants. Dicotyledons: Malvales, Capparales and Non-betalain Caryophyllales. Springer-
+     Verlag, Berlin, pp. 225-311.
+
+Bizer, C., Heath, T., and Berners-Lee, T. (2009) Linked Data - The Story So Far. International Journal on Semantic Web
+     and Information Systems 5 (3): 1­22. doi:10.4018/jswis.2009081901.
+
+Bocquillon, H.T. (1866) Mémoire sur le groupe des Tiliacées. Adansonia; recueil (périodique) d'observations botaniques
+     7: 2-64.
+
+Cheek, M., Pollard, B., Darbyshire, I., Onana, J., & Wild, C. (2004) The Plants of Kupe, Mwanenguba and the Bakossi
+     Mountains, Cameroon, Royal Botanic Gardens, Kew, Richmond, Surrey, 508 pp.
+
+Cheek, M. (2007) Sparmanniaceae. In: Heywood, V.H., Brummitt, R.K., Culham, A. & Seberg, O. Flowering Plant
+     Families of the World. Royal Botanic Gardens, Kew, London, pp. 307-308.
+
+Cheek, M., Harvey, Y. & Onana, J. M. (2011) The Plants of Mefou Proposed National Park, Yaounde, Cameroon: A
+     Conservation Checklist. Royal Botanic Gardens, Kew, Richmond, Surrey, 252 pp.
+
+Chevalier, A. (1917) La forêt et les bois du Gabon. Fascicule 9 of Vegetaux Utiles de l'Afrique Tropicale Francaise.
+     Challamel, Paris, 315 pp.
+
+Cryer, P., Hyam, R., Miller, C., Nicolson, N., Ó Tuama, E., Page, R., Rees, J., Riccardi, G., Richards, K. & White, R.
+     (2009) Adoption of Persistent Identifiers for Biodiversity Informatics: Recommendations of the GBIF LSID GUID
+     Task Group. Global Biodiversity Information Facility Secretariat, November 6.
+
+DCMI Usage Board (2012) DCMI Metadata Terms. Available from: http://dublincore.org/documents/2012/06/14/dcmi-
+     terms/ (accessed: July 2012).
+
+De Wildeman, E. (1915) Decades novarum specierum Florae Congolensis, Bulletin du Jardin botanique de l'État à
+     Bruxelles 5: 65.
+
+Drinkwater, R.E. (2011) e-Taxonomy: exploring the publication of botanical inventory and revisional work online.
+     University of Edinburgh, 95 pp.
+
+EPSRC (2011) EPSRC Policy Framework on Research Data Available From: http://www.epsrc.ac.uk/about/standards/
+     researchdata/Pages/expectations.aspx (accessed: July 2012).
+
+Harris, D.J. (2002) The vascular plants of the Dzanga-Sangha Reserve, Central African Republic. National Botanic
+     Garden of Belgium, Meise, 273 pp.
+
+Harris, D.J. & Wortley, A.H. (2008) Sangha trees. Royal Botanic Garden Edinburgh, Edinburgh, 300 pp.
+Hawthorne, W.D. & Jongkind, C.C.H. (2006) Woody Plants of Western African Forests: A guide to the forest trees,
+
+     shrubs and lianes from Senegal to Ghana. Royal Botanic Gardens, Kew, London, 1023 pp.
+Judd, W.S. & Manchester S.R. (1997) Circumscription of Malvaceae (Malvales) as determined by a preliminary cladistic
+
+     analysis of morphological, anatomical, palynological, and chemical characters. Brittonia 49(3): 384-405.
+Keay, R.W.J. (1958) in Hutchinson, J. & Dalziel, J. Flora of West Tropical Africa. Second Edition.Volume 1 part 2, 533
+
+     pp.
+Keay, R. (1989) Trees of Nigeria. Clarendon Press, Oxford, 476 pp.
+Lebrun J.P. & Stork, A. (1997) Enumeration des Plantes a Fleurs d'Afrique Tropicale vol. 4, Ville de Geneve, Geneva,
+
+     712 pp.
+Lebrun, J.P. & Stork, A. (2003) Tropical African Flowering Plants: Ecology and Distribution vol. 1. Ville de Geneve,
+
+STABLE CITATIONS FOR HERBARIUM SPECIMENS  Phytotaxa 73 © 2012 Magnolia Press · 29
+     Geneva, 797 pp.
+Louppe, D., Oteng-Amoako, A. & Brink, M. (2008) Plant Resources of Tropical Africa: Timbers 7 (1). Backhuys
+
+     Publishers, Leiden, 704 pp.
+Mildbraed, J. (1922) Wissenschaftliche Ergebnisse der zweiten Deutschen Zentral-Afrika-Expedition, 1910-1911.
+
+     Klinghardt and Biermann, Leipzig, 202 pp.
+Riccardi, G., White, R., Cryer, P., Hyam, R., Miller, C., Nicolson, N., Ó Tuama, E., Page, R., Rees, J. & Richards, K.
+
+     (2009) Persistent Identifiers for Biodiversity Informatics: Status and Likely Directions. Proceedings of TDWG 2009,
+     Abstracts. Available from: http://www.tdwg.org/proceedings/issue/current (accessed: January 2012).
+Schumann, K. (1897) Tiliaceae in Engler, A. & Prantl, K. (eds) Die Natürlichen Pflanzenfamilien. Die Natürlichen
+     Pflanzenfamilien. Nachträge zum II - IV Teil. Verlag von Wilhelm Engelmann, Leipzig, 234 pp.
+Sosef, M., Wieringa, J., Jongkind, C., Achoundong, G., Azizet Issembe, Y., Bedigian, D., van den Berg, R., Breteler, F.,
+     Cheek, M., Degreef, J., Faden, R., Goldblatt, P., van der Maesen, L., Ngok Banak, L., Niangadouma, R., Nzabi, T.,
+     Nziengui, B., Rogers, Z., Stevart, T., van Valkenburg, J., Walters, G. & de Wilde, J. (2006) Checklist of Gabonese
+     Vascular Plants. National Botanic Garden of Belgium, 438 pp.
+Wilczeck, R. (1963) Tiliaceae. in Wilczeck, R. et al. Flore du Congo, du Rwanda et du Burundi. Institut national pour
+     l'étude agronomique du Congo, Bruxelles, pp. 38­40.
+
+30 · Phytotaxa 73 © 2012 Magnolia Press  HYAM ET AL.
+

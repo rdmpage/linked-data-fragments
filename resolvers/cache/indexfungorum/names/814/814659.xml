@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:TaxonName="http://rs.tdwg.org/ontology/voc/TaxonName#" xmlns:ns="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:PublicationCitation="http://rs.tdwg.org/ontology/voc/PublicationCitation#" xmlns:Common="http://rs.tdwg.org/ontology/voc/Common#">
+  <TaxonName:TaxonName rdf:about="urn:lsid:indexfungorum.org:names:814659">
+    <ns:Title>Neozygites linanensis X. Zhou &amp; C. Montalva2017</ns:Title>
+    <owl:versionInfo>1.1.2.1</owl:versionInfo>
+    <TaxonName:nameComplete>Neozygites linanensis</TaxonName:nameComplete>
+    <TaxonName:genusPart>Neozygites</TaxonName:genusPart>
+    <TaxonName:specificEpithet>linanensis</TaxonName:specificEpithet>
+    <TaxonName:authorship>X. Zhou &amp; C. Montalva</TaxonName:authorship>
+    <TaxonName:basionymAuthorship>X. Zhou &amp; C. Montalva</TaxonName:basionymAuthorship>
+    <TaxonName:year>2017</TaxonName:year>
+    <TaxonName:microReference>310</TaxonName:microReference>
+    <Common:publishedInCitation rdf:nodeID="bnode0" />
+    <TaxonName:rankString>sp.</TaxonName:rankString>
+    <TaxonName:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+  </TaxonName:TaxonName>
+  <PublicationCitation:PublicationCitation rdf:nodeID="bnode0">
+    <PublicationCitation:year>2017</PublicationCitation:year>
+    <PublicationCitation:title>Mycotaxon</PublicationCitation:title>
+    <PublicationCitation:volume>132</PublicationCitation:volume>
+    <PublicationCitation:number>2</PublicationCitation:number>
+    <PublicationCitation:pages>310</PublicationCitation:pages>
+  </PublicationCitation:PublicationCitation>
+  <TaxonName:NomenclaturalCodeTerm rdf:about="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+</rdf:RDF>

@@ -1,0 +1,329 @@
+{
+  "@context": {
+    "@vocab": "http:\/\/schema.org\/",
+    "sameAs": {
+      "@id": "http:\/\/schema.org\/sameAs",
+      "@container": "@set"
+    },
+    "issn": {
+      "@id": "http:\/\/schema.org\/issn",
+      "@container": "@set"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "https:\/\/biostor.org\/reference\/247624",
+      "@type": [
+        "ScholarlyArticle",
+        "itemList"
+      ],
+      "creator": {
+        "@id": "https:\/\/biostor.org\/reference\/247624#role\/1",
+        "@type": "Role",
+        "creator": {
+          "@id": "https:\/\/biostor.org\/reference\/247624#creator\/1",
+          "@type": "Person",
+          "familyName": "Cusset",
+          "givenName": "C",
+          "name": "C Cusset"
+        },
+        "roleName": "1"
+      },
+      "datePublished": "1983-00-00",
+      "identifier": {
+        "@id": "https:\/\/biostor.org\/reference\/247624#biostor",
+        "@type": "PropertyValue",
+        "propertyID": "biostor",
+        "value": "247624"
+      },
+      "isPartOf": {
+        "@id": "http:\/\/worldcat.org\/issn\/0240-8937",
+        "issn": [
+          "0240-8937"
+        ],
+        "name": "Bulletin du Mus\u00e9um National d'Histoire Naturelle Section B,Adansonia, botanique, phytochimie"
+      },
+      "issueNumber": "4",
+      "itemListElement": [
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_1",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13957289",
+            "@type": "ImageObject"
+          },
+          "position": "1"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_2",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13955090",
+            "@type": "ImageObject"
+          },
+          "position": "2"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_3",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13954172",
+            "@type": "ImageObject"
+          },
+          "position": "3"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_4",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13954921",
+            "@type": "ImageObject"
+          },
+          "position": "4"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_5",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13957087",
+            "@type": "ImageObject"
+          },
+          "position": "5"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_6",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13955913",
+            "@type": "ImageObject"
+          },
+          "position": "6"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_7",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13960070",
+            "@type": "ImageObject"
+          },
+          "position": "7"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_8",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13953829",
+            "@type": "ImageObject"
+          },
+          "position": "8"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_9",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13959705",
+            "@type": "ImageObject"
+          },
+          "position": "9"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_10",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13958290",
+            "@type": "ImageObject"
+          },
+          "position": "10"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_11",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13957930",
+            "@type": "ImageObject"
+          },
+          "position": "11"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_12",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13955843",
+            "@type": "ImageObject"
+          },
+          "position": "12"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_13",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13954926",
+            "@type": "ImageObject"
+          },
+          "position": "13"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_14",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13956195",
+            "@type": "ImageObject"
+          },
+          "position": "14"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_15",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13957901",
+            "@type": "ImageObject"
+          },
+          "position": "15"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_16",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13957192",
+            "@type": "ImageObject"
+          },
+          "position": "16"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_17",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13961319",
+            "@type": "ImageObject"
+          },
+          "position": "17"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_18",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13955147",
+            "@type": "ImageObject"
+          },
+          "position": "18"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_19",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13959987",
+            "@type": "ImageObject"
+          },
+          "position": "19"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_20",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13959073",
+            "@type": "ImageObject"
+          },
+          "position": "20"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_21",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13960736",
+            "@type": "ImageObject"
+          },
+          "position": "21"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_22",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13955347",
+            "@type": "ImageObject"
+          },
+          "position": "22"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_23",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13954416",
+            "@type": "ImageObject"
+          },
+          "position": "23"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_24",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13953663",
+            "@type": "ImageObject"
+          },
+          "position": "24"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_25",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13960543",
+            "@type": "ImageObject"
+          },
+          "position": "25"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_26",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13954640",
+            "@type": "ImageObject"
+          },
+          "position": "26"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_27",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13958742",
+            "@type": "ImageObject"
+          },
+          "position": "27"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_28",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13956630",
+            "@type": "ImageObject"
+          },
+          "position": "28"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_29",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13959441",
+            "@type": "ImageObject"
+          },
+          "position": "29"
+        },
+        {
+          "@id": "https:\/\/biostor.org\/reference\/247624#listitem_30",
+          "@type": "ListItem",
+          "item": {
+            "@id": "https:\/\/biodiversitylibrary.org\/page\/13958556",
+            "@type": "ImageObject"
+          },
+          "position": "30"
+        }
+      ],
+      "name": "Contribution \u00e0 l'\u00e9tude des Podostemace\u0153 : 7. Ledermanniella Engl. sous-genre Phyllosoma C. Cusset",
+      "pageEnd": "390",
+      "pageStart": "361",
+      "sameAs": [
+        "https:\/\/biostor.org\/reference\/247624"
+      ],
+      "url": "https:\/\/biostor.org\/reference\/247624",
+      "volume": "5"
+    }
+  ]
+}

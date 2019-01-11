@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77109581-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77109581-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Stenanona columbiensis Aristeg. ex G.E.Schatz &amp; Maas</dc:title>                        
+<dcterms:created>2011-02-16 09:12:02.0</dcterms:created>
+<dcterms:modified>2011-02-16 09:12:02.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Stenanona columbiensis</tn:nameComplete>
+<tn:genusPart>Stenanona</tn:genusPart>        
+<tn:specificEpithet>columbiensis</tn:specificEpithet>                
+<tn:authorship>Aristeg. ex G.E.Schatz &amp; Maas</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Aristeg. ex G.E.Schatz &amp; Maas</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:267-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:26232-1"
+tm:index="1"
+tm:role="Publishing Ex Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:5879-1"
+tm:index="2"
+tm:role="Publishing Ex Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Blumea 55(3): 208 (fig. 1, map). 2010 [Dec 2010] </tcom:publishedIn>    
+<tn:year>2010</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Fuchs et al. 22042, US (holo)</dc:title>
+<tn:typeSpecimen>Fuchs et al. 22042, US</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Fuchs et al. 22042, COL (iso)</dc:title>
+<tn:typeSpecimen>Fuchs et al. 22042, COL</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Fuchs et al. 22042, U (iso)</dc:title>
+<tn:typeSpecimen>Fuchs et al. 22042, U</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

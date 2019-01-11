@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:904480-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:904480-1:1.4"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.4</owl:versionInfo>
+<dc:title>Ledermanniella torrei C.Cusset</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2008-05-20 14:51:42.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Ledermanniella torrei</tn:nameComplete>
+<tn:genusPart>Ledermanniella</tn:genusPart>        
+<tn:specificEpithet>torrei</tn:specificEpithet>                
+<tn:authorship>C.Cusset</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>C.Cusset</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:1931-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Bull. Mus. Natl. Hist. Nat., B, Adansonia Sér. 4, 5(4): 386. 1984 [1983 publ. 1984] </tcom:publishedIn>    
+<tn:year>1984</tn:year>        
+</tn:TaxonName>  
+</rdf:RDF>

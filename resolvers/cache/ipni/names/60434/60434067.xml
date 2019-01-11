@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:60434067-2">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:60434067-2:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Ledermanniella prasina J.J.Schenk &amp; D.W.Thomas</dc:title>                        
+<dcterms:created>2004-07-02 18:58:58.0</dcterms:created>
+<dcterms:modified>2014-06-07 04:55:40.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Ledermanniella prasina</tn:nameComplete>
+<tn:genusPart>Ledermanniella</tn:genusPart>        
+<tn:specificEpithet>prasina</tn:specificEpithet>                
+<tn:authorship>J.J.Schenk &amp; D.W.Thomas</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>J.J.Schenk &amp; D.W.Thomas</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20003690-2"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:27676-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Novon 14(2): 227 (-232; fig. 1). 2004 [4 Jun 2004] </tcom:publishedIn>    
+<tn:year>2004</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, MO (holo)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, K (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, K</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, LBV (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, LBV</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, MO (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, NY (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, NY</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, OSC (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, OSC</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, P (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, P</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, SCA (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, SCA</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, WAG (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, WAG</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>D. W. Thomas 11550, YA (iso)</dc:title>
+<tn:typeSpecimen>D. W. Thomas 11550, YA</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

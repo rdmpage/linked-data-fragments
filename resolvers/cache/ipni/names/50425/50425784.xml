@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:50425784-2">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:50425784-2:1.1.2.1.1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.2.1.1.1</owl:versionInfo>
+<dc:title>Ledermanniella onanae Cheek</dc:title>                        
+<dcterms:created>2003-12-05 09:54:41.0</dcterms:created>
+<dcterms:modified>2014-07-08 15:46:37.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Ledermanniella onanae</tn:nameComplete>
+<tn:genusPart>Ledermanniella</tn:genusPart>        
+<tn:specificEpithet>onanae</tn:specificEpithet>                
+<tn:authorship>Cheek</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Cheek</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:12442-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Kew Bull. 58(3): 733. 2003 [26 Nov 2003] </tcom:publishedIn>    
+<tn:year>2003</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Cheek 9196, K (holo)</dc:title>
+<tn:typeSpecimen>Cheek 9196, K</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Cheek 9196, BR (iso)</dc:title>
+<tn:typeSpecimen>Cheek 9196, BR</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Cheek 9196, EA (iso)</dc:title>
+<tn:typeSpecimen>Cheek 9196, EA</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Cheek 9196, MO (iso)</dc:title>
+<tn:typeSpecimen>Cheek 9196, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Cheek 9196, P (iso)</dc:title>
+<tn:typeSpecimen>Cheek 9196, P</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Cheek 9196, YA (iso)</dc:title>
+<tn:typeSpecimen>Cheek 9196, YA</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

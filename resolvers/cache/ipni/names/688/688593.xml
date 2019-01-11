@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:688593-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:688593-1:1.1.1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.1.2</owl:versionInfo>
+<dc:title>Sphaerothylax pygmaea Pellegr.</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2011-06-09 16:45:37.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Sphaerothylax pygmaea</tn:nameComplete>
+<tn:genusPart>Sphaerothylax</tn:genusPart>        
+<tn:specificEpithet>pygmaea</tn:specificEpithet>                
+<tn:authorship>Pellegr.</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Pellegr.</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:7474-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Bull. Mus. Natl. Hist. Nat. 1927, xxxiii. 268. </tcom:publishedIn>    
+</tn:TaxonName>  
+</rdf:RDF>

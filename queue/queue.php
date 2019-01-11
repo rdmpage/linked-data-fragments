@@ -147,8 +147,14 @@ function fetch($item, $add_links = false)
 					$add_links = true;
 				}
 
-				// Add author names linked to names
+				// IPNI may have basionyms and/or author names
 				if (preg_match('/urn:lsid:ipni.org/', $item->value))
+				{
+					$add_links = true;
+				}
+
+				// Index Fungorum may have basionym links
+				if (preg_match('/urn:lsid:indexfungorum.org:names:/', $item->value))
 				{
 					$add_links = true;
 				}

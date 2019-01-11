@@ -24,7 +24,7 @@
 			<key>parameter</key>
 			<string>key</string>
 			<key>value</key>
-			<string>"https://doi.org/10.3969/j.issn.1000-3142.2007.06.001"</string>
+			<string>"urn:lsid:ipni.org:names:77088053-1"</string>
 		</dict>
 	</array>
 	<key>parametersType</key>

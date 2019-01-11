@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.3.1131", 
+  "@type": "ScholarlyArticle", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Smithsonian Institution, Washington, DC, United States of America", 
+      "name": "Robinson, Harold"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Smithsonian Institution, Washington DC, United States of America", 
+      "name": "Funk, Vicki"
+    }
+  ], 
+  "datePublished": "2011-05-30", 
+  "description": "<i>Nothovernonia </i><b>gen. nov.</b>,<i> </i>is described as a new genus for the tropical African <i>Vernonia purpurea</i> Sch.Bip. ex Walp. and <i>V. amblyolepis </i>Bak,cymiform inflorescences, pedunculate heads with differentiated foliiform bracts at the base, apiculate involucral bracts with scarious lateral margins, spiculiferous corolla lobes, and strongly spinose, sublopohate tricolporate pollen with the colpi meeting at the poles. The new genus belongs to the subtribe Centrapalinae and a key to the known DNA-sequenced genera of the subtribe is provided. The new species names are <i>Nothovernonia purpurea </i>(Sch.Bip. ex Walp.) H.Rob. and V.A.Funk, <b>comb. nov.</b>, and <i>N. amblyolepis</i> (Baker) H.Rob. and V.A.Funk, <b>comb. nov.</b>", 
+  "headline": "A new genus, Nothovernonia, from tropical Africa (Asteraceae or Compositae: Vernonieae)", 
+  "identifier": "https://doi.org/10.3897/phytokeys.3.1131", 
+  "image": "https://zenodo.org/static/img/logos/zenodo-gradient-round.svg", 
+  "keywords": [
+    "Compositae", 
+    "Nothovernonia", 
+    "new genus", 
+    "tropical Africa", 
+    "Centrapalinae", 
+    "Erlangineae", 
+    "phylogeny"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "A new genus, Nothovernonia, from tropical Africa (Asteraceae or Compositae: Vernonieae)", 
+  "url": "https://zenodo.org/record/576067"
+}

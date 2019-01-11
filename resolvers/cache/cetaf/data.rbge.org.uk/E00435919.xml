@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tap="http://rs.tdwg.org/tapir/1.0"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:hyam="http://hyam.net/tapir2sw#"
+        xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/"
+        xmlns:dc="http://purl.org/dc/terms/"
+        xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+
+    <!--This is metadata about this metadata document-->
+    <rdf:Description
+        rdf:about="http://data.rbge.org.uk/service/rdf/herb.php?guid=http://data.rbge.org.uk/herb/E00435919">
+        <dc:creator>Simple PHP RDF Script</dc:creator>
+        <dc:created>2019-01-10T15:17:57+00:00</dc:created>
+    
+        <dc:hasVersion rdf:resource="http://data.rbge.org.uk/search/herbarium?cfg=fulldetails.cfg&amp;specimen_num=E00435919" />
+    
+    </rdf:Description>
+    
+
+    <!--This is metadata about this specimen-->
+    <rdf:Description rdf:about="http://data.rbge.org.uk/herb/E00435919">
+    
+        <!-- Assertions made in simple Dublin Core -->
+        <dc:publisher rdf:resource="http://www.rbge.org.uk" />
+                
+        <dc:title>Harris, David J. #6016 Duboscia viridiflora (K.Schum.) Mildbr.</dc:title>
+        
+                <dc:description>A herbarium specimen of Duboscia viridiflora (K.Schum.) Mildbr. collected by Harris, David J. #6016 </dc:description>
+        
+                       <dc:creator>Harris, David J.</dc:creator>
+                
+                    <dc:created>1998-10-29</dc:created>
+                
+        
+                
+        <!-- Assertions based on Darwin Core -->
+        <dwc:sampleID>http://data.rbge.org.uk/herb/E00435919</dwc:sampleID>
+        <dc:modified>2011-08-19 00:00:00</dc:modified>
+        <dwc:basisOfRecord>Specimen</dwc:basisOfRecord>
+        <dc:type>Specimen</dc:type>
+        <dwc:institutionCode>http://biocol.org/urn:lsid:biocol.org:col:15670</dwc:institutionCode>
+        <dwc:collectionCode>E</dwc:collectionCode>
+        <dwc:catalogNumber>E00435919</dwc:catalogNumber>
+        <dwc:scientificName>Duboscia viridiflora (K.Schum.) Mildbr.</dwc:scientificName>
+        <dwc:family>Malvaceae</dwc:family>
+        <dwc:genus>Duboscia</dwc:genus>
+        <dwc:specificEpithet>viridiflora</dwc:specificEpithet>
+        <dwc:higherGeography>Tropical Africa</dwc:higherGeography>
+
+            <dwc:country>CM</dwc:country>
+        <dwc:countryCode>CM</dwc:countryCode>
+        
+            <dwc:stateProvince>East</dwc:stateProvince>
+            
+            
+            <dwc:locality>Lobeke Reserve. Road head at start of path to Small Bai.</dwc:locality>
+            
+           
+        
+        
+            <dwc:earliestDateCollected>1998-10-29</dwc:earliestDateCollected>
+        
+            <dwc:recordedBy>Harris, David J.</dwc:recordedBy>
+    
+            <dwc:recordNumber>6016</dwc:recordNumber>
+    
+    <dc:relation><rdf:Description  rdf:about="http://data.rbge.org.uk/images/391944" ><dc:identifier rdf:resource="http://data.rbge.org.uk/images/391944" /><dc:type rdf:resource="http://purl.org/dc/dcmitype/Image" /><dc:subject rdf:resource="http://data.rbge.org.uk/herb/E00435919" /><dc:format>image/jpeg</dc:format><dc:description xml:lang="en">Image of herbarium specimen</dc:description><dc:created>2011-08-22T11:43:20Z</dc:created></rdf:Description></dc:relation><dwc:associatedMedia rdf:resource="http://data.rbge.org.uk/images/391944" />        
+    </rdf:Description>
+    
+</rdf:RDF>    
+   
+
+    
+    

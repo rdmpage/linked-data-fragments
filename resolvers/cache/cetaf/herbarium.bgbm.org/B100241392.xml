@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+	xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:owl="http://www.w3.org/2002/07/owl/">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tap="http://rs.tdwg.org/tapir/1.0"
+       xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:hyam="http://hyam.net/tapir2sw#">
+
+
+    <!--This is metadata about this metadata document-->
+	<rdf:Description rdf:about="http://herbarium.bgbm.org/data/rdf/B100241392">
+		<dc:subject rdf:resource="http://herbarium.bgbm.org/object/B100241392"></dc:subject>
+		<dc:creator>Botanischer Garten und Botanisches Museum Berlin</dc:creator>
+		<dc:created>2019-01-10T16:12:26+01:00</dc:created>
+	   	</rdf:Description>
+    
+
+    <!--This is metadata about this specimen-->
+	<rdf:Description rdf:about="http://herbarium.bgbm.org/object/B100241392">
+		<dc:title>Cardamine elegantula Hook.f. &amp; Thomson</dc:title>       
+		<dc:description>A herbarium specimen of Cardamine elegantula Hook.f. &amp; Thomson</dc:description>        
+		                
+		
+		<dc:type>Specimen</dc:type>       	
+		<dc:publisher>BGBM</dc:publisher>
+		<dwc:materialSampleID>http://herbarium.bgbm.org/object/B100241392</dwc:materialSampleID>
+		<dc:modified>2015-07-09 16:52:29.5430000</dc:modified>
+		<dwc:basisOfRecord>Specimen</dwc:basisOfRecord>
+		<dwc:collectionCode>B</dwc:collectionCode>
+		<dwc:catalogNumber>B 10 0241392</dwc:catalogNumber>
+		<dwc:scientificName>Cardamine elegantula Hook.f. &amp; Thomson</dwc:scientificName>
+		<dwc:previousIdentifications>Cardamine elegantula Hook.f. &amp; Thomson</dwc:previousIdentifications>
+		<dwc:family>CRUCIFERAE</dwc:family>
+       	<dwc:genus>Cardamine</dwc:genus>
+		<dwc:specificEpithet>elegantula</dwc:specificEpithet>
+		<dwc:country>Bhutan</dwc:country>
+		<dwc:countryCode>BT</dwc:countryCode>
+		<dwc:locality>Bhutan: East Himalaya. 1360. ex herb. / ded. : Herb. Griffith.</dwc:locality>
+		
+		
+		
+		<dwc:recordNumber>1360</dwc:recordNumber>
+		<dwc:fieldNumber>1360</dwc:fieldNumber>
+		
+		<dwc:associatedMedia rdf:resource="http://ww2.bgbm.org/herbarium/images/B/10/02/41/39/b_10_0241392.jpg" />        
+       </rdf:Description>
+    
+	<rdf:Description rdf:about="">
+		<owl:sameAs rdf:resource=""></owl:sameAs>
+		
+	</rdf:Description>
+
+</rdf:RDF>    
+   
+
+    
+    

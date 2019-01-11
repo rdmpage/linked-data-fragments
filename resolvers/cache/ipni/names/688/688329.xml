@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:688329-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:688329-1:1.4"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.4</owl:versionInfo>
+<dc:title>Ledermanniella monandra C.Cusset</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2008-06-27 17:38:33.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Ledermanniella monandra</tn:nameComplete>
+<tn:genusPart>Ledermanniella</tn:genusPart>        
+<tn:specificEpithet>monandra</tn:specificEpithet>                
+<tn:authorship>C.Cusset</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>C.Cusset</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:1931-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Adansonia sér. 2, 14(2): 274, nom. nov. 1974 </tcom:publishedIn>    
+<tn:year>1974</tn:year>        
+</tn:TaxonName>  
+</rdf:RDF>

@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.3.1131.figure1", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Smithsonian Institution, Washington, DC, United States of America", 
+      "name": "Robinson, Harold"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Smithsonian Institution, Washington DC, United States of America", 
+      "name": "Funk, Vicki"
+    }
+  ], 
+  "datePublished": "2011-05-30", 
+  "description": "Figure 1 -  Nothovernonia purpurea (Sch.Bip. ex Walp.) H. Rob. and V.A. Funk: habit. [Illustration by Alice Tangerini (US)]", 
+  "identifier": "https://doi.org/10.3897/phytokeys.3.1131.figure1", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/phytokeys.3.1131", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Plantae", 
+    "Tracheophyta", 
+    "Magnoliopsida", 
+    "Asterales", 
+    "Asteraceae", 
+    "Nothovernonia", 
+    "Nothovernonia purpurea", 
+    "Compositae", 
+    "Nothovernonia", 
+    "new genus", 
+    "tropical Africa", 
+    "Centrapalinae", 
+    "Erlangineae", 
+    "phylogeny"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 1 from: Funk V, Robinson H (2011) A new genus, Nothovernonia, from tropical Africa (Asteraceae or Compositae: Vernonieae). PhytoKeys 3: 21-34. https://doi.org/10.3897/phytokeys.3.1131", 
+  "url": "https://zenodo.org/record/918933"
+}

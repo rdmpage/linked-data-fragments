@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:907440-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:907440-1:1.1.2.1.1.4"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.2.1.1.4</owl:versionInfo>
+<dc:title>Boehmeria penduliflora Wedd. ex D.G.Long</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2007-11-30 00:39:45.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Boehmeria penduliflora</tn:nameComplete>
+<tn:genusPart>Boehmeria</tn:genusPart>        
+<tn:specificEpithet>penduliflora</tn:specificEpithet>                
+<tn:authorship>Wedd. ex D.G.Long</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Wedd. ex D.G.Long</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:11480-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:5728-1"
+tm:index="1"
+tm:role="Publishing Ex Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Notes Roy. Bot. Gard. Edinburgh 40(1): 130. 1982 </tcom:publishedIn>    
+<tn:year>1982</tn:year>        
+<tn:hasAnnotation>
+<tn:NomenclaturalNote>
+<tn:noteType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#replacementNameFor"/>
+<tn:objectTaxonName rdf:resource="urn:lsid:ipni.org:names:850657-1"/>
+</tn:NomenclaturalNote>
+</tn:hasAnnotation>                            
+</tn:TaxonName>  
+</rdf:RDF>

@@ -22,7 +22,7 @@ SELECT * WHERE {
 
 PREFIX schema: <http://schema.org/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX ref: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 SELECT * WHERE {
 	?person rdf:type <http://schema.org/Person> .
 	?person schema:name ?name .
@@ -149,19 +149,35 @@ where
 
 PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
 PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 SELECT * WHERE {
 ?s tn:genusPart "Begonia" .
+?s tn:nameComplete ?nameComplete .
 
 ?s tcom:publishedInCitation ?pub .
-?pub <http://schema.org/name> ?title .
+#?pub <http://schema.org/name> ?title .
+OPTIONAL {
+?pub dc:title ?title .
+}
 OPTIONAL {
 ?pub <http://schema.org/datePublished> ?datePublished .
 }
+OPTIONAL {
+?pub <http://schema.org/name> ?name .
+}
+OPTIONAL {
+?pub <http://schema.org/description> ?description .
+}
+OPTIONAL {
+?pub <http://schema.org/isPartOf> ?container .
+?container <http://schema.org/name> ?journal .
+}
 }
 
 
 
-
+#-----------------------------------------------------------------------------------------
+# page images for BioStor article
 PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
 PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
 PREFIX schema: <http://schema.org/>
@@ -174,15 +190,75 @@ SELECT * WHERE {
 ?list schema:item ?item .
 
 
-
 }
 
 
+#-----------------------------------------------------------------------------------------
+# Image for specimen with species name 
+
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT * WHERE {
+?s dwc:species "Macrocarpaea bangiana" .
+
+OPTIONAL {
+?s dwc:associatedMedia ?media .
+
+}
+}
+
+#-----------------------------------------------------------------------------------------
+# Image for specimen with species name plus occurrence ID
 
 
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT * WHERE {
+?s dwc:species "Macrocarpaea bangiana" .
+?s dwc:typeStatus ?typeStatus .
 
+OPTIONAL {
+?s dwc:associatedMedia ?media .
 
+}
+OPTIONAL {
+?s dwc:occurrenceID ?occurrenceID .
 
+}
+}
+
+#-----------------------------------------------------------------------------------------
+# fungal names
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX  tpc: <http://rs.tdwg.org/ontology/voc/PublicationCitation#>
+SELECT DISTINCT * WHERE {
+?s tn:genusPart ?genus .
+?s tcom:publishedInCitation ?pub .
+?pub tpc:title ?title .
+}
+
+#-----------------------------------------------------------------------------------------
+# images in a paper, e.g. figures from BLR
+PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT * WHERE {
+?image schema:isPartOf <https://doi.org/10.3897/phytokeys.3.1131>  .
+?image rdf:type <http://schema.org/ImageObject> .
+?image schema:thumbnailUrl ?thumbnailUrl .
+
+}
 
 
 

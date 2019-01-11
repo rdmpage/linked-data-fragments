@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:20007423-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:20007423-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Boehmeria densiflora var. penduliflora (Wedd. ex D.G.Long) Acharya &amp; Yonek.</dc:title>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2016-10-13 16:58:29.0</dcterms:modified>
+<tn:rankString>var.</tn:rankString>
+<tn:nameComplete>Boehmeria densiflora var. penduliflora</tn:nameComplete>
+<tn:genusPart>Boehmeria</tn:genusPart>
+<tn:specificEpithet>densiflora</tn:specificEpithet>
+<tn:infraspecificEpithet>penduliflora</tn:infraspecificEpithet>
+<tn:authorship>(Wedd. ex D.G.Long) Acharya &amp; Yonek.</tn:authorship>
+<tn:basionymAuthorship>Wedd. ex D.G.Long</tn:basionymAuthorship>
+<tn:combinationAuthorship>Acharya &amp; Yonek.</tn:combinationAuthorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>(Wedd. ex D.G.Long) Acharya &amp; Yonek.</tm:name>
+<tm:hasMember>
+<tm:TeamMember tm:index="1" tm:role="Combination Author">
+<tm:member>
+<p:Person>
+<p:alias>
+<p:PersonNameAlias>
+<p:standardForm>Acharya</p:standardForm>
+</p:PersonNameAlias>
+</p:alias> 
+</p:Person>
+</tm:member>
+</tm:TeamMember> 
+</tm:hasMember>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:37178-1"
+tm:index="2"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:11480-1" 
+tm:index="1"
+tm:role="Basionym Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:5728-1"
+tm:index="1"
+tm:role="Basionym Ex Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Acta Phytotax. Geobot. 53(1): 6. 2002 [29 Jun 2002] </tcom:publishedIn>    
+<tn:year>2002</tn:year>        
+<tn:hasBasionym rdf:resource="urn:lsid:ipni.org:names:907440-1"/>
+</tn:TaxonName>  
+</rdf:RDF>

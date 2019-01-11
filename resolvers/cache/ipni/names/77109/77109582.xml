@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77109582-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77109582-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Stenanona hondurensis G.E.Schatz, F.G.Coe &amp; Maas</dc:title>                        
+<dcterms:created>2011-02-16 09:15:45.0</dcterms:created>
+<dcterms:modified>2011-02-16 09:30:50.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Stenanona hondurensis</tn:nameComplete>
+<tn:genusPart>Stenanona</tn:genusPart>        
+<tn:specificEpithet>hondurensis</tn:specificEpithet>                
+<tn:authorship>G.E.Schatz, F.G.Coe &amp; Maas</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>G.E.Schatz, F.G.Coe &amp; Maas</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:26232-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20016282-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:5879-1"
+tm:index="3"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Blumea 55(3): 211 (pl. 1, map). 2010 [Dec 2010] </tcom:publishedIn>    
+<tn:year>2010</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Brant &amp; Zúniga 2840, MO (holo)</dc:title>
+<tn:typeSpecimen>Brant &amp; Zúniga 2840, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Brant &amp; Zúniga 2840, CR (iso)</dc:title>
+<tn:typeSpecimen>Brant &amp; Zúniga 2840, CR</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Brant &amp; Zúniga 2840, EAP (iso)</dc:title>
+<tn:typeSpecimen>Brant &amp; Zúniga 2840, EAP</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Brant &amp; Zúniga 2840, INB (iso)</dc:title>
+<tn:typeSpecimen>Brant &amp; Zúniga 2840, INB</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Brant &amp; Zúniga 2840, K (iso)</dc:title>
+<tn:typeSpecimen>Brant &amp; Zúniga 2840, K</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Brant &amp; Zúniga 2840, PMA (iso)</dc:title>
+<tn:typeSpecimen>Brant &amp; Zúniga 2840, PMA</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Brant &amp; Zúniga 2840, STRI (iso)</dc:title>
+<tn:typeSpecimen>Brant &amp; Zúniga 2840, STRI</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Brant &amp; Zúniga 2840, WAG (iso)</dc:title>
+<tn:typeSpecimen>Brant &amp; Zúniga 2840, WAG</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

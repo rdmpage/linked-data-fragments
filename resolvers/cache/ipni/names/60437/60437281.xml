@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:60437281-2">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:60437281-2:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Stenanona flagelliflora T.Wendt &amp; G.E.Schatz</dc:title>                        
+<dcterms:created>2004-12-20 12:13:29.0</dcterms:created>
+<dcterms:modified>2004-12-20 12:13:29.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Stenanona flagelliflora</tn:nameComplete>
+<tn:genusPart>Stenanona</tn:genusPart>        
+<tn:specificEpithet>flagelliflora</tn:specificEpithet>                
+<tn:authorship>T.Wendt &amp; G.E.Schatz</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>T.Wendt &amp; G.E.Schatz</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:34494-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:26232-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Lundellia 7: 30 (28-38; figs. 1-3). 2004 [6 Dec 2004] </tcom:publishedIn>    
+<tn:year>2004</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T. L. Wendt, M. Vázquez Torres, A. Méndez, I. Navarrete &amp; A. García M. 3851, MEXU (holo)</dc:title>
+<tn:typeSpecimen>T. L. Wendt, M. Vázquez Torres, A. Méndez, I. Navarrete &amp; A. García M. 3851, MEXU</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T. L. Wendt, M. Vázquez Torres, A. Méndez, I. Navarrete &amp; A. García M. 3851, CHAPA (iso)</dc:title>
+<tn:typeSpecimen>T. L. Wendt, M. Vázquez Torres, A. Méndez, I. Navarrete &amp; A. García M. 3851, CHAPA</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T. L. Wendt, M. Vázquez Torres, A. Méndez, I. Navarrete &amp; A. García M. 3851, MO (iso)</dc:title>
+<tn:typeSpecimen>T. L. Wendt, M. Vázquez Torres, A. Méndez, I. Navarrete &amp; A. García M. 3851, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>T. L. Wendt, M. Vázquez Torres, A. Méndez, I. Navarrete &amp; A. García M. 3851, WIS (iso)</dc:title>
+<tn:typeSpecimen>T. L. Wendt, M. Vázquez Torres, A. Méndez, I. Navarrete &amp; A. García M. 3851, WIS</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>
