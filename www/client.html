@@ -1,0 +1,77 @@
+<html>
+<head>
+<script src="ldf-client-browser.js"></script>
+</head>
+<body>
+
+<ul id="output"></ul>
+
+<script>
+//var fragmentsClient = new ldf.FragmentsClient('http://fragments.dbpedia.org/2015/en');
+
+var fragmentsClient = new ldf.FragmentsClient('fragments.php');
+
+var s = '';
+
+s = 'SELECT * { ?journal  <http://schema.org/name> ?name_en . } LIMIT 10';
+
+s = `PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT * WHERE {
+?image schema:isPartOf <https://doi.org/10.3897/phytokeys.3.1131>  .
+?image rdf:type <http://schema.org/ImageObject> .
+?image schema:thumbnailUrl ?thumbnailUrl .
+?image schema:name ?name .
+
+}`;
+
+
+var query = s,
+    results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+results.on('data', function (result) { 
+
+	console.log(result); 
+	
+	/*
+	var node = document.createElement("li");     
+	var textnode = document.createTextNode(JSON.stringify(result));
+	node.appendChild(textnode);     
+	document.getElementById("output").appendChild(node); 
+	*/
+
+	/*
+	var node = document.createElement("li");     
+	var textnode = document.createTextNode(result['?thumbnailUrl']);
+	node.appendChild(textnode);     
+	document.getElementById("output").appendChild(node); 
+	*/
+	
+	var node = document.createElement("li");  
+	
+	var src = result['?thumbnailUrl'];
+	
+	src = src.replace(/\"/g, '');
+	
+	var name = result['?name'];
+	name = name.replace(/\"/g, '');
+	
+	var textnode = document.createTextNode(name);
+	node.appendChild(textnode);     
+	   
+	var img = document.createElement("img");
+	img.src = src;
+	img.height = "100";
+	img.style="border:1px solid rgb(192,192,192);padding:4px;";
+	node.appendChild(img); 
+	document.getElementById("output").appendChild(node); 
+	
+	});
+
+
+</script>
+</body>
+</html>
+

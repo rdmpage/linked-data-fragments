@@ -1,11 +1,13 @@
 <div id="output"></div>
 <!-- <script src="jquery.js"></script> -->
-<script src="ejs.js"></script>
+<script src="js/ejs.js"></script>
 <script>
   let people = ['geddy', 'neil', 'alex'],
       html = ejs.render('<%= people.join(", "); %>', {people: people});
       
-      var title = '云南秋海棠属三新种';
+      var data = {};
+      
+      data.title = '云南秋海棠属三新种';
       
       
       
@@ -23,7 +25,7 @@ These fruits are amazing:
   - <%=fruits[i]%>s<% } %>
 
 
-<h1><%=title%></h1>
+<h1>Title: <%=data.title%></h1>
 
 
   `;      

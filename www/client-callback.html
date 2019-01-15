@@ -1,0 +1,519 @@
+<html>
+<head>
+	<script src="js/ldf-client-browser.js"></script>
+	<script src="js/jsonld.js"></script>
+	<script src="js/ejs.js"></script>
+	
+	<script>
+	//----------------------------------------------------------------------------------------
+// http://stackoverflow.com/a/25715455
+function isObject (item) {
+  return (typeof item === "object" && !Array.isArray(item) && item !== null);
+}
+	</script>
+	
+	<style>
+	body {
+		font-family:sans-serif;
+		padding:20px;
+	}
+	</style>
+	
+</head>
+<body>
+
+<!--
+
+zbib 
+
+[{
+    "key": "RUGULVH2",
+    "version": 0,
+    "itemType": "journalArticle",
+    "creators": [{
+        "firstName": "Graeme B.",
+        "lastName": "Smith",
+        "creatorType": "author"
+    }],
+    "tags": [],
+    "publicationTitle": "Records of the Australian Museum",
+    "volume": "68",
+    "issue": "2",
+    "ISSN": "22014349",
+    "date": "2016-7-21",
+    "pages": "45-80",
+    "DOI": "10.3853/j.2201-4349.68.2016.1652",
+    "url": "https://journals.australianmuseum.net.au/smith-2016-rec-aust-mus-682-4580/",
+    "title": "On some silverfish taxa from Tasmania (Zygentoma: Lepismatidae and Nicoletiidae)",
+    "libraryCatalog": "Crossref",
+    "accessDate": "2019-01-14T14:48:48Z",
+    "shortTitle": "On some silverfish taxa from Tasmania (Zygentoma"
+}]
+
+
+-->
+
+<div id="output">Output</div>
+
+<!-- json -->
+<div style="width:400px;border:1px solid rgb(192,192,192);font-family:Courier;font-size:10px;white-space:pre;overflow:auto;" id="record"></div>
+
+
+
+<script>
+
+var fragmentsClient = new ldf.FragmentsClient('fragments.php');
+
+var record = {};
+record.figures = {};
+record.creators = {};
+record.creators_display = {};
+
+
+//----------------------------------------------------------------------------------------
+// Convert ISO data to a human-readable string (PubMed-style)
+// My databases use -00 to indicate no month or no day, and this confuses Javascript
+// Date so we need to set the options appropriately
+function isodate_to_string(datestring) {
+
+	// By default assume datestring is a year only
+	var options = {};
+	options.year = 'numeric';
+	
+	// Test for valid month, then day (because we use -00 to indicate no data)
+	var m = null;
+	
+	if (!m) {	
+		m = datestring.match(/^([0-9]{4})$/);
+		if (m) {
+			// year only
+			datestring = m[1]; 
+		}
+	}
+	
+	if (!m) {		
+		m = datestring.match(/^([0-9]{4})-([0-9]{2})-00/);
+		if (m) {
+			
+			if (m[2] == '00') {
+				// Javascript can't handle -00-00 date string so set to January 1st 
+				// which won't be output as we're only outputting the year
+				datestring = m[1] + '-01-01';
+			} else {
+				// We have a month but no day
+				datestring = m[1] + '-' + m[2] + '-01';
+				options.month = 'short';
+			}		
+		}
+	}
+	
+	if (!m) {	
+		m = datestring.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})/);
+		if (m) {
+			// we have yea, month, and day
+			options.month = 'short';
+			options.day = 'numeric';
+		}
+	}
+	
+	var d = new Date(datestring);
+	datestring = d.toLocaleString('en-gb', options);
+	
+	return datestring;		
+}
+
+//----------------------------------------------------------------------------------------
+function render() {
+	var template = `
+	
+	<div>
+	<% if(record.publicationTitle) {%>
+	<span><%=Object.values(record.publicationTitle).join(' / ')%><% } %></span>
+	
+	<% if(record.datePublished) {%>
+	<span><%=isodate_to_string(record.datePublished)%><% } %></span>
+	
+	<% if(record.volumeNumber) {%>
+	<span><%=record.volumeNumber%><% } %></span>
+
+	<% if(record.issueNumber) {%>
+	<span>(<%=record.issueNumber%>)<% } %></span>
+
+	<% if(record.pagination) {%>
+	<span>: <%=record.pagination%><% } %></span>
+
+	<% if(record.pageStart) {%>
+	<span>: <%=record.pageStart%><% } %></span>
+
+	<% if(record.pageEnd) {%>
+	<span>-<%=record.pageEnd%><% } %></span>
+
+
+
+	</div>
+	
+	<% for(var i in record.name) {%>
+		<h1><%=record.name[i]%></h1>
+	<% } %>
+		
+	<ul>
+	<% if(record.DOI) {%>
+	<li>DOI: <a href="https://doi.org/<%=record.DOI%>"><%=record.DOI%></a></li><% } %>
+	</ul>
+	
+	<ul>
+	<% if(record.creators) {
+			for(var i in record.creators) {%>
+				<li><%=Object.values(record.creators[i].name).join(' / ')%></li>
+			<%}
+		}%>
+	</ul>
+
+	<h2>Abstract</h2>
+	<!-- note use of - in ejs template because we want unescaped output to handle HTML codes in abstract -->
+	<% for(var i in record.description) {%>
+		<p><%-record.description[i]%></p><% } %>
+
+	<% if (record.license) {%>
+		<p><%=record.license%></p><% } %>
+		
+	<h2>Images</h2>
+	<% if(record.figures) {
+			for(var i in record.figures) {%>
+				<div style="padding:10px;">				
+				<img style="border:1px solid rgb(192,192,192);"  src="<%=record.figures[i].thumbnailUrl%> "/> 
+				<br />
+				<span><%=record.figures[i].caption%></span>
+				</div>
+			<%}
+		}%>
+
+	
+	`;
+	
+	html = ejs.render(template);
+
+
+
+	document.getElementById('output').innerHTML = html;
+}
+
+
+//----------------------------------------------------------------------------------------
+function clean_value(value) {
+	value = value.replace(/\"/g, '');
+	
+	var m = value.match(/^(.*)@([a-z]{2})$/);
+	if (m) {
+		value = {};
+		value[m[2]] = m[1];
+	}
+	
+	return value;
+}
+
+//----------------------------------------------------------------------------------------
+function get_core (uri) {
+	var query = 'SELECT * { <' + uri + '> ?p ?o . }';
+
+    results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+	results.on('data', function (result) { 
+
+		console.log(result); 
+	
+		switch (result['?p']) {
+			case 'http://schema.org/volumeNumber':
+			case 'http://schema.org/pageStart':
+			case 'http://schema.org/pageEnd':
+			case 'http://schema.org/pagination':
+			case 'http://schema.org/issueNumber':
+			case 'http://schema.org/datePublished':
+			case 'http://schema.org/license':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				var value = clean_value(result['?o']);
+				record[key] = value;
+				break;
+
+			// may have multiple values
+			case 'http://schema.org/sameAs':
+			case 'http://schema.org/url':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				
+				if (!record[key]) {
+					record[key] = [];
+				}
+			
+				var value = result['?o'];
+				value = value.replace(/\"/g, '');
+											
+				record[key].push(value);
+				break;
+			
+			
+			// may have languages
+			case 'http://schema.org/description':
+			case 'http://schema.org/name':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				
+				if (!record[key]) {
+					record[key] = {};
+				}
+			
+				var value = clean_value(result['?o']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record[key][kv[0]] = kv[1];
+				} else {
+					record[key]['und'] = value;
+				}
+				break;
+				
+			
+			default:
+				break;
+		}
+	
+		});
+		
+	results.on('end', function (result) { 
+		get_figures(uri);		
+		});	
+
+
+}
+
+//----------------------------------------------------------------------------------------
+function get_figures (uri) {
+		var query = `PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT * WHERE {
+  ?image schema:isPartOf <` + uri + `>  .
+  ?image rdf:type <http://schema.org/ImageObject> .
+  ?image schema:thumbnailUrl ?thumbnailUrl .
+  ?image schema:description ?caption .
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+		
+			record.figures[result['?image']] = {};
+		
+			var thumbnailUrl = result['?thumbnailUrl'];
+		
+			var caption = result['?caption'];
+				
+			record.figures[result['?image']].thumbnailUrl = clean_value(thumbnailUrl);
+			record.figures[result['?image']].caption = clean_value(caption);
+			});
+	
+		results.on('end', function (result) { 
+		
+			get_creators(uri);
+		
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_creators (uri) {
+		var query = `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT *
+WHERE {
+ { 
+    <` + uri + `> <http://schema.org/creator> ?person  .
+     ?person  rdf:type <http://schema.org/Person>
+ }
+UNION
+ { 
+    <` + uri + `> <http://schema.org/creator> ?role  .
+    ?role  rdf:type <http://schema.org/Role> . 
+    ?role <http://schema.org/creator> ?person  .
+    ?person  rdf:type <http://schema.org/Person> .
+ }
+?person <http://schema.org/name> ?name  .
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			if (!record.creators[result['?person']]) {
+				record.creators[result['?person']] = {};
+				record.creators[result['?person']].name = {};
+			}			
+		
+			var value = result['?name'];
+			value = clean_value(value);
+			
+			// language?
+			if (isObject(value)) {
+				var kv = Object.entries(value)[0];
+				record.creators[result['?person']].name[kv[0]] = kv[1];
+			} else {
+				record.creators[result['?person']].name['und'] = value;
+			}
+			});
+	
+		results.on('end', function (result) { 
+		
+			get_container(uri);
+		
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_container (uri) {
+		var query = `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+SELECT *
+WHERE {
+   <` + uri + `> schema:isPartOf ?container .
+   #?container  rdf:type <http://schema.org/Periodical> .
+   ?container schema:name ?name  .
+OPTIONAL {
+ ?container schema:issn ?issn  .
+}
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			if (result['?issn']) {
+				value = result['?issn'];
+				value = clean_value(value);
+				
+				if (!record.ISSN) {
+					record.ISSN = [];
+				}
+				record.ISSN.push (value);
+			}
+			
+			if (result['?name']) {
+			
+				if (!record.publicationTitle) {
+					record.publicationTitle = {};
+				}
+			
+				var value = clean_value(result['?name']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record.publicationTitle[kv[0]] = kv[1];
+				} else {
+					record.publicationTitle['und'] = value;
+				}
+			}			
+			
+		
+	
+		});
+	
+		results.on('end', function (result) { 
+		
+			get_identifiers(uri);
+		
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_identifiers (uri) {
+		query = `PREFIX schema: <http://schema.org/>
+	SELECT * WHERE {
+	<` + uri + `> schema:identifier ?identifier .
+	?identifier schema:propertyID ?id .
+	?identifier schema:value ?value .
+	}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+		
+			if (result['?id'] == "\"doi\"") {
+				var value = clean_value(result['?value']);
+				record.DOI = value;
+			}
+		});
+	
+		results.on('end', function (result) { 
+		
+			display_record();
+			
+			render();
+		
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+
+function display_record() {
+	var textnode = document.createTextNode(JSON.stringify(record, null, 2));   
+	document.getElementById("record").appendChild(textnode); 
+}
+
+
+//----------------------------------------------------------------------------------------
+
+
+var uri = 'https://doi.org/10.3897/phytokeys.3.1131';
+uri = 'https://doi.org/10.3969/j.issn.2095-0845.1999.01.002'; // chinese only
+//uri = 'https://biostor.org/reference/146755';
+uri = 'https://doi.org/10.6165/tai.2014.59.4.326'; // English and Chinese
+//uri = 'https://doi.org/10.14203/reinwardtia.v14i1.391';
+//uri = 'https://doi.org/10.3897/phytokeys.94.23248'; // Figures from Zenodo
+//uri = 'https://doi.org/10.3897/phytokeys.3.1131'; // Figures from Zenodo
+
+
+
+
+	
+		
+		
+		
+		
+		
+
+// https://html-online.com/articles/get-url-parameters-javascript/	
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+		
+		
+		
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+    return urlparameter;
+}
+
+var uri = getUrlParam('uri', 'https://doi.org/10.6165/tai.2014.59.4.326');
+get_core(uri);
+	
+	
+	
+
+
+</script>
+</body>
+</html>
+

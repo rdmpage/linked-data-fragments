@@ -1,0 +1,212 @@
+<html>
+<head>
+	<script src="js/ldf-client-browser.js"></script>
+	<script src="js/jsonld.js"></script>
+</head>
+<body>
+
+<!--
+
+[{
+    "key": "RUGULVH2",
+    "version": 0,
+    "itemType": "journalArticle",
+    "creators": [{
+        "firstName": "Graeme B.",
+        "lastName": "Smith",
+        "creatorType": "author"
+    }],
+    "tags": [],
+    "publicationTitle": "Records of the Australian Museum",
+    "volume": "68",
+    "issue": "2",
+    "ISSN": "22014349",
+    "date": "2016-7-21",
+    "pages": "45-80",
+    "DOI": "10.3853/j.2201-4349.68.2016.1652",
+    "url": "https://journals.australianmuseum.net.au/smith-2016-rec-aust-mus-682-4580/",
+    "title": "On some silverfish taxa from Tasmania (Zygentoma: Lepismatidae and Nicoletiidae)",
+    "libraryCatalog": "Crossref",
+    "accessDate": "2019-01-14T14:48:48Z",
+    "shortTitle": "On some silverfish taxa from Tasmania (Zygentoma"
+}]
+
+
+-->
+
+<ul id="output"></ul>
+
+<div style="font-family:sans-serif;white-space:pre;overflow:auto;" id="record"></div>
+
+<script>
+
+var record = {};
+
+record.figures = {};
+
+record.creators = {};
+
+
+//----------------------------------------------------------------------------------------
+function clean_value(value) {
+	value = value.replace(/\"/g, '');
+	
+	return value;
+}
+
+
+//----------------------------------------------------------------------------------------
+
+
+var uri = 'https://doi.org/10.3897/phytokeys.3.1131';
+uri = 'https://doi.org/10.3969/j.issn.2095-0845.1999.01.002';
+//uri = 'https://biostor.org/reference/146755';
+uri = 'https://doi.org/10.6165/tai.2014.59.4.326';
+//uri = 'https://doi.org/10.14203/reinwardtia.v14i1.391';
+//uri = 'https://doi.org/10.3897/phytokeys.94.23248';
+//uri = 'https://doi.org/10.3897/phytokeys.3.1131';
+
+
+	var fragmentsClient = new ldf.FragmentsClient('fragments.php');
+
+	var query = '';
+
+	//------------------------------------------------------------------------------------	
+	// identifiers
+	
+	query = `PREFIX schema: <http://schema.org/>
+SELECT * WHERE {
+<` + uri + `> schema:identifier ?identifier .
+?identifier schema:propertyID ?id .
+?identifier schema:value ?value .
+}`;
+
+    results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+	results.on('data', function (result) { 
+
+		console.log(result); 
+		
+		if (result['?id'] == "\"doi\"") {
+			record.DOI = result['?value'];
+		}
+	});
+	
+	results.on('end', function (result) { 
+		
+		var textnode = document.createTextNode(JSON.stringify(record, null, 2));   
+		document.getElementById("record").appendChild(textnode); 
+		
+		});		
+	
+	
+	//------------------------------------------------------------------------------------	
+
+
+
+	//------------------------------------------------------------------------------------	
+	
+		// figures
+query = `PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT * WHERE {
+  ?image schema:isPartOf <` + uri + `>  .
+  ?image rdf:type <http://schema.org/ImageObject> .
+  ?image schema:thumbnailUrl ?thumbnailUrl .
+  ?image schema:name ?caption .
+}`;
+
+    results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+	results.on('data', function (result) { 
+
+		console.log(result); 
+		
+		record.figures[result['?image']] = {};
+		
+		var thumbnailUrl = result['?thumbnailUrl'];
+		thumbnailUrl = thumbnailUrl.replace(/\"/g, '');
+		
+		var caption = result['?caption'];
+		caption = caption.replace(/\"/g, '');
+				
+		record.figures[result['?image']].thumbnailUrl = thumbnailUrl;
+		record.figures[result['?image']].caption = caption;
+	
+		});
+		
+	results.on('end', function (result) { 
+		
+		var textnode = document.createTextNode(JSON.stringify(record, null, 2));   
+		document.getElementById("record").appendChild(textnode); 
+		
+		});		
+		
+		
+
+	//------------------------------------------------------------------------------------	
+	// basic metadata
+
+	query = 'SELECT * { <' + uri + '> ?p ?o . }';
+
+    results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+	results.on('data', function (result) { 
+
+		console.log(result); 
+	
+		switch (result['?p']) {
+			
+			case 'http://schema.org/description':
+			case 'http://schema.org/name':
+			case 'http://schema.org/volumeNumber':
+			case 'http://schema.org/pageStart':
+			case 'http://schema.org/pageEnd':
+			case 'http://schema.org/pagination':
+			case 'http://schema.org/issueNumber':
+			case 'http://schema.org/datePublished':
+			case 'http://schema.org/url':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				
+				if (!record[key]) {
+					record[key] = [];
+				}
+			
+				var value = result['?o'];
+				value = value.replace(/\"/g, '');
+											
+				record[key].push(value);
+				break;
+				
+			
+			default:
+				break;
+		}
+	
+		});
+		
+	results.on('end', function (result) { 
+		
+		var textnode = document.createTextNode(JSON.stringify(record, null, 2));   
+		document.getElementById("record").appendChild(textnode); 
+		
+		});		
+		
+		
+		
+		
+		
+
+	
+		
+		
+		
+		
+
+
+</script>
+</body>
+</html>
+

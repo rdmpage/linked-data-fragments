@@ -1,0 +1,278 @@
+<html>
+<head>
+<script src="js/ldf-client-browser.js"></script>
+<script src="js/jsonld.js"></script>
+
+<style>
+/* -------------------------------------------------------------------------------------*/
+/* figures in a work displayed all at once */
+	
+.figures {
+	background-color:rgb(242,242,242);
+	border-top:1px solid rgb(128,128,128);
+	border-bottom:1px solid rgb(128,128,128);
+	padding:10px;
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section::after{
+  content: \'\';
+  flex-grow: 999999999;
+}
+
+div.figure{
+  flex-grow: 1;
+  margin: 4px;
+  height: 100px;
+}
+
+img.figure{
+  height: 100px;
+  object-fit: contain; /* cover */
+  max-width: 100%;
+  min-width: 100%;
+  vertical-align: bottom;
+  border:1px solid black;
+}	
+</style>
+
+</head>
+<body>
+
+<ul id="output"></ul>
+
+<div id="creativework" vocab="http://schema.org/" typeof="ScholarlyArticle">
+	<span property="datePublished"></span> <span property="volumeNumber"></span> <span property="issueNumber"></span>:<br />
+	<strong> <span property="name"></span></strong><br />
+	<span property="description"></span><br />
+	<a property="url"></a>
+	
+</div>
+
+<div id="figures" class="figures">
+	<section id="section">
+	</section>	
+</div>
+
+
+
+
+<script>
+
+//----------------------------------------------------------------------------------------
+function add_literal (name, value) {
+	value = value.replace(/\"/g, '');
+	
+	var elements = document.querySelectorAll("span[property='" + name + "']");
+
+	elements.forEach(function(element) {
+		if (0) {
+	  		var textnode = document.createTextNode(value);
+	  		element.appendChild(textnode); 	  		
+		} else {
+			element.innerHTML = value;
+		}
+		
+	});
+}
+
+//----------------------------------------------------------------------------------------
+function add_link (name, link) {
+	link = link.replace(/\"/g, '');
+	var elements = document.querySelectorAll("a[property='" + name + "']");
+	elements.forEach(function(element) {
+		element.setAttribute('href', link);
+		element.innerHTML = link;
+	});
+}
+
+//----------------------------------------------------------------------------------------
+function add_identifier(element_id, identifier) {
+	var element = document.getElementById(element_id);
+	element.setAttribute('resource', identifier);
+}
+
+//----------------------------------------------------------------------------------------
+function add_date(name, datestring) {
+	datestring = datestring.replace(/\"/g, '');
+	var elements = document.querySelectorAll("span[property='" + name + "']");
+	elements.forEach(function(element) {
+		element.setAttribute('content', datestring);
+		
+		// By default assume it is a year
+		var options = {};
+		options.year = 'numeric';
+		
+		// Test for valid month then day (because we use -00 to indicate no data)
+		var m = null;
+		
+		if (!m) {	
+			m = datestring.match(/^([0-9]{4})$/);
+			if (m) {
+				datestring = m[1];
+			}
+		}
+		
+		if (!m) {		
+			m = datestring.match(/^([0-9]{4})-([0-9]{2})-00/);
+			if (m) {
+			
+				if (m[2] == '00') {
+					datestring = m[1] + '-01-01';
+				} else {
+					datestring = m[1] + '-' + m[2] + '-01';
+					options.month = 'short';
+				}		
+			}
+		}
+		
+		if (!m) {	
+			m = datestring.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})/);
+			if (m) {
+				options.month = 'short';
+				options.day = 'numeric';
+			}
+		}
+		
+		var d = new Date(datestring);
+	  	var s = d.toLocaleString('en-gb', options);		
+		element.innerHTML = s;
+		
+	});
+
+
+}
+
+//----------------------------------------------------------------------------------------
+
+var fragmentsClient = new ldf.FragmentsClient('fragments.php');
+
+var s = '';
+
+var uri = 'https://doi.org/10.3897/phytokeys.3.1131';
+uri = 'https://doi.org/10.3969/j.issn.2095-0845.1999.01.002';
+uri = 'https://biostor.org/reference/146755';
+uri = 'https://doi.org/10.6165/tai.2014.59.4.326';
+uri = 'https://doi.org/10.14203/reinwardtia.v14i1.391';
+uri = 'https://doi.org/10.3897/phytokeys.94.23248';
+//uri = 'https://doi.org/10.3897/phytokeys.3.1131';
+
+
+s = 'SELECT * { <https://doi.org/10.3897/phytokeys.3.1131> ?p ?o . }';
+
+s = 'SELECT * { <https://hdl.handle.net/10125/501> ?p ?o . }';
+
+s = 'SELECT * { <' + uri + '> ?p ?o . }';
+
+add_identifier('creativework', uri);
+
+var query = s,
+    results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+	results.on('data', function (result) { 
+
+		console.log(result); 
+		
+		/*
+		var node = document.createElement("li");     
+		var textnode = document.createTextNode(JSON.stringify(result));
+		node.appendChild(textnode);     
+		document.getElementById("output").appendChild(node); 
+		*/
+	
+		switch (result['?p']) {
+			
+			case 'http://schema.org/description':
+			case 'http://schema.org/name':
+			case 'http://schema.org/volumeNumber':
+			case 'http://schema.org/issueNumber':
+				add_literal(result['?p'].replace(/http:\/\/schema.org\//, ''), result['?o']);
+				break;
+				
+			case 'http://schema.org/datePublished':				
+				add_date(result['?p'].replace(/http:\/\/schema.org\//, ''), result['?o']);
+				break;
+			
+			case 'http://schema.org/url':
+				add_link(result['?p'].replace(/http:\/\/schema.org\//, ''), result['?o']);			
+				break;
+			
+			default:
+				break;
+		}
+	
+		/*
+		if (result['?p'] == 'http://schema.org/name') {
+
+			var literal = result['?o'];
+		
+			add_literal('name', literal);
+		}
+	
+		if (result['?p'] == 'http://schema.org/description') {
+			var literal = result['?o'];
+			add_literal('description', literal);
+		}	
+		*/
+
+	
+		});
+		
+		// figures
+s = `PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT * WHERE {
+  ?image schema:isPartOf <` + uri + `>  .
+  ?image rdf:type <http://schema.org/ImageObject> .
+  ?image schema:thumbnailUrl ?thumbnailUrl .
+  ?image schema:name ?caption .
+}`;
+
+var query = s,
+    results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+	results.on('data', function (result) { 
+
+		console.log(result); 
+		
+		
+		var image_id = result['?image'];
+		image_id = image_id.replace(/\"/g, '');
+		
+		var div = document.createElement("div");
+		div.setAttribute('class', 'figure');
+		div.setAttribute('property', 'image');
+		div.setAttribute('resource', image_id);
+		div.setAttribute('vocab', 'http://schema.org/');
+		div.setAttribute('typeof', "ImageObject");
+		
+		
+		var src = result['?thumbnailUrl'];
+		src = src.replace(/\"/g, '');
+		
+		var img = document.createElement("img");
+		
+		img.setAttribute('class', 'figure');
+		img.setAttribute('src', src);
+		
+		div.appendChild(img); 
+		
+		document.getElementById("section").appendChild(div); 
+		
+
+
+	
+		});
+		
+		
+
+
+</script>
+</body>
+</html>
+
