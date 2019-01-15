@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.18.3713", 
+  "@type": "ScholarlyArticle", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Wageningen University, Wageningen, Netherlands", 
+      "name": "Maas-van de Kamer, Hiltje"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Wageningen University, Wageningen, Netherlands", 
+      "name": "Maas, Paul J.M."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "University of California, Berkeley, Berkeley, United States of America", 
+      "name": "Specht, Chelsea"
+    }
+  ], 
+  "datePublished": "2012-11-19", 
+  "description": "<p>A new species of spiral ginger (<i>Costus: </i>Costaceae) from Gabon, Africa is described. <i>Costus loangensis</i> H. Maas &amp; Maas is found in the coastal region on white sand soils under a tropical rain forest canopy. It is morphologically distinct from all other African species of <i>Costus</i> but shows some similarities in floral form with the savanna-inhabiting <i>Costus spectabilis</i> (Fenzl) K. Schum. and similarities in vegetative form with <i>Costus ligularis</i> Baker. Only one population of the new species is documented. Photographs of the new species are included as is a preliminary phylogeny indicating its position within the African Costaceae.</p>", 
+  "headline": "Costus loangensis, an exciting new species from Gabon, Africa", 
+  "identifier": "https://doi.org/10.3897/phytokeys.18.3713", 
+  "image": "https://zenodo.org/static/img/logos/zenodo-gradient-round.svg", 
+  "keywords": [
+    "Africa", 
+    "Gabon", 
+    "Costaceae", 
+    "Costus", 
+    "Zingiberales", 
+    "spiral ginger"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Costus loangensis, an exciting new species from Gabon, Africa", 
+  "url": "https://zenodo.org/record/576149"
+}

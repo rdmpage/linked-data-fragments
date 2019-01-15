@@ -1,0 +1,64 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.94.23248.figure2", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Kunming Institute of Botany, Chinese Academy of Sciences, Kunming, China|Southeast Asia Biodiversity Research Institute, Chinese Academy of Sciences, Nay Pyi Taw, Myanmar", 
+      "name": "Chen, Wen-Hong"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Kunming Institute of Botany, Chinese Academy of Sciences, Kunming, China|University of Chinese Academy of Sciences, Beijing, China", 
+      "name": "Radbouchoom, Sirilak"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Center for Plant Conservation of Vietnam, Hanoi, Vietnam", 
+      "name": "Nguyen, Hieu Quang"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Center for Plant Conservation of Vietnam, Hanoi, Vietnam", 
+      "name": "Nguyen, Hiep Tien"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Vietnam Academy of Science and Technology, Hanoi, Vietnam", 
+      "name": "Nguyen, Khang Sinh"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Kunming Institute of Botany, Chinese Academy of Sciences, Kunming, China|Southeast Asia Biodiversity Research Institute, Chinese Academy of Sciences, Nay Pyi Taw, Myanmar", 
+      "name": "Shui, Yu-Min"
+    }
+  ], 
+  "datePublished": "2018-02-06", 
+  "description": "Figure 2 Begonia albopunctata Y.M. Shui, W.H. Chen &amp; H.Q. Nguyen A Habitat B Inflorescence C View of adaxial leaf D Close-up of adaxial leaf E View of abaxial leaf F Close-up of abaxial leaf G Pistillate flower, side view H Staminate flower, face view I Pistillate flower, face view J Fruits K Serial cross sections of ovary. (A\u2013J photographs by Y.M. Shui; K by S. Radbouchoom).", 
+  "identifier": "https://doi.org/10.3897/phytokeys.94.23248.figure2", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/phytokeys.94.23248", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Plantae", 
+    "Tracheophyta", 
+    "Magnoliopsida", 
+    "Cucurbitales", 
+    "Begoniaceae", 
+    "Begonia", 
+    "Begonia", 
+    "Begonia sect. Coelocentrum", 
+    "Begonia sect. Diploclinium", 
+    "Begonia sect. Leprosae", 
+    "Begonia sect. Sphenanthera, China", 
+    "new species", 
+    "Vietnam"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 2 from: Chen W-H, Radbouchoom S, Nguyen HQ, Nguyen HT, Nguyen KS, Shui Y-M (2018) Seven new species of Begonia (Begoniaceae) in Northern Vietnam and Southern China. In: Jin X-H, Shui Y-M, Tan Y-H, Kang M (Eds) Plant diversity in Southeast Asia. PhytoKeys 94: 65-85. https://doi.org/10.3897/phytokeys.94.23248", 
+  "url": "https://zenodo.org/record/1166734"
+}

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.18.3713.figure2", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Wageningen University, Wageningen, Netherlands", 
+      "name": "Maas-van de Kamer, Hiltje"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Wageningen University, Wageningen, Netherlands", 
+      "name": "Maas, Paul J.M."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "University of California, Berkeley, Berkeley, United States of America", 
+      "name": "Specht, Chelsea"
+    }
+  ], 
+  "datePublished": "2012-11-19", 
+  "description": "Figure 2 - Map of locality for Costus loangensis. The red dot represents the type locality.", 
+  "identifier": "https://doi.org/10.3897/phytokeys.18.3713.figure2", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/phytokeys.18.3713", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Plantae", 
+    "Tracheophyta", 
+    "Liliopsida", 
+    "Zingiberales", 
+    "Costaceae", 
+    "Costus", 
+    "Costus loangensis", 
+    "Africa", 
+    "Gabon", 
+    "Costaceae", 
+    "Costus", 
+    "Zingiberales", 
+    "spiral ginger"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 2 from: Specht C, Maas-van de Kamer H, Maas P (2012) Costus loangensis, an exciting new species from Gabon, Africa. PhytoKeys 18: 11-18. https://doi.org/10.3897/phytokeys.18.3713", 
+  "url": "https://zenodo.org/record/919508"
+}

@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.18.3713.figure4", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Wageningen University, Wageningen, Netherlands", 
+      "name": "Maas-van de Kamer, Hiltje"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Wageningen University, Wageningen, Netherlands", 
+      "name": "Maas, Paul J.M."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "University of California, Berkeley, Berkeley, United States of America", 
+      "name": "Specht, Chelsea"
+    }
+  ], 
+  "datePublished": "2012-11-19", 
+  "description": "Figure 4 - Phylogeny of African Costus species (Table 2) including newly described Costus loangensis. The phylogeny was constructed in PhyML (Guindon and Gascuel 2003) with aligned sequence data for two low copy nuclear markers [calmodulin (cam) intron (Johansen 2005) and rpb2 (Specht 2006a)] and nrDNA markers ITS and ETS. All nodes indicated have &gt;50% bootstrap support.", 
+  "identifier": "https://doi.org/10.3897/phytokeys.18.3713.figure4", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/phytokeys.18.3713", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Plantae", 
+    "Tracheophyta", 
+    "Liliopsida", 
+    "Zingiberales", 
+    "Costaceae", 
+    "CostusPlantae", 
+    "Costus", 
+    "Costus loangensis", 
+    "Africa", 
+    "Gabon", 
+    "Costaceae", 
+    "Costus", 
+    "Zingiberales", 
+    "spiral ginger"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 4 from: Specht C, Maas-van de Kamer H, Maas P (2012) Costus loangensis, an exciting new species from Gabon, Africa. PhytoKeys 18: 11-18. https://doi.org/10.3897/phytokeys.18.3713", 
+  "url": "https://zenodo.org/record/919512"
+}

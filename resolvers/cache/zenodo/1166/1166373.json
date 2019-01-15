@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.94.23248", 
+  "@type": "ScholarlyArticle", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Kunming Institute of Botany, Chinese Academy of Sciences, Kunming, China|Southeast Asia Biodiversity Research Institute, Chinese Academy of Sciences, Nay Pyi Taw, Myanmar", 
+      "name": "Chen, Wen-Hong"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Kunming Institute of Botany, Chinese Academy of Sciences, Kunming, China|University of Chinese Academy of Sciences, Beijing, China", 
+      "name": "Radbouchoom, Sirilak"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Center for Plant Conservation of Vietnam, Hanoi, Vietnam", 
+      "name": "Nguyen, Hieu Quang"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Center for Plant Conservation of Vietnam, Hanoi, Vietnam", 
+      "name": "Nguyen, Hiep Tien"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Vietnam Academy of Science and Technology, Hanoi, Vietnam", 
+      "name": "Nguyen, Khang Sinh"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Kunming Institute of Botany, Chinese Academy of Sciences, Kunming, China|Southeast Asia Biodiversity Research Institute, Chinese Academy of Sciences, Nay Pyi Taw, Myanmar", 
+      "name": "Shui, Yu-Min"
+    }
+  ], 
+  "datePublished": "2018-01-29", 
+  "description": "<p>Since 2016, KIB (Kunming Institute of Botany) and CPC (Centre for Plant Conservation of Vietnam) have conducted several surveys in the transboundary karst regions in Northern Vietnam and Southern China and seven new species in the genus Begonia Linn. (Begoniaceae) are firstly described. Amongst them, two species, Begonia albopunctata Y.M. Shui, W.H. Chen &amp; H.Q. Nguyen and B. erectocarpa H.Q. Nguyen, Y.M. Shui &amp; W.H. Chen, respectively belong to section Sphenanthera with berry fruits and section Leprosae with clavate berry fruits; four species, B. gulongshanensis Y.M. Shui &amp; W. H. Chen, B. minissima H.Q. Nguyen, Y.M. Shui &amp; W.H. Chen, B. mollissima Y.M. Shui, H.Q. Nguyen &amp; W.H. Chen, B. rhytidophylla Y.M. Shui &amp; W.H. Chen, belong to section Coelocentrum with parietal placentation; one species, Begonia bambusetorum H.Q. Nguyen, Y.M. Shui &amp; W.H. Chen, belongs to section Diploclinium with 3-loculed ovary and capsules. The diagnostic characters of these species are described and illustrated in the text and photographs.</p>", 
+  "headline": "Seven new species of Begonia (Begoniaceae) in Northern Vietnam and Southern China", 
+  "identifier": "https://doi.org/10.3897/phytokeys.94.23248", 
+  "image": "https://zenodo.org/static/img/logos/zenodo-gradient-round.svg", 
+  "keywords": [
+    "Plantae", 
+    "Tracheophyta", 
+    "Magnoliopsida", 
+    "Cucurbitales", 
+    "Begoniaceae", 
+    "Begonia", 
+    "Begonia", 
+    "Begonia sect. Coelocentrum", 
+    "Begonia sect. Diploclinium", 
+    "Begonia sect. Leprosae", 
+    "Begonia sect. Sphenanthera, China", 
+    "new species", 
+    "Vietnam"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Seven new species of Begonia (Begoniaceae) in Northern Vietnam and Southern China", 
+  "url": "https://zenodo.org/record/1166373"
+}

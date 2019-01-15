@@ -409,6 +409,25 @@ $urls = array(
 'https://zenodo.org/record/918935',
 );
 
+$urls = array(
+'https://zenodo.org/record/1166373',
+'https://zenodo.org/record/1166732',
+'https://zenodo.org/record/1166746',
+'https://zenodo.org/record/1166740',
+'https://zenodo.org/record/1166744',
+'https://zenodo.org/record/1166734',
+'https://zenodo.org/record/1166742',
+'https://zenodo.org/record/1166736',
+'https://zenodo.org/record/1166738',
+);
+
+$urls = array(
+'https://zenodo.org/record/919506',
+'https://zenodo.org/record/919508',
+'https://zenodo.org/record/919510',
+'https://zenodo.org/record/576149',
+'https://zenodo.org/record/919512',
+);
 
 
 $force = false;
