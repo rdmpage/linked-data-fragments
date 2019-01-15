@@ -261,6 +261,23 @@ SELECT * WHERE {
 }
 
 
+#-----------------------------------------------------------------------------------------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT *
+WHERE {
+ { 
+    <https://doi.org/10.3897/phytokeys.18.3713> <http://schema.org/creator> ?person  .
+     ?person  rdf:type <http://schema.org/Person>
+ }
+UNION
+ { 
+    <https://doi.org/10.3897/phytokeys.18.3713> <http://schema.org/creator> ?role  .
+    ?role  rdf:type <http://schema.org/Role> . 
+    ?role <http://schema.org/creator> ?person  .
+     ?person  rdf:type <http://schema.org/Person> .
+ }
+?person <http://schema.org/name> ?name  .
+}
 
 
 
