@@ -28,6 +28,8 @@ Server needs to return triples with mime type “application/n-quads” to be re
 
 Can test using [jQuery widget to query Triple Pattern Fragments interfaces](https://github.com/LinkedDataFragments/jQuery-Widget.js). Download Github repo and follow instructions.
 
+RDFa https://rdfa.info/play/
+
 
 ## Web 
 
