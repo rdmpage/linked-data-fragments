@@ -5,6 +5,7 @@
 	<script src="js/ejs.js"></script>
 	
 	<script>
+	
 	//----------------------------------------------------------------------------------------
 // http://stackoverflow.com/a/25715455
 function isObject (item) {
@@ -53,10 +54,10 @@ zbib
 
 -->
 
-<div id="output">Output</div>
+<div id="output">Template output goes here</div>
 
 <!-- json -->
-<div style="width:400px;border:1px solid rgb(192,192,192);font-family:Courier;font-size:10px;white-space:pre;overflow:auto;" id="record"></div>
+<div style="border:1px solid rgb(192,192,192);font-family:Courier;font-size:10px;white-space:pre;overflow:auto;" id="record">Data object goes here</div>
 
 
 
@@ -65,6 +66,7 @@ zbib
 var fragmentsClient = new ldf.FragmentsClient('fragments.php');
 
 var record = {};
+record.type = [];
 record.figures = {};
 record.creators = {};
 record.creators_display = {};
@@ -123,16 +125,20 @@ function isodate_to_string(datestring) {
 }
 
 //----------------------------------------------------------------------------------------
-function render() {
-	var template = `
-	
-	<div>
+// Templates
+
+var template;
+
+// Article template
+var template_article = `
+<!-- journal, date, volume, pagination -->
+<div>
 	<% if(record.publicationTitle) {%>
 	<span><%=Object.values(record.publicationTitle).join(' / ')%><% } %></span>
-	
+
 	<% if(record.datePublished) {%>
 	<span><%=isodate_to_string(record.datePublished)%><% } %></span>
-	
+
 	<% if(record.volumeNumber) {%>
 	<span><%=record.volumeNumber%><% } %></span>
 
@@ -147,54 +153,58 @@ function render() {
 
 	<% if(record.pageEnd) {%>
 	<span>-<%=record.pageEnd%><% } %></span>
+</div>
 
-
-
-	</div>
+<!-- title -->
+<% for(var i in record.name) {%>
+	<h1><%=record.name[i]%></h1>
+<% } %>
 	
-	<% for(var i in record.name) {%>
-		<h1><%=record.name[i]%></h1>
-	<% } %>
-		
-	<ul>
-	<% if(record.DOI) {%>
-	<li>DOI: <a href="https://doi.org/<%=record.DOI%>"><%=record.DOI%></a></li><% } %>
-	</ul>
-	
-	<ul>
-	<% if(record.creators) {
-			for(var i in record.creators) {%>
-				<li><%=Object.values(record.creators[i].name).join(' / ')%></li>
-			<%}
-		}%>
-	</ul>
+<!-- identifiers -->
+<ul>
+<% if(record.DOI) {%>
+<li>DOI: <a href="https://doi.org/<%=record.DOI%>"><%=record.DOI%></a></li><% } %>
+</ul>
 
-	<h2>Abstract</h2>
-	<!-- note use of - in ejs template because we want unescaped output to handle HTML codes in abstract -->
-	<% for(var i in record.description) {%>
-		<p><%-record.description[i]%></p><% } %>
+<!-- creators -->
+<ul>
+<% if(record.creators) {
+		for(var i in record.creators) {%>
+			<li><%=Object.values(record.creators[i].name).join(' / ')%></li>
+		<%}
+	}%>
+</ul>
 
-	<% if (record.license) {%>
-		<p><%=record.license%></p><% } %>
-		
-	<h2>Images</h2>
-	<% if(record.figures) {
-			for(var i in record.figures) {%>
-				<div style="padding:10px;">				
-				<img style="border:1px solid rgb(192,192,192);"  src="<%=record.figures[i].thumbnailUrl%> "/> 
-				<br />
-				<span><%=record.figures[i].caption%></span>
-				</div>
-			<%}
-		}%>
+<!-- abstract -->
+<h2>Abstract</h2>
+<!-- note use of - in ejs template because we want unescaped output to handle HTML codes in abstract -->
+<% for(var i in record.description) {%>
+	<p><%-record.description[i]%></p><% } %>
 
+<!-- licensing -->
+<% if (record.license) {%>
+	<p><%=record.license%></p><% } %>
 	
-	`;
-	
+<!-- figures -->
+<h2>Images</h2>
+<% if(record.figures) {
+		for(var i in record.figures) {%>
+			<div style="padding:10px;">				
+			<img style="border:1px solid rgb(192,192,192);"  src="<%=record.figures[i].thumbnailUrl%> "/> 
+			<br />
+			<span><%=record.figures[i].caption%></span>
+			</div>
+		<%}
+	}%>
+`;
+
+//----------------------------------------------------------------------------------------
+function render() {
+
+	// Render template 	
 	html = ejs.render(template);
-
-
-
+	
+	// Display
 	document.getElementById('output').innerHTML = html;
 }
 
@@ -215,6 +225,8 @@ function clean_value(value) {
 //----------------------------------------------------------------------------------------
 function get_core (uri) {
 	var query = 'SELECT * { <' + uri + '> ?p ?o . }';
+	
+	//alert(uri);
 
     results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
 
@@ -223,6 +235,20 @@ function get_core (uri) {
 		console.log(result); 
 	
 		switch (result['?p']) {
+		
+			case 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type':
+				var value = clean_value(result['?o']);
+				
+				// schema.org type
+				value = value.replace('http://schema.org/', '');
+				
+				// TDWG LSID types
+				value = value.replace('http://rs.tdwg.org/ontology/voc/TaxonName#', '');
+				
+				record['type'].push(value);
+				break;
+		
+		
 			case 'http://schema.org/volumeNumber':
 			case 'http://schema.org/pageStart':
 			case 'http://schema.org/pageEnd':
@@ -235,6 +261,98 @@ function get_core (uri) {
 				var value = clean_value(result['?o']);
 				record[key] = value;
 				break;
+	
+/*			
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:TaxonName="http://rs.tdwg.org/ontology/voc/TaxonName#" xmlns:ns="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:PublicationCitation="http://rs.tdwg.org/ontology/voc/PublicationCitation#" xmlns:Common="http://rs.tdwg.org/ontology/voc/Common#">
+  <TaxonName:TaxonName rdf:about="urn:lsid:indexfungorum.org:names:568745">
+    <ns:Title>Mediaverrunites mulleri Nandi &amp; A. Sinha2007</ns:Title>
+    <owl:versionInfo>1.1.2.1</owl:versionInfo>
+    <TaxonName:nameComplete>Mediaverrunites mulleri</TaxonName:nameComplete>
+    <TaxonName:genusPart>Mediaverrunites</TaxonName:genusPart>
+    <TaxonName:genusPart>mulleri</TaxonName:specificEpithet>
+    <TaxonName:genusPart>Nandi &amp; A. Sinha</TaxonName:authorship>
+    <TaxonName:genusPart>Nandi &amp; A. Sinha</TaxonName:basionymAuthorship>
+    <TaxonName:year>2007</TaxonName:year>
+    <TaxonName:microReference>98 + plate 1, figs 1-6, 8, 9 &amp; text fig. 2A</TaxonName:microReference>
+    <Common:publishedInCitation rdf:nodeID="bnode0" />
+    <TaxonName:rankString>sp.</TaxonName:rankString>
+    <TaxonName:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+  </TaxonName:TaxonName>
+  <PublicationCitation:PublicationCitation rdf:nodeID="bnode0">
+    <PublicationCitation:year>2007</PublicationCitation:year>
+    <PublicationCitation:title>Palynology</PublicationCitation:title>
+    <PublicationCitation:volume>31</PublicationCitation:volume>
+    <PublicationCitation:number>1</PublicationCitation:number>
+    <PublicationCitation:pages>98 + plate 1, figs 1-6, 8, 9 &amp; text fig. 2A</PublicationCitation:pages>
+  </PublicationCitation:PublicationCitation>
+  <TaxonName:NomenclaturalCodeTerm rdf:about="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+</rdf:RDF>	
+*/			
+
+/*
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:25386-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:25386-1:1.1.2.1.1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.2.1.1.1</owl:versionInfo>
+<dc:title>Anisotes Lindl.</dc:title>                
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2009-11-20 17:39:55.0</dcterms:modified>
+<tn:rankString>gen.</tn:rankString>
+<tn:nameComplete>Anisotes</tn:nameComplete>
+<tn:uninomial>Anisotes</tn:uninomial>
+<tn:authorship>Lindl.</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Lindl.</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:22383-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Intr. Nat. Syst. Bot., ed. 2. 100, 441. 1836 </tcom:publishedIn>    
+<tn:year>1836</tn:year>        
+</tn:TaxonName>  
+</rdf:RDF>
+
+*/
+
+				
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#nameComplete':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#uninomial':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#genusPart':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#specificEpithet':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#authorship':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#basionymAuthorship':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#hasBasionym':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#combinationAuthorship':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#year':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#microReference':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#rankString':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#nomenclaturalCode':			
+				var key = result['?p'].replace(/http:\/\/rs.tdwg.org\/ontology\/voc\/TaxonName#/, '');
+				var value = clean_value(result['?o']);
+				record[key] = value;
+				break;
+				
+			case 'http://rs.tdwg.org/ontology/voc/Common#publishedIn':			
+				var key = result['?p'].replace(/http:\/\/rs.tdwg.org\/ontology\/voc\/Common#/, '');
+				var value = clean_value(result['?o']);
+				record[key] = value;
+				break;
+				
 
 			// may have multiple values
 			case 'http://schema.org/sameAs':
@@ -280,8 +398,19 @@ function get_core (uri) {
 	
 		});
 		
-	results.on('end', function (result) { 
-		get_figures(uri);		
+	results.on('end', function (result) {
+	
+		// decide what to do next based on type of object
+		
+		template = template_article;
+		
+		if (record.type.indexOf('ScholarlyArticle') !== -1) {
+
+			template = template_article;
+	 	}
+	 	
+	 	get_figures(uri);
+	 	
 		});	
 
 
@@ -449,13 +578,30 @@ function get_identifiers (uri) {
 			}
 		});
 	
-		results.on('end', function (result) { 
+		results.on('end', function (result) {
+		
+			record = clean_record(record); 
 		
 			display_record();
 			
 			render();
 		
 			});	
+}
+
+//----------------------------------------------------------------------------------------
+
+function clean_record() {
+
+	for (var i in record) {
+		if (isObject(record[i])) {
+			if (Object.keys(record[i]).length == 0)	{
+				delete record[i];
+			}
+		}	
+	}
+
+	return record;
 }
 
 //----------------------------------------------------------------------------------------
@@ -468,23 +614,6 @@ function display_record() {
 
 //----------------------------------------------------------------------------------------
 
-
-var uri = 'https://doi.org/10.3897/phytokeys.3.1131';
-uri = 'https://doi.org/10.3969/j.issn.2095-0845.1999.01.002'; // chinese only
-//uri = 'https://biostor.org/reference/146755';
-uri = 'https://doi.org/10.6165/tai.2014.59.4.326'; // English and Chinese
-//uri = 'https://doi.org/10.14203/reinwardtia.v14i1.391';
-//uri = 'https://doi.org/10.3897/phytokeys.94.23248'; // Figures from Zenodo
-//uri = 'https://doi.org/10.3897/phytokeys.3.1131'; // Figures from Zenodo
-
-
-
-
-	
-		
-		
-		
-		
 		
 
 // https://html-online.com/articles/get-url-parameters-javascript/	
@@ -494,17 +623,30 @@ function getUrlVars() {
         vars[key] = value;
     });
     return vars;
-}
-		
-		
+}	
 		
 function getUrlParam(parameter, defaultvalue){
     var urlparameter = defaultvalue;
     if(window.location.href.indexOf(parameter) > -1){
         urlparameter = getUrlVars()[parameter];
+        
+        urlparameter = decodeURIComponent(urlparameter);
         }
     return urlparameter;
 }
+
+/* examples
+
+https://doi.org/10.3897/phytokeys.3.1131
+https://doi.org/10.3969/j.issn.2095-0845.1999.01.002 // chinese only
+https://biostor.org/reference/146755
+https://doi.org/10.6165/tai.2014.59.4.326 // English and Chinese
+https://doi.org/10.14203/reinwardtia.v14i1.391
+https://doi.org/10.3897/phytokeys.94.23248 // Figures from Zenodo
+https://doi.org/10.3897/phytokeys.3.1131 // Figures from Zenodo
+
+*/
+
 
 var uri = getUrlParam('uri', 'https://doi.org/10.6165/tai.2014.59.4.326');
 get_core(uri);
