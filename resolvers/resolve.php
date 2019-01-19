@@ -1296,6 +1296,57 @@ function resolve_url($url)
 		}
 	}	
 	
+	// IndexFungorum name clusters -------------------------------------------------------
+	if (!$done)
+	{
+		if (preg_match('/https?:\/\/bionames.org\/indexfungorum\/cluster\/(?<id>\d+)/', $url, $m))
+		{
+			$id = $m['id'];
+			
+			$url = 'http://localhost/~rpage/indexfungorum-publications/jsonld-clusters.php?id=' . $id;
+			$json = get($url);
+			
+			if ($json != '')
+			{
+				$data = json_decode($json);
+				if ($data)
+				{				
+					$doc = new stdclass;
+					$doc->{'message-source'} = $url;
+					$doc->{'message-format'} = 'application/ld+json';
+					$doc->message = $data;
+					
+					// process possible links
+					$doc->links = array();
+					if (isset($data->dataFeedElement))
+					{
+						foreach ($data->dataFeedElement as $dataFeedElement)
+						{
+							$doc->links[] = $dataFeedElement->{'@id'};
+							
+							if (isset($dataFeedElement->{'tcom:publishedInCitation'}))
+							{
+								$doc->links[] = $dataFeedElement->{'tcom:publishedInCitation'}->{'@id'};
+							}
+						}
+					}
+					
+					if (count($doc->links) == 0)
+					{
+						unset($doc->links);
+					}
+					else
+					{
+						$doc->links = array_unique($doc->links);
+					}
+										
+				}
+			}
+						
+			$done = true;
+		}
+	}		
+	
 	// WorldCat JSON-LD ------------------------------------------------------------------
 	if (!$done)
 	{
@@ -1513,6 +1564,7 @@ if (0)
 	
 	$url = 'https://zenodo.org/record/918935';
 	
+	$url = 'http://bionames.org/indexfungorum/cluster/568745';
 	
 	
 	
