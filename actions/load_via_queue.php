@@ -430,6 +430,16 @@ $urls = array(
 );
 
 
+$urls=array(
+'https://doi.org/10.1080/01916122.2007.9989637',
+'http://bionames.org/indexfungorum/cluster/568745',
+);
+
+$urls=array(
+'https://doi.org/10.5248/132.305',
+'http://bionames.org/indexfungorum/cluster/814659',
+);
+
 $force = false;
 $force = true;
 
