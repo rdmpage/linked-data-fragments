@@ -1,0 +1,1055 @@
+<html>
+<head>
+
+	<style>
+		.genusPart {
+			font-style: italic;
+		}
+		.infragenericEpithet {
+			font-style: italic;
+		}
+		.specificEpithet {
+			font-style: italic;
+		}
+		.infraspecificEpithet {
+			font-style: italic;
+		}
+	
+	
+	</style>
+
+	<script src="js/ldf-client-browser.js"></script>
+	<script src="js/jsonld.js"></script>
+	<script src="js/ejs.js"></script>
+	
+	<script>
+	
+	//----------------------------------------------------------------------------------------
+// http://stackoverflow.com/a/25715455
+function isObject (item) {
+  return (typeof item === "object" && !Array.isArray(item) && item !== null);
+}
+	</script>
+	
+	<style>
+	body {
+		font-family:sans-serif;
+		padding:20px;
+	}
+	</style>
+	
+</head>
+<body>
+
+<!--
+
+zbib 
+
+[{
+    "key": "RUGULVH2",
+    "version": 0,
+    "itemType": "journalArticle",
+    "creators": [{
+        "firstName": "Graeme B.",
+        "lastName": "Smith",
+        "creatorType": "author"
+    }],
+    "tags": [],
+    "publicationTitle": "Records of the Australian Museum",
+    "volume": "68",
+    "issue": "2",
+    "ISSN": "22014349",
+    "date": "2016-7-21",
+    "pages": "45-80",
+    "DOI": "10.3853/j.2201-4349.68.2016.1652",
+    "url": "https://journals.australianmuseum.net.au/smith-2016-rec-aust-mus-682-4580/",
+    "title": "On some silverfish taxa from Tasmania (Zygentoma: Lepismatidae and Nicoletiidae)",
+    "libraryCatalog": "Crossref",
+    "accessDate": "2019-01-14T14:48:48Z",
+    "shortTitle": "On some silverfish taxa from Tasmania (Zygentoma"
+}]
+
+
+-->
+
+<div id="output">Template output goes here</div>
+
+<!-- json -->
+<div style="border:1px solid rgb(192,192,192);font-family:Courier;font-size:10px;white-space:pre;overflow:auto;" id="record">Data object goes here</div>
+
+
+
+<script>
+
+var fragmentsClient = new ldf.FragmentsClient('fragments.php');
+
+var record = {};
+record.type = [];
+
+// work
+record.figures = {};
+record.creators = {};
+record.creators_display = {};
+record.about = {};
+
+// taxon name
+record.references = {};
+
+// person
+
+
+
+
+//----------------------------------------------------------------------------------------
+// Convert ISO data to a human-readable string (PubMed-style)
+// My databases use -00 to indicate no month or no day, and this confuses Javascript
+// Date so we need to set the options appropriately
+function isodate_to_string(datestring) {
+
+	// By default assume datestring is a year only
+	var options = {};
+	options.year = 'numeric';
+	
+	// Test for valid month, then day (because we use -00 to indicate no data)
+	var m = null;
+	
+	if (!m) {	
+		m = datestring.match(/^([0-9]{4})$/);
+		if (m) {
+			// year only
+			datestring = m[1]; 
+		}
+	}
+	
+	if (!m) {		
+		m = datestring.match(/^([0-9]{4})-([0-9]{2})-00/);
+		if (m) {
+			
+			if (m[2] == '00') {
+				// Javascript can't handle -00-00 date string so set to January 1st 
+				// which won't be output as we're only outputting the year
+				datestring = m[1] + '-01-01';
+			} else {
+				// We have a month but no day
+				datestring = m[1] + '-' + m[2] + '-01';
+				options.month = 'short';
+			}		
+		}
+	}
+	
+	if (!m) {	
+		m = datestring.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})/);
+		if (m) {
+			// we have yea, month, and day
+			options.month = 'short';
+			options.day = 'numeric';
+		}
+	}
+	
+	var d = new Date(datestring);
+	datestring = d.toLocaleString('en-gb', options);
+	
+	return datestring;		
+}
+
+//----------------------------------------------------------------------------------------
+// Templates
+
+var template;
+
+// Article template
+var template_article = `
+<!-- journal, date, volume, pagination -->
+<div>
+	<% if(record.publicationTitle) {%>
+	<span><%=Object.values(record.publicationTitle).join(' / ')%><% } %></span>
+
+	<% if(record.datePublished) {%>
+	<span><%=isodate_to_string(record.datePublished)%><% } %></span>
+
+	<% if(record.volumeNumber) {%>
+	<span><%=record.volumeNumber%><% } %></span>
+
+	<% if(record.issueNumber) {%>
+	<span>(<%=record.issueNumber%>)<% } %></span>
+
+	<% if(record.pagination) {%>
+	<span>: <%=record.pagination%><% } %></span>
+
+	<% if(record.pageStart) {%>
+	<span>: <%=record.pageStart%><% } %></span>
+
+	<% if(record.pageEnd) {%>
+	<span>-<%=record.pageEnd%><% } %></span>
+</div>
+
+<!-- title -->
+<% for(var i in record.name) {%>
+	<h1><%=record.name[i]%></h1>
+<% } %>
+	
+<!-- identifiers -->
+<ul>
+<% if(record.DOI) {%>
+<li>DOI: <a href="https://doi.org/<%=record.DOI%>"><%=record.DOI%></a></li><% } %>
+</ul>
+
+<!-- creators -->
+<ul>
+<% if(record.creators) {
+		for(var i in record.creators) {%>
+			<li>
+				<a href="?uri=<%=encodeURIComponent(i)%>">
+					<%=Object.values(record.creators[i].name).join(' / ')%>
+				</a>	
+			</li>
+		<%}
+	}%>
+</ul>
+
+<!-- abstract -->
+<h2>Abstract</h2>
+<!-- note use of - in ejs template because we want unescaped output to handle HTML codes in abstract -->
+<% for(var i in record.description) {%>
+	<p><%-record.description[i]%></p><% } %>
+
+<!-- licensing -->
+<% if (record.license) {%>
+	<p><%=record.license%></p><% } %>
+	
+<!-- figures -->
+<h2>Images</h2>
+<% if(record.figures) {
+		for(var i in record.figures) {%>
+			<div style="padding:10px;">				
+			<img style="border:1px solid rgb(192,192,192);"  src="<%=record.figures[i].thumbnailUrl%> "/> 
+			<br />
+			<span><%=record.figures[i].caption%></span>
+			</div>
+		<%}
+	}%>
+	
+<!-- what is this work about? -->
+	
+	<% if(record.about) {%>
+		<h2>About</h2>
+		<ul>
+		<% for(var i in record.about) {%>
+			<li>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+			
+			<% if (record.about[i].name) {%>
+				<%=record.about[i].name%>
+			<% } %>
+			</a>
+			</li>
+		<% } %>
+	<% } %>
+	
+`;
+
+
+// Taxon name template
+var template_taxon_name = `
+<!-- title -->
+<h1>
+<% if (record.uninomial) {%>
+	<%if (record.rankString == 'gen.') {%>
+		<span class="genusPart"><%=record.uninomial%></span>
+	<%} else {%>	
+		<%=record.uninomial%>
+	<%}%>
+<%	} else {
+		if (record.genusPart) {%>
+			<span class="genusPart"><%=record.genusPart%></span>
+		<%}
+		if (record.infragenericEpithet) {%>
+		
+			<%if (record.rankString == 'sect.') {%>
+				<span> sect. </span>
+			<%}%>
+		
+			<span class="infragenericEpithet"><%=record.infragenericEpithet%></span>
+		<%}
+		if (record.specificEpithet) {%>
+			<span class="specificEpithet"><%=record.specificEpithet%></span>
+		<%}
+		if (record.infraspecificEpithet) {%>
+			<span class="infraspecificEpithet"><%=record.infraspecificEpithet%></span>
+		<%}
+		
+	}%>
+	
+	<%if (record.authorship) {%>
+		<%=record.authorship%>
+	<%}%>	
+</h1>
+
+<% if (record.id) {%>
+	<div><%=record.id%></div>
+<% } %>
+
+
+<% if (record.publishedIn) {%>
+	<div><%=record.publishedIn%></div>
+<% } %>
+
+<!-- Reference(s) that published this name  -->
+	<ul>
+	<% if(record.references) {%>
+		<h2>References</h2>
+		<% for(var i in record.references) {%>
+			<li>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+			
+			<% if (record.references[i].name) {%>
+				<%=Object.values(record.references[i].name).join(' / ')%>
+			<% } %>
+
+			<% if (record.references[i].publicationTitle) {%>
+				<%=Object.values(record.references[i].publicationTitle).join(' / ')%>
+			<% } %>
+			
+			<% if (record.references[i].volumeNumber) {%>
+				<%=record.references[i].volumeNumber%>
+			<% } %>
+			<% if (record.references[i].issueNumber) {%>
+				<%=record.references[i].issueNumber%>
+			<% } %>
+			<% if (record.references[i].pagination) {%>
+				<%=record.references[i].pagination%>
+			<% } %>
+						
+			<% if (record.references[i].doi) {%>
+				DOI: <%=record.references[i].doi%>
+			<% } %>
+			
+			</a>		
+			</li>
+		<% } %>	
+	<% } %>	
+	
+	</ul>
+
+
+`;
+
+
+//----------------------------------------------------------------------------------------
+function render() {
+
+	// Render template 	
+	html = ejs.render(template);
+	
+	// Display
+	document.getElementById('output').innerHTML = html;
+}
+
+
+//----------------------------------------------------------------------------------------
+function clean_value(value) {
+	value = value.replace(/\"/g, '');
+	
+	var m = value.match(/^(.*)@([a-z]{2})$/);
+	if (m) {
+		value = {};
+		value[m[2]] = m[1];
+	}
+	
+	return value;
+}
+
+//----------------------------------------------------------------------------------------
+function get_core (uri) {
+
+	record.id = uri;
+
+	var query = 'SELECT * { <' + uri + '> ?p ?o . }';
+	
+	//alert(uri);
+
+    results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+	results.on('data', function (result) { 
+
+		console.log(result); 
+	
+		switch (result['?p']) {
+		
+			case 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type':
+				var value = clean_value(result['?o']);
+				
+				// schema.org type
+				value = value.replace('http://schema.org/', '');
+				
+				// TDWG LSID types
+				value = value.replace('http://rs.tdwg.org/ontology/voc/TaxonName#', '');
+				
+				record['type'].push(value);
+				break;
+		
+		
+			case 'http://schema.org/volumeNumber':
+			case 'http://schema.org/pageStart':
+			case 'http://schema.org/pageEnd':
+			case 'http://schema.org/pagination':
+			case 'http://schema.org/issueNumber':
+			case 'http://schema.org/datePublished':
+			case 'http://schema.org/license':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				var value = clean_value(result['?o']);
+				record[key] = value;
+				break;
+	
+/*			
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:TaxonName="http://rs.tdwg.org/ontology/voc/TaxonName#" xmlns:ns="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:PublicationCitation="http://rs.tdwg.org/ontology/voc/PublicationCitation#" xmlns:Common="http://rs.tdwg.org/ontology/voc/Common#">
+  <TaxonName:TaxonName rdf:about="urn:lsid:indexfungorum.org:names:568745">
+    <ns:Title>Mediaverrunites mulleri Nandi &amp; A. Sinha2007</ns:Title>
+    <owl:versionInfo>1.1.2.1</owl:versionInfo>
+    <TaxonName:nameComplete>Mediaverrunites mulleri</TaxonName:nameComplete>
+    <TaxonName:genusPart>Mediaverrunites</TaxonName:genusPart>
+    <TaxonName:genusPart>mulleri</TaxonName:specificEpithet>
+    <TaxonName:genusPart>Nandi &amp; A. Sinha</TaxonName:authorship>
+    <TaxonName:genusPart>Nandi &amp; A. Sinha</TaxonName:basionymAuthorship>
+    <TaxonName:year>2007</TaxonName:year>
+    <TaxonName:microReference>98 + plate 1, figs 1-6, 8, 9 &amp; text fig. 2A</TaxonName:microReference>
+    <Common:publishedInCitation rdf:nodeID="bnode0" />
+    <TaxonName:rankString>sp.</TaxonName:rankString>
+    <TaxonName:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+  </TaxonName:TaxonName>
+  <PublicationCitation:PublicationCitation rdf:nodeID="bnode0">
+    <PublicationCitation:year>2007</PublicationCitation:year>
+    <PublicationCitation:title>Palynology</PublicationCitation:title>
+    <PublicationCitation:volume>31</PublicationCitation:volume>
+    <PublicationCitation:number>1</PublicationCitation:number>
+    <PublicationCitation:pages>98 + plate 1, figs 1-6, 8, 9 &amp; text fig. 2A</PublicationCitation:pages>
+  </PublicationCitation:PublicationCitation>
+  <TaxonName:NomenclaturalCodeTerm rdf:about="http://rs.tdwg.org/ontology/voc/TaxonName#ICBN" />
+</rdf:RDF>	
+*/			
+
+/*
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:25386-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:25386-1:1.1.2.1.1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.2.1.1.1</owl:versionInfo>
+<dc:title>Anisotes Lindl.</dc:title>                
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2009-11-20 17:39:55.0</dcterms:modified>
+<tn:rankString>gen.</tn:rankString>
+<tn:nameComplete>Anisotes</tn:nameComplete>
+<tn:uninomial>Anisotes</tn:uninomial>
+<tn:authorship>Lindl.</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Lindl.</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:22383-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Intr. Nat. Syst. Bot., ed. 2. 100, 441. 1836 </tcom:publishedIn>    
+<tn:year>1836</tn:year>        
+</tn:TaxonName>  
+</rdf:RDF>
+
+*/
+
+				
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#nameComplete':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#uninomial':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#genusPart':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#infragenericEpithet':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#specificEpithet':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#infraspecificEpithet':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#authorship':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#basionymAuthorship':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#hasBasionym':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#combinationAuthorship':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#year':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#microReference':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#rankString':
+			case 'http://rs.tdwg.org/ontology/voc/TaxonName#nomenclaturalCode':			
+				var key = result['?p'].replace(/http:\/\/rs.tdwg.org\/ontology\/voc\/TaxonName#/, '');
+				var value = clean_value(result['?o']);
+				record[key] = value;
+				break;
+				
+			case 'http://rs.tdwg.org/ontology/voc/Common#publishedIn':			
+				var key = result['?p'].replace(/http:\/\/rs.tdwg.org\/ontology\/voc\/Common#/, '');
+				var value = clean_value(result['?o']);
+				record[key] = value;
+				break;
+				
+
+			// may have multiple values
+			case 'http://schema.org/sameAs':
+			case 'http://schema.org/url':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				
+				if (!record[key]) {
+					record[key] = [];
+				}
+			
+				var value = result['?o'];
+				value = value.replace(/\"/g, '');
+											
+				record[key].push(value);
+				break;
+			
+			
+			// may have languages
+			case 'http://schema.org/description':
+			case 'http://schema.org/name':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				
+				if (!record[key]) {
+					record[key] = {};
+				}
+			
+				var value = clean_value(result['?o']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record[key][kv[0]] = kv[1];
+				} else {
+					record[key]['und'] = value;
+				}
+				break;
+				
+			
+			default:
+				break;
+		}
+	
+		});
+		
+	results.on('end', function (result) {
+	
+		// decide what to do next based on type of object
+		
+		template = template_article;
+		
+		if (record.type.indexOf('ScholarlyArticle') !== -1) {
+			template = template_article;
+	 	}
+
+		if (record.type.indexOf('TaxonName') !== -1) {
+			template = template_taxon_name;
+	 	}
+
+
+		switch (template) {
+			case template_taxon_name:
+				get_published_in(uri, function (uri) { 
+					get_published_in_indexfungorum(uri, function (uri) { 
+							last(uri); 
+					});			
+				});
+				break;
+
+			case template_article:
+			default:			
+				get_figures(uri, function (uri) { 
+					get_creators(uri, function (uri) { 	
+						get_container(uri, function (uri) { 
+							get_identifiers(uri, function (uri) { 
+								get_names_published(uri, function (uri) { 
+									last(uri); 
+								});
+							});
+						});				
+					});
+				});			
+				break;
+				
+		}
+
+
+	 	
+		});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_published_in (uri, cb) {
+
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+SELECT * WHERE {
+<` + uri + `> tcom:publishedInCitation ?pub .
+
+OPTIONAL {
+{
+   ?pub <http://schema.org/name> ?name .
+}
+UNION {
+?pub dc:title ?name .
+}
+OPTIONAL {
+?pub <http://schema.org/datePublished> ?datePublished .
+}
+OPTIONAL {
+?pub <http://schema.org/name> ?name .
+}
+
+OPTIONAL {
+?pub <http://schema.org/volumeNumber> ?volumeNumber .
+}
+
+OPTIONAL {
+?pub <http://schema.org/issueNumber> ?issueNumber .
+}
+
+OPTIONAL {
+?pub <http://schema.org/pagination> ?pagination .
+}
+
+OPTIONAL {
+?pub <http://schema.org/isPartOf> ?container .
+?container <http://schema.org/name> ?journal .
+}
+
+OPTIONAL {
+?pub <http://schema.org/identifier> ?identifier .
+?identifier <http://schema.org/propertyID> ?propertyID .
+?identifier <http://schema.org/value> ?doi .
+FILTER (?propertyID = "doi")
+}
+}
+
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+		
+			record.references[result['?pub']] = {};
+			
+			record.references[result['?pub']].name = {};
+			record.references[result['?pub']].publicationTitle = {};
+		
+			if (result['?name']) {
+				var value = clean_value(result['?name']);	
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record.references[result['?pub']].name[kv[0]] = kv[1];
+				} else {
+					record.references[result['?pub']].name['und'] = value;
+				}
+			}
+			
+			if (result['?journal']) {
+				var value = clean_value(result['?journal']);	
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record.references[result['?pub']].publicationTitle[kv[0]] = kv[1];
+				} else {
+					record.references[result['?pub']].publicationTitle['und'] = value;
+				}
+			}
+			
+			var value;		
+			
+			var keys = [
+				'volumeNumber',
+				'issueNumber',
+				'pagination',
+				'datePublished',
+				'doi'
+				];
+				
+			for(var i in keys) {
+				if (result['?' + keys[i]]) {
+					value = result['?' + keys[i]];
+					record.references[result['?pub']][keys[i]] = clean_value(value);										
+				}		
+			}
+
+			
+			});
+	
+		results.on('end', function (result) { 		
+			cb(uri);			
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_published_in_indexfungorum (uri, cb) {
+
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX pc: <http://rs.tdwg.org/ontology/voc/PublicationCitation#>
+
+SELECT *
+WHERE {
+	<` + uri + `> tcom:publishedInCitation ?pub .
+	
+	?pub pc:title ?title .
+
+	OPTIONAL {
+		?pub pc:volume ?volume .
+	}
+	OPTIONAL {
+		?pub pc:number ?number .
+	}
+	OPTIONAL {
+		?pub pc:pages ?pages .
+	}
+	OPTIONAL {
+		?pub pc:year ?year .
+	}
+
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+		
+			record.references[result['?pub']] = {};
+			
+			record.references[result['?pub']].publicationTitle = [];
+					
+			var value;		
+			
+			// IndexFungorum uses a separate vocabulary to describe a citation
+			// (which is really a microcitation)
+			
+			if (result['?title']) {
+				value = result['?title'];	
+				record.references[result['?pub']].publicationTitle.push(clean_value(value));		
+			}						
+
+			if (result['?volume']) {
+				var value = result['?volume'];				
+				record.references[result['?pub']].volumeNumber = clean_value(value);		
+			}			
+
+			if (result['?number']) {
+				var value = result['?number'];				
+				record.references[result['?pub']].issueNumber = clean_value(value);		
+			}			
+
+			if (result['?pages']) {
+				var value = result['?pages'];				
+				record.references[result['?pub']].pagination = clean_value(value);		
+			}			
+
+			if (result['?year']) {
+				var value = result['?year'];				
+				record.references[result['?pub']].datePublished = clean_value(value);		
+			}			
+			
+			});
+	
+		results.on('end', function (result) { 		
+			cb(uri);			
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_figures (uri, cb) {
+		var query = `PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT * WHERE {
+  ?image schema:isPartOf <` + uri + `>  .
+  ?image rdf:type <http://schema.org/ImageObject> .
+  ?image schema:thumbnailUrl ?thumbnailUrl .
+  ?image schema:description ?caption .
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+		
+			record.figures[result['?image']] = {};
+		
+			var thumbnailUrl = result['?thumbnailUrl'];
+		
+			var caption = result['?caption'];
+				
+			record.figures[result['?image']].thumbnailUrl = clean_value(thumbnailUrl);
+			record.figures[result['?image']].caption = clean_value(caption);
+			});
+	
+		results.on('end', function (result) { 		
+			cb(uri);			
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_creators (uri, cb) {
+		var query = `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT *
+WHERE {
+ { 
+    <` + uri + `> <http://schema.org/creator> ?person  .
+     ?person  rdf:type <http://schema.org/Person>
+ }
+UNION
+ { 
+    <` + uri + `> <http://schema.org/creator> ?role  .
+    ?role  rdf:type <http://schema.org/Role> . 
+    ?role <http://schema.org/creator> ?person  .
+    ?person  rdf:type <http://schema.org/Person> .
+ }
+?person <http://schema.org/name> ?name  .
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			if (!record.creators[result['?person']]) {
+				record.creators[result['?person']] = {};
+				record.creators[result['?person']].name = {};
+			}			
+		
+			var value = result['?name'];
+			value = clean_value(value);
+			
+			// language?
+			if (isObject(value)) {
+				var kv = Object.entries(value)[0];
+				record.creators[result['?person']].name[kv[0]] = kv[1];
+			} else {
+				record.creators[result['?person']].name['und'] = value;
+			}
+			});
+	
+		results.on('end', function (result) { 	
+			cb(uri);		
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_container (uri, cb) {
+		var query = `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+SELECT *
+WHERE {
+   <` + uri + `> schema:isPartOf ?container .
+   #?container  rdf:type <http://schema.org/Periodical> .
+   ?container schema:name ?name  .
+OPTIONAL {
+ ?container schema:issn ?issn  .
+}
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			if (result['?issn']) {
+				value = result['?issn'];
+				value = clean_value(value);
+				
+				if (!record.ISSN) {
+					record.ISSN = [];
+				}
+				record.ISSN.push (value);
+			}
+			
+			if (result['?name']) {
+			
+				if (!record.publicationTitle) {
+					record.publicationTitle = {};
+				}
+			
+				var value = clean_value(result['?name']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record.publicationTitle[kv[0]] = kv[1];
+				} else {
+					record.publicationTitle['und'] = value;
+				}
+			}			
+			
+		
+	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_identifiers (uri, cb) {
+		query = `PREFIX schema: <http://schema.org/>
+	SELECT * WHERE {
+	<` + uri + `> schema:identifier ?identifier .
+	?identifier schema:propertyID ?id .
+	?identifier schema:value ?value .
+	}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+		
+			if (result['?id'] == "\"doi\"") {
+				var value = clean_value(result['?value']);
+				record.DOI = value;
+			}
+		});
+	
+		results.on('end', function (result) {
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_names_published (uri, cb) {
+		var query = `PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+SELECT *
+WHERE {
+	?id tcom:publishedInCitation <` + uri + `> .
+	?id tn:nameComplete ?nameComplete .
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			if (!record.about[result['?id']]) {
+				record.about[result['?id']] = {};
+			}			
+		
+			if (result['?nameComplete']) {
+				var value = clean_value(result['?nameComplete']);
+				record.about[result['?id']].name = value;
+			}
+	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+// Remove any keys that lack data
+function clean_record() {
+
+	for (var i in record) {
+		if (isObject(record[i])) {
+			if (Object.keys(record[i]).length == 0)	{
+				delete record[i];
+			}
+		}	
+	}
+
+	return record;
+}
+
+//----------------------------------------------------------------------------------------
+// Dump JSON object
+function display_record() {
+	var textnode = document.createTextNode(JSON.stringify(record, null, 2));   
+	document.getElementById("record").appendChild(textnode); 
+}
+
+//----------------------------------------------------------------------------------------
+// Finish up by displaying info
+function last(uri) {
+	record = clean_record(record);
+	display_record();
+	render();
+}
+
+//----------------------------------------------------------------------------------------
+// https://html-online.com/articles/get-url-parameters-javascript/	
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}	
+		
+//----------------------------------------------------------------------------------------
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        
+        urlparameter = decodeURIComponent(urlparameter);
+        }
+    return urlparameter;
+}
+
+/* examples
+
+https://doi.org/10.3897/phytokeys.3.1131
+https://doi.org/10.3969/j.issn.2095-0845.1999.01.002 // chinese only
+https://biostor.org/reference/146755
+https://doi.org/10.6165/tai.2014.59.4.326 // English and Chinese
+https://doi.org/10.14203/reinwardtia.v14i1.391
+https://doi.org/10.3897/phytokeys.94.23248 // Figures from Zenodo
+https://doi.org/10.3897/phytokeys.3.1131 // Figures from Zenodo
+
+*/
+
+
+var uri = getUrlParam('uri', 'https://doi.org/10.6165/tai.2014.59.4.326');
+
+// nested callbacks? yes, nested callbacks
+
+// article
+/*get_core(uri, function (uri) { 
+	get_figures(uri, function (uri) { 
+		get_creators(uri, function (uri) { 	
+			get_container(uri, function (uri) { 
+				get_identifiers(uri, function (uri) { 
+					last(uri); 
+				});
+			});				
+		});
+	});
+});*/
+
+get_core(uri);
+
+
+	
+
+</script>
+</body>
+</html>
+
