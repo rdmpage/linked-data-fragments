@@ -376,6 +376,7 @@ function get_core (uri) {
 	
 		switch (result['?p']) {
 		
+			// type-----------------------------------------------------------------------
 			case 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type':
 				var value = clean_value(result['?o']);
 				
@@ -385,10 +386,16 @@ function get_core (uri) {
 				// TDWG LSID types
 				value = value.replace('http://rs.tdwg.org/ontology/voc/TaxonName#', '');
 				
+				// Bibo
+				value = value.replace('http://purl.org/ontology/bibo/', '');
+
+				// FOAF
+				value = value.replace('http://xmlns.com/foaf/0.1/', '');
+				
 				record['type'].push(value);
 				break;
 		
-		
+			// schema.org-----------------------------------------------------------------
 			case 'http://schema.org/volumeNumber':
 			case 'http://schema.org/pageStart':
 			case 'http://schema.org/pageEnd':
@@ -401,6 +408,152 @@ function get_core (uri) {
 				var value = clean_value(result['?o']);
 				record[key] = value;
 				break;
+				
+			// may have multiple values
+			case 'http://schema.org/sameAs':
+			case 'http://schema.org/url':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				
+				if (!record[key]) {
+					record[key] = [];
+				}
+			
+				var value = result['?o'];
+				value = value.replace(/\"/g, '');
+											
+				record[key].push(value);
+				break;
+			
+			
+			// may have languages
+			case 'http://schema.org/description':
+			case 'http://schema.org/name':
+			
+				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
+				
+				if (!record[key]) {
+					record[key] = {};
+				}
+			
+				var value = clean_value(result['?o']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record[key][kv[0]] = kv[1];
+				} else {
+					record[key]['und'] = value;
+				}
+				break;
+								
+	
+			// CiNii----------------------------------------------------------------------
+			// may have multiple values/languages
+			case 'http://purl.org/dc/elements/1.1/title':
+			
+				var key = 'name';
+				
+				if (!record[key]) {
+					record[key] = {};
+				}
+			
+				var value = clean_value(result['?o']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record[key][kv[0]] = kv[1];
+				} else {
+					record[key]['und'] = value;
+				}
+				break;
+			
+			case 'http://purl.org/dc/elements/1.1/description':
+			
+				var key = result['?p'].replace(/http:\/\/purl.org\/dc\/elements\/1.1\//, '');
+				
+				if (!record[key]) {
+					record[key] = {};
+				}
+			
+				var value = clean_value(result['?o']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record[key][kv[0]] = kv[1];
+				} else {
+					record[key]['und'] = value;
+				}
+				break;
+
+			case 'http://prismstandard.org/namespaces/basic/2.0/publicationName':
+			
+				var key = 'publicationTitle';
+				
+				if (!record[key]) {
+					record[key] = {};
+				}
+			
+				var value = clean_value(result['?o']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record[key][kv[0]] = kv[1];
+				} else {
+					record[key]['und'] = value;
+				}
+				break;
+
+			case 'http://prismstandard.org/namespaces/basic/2.0/volume':
+				var value = clean_value(result['?o']);
+				record.volumeNumber = value;
+				break;
+
+			case 'http://prismstandard.org/namespaces/basic/2.0/number':
+				var value = clean_value(result['?o']);
+				record.issueNumber = value;
+				break;
+
+			case 'http://prismstandard.org/namespaces/basic/2.0/startingPage':
+				var value = clean_value(result['?o']);
+				record.pageStart = value;
+				break;
+
+			case 'http://prismstandard.org/namespaces/basic/2.0/endingPage':
+				var value = clean_value(result['?o']);
+				record.pageEnd = value;
+				break;
+
+			case 'http://prismstandard.org/namespaces/basic/2.0/publicationDate':
+				var value = clean_value(result['?o']);
+				record.datePublished = value;
+				break;
+
+			case 'http://prismstandard.org/namespaces/basic/2.0/doi':
+				var value = clean_value(result['?o']);
+				record.DOI = value;
+				break;
+				
+			// may have languages
+			case 'http://xmlns.com/foaf/0.1/name':
+			
+				var key = result['?p'].replace(/http:\/\/xmlns.com\/foaf\/0.1\//, '');
+				
+				if (!record[key]) {
+					record[key] = {};
+				}
+			
+				var value = clean_value(result['?o']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record[key][kv[0]] = kv[1];
+				} else {
+					record[key]['und'] = value;
+				}
+				break;
+				
+				
+				
 	
 /*			
 <?xml version="1.0" encoding="utf-8"?>
@@ -469,7 +622,7 @@ tm:role="Publishing Author"/>
 
 */
 
-				
+			// TDWG-----------------------------------------------------------------------
 			case 'http://rs.tdwg.org/ontology/voc/TaxonName#nameComplete':
 			case 'http://rs.tdwg.org/ontology/voc/TaxonName#uninomial':
 			case 'http://rs.tdwg.org/ontology/voc/TaxonName#genusPart':
@@ -496,43 +649,6 @@ tm:role="Publishing Author"/>
 				break;
 				
 
-			// may have multiple values
-			case 'http://schema.org/sameAs':
-			case 'http://schema.org/url':
-			
-				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
-				
-				if (!record[key]) {
-					record[key] = [];
-				}
-			
-				var value = result['?o'];
-				value = value.replace(/\"/g, '');
-											
-				record[key].push(value);
-				break;
-			
-			
-			// may have languages
-			case 'http://schema.org/description':
-			case 'http://schema.org/name':
-			
-				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
-				
-				if (!record[key]) {
-					record[key] = {};
-				}
-			
-				var value = clean_value(result['?o']);
-				
-				if (isObject(value)) {
-					var kv = Object.entries(value)[0];
-					record[key][kv[0]] = kv[1];
-				} else {
-					record[key]['und'] = value;
-				}
-				break;
-				
 			
 			default:
 				break;
@@ -546,11 +662,18 @@ tm:role="Publishing Author"/>
 		
 		template = template_article;
 		
+		// Schema
 		if (record.type.indexOf('ScholarlyArticle') !== -1) {
 			template = template_article;
 	 	}
-
-		if (record.type.indexOf('TaxonName') !== -1) {
+	 	
+	 	// CiNii
+		if (record.type.indexOf('Article') !== -1) {
+			template = template_article;
+	 	}
+	 	
+	 	// TDWG
+	 	if (record.type.indexOf('TaxonName') !== -1) {
 			template = template_taxon_name;
 	 	}
 
@@ -695,6 +818,7 @@ FILTER (?propertyID = "doi")
 }
 
 //----------------------------------------------------------------------------------------
+// Indexfungorum has bibliographic details for names, using TDWG publication vocabulary
 function get_published_in_indexfungorum (uri, cb) {
 
 		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
@@ -804,13 +928,17 @@ SELECT * WHERE {
 }
 
 //----------------------------------------------------------------------------------------
+// Get creators, either directly as creators or indirectly via roles, 
+// also handle CiNii use of FOAF
 function get_creators (uri, cb) {
 		var query = `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>		
 SELECT *
 WHERE {
  { 
     <` + uri + `> <http://schema.org/creator> ?person  .
-     ?person  rdf:type <http://schema.org/Person>
+     ?person  rdf:type <http://schema.org/Person> .
+     ?person <http://schema.org/name> ?name  .
  }
 UNION
  { 
@@ -818,8 +946,14 @@ UNION
     ?role  rdf:type <http://schema.org/Role> . 
     ?role <http://schema.org/creator> ?person  .
     ?person  rdf:type <http://schema.org/Person> .
+    ?person <http://schema.org/name> ?name  .
  }
-?person <http://schema.org/name> ?name  .
+ UNION
+ {
+ 	<` + uri + `> foaf:maker ?person .
+	?person foaf:name ?name .
+ }
+
 }`;
 
 		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
