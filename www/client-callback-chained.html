@@ -96,7 +96,7 @@ record.about = {};
 record.references = {};
 
 // person
-
+record.created = {};
 
 
 
@@ -156,6 +156,37 @@ function isodate_to_string(datestring) {
 // Templates
 
 var template;
+
+// Person template
+var template_person = `
+	<% if(record.name) {%>
+	<h1><%=Object.values(record.name).join(' / ')%><% } %></h1>
+
+	<% if (record.id) {%>
+		<div><%=record.id%></div>
+	<% } %>	
+	
+	
+	<% if(record.created) {%>
+		<h2>Publications</h2>
+		<ul>
+		<% for(var i in record.created) {%>
+			<li>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+			
+			<% if (record.created[i].name) {%>
+				<%=Object.values(record.created[i].name).join(' / ')%>
+			<% } %>
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>	
+	
+			
+	
+	
+	
+`;
 
 // Article template
 var template_article = `
@@ -666,6 +697,10 @@ tm:role="Publishing Author"/>
 		if (record.type.indexOf('ScholarlyArticle') !== -1) {
 			template = template_article;
 	 	}
+
+		if (record.type.indexOf('Person') !== -1) {
+			template = template_person;
+	 	}
 	 	
 	 	// CiNii
 		if (record.type.indexOf('Article') !== -1) {
@@ -679,6 +714,13 @@ tm:role="Publishing Author"/>
 
 
 		switch (template) {
+		
+			case template_person:
+				get_works_created(uri, function (uri) { 
+						last(uri); 
+				});			
+				break;		
+		
 			case template_taxon_name:
 				get_published_in(uri, function (uri) { 
 					get_published_in_indexfungorum(uri, function (uri) { 
@@ -1090,6 +1132,63 @@ WHERE {
 				record.about[result['?id']].name = value;
 			}
 	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_works_created (uri, cb) {
+		var query = `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX schema: <http://schema.org/>	
+PREFIX dc: <http://purl.org/dc/elements/1.1/>	
+SELECT *
+WHERE {
+	{
+		?role schema:creator <`+ uri + `>  .
+		?work schema:creator ?role .
+		?work schema:name ?name .
+	}
+	UNION
+	{
+		?work schema:creator <`+ uri + `>  .
+		?work schema:name ?name .
+	}
+	UNION
+	{
+		?work foaf:maker <`+ uri + `> .
+		?work dc:title ?name .
+	}
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			if (!record.created[result['?work']]) {
+				record.created[result['?work']] = {};
+				record.created[result['?work']].name = {};
+			}			
+				
+			if (result['?name']) {
+			
+				
+			
+				var value = clean_value(result['?name']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record.created[result['?work']].name[kv[0]] = kv[1];
+				} else {
+					record.created[result['?work']].name['und'] = value;
+				}	
+			}
+			
 		});
 	
 		results.on('end', function (result) { 		
