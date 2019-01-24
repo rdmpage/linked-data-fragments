@@ -1,0 +1,1283 @@
+<html>
+	<head>
+		<title>Citeproc to JSON-LD</title>
+		<meta charset="UTF-8"/>
+		<script src="jquery.js"></script>
+		<!-- stuff below needs to go into CouchDB views -->
+		<!-- <script src="language.js"></script> -->
+		<style>
+		td { border: 1px solid red; }
+		</style>
+	</head>
+<body>
+
+<h1>ORCID work DOI to author role</h1>
+
+<div>
+	<div style="width:100%;height:auto;">
+		<h2>JSON</h2>
+		
+<!--
+
+{
+  "message-format": "application/vnd.citationstyles.csl+json",
+  "message": {
+    "id": "EWART_2015",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "EWART",
+        "given": "A.",
+        "literal": "A. EWART"
+      },
+      {
+        "family": "POPPLE",
+        "given": "L.W.",
+        "literal": "L.W. POPPLE",
+        "ORCID": "0000-0001-8630-3114"
+      },
+      {
+        "family": "MARSHALL",
+        "given": "D.C.",
+        "literal": "D.C. MARSHALL"
+      }
+    ],
+    "event-date": {
+      "date-parts": [
+        [
+          2015,
+          8
+        ]
+      ]
+    },
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          8
+        ]
+      ]
+    },
+    "collection-title": "Zootaxa",
+    "container-title": "Zootaxa",
+    "DOI": "10.11646/zootaxa.4001.1.1",
+    "issue": "1",
+    "number": "1",
+    "number-of-pages": "1",
+    "page": "1",
+    "page-first": "1",
+    "publisher": "Magnolia Press",
+    "title": "<strong>New species of <em>Simona</em> Moulds, 2012 and <em>Chelapsalta</em> Moulds, 2012 cicadas (Cicadidae: Cicadettinae: Cicadettini) from Australia: comparative morphology, songs, behaviour and distributions</strong>",
+    "URL": "https://doi.org/10.11646%2Fzootaxa.4001.1.1",
+    "volume": "4001"
+  }
+}
+
+-->		
+		
+		
+		
+			<!-- JSON for data object goes below -->
+			<textarea id="json" style="width:100%;background-color:#224FBC;color:#FFFF66;" rows="20">
+			
+{
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+     "message-format": "application/vnd.citationstyles.csl+json",
+    "message": {
+        "indexed": {
+            "date-parts": [
+                [
+                    2018,
+                    11,
+                    29
+                ]
+            ],
+            "date-time": "2018-11-29T16:13:29Z",
+            "timestamp": 1543508009097
+        },
+        "reference-count": 50,
+        "publisher": "Informa UK Limited",
+        "funder": [
+            {
+                "DOI": "10.13039/100000001",
+                "name": "National Science Foundation",
+                "doi-asserted-by": "publisher",
+                "award": [
+                    "DEB 1354802"
+                ]
+            },
+            {
+                "name": "Bentham Moxon Trust (UK)",
+                "award": [
+                    "2016 and 2017"
+                ]
+            },
+            {
+                "name": "UF Institute for Food and Agricultural Sciences IFAS",
+                "award": [
+                    "1"
+                ]
+            },
+            {
+                "name": "Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung (CH)",
+                "award": [
+                    "Postdoc Mobility Fellowship"
+                ]
+            }
+        ],
+        "content-domain": {
+            "domain": [
+                "www.tandfonline.com"
+            ],
+            "crossmark-restriction": true
+        },
+        "short-container-title": [
+            "Mycologia"
+        ],
+        "DOI": "10.1080/00275514.2018.1515449",
+        "type": "journal-article",
+        "created": {
+            "date-parts": [
+                [
+                    2018,
+                    11,
+                    29
+                ]
+            ],
+            "date-time": "2018-11-29T15:57:30Z",
+            "timestamp": 1543507050000
+        },
+        "page": "1-18",
+        "update-policy": "http://dx.doi.org/10.1080/tandf_crossmark_01",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+            "New species of Cortinarius sect. Austroamericani, sect. nov., from South American Nothofagaceae forests"
+        ],
+        "prefix": "10.1080",
+        "author": [
+            {
+                "ORCID": "http://orcid.org/0000-0001-5797-4584",
+                "authenticated-orcid": false,
+                "given": "Beatriz",
+                "family": "San-Fabian",
+                "sequence": "first",
+                "affiliation": [
+                    {
+                        "name": "Jodrell Laboratory, Royal Botanic Gardens, Kew, Surrey TW9 3AB, United Kingdom"
+                    }
+                ]
+            },
+            {
+                "ORCID": "http://orcid.org/0000-0003-1479-5548",
+                "authenticated-orcid": false,
+                "given": "Tuula",
+                "family": "Niskanen",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Jodrell Laboratory, Royal Botanic Gardens, Kew, Surrey TW9 3AB, United Kingdom"
+                    }
+                ]
+            },
+            {
+                "ORCID": "http://orcid.org/0000-0002-5422-2384",
+                "authenticated-orcid": false,
+                "given": "Kare",
+                "family": "Liimatainen",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Jodrell Laboratory, Royal Botanic Gardens, Kew, Surrey TW9 3AB, United Kingdom"
+                    }
+                ]
+            },
+            {
+                "ORCID": "http://orcid.org/0000-0002-2619-0813",
+                "authenticated-orcid": false,
+                "given": "Pepijn W.",
+                "family": "Kooij",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Jodrell Laboratory, Royal Botanic Gardens, Kew, Surrey TW9 3AB, United Kingdom"
+                    }
+                ]
+            },
+            {
+                "ORCID": "http://orcid.org/0000-0002-5810-5521",
+                "authenticated-orcid": false,
+                "given": "Alija B.",
+                "family": "Mujic",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Instituto de Biología, Universidad Nacional Autónoma de México, Tercer Circuito s/n, Ciudad Universitaria, Delegación Coyoacán, C.P. 04510, Mexico City, Mexico"
+                    },
+                    {
+                        "name": "Department of Plant Pathology, University of Florida, PO Box 110680, Gainesville, Florida 32611"
+                    }
+                ]
+            },
+            {
+                "given": "Camille",
+                "family": "Truong",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Instituto de Biología, Universidad Nacional Autónoma de México, Tercer Circuito s/n, Ciudad Universitaria, Delegación Coyoacán, C.P. 04510, Mexico City, Mexico"
+                    },
+                    {
+                        "name": "Department of Plant Pathology, University of Florida, PO Box 110680, Gainesville, Florida 32611"
+                    }
+                ]
+            },
+            {
+                "given": "Ursula",
+                "family": "Peintner",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Institute of Microbiology, University Innsbruck, Technikerstraße 25, 6020 Innsbruck, Austria"
+                    }
+                ]
+            },
+            {
+                "given": "Philipp",
+                "family": "Dresch",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Institute of Microbiology, University Innsbruck, Technikerstraße 25, 6020 Innsbruck, Austria"
+                    }
+                ]
+            },
+            {
+                "given": "Eduardo",
+                "family": "Nouhra",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Instituto Multidisciplinario de Biología Vegetal (CONICET), Facultad de Ciencias Exactas, Físicas y Naturales, Universidad Nacional de Córdoba, Argentina"
+                    }
+                ]
+            },
+            {
+                "ORCID": "http://orcid.org/0000-0003-3857-2189",
+                "authenticated-orcid": false,
+                "given": "P. Brandon",
+                "family": "Matheny",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Department of Ecology and Evolutionary Biology, University of Tennessee, 334 Hesler Biology Building, Knoxville, Tennessee 37996"
+                    }
+                ]
+            },
+            {
+                "given": "Matthew E.",
+                "family": "Smith",
+                "sequence": "additional",
+                "affiliation": [
+                    {
+                        "name": "Department of Plant Pathology, University of Florida, PO Box 110680, Gainesville, Florida 32611"
+                    }
+                ]
+            }
+        ],
+        "member": "301",
+        "published-online": {
+            "date-parts": [
+                [
+                    2018,
+                    11,
+                    29
+                ]
+            ]
+        },
+        "reference": [
+            {
+                "key": "CIT0001",
+                "author": "Abarenkov K",
+                "volume": "6",
+                "first-page": "189",
+                "year": "2010",
+                "journal-title": "Evolutionary Bioinformatics Online"
+            },
+            {
+                "key": "CIT0002",
+                "author": "ITM Bödeker",
+                "volume": "203",
+                "first-page": "245",
+                "year": "2014",
+                "journal-title": "New Phytologist",
+                "DOI": "10.1111/nph.12791",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0003",
+                "author": "Borchsenius F.",
+                "year": "2009",
+                "volume-title": "FastGap 1.2. Department of Biosciences, Aarhus University, Denmark. [cited 2017 May 21]. Available from"
+            },
+            {
+                "key": "CIT0004",
+                "DOI": "10.1080/00275514.1994.12026481",
+                "doi-asserted-by": "publisher"
+            },
+            {
+                "key": "CIT0005",
+                "DOI": "10.1111/j.1755-0998.2009.02825.x",
+                "doi-asserted-by": "publisher"
+            },
+            {
+                "key": "CIT0006",
+                "author": "Galtier N",
+                "volume": "12",
+                "first-page": "543",
+                "year": "1996",
+                "journal-title": "Computer Applications in the Biosciences"
+            },
+            {
+                "key": "CIT0007",
+                "author": "Gardes M",
+                "volume": "2",
+                "first-page": "113",
+                "year": "1993",
+                "journal-title": "Molecular Ecology",
+                "DOI": "10.1111/j.1365-294X.1993.tb00005.x",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0008",
+                "author": "Garnica S",
+                "year": "2016",
+                "volume-title": "Determining threshold values for barcoding fungi: lessons from Cortinarius (Basidiomycota), a highly diverse and widespread ectomycorrhizal genus. FEMS Microbiology Ecology 92: fiw045"
+            },
+            {
+                "key": "CIT0009",
+                "DOI": "10.1080/15572536.2003.11833256",
+                "doi-asserted-by": "publisher"
+            },
+            {
+                "key": "CIT0010",
+                "author": "Garnica S",
+                "volume": "107",
+                "first-page": "1143",
+                "year": "2003",
+                "journal-title": "Mycological Research",
+                "DOI": "10.1017/S0953756203008414",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0011",
+                "author": "Garnica S",
+                "volume": "83",
+                "first-page": "1457",
+                "year": "2005",
+                "journal-title": "Canadian Journal Botany",
+                "DOI": "10.1139/b05-107",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0012",
+                "author": "Garrido N.",
+                "year": "1988",
+                "volume-title": "Agaricales s.l. und ihre Mykorrhizen in den Nothofagus-Wäldern Mittelchiles. Bibliotheca Mycologica 120: 1–528"
+            },
+            {
+                "key": "CIT0013",
+                "author": "Harrower E",
+                "volume": "89",
+                "first-page": "799",
+                "year": "2011",
+                "journal-title": "Botany",
+                "DOI": "10.1139/b11-065",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0014",
+                "author": "Heenan PB",
+                "volume": "146",
+                "first-page": "1",
+                "year": "2013",
+                "journal-title": "Phytotaxa",
+                "DOI": "10.11646/phytotaxa.146.1.1",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "issue": "6",
+                "key": "CIT0015",
+                "first-page": "1",
+                "volume": "11",
+                "author": "Horak E.",
+                "year": "1980",
+                "journal-title": "Basidiomycetes. Agaricales y Gasteromycetes secotioides. Flora Criptogámica de Tierra del Fuego"
+            },
+            {
+                "key": "CIT0016",
+                "author": "Ivanova NV",
+                "volume": "6",
+                "first-page": "998",
+                "year": "2006",
+                "journal-title": "Molecular Ecology Notes",
+                "DOI": "10.1111/j.1471-8286.2006.01428.x",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0017",
+                "author": "Katoh K",
+                "volume": "33",
+                "first-page": "511",
+                "year": "2005",
+                "journal-title": "Nucleic Acids Research",
+                "DOI": "10.1093/nar/gki198",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0018",
+                "author": "Katoh K",
+                "volume": "30",
+                "first-page": "772",
+                "year": "2013",
+                "journal-title": "Molecular Biology and Evolution",
+                "DOI": "10.1093/molbev/mst010",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0019",
+                "unstructured": "Kirk PM, Cannon PF, Minter DW, Stalpers JA. 2008. Dictionary of the fungi, 10th ed. Wallingford, UK: CSIRO Publishing. p. 784."
+            },
+            {
+                "key": "CIT0020",
+                "author": "Kõljalg U",
+                "volume": "22",
+                "first-page": "5271",
+                "year": "2013",
+                "journal-title": "Molecular Ecology",
+                "DOI": "10.1111/mec.12481",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0021",
+                "author": "Kuhar F",
+                "volume": "121",
+                "first-page": "876",
+                "year": "2017",
+                "journal-title": "Fungal Biology",
+                "DOI": "10.1016/j.funbio.2017.06.006",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0022",
+                "author": "Liimatainen K",
+                "volume": "33",
+                "first-page": "98",
+                "year": "2014",
+                "journal-title": "Persoonia",
+                "DOI": "10.3767/003158514X684681",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0023",
+                "author": "Maddison WP",
+                "year": "2017",
+                "volume-title": "Mesquite: a modular system for evolutionary analysis. Version 3.2. [cited 2017 May 24]"
+            },
+            {
+                "key": "CIT0024",
+                "author": "Moser M",
+                "volume": "52",
+                "first-page": "1",
+                "year": "1975",
+                "journal-title": "und nahe verwandte Gattungen in Südamerika. Beihefte zur Nova Hedwigia"
+            },
+            {
+                "key": "CIT0025",
+                "author": "Munsell",
+                "year": "2009",
+                "volume-title": "Munsell soil color charts: with genuine Munsell color chips. 2009"
+            },
+            {
+                "key": "CIT0026",
+                "unstructured": "Niskanen T. 2008. Cortinarius subgenus Telamonia p.p. in North Europe [PhD  academic dissertation]. Helsinki, Finland: Yliopistopaino. p. 33."
+            },
+            {
+                "key": "CIT0027",
+                "unstructured": "Niskanen T, Kytövuori I, Bendisken E, Bendisken K, Brandrud TE, Frøslev TG, Høiland K, Jeppesen TS, Liimatainen K, Lindström H. 2008. Cortinarius. In: Knudsen H, Vesterholt J, eds. Funga Nordica: Agaricoid, Boletoid and Cyphelloid genera. Copenhagen, Denmark: Nordsvamp. p. 661–777."
+            },
+            {
+                "key": "CIT0028",
+                "author": "Niskanen T",
+                "volume": "103",
+                "first-page": "1080",
+                "year": "2011",
+                "journal-title": "Armillati"
+            },
+            {
+                "key": "CIT0029",
+                "unstructured": "Nouhra E, Urcelay C, Longo S, Fontenla S. 2012. Differential hypogeous sporocarp production from Nothofagus dombeyi and N. pumilio forests in southern Argentina. Mycologia 104:45–52."
+            },
+            {
+                "key": "CIT0030",
+                "author": "Nouhra E",
+                "volume": "23",
+                "first-page": "487",
+                "year": "2013",
+                "journal-title": "Mycorrhiza",
+                "DOI": "10.1007/s00572-013-0490-2",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0031",
+                "author": "Peintner U",
+                "volume": "88",
+                "first-page": "2168",
+                "year": "2001",
+                "journal-title": "American Journal of Botany",
+                "DOI": "10.2307/3558378",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0032",
+                "author": "Peintner U",
+                "volume": "96",
+                "first-page": "1042",
+                "year": "2004",
+                "journal-title": "Mycologia",
+                "DOI": "10.1080/15572536.2005.11832904",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0033",
+                "author": "Romano GM",
+                "volume": "126",
+                "first-page": "247",
+                "year": "2014",
+                "journal-title": "Mycotaxon link page"
+            },
+            {
+                "key": "CIT0034",
+                "author": "Schoch C",
+                "year": "2014",
+                "volume-title": "Finding needles in haystacks: linking scientific names, reference specimens and molecular data for Fungi. Database: The Journal of Biological Databases and Curation 2014:bau061"
+            },
+            {
+                "key": "CIT0035",
+                "author": "Simmons MP",
+                "volume": "49",
+                "first-page": "369",
+                "year": "2000",
+                "journal-title": "Systematic Biology",
+                "DOI": "10.1093/sysbio/49.2.369",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0036",
+                "unstructured": "Singer R, Moser M. 1965. Forest mycology and forest communities in South America. 1. The early fall aspect of the mycoflora of the Cordillera Pelada (Chile). Mycopathologia et Mycologia Applicata 26:129–191."
+            },
+            {
+                "key": "CIT0037",
+                "author": "Spegazzini C.",
+                "volume": "11",
+                "first-page": "5",
+                "year": "1887",
+                "journal-title": "Boletín de la Academia Nacional de Ciencias de Córdoba"
+            },
+            {
+                "key": "CIT0038",
+                "author": "Spegazzini C.",
+                "volume": "11",
+                "first-page": "135",
+                "year": "1887",
+                "journal-title": "Boletín de la Academia Nacional de Ciencias de Córdoba"
+            },
+            {
+                "key": "CIT0039",
+                "author": "Stamatakis A.",
+                "volume": "30",
+                "first-page": "1312",
+                "year": "2014",
+                "journal-title": "Bioinformatics",
+                "DOI": "10.1093/bioinformatics/btu033",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0040",
+                "author": "Ø Stensrud",
+                "volume": "54",
+                "first-page": "57",
+                "year": "2014",
+                "journal-title": "Karstenia",
+                "DOI": "10.29203/ka.2014.464",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0041",
+                "author": "Tedersoo L",
+                "volume": "21",
+                "first-page": "4160",
+                "year": "2012",
+                "journal-title": "Molecular Ecology",
+                "DOI": "10.1111/j.1365-294X.2012.05602.x",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0042",
+                "author": "Tedersoo L",
+                "volume": "180",
+                "first-page": "479",
+                "year": "2008",
+                "journal-title": "New Phytologist",
+                "DOI": "10.1111/j.1469-8137.2008.02561.x",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0043",
+                "author": "Tedersoo L",
+                "volume": "20",
+                "first-page": "217",
+                "year": "2010",
+                "journal-title": "Mycorrhiza",
+                "DOI": "10.1007/s00572-009-0274-x",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0044",
+                "author": "Thiers B.",
+                "volume-title": "Index Herbariorum: a global directory of public herbaria and associated staff. New York Botanical Garden’s Virtual Herbarium. [cited 2017 Jun 25]. Available from"
+            },
+            {
+                "key": "CIT0045",
+                "author": "Truong C",
+                "volume": "214",
+                "first-page": "913",
+                "year": "2017",
+                "journal-title": "New Phytologist",
+                "DOI": "10.1111/nph.14509",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0046",
+                "author": "Truong C",
+                "volume": "121",
+                "first-page": "638",
+                "year": "2017",
+                "journal-title": "Fungal Biology",
+                "DOI": "10.1016/j.funbio.2017.04.006",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0047",
+                "author": "Valenzuela E",
+                "volume": "98",
+                "first-page": "973",
+                "year": "1994",
+                "journal-title": "Mycological Research",
+                "DOI": "10.1016/S0953-7562(09)80266-9",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0048",
+                "author": "Vesterholt J.",
+                "volume": "24",
+                "first-page": "27",
+                "year": "1991",
+                "journal-title": "Svampe"
+            },
+            {
+                "key": "CIT0049",
+                "author": "Vilgalys R",
+                "volume": "172",
+                "first-page": "4238",
+                "year": "1990",
+                "journal-title": "Journal of Bacteriology",
+                "DOI": "10.1128/jb.172.8.4238-4246.1990",
+                "doi-asserted-by": "crossref"
+            },
+            {
+                "key": "CIT0050",
+                "author": "White TJ",
+                "first-page": "315",
+                "year": "1990",
+                "volume-title": "PCR protocols: a guide to methods and applications"
+            }
+        ],
+        "container-title": [
+            "Mycologia"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+            {
+                "URL": "https://www.tandfonline.com/doi/pdf/10.1080/00275514.2018.1515449",
+                "content-type": "unspecified",
+                "content-version": "vor",
+                "intended-application": "similarity-checking"
+            }
+        ],
+        "deposited": {
+            "date-parts": [
+                [
+                    2018,
+                    11,
+                    29
+                ]
+            ],
+            "date-time": "2018-11-29T15:57:54Z",
+            "timestamp": 1543507074000
+        },
+        "score": 1,
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+            "date-parts": [
+                [
+                    2018,
+                    11,
+                    29
+                ]
+            ]
+        },
+        "references-count": 50,
+        "alternative-id": [
+            "10.1080/00275514.2018.1515449"
+        ],
+        "URL": "http://dx.doi.org/10.1080/00275514.2018.1515449",
+        "relation": {
+            "cites": []
+        },
+        "ISSN": [
+            "0027-5514",
+            "1557-2536"
+        ],
+        "issn-type": [
+            {
+                "value": "0027-5514",
+                "type": "print"
+            },
+            {
+                "value": "1557-2536",
+                "type": "electronic"
+            }
+        ],
+        "subject": [
+            "Plant Science",
+            "Genetics",
+            "Cell Biology",
+            "Physiology",
+            "Ecology, Evolution, Behavior and Systematics",
+            "Molecular Biology",
+            "General Medicine"
+        ],
+        "assertion": [
+            {
+                "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+                "order": 1,
+                "name": "peerreview_statement",
+                "label": "Peer Review Statement"
+            },
+            {
+                "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=umyc20",
+                "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=umyc20",
+                "order": 2,
+                "name": "aims_and_scope_url",
+                "label": "Aim & Scope"
+            }
+        ]
+    }
+}			
+			
+			</textarea>
+			<br />
+			<button onclick="convert()">Convert JSON to JSON-LD</button>
+	</div>
+	<div style="clear:both;"></div>
+	
+	<div style="width:100%;">
+		<h2>JSON-LD</h2>
+		<div id="jsonld" style="width:100%;white-space:pre;background-color:#333;color:white;overflow:auto;"></div>
+
+</div>			
+			
+		
+		
+		
+<script>
+	
+//----------------------------------------------------------------------------------------
+// START COUCHDB VIEW
+function detect_language(s) {
+    var language = null;
+    var matched = 0;
+    var parts = [];
+
+    var regexp = [];
+
+    // https://gist.github.com/ryanmcgrath/982242
+    regexp['ja'] = /[\u3000-\u303F]|[\u3040-\u309F]|[\u30A0-\u30FF]|[\uFF00-\uFFEF]|[\u4E00-\u9FAF]|[\u2605-\u2606]|[\u2190-\u2195]|\u203B/g;
+    // http://hjzhao.blogspot.co.uk/2015/09/javascript-detect-chinese-character.html
+    regexp['zh'] = /[\u4E00-\uFA29]/g;
+    // http://stackoverflow.com/questions/32709687/js-check-if-string-contains-only-cyrillic-symbols-and-spaces
+    regexp['ru'] = /[\u0400-\u04FF]/g;
+
+    for (var i in regexp) {
+        parts = s.match(regexp[i]);
+
+        if (parts != null) {
+            if (parts.length > matched) {
+                language = i;
+                matched = parts.length;
+            }
+        }
+    }
+
+    // require a minimum matching
+    if (matched < 2) {
+        language = null;
+    }
+
+    return language;
+}
+
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
+function message(doc) {
+
+	var use_roles = true;
+	var use_citations = true;
+
+	var jsonld = {};
+
+	// context
+	jsonld['@context'] = 'http://schema.org/';
+
+	var container = null;
+
+	// identifier
+	if (doc.message.DOI) {
+		jsonld['@id'] = 'https://doi.org/' + doc.message.DOI.toLowerCase();
+	}
+
+	for (var i in doc.message) {
+
+		switch (i) {
+
+			case 'type':
+				switch (doc.message[i]) {
+					case 'article-journal':
+					case 'journal-article':
+						jsonld['@type'] = 'ScholarlyArticle';
+						break;
+					default:
+						break;
+				}
+				break;
+
+				/*
+				case 'DOI':
+					var identifier = {};
+					identifier['@type'] = 'PropertyValue';
+					identifier.propertyID = 'doi';
+					identifier.value = doc.message[i].toLowerCase();
+					
+					if (!jsonld.identifier) {
+						jsonld.identifier = [];
+					}
+					jsonld.identifier.push(identifier);
+					break;	
+				*/
+
+			case 'volume':
+				jsonld.volumeNumber = doc.message[i];
+				break;
+
+			case 'issue':
+				jsonld.issueNumber = doc.message[i];
+				break;
+
+			case 'URL':
+				jsonld.url = doc.message[i];
+				break;
+
+			case 'page':
+			case 'pages':
+				var parts = doc.message[i].match(/^(.*)\-(.*)$/);
+				if (parts) {
+					jsonld.pageStart = parts[1];
+					jsonld.pageEnd = parts[2];
+				} else {
+					jsonld.pagination = doc.message[i];
+				}
+
+				break;
+
+			case 'issued':
+				var date = '';
+				var dateparts = doc.message[i]['date-parts'][0];
+
+				switch (dateparts.length) {
+					case 1:
+						date = dateparts[0];
+						break;
+					case 2:
+						date = dateparts[0] + '-' + ("00" + dateparts[1]).slice(-2) + '-00';
+						break;
+					case 3:
+						date = dateparts[0] + '-' + ("00" + dateparts[1]).slice(-2) + '-' + ("00" + dateparts[2]).slice(-2);
+						break;
+					default:
+						break;
+				}
+				jsonld.datePublished = date.toString();
+				break;
+
+				// tags
+			case 'subject':
+				jsonld.keywords = [];
+				for (var j in doc.message[i]) {
+					jsonld.keywords.push(doc.message[i][j]);
+				}
+				break;
+
+			case 'ISSN':
+				if (!container) {
+					container = {};
+					container['@type'] = 'Periodical';
+				}
+
+				if (!container.issn) {
+					container.issn = [];
+				}
+
+				for (var j in doc.message[i]) {
+					container.issn.push(doc.message[i][j]);
+				}
+
+				container['@id'] = 'http://worldcat.org/issn/' + container.issn[0];
+				break;
+
+				// journal			
+			case 'container-title':
+				if (!container) {
+					container = {};
+					container['@type'] = 'Periodical';
+				}
+
+				// journal name can be string or array
+				if (Array.isArray(doc.message[i])) {
+
+					var n = doc.message[i].length;
+
+					if (n > 1) {
+						container.name = [];
+					}
+
+					for (var j in doc.message[i]) {
+
+						var lang = detect_language(doc.message[i][j]);
+
+						if (lang) {
+							var s = {};
+							s['@lang'] = lang;
+							s['@value'] = doc.message[i][j];
+
+							if (n > 1) {
+								container.name.push(s);
+							} else {
+								container.name = s;
+							}
+						} else {
+
+							if (n > 1) {
+								container.name.push(doc.message[i][j]);
+							} else {
+								container.name = doc.message[i][j];
+							}
+						}
+					}
+				} else {
+					// string
+					container.name = doc.message[i];
+				}
+				break;
+
+				// title can be string or array
+			case 'title':
+				if (Array.isArray(doc.message[i])) {
+
+					var n = doc.message[i].length;
+
+					if (n > 1) {
+						jsonld.name = [];
+					}
+
+					for (var j in doc.message[i]) {
+
+						var lang = detect_language(doc.message[i][j]);
+
+						if (lang) {
+							var s = {};
+							s['@lang'] = lang;
+							s['@value'] = doc.message[i][j];
+
+							if (n > 1) {
+								jsonld.name.push(s);
+							} else {
+								jsonld.name = s;
+							}
+						} else {
+
+							if (n > 1) {
+								jsonld.name.push(doc.message[i][j]);
+							} else {
+								jsonld.name = doc.message[i][j];
+							}
+						}
+
+					}
+				} else {
+					jsonld.name = doc.message[i];
+				}
+				break;
+
+
+			case 'author':
+				var n = doc.message[i].length;
+
+				jsonld.creator = [];
+
+				for (var j = 0; j < n; j++) {
+					var author_id = '';
+
+					// use ORCID if available, otherwise hash
+					if (doc.message[i][j].ORCID) {
+						author_id = doc.message[i][j].ORCID;
+						author_id = author_id.replace(/http:/, 'https:');
+					} else {
+						// #hash identifier 
+						author_id = jsonld['@id'] + '#author_' + (j + 1);
+					}
+
+					var creator = {};
+					creator['@id'] = author_id;
+					creator['@type'] = 'Person';
+
+					// name
+					var name = '';
+					if (doc.message[i][j].given) {
+						creator.givenName = doc.message[i][j].given;
+						name += doc.message[i][j].given;
+					}
+					if (doc.message[i][j].family) {
+						creator.familyName = doc.message[i][j].family;
+						name += ' ' + doc.message[i][j].family;
+					}
+
+					if (name != '') {
+						creator.name = name;
+					}
+
+					if (use_roles) {
+						var role_id = jsonld['@id'] + '#role' + (j + 1);
+						var role = {};
+						role['@id'] = role_id;
+						role['@type'] = 'Role';
+
+						role.roleName = String(j + 1);
+
+						role.creator = creator;
+
+						jsonld.creator.push(role);
+
+				  } else {
+						jsonld.creator.push(creator);
+					}
+				}
+				break;
+
+				/*
+					  "reference": [
+						   {
+							   "key": "11192_B1",
+							   "first-page": "119",
+							   "article-title": "Pseudocrangonyx, a new genus of subterranean amphipods from Japan.",
+							   "volume": "10",
+							   "author": "Akatsuka",
+							   "year": "1922",
+							   "journal-title": "Annotationes Zoologicae Japonenses"
+						   },
+				 */
+			case 'reference':
+				if (use_citations) {
+					jsonld.citation = [];
+					var n = doc.message[i].length;
+					for (var j = 0; j < n; j++) {
+
+					   var reference_id = '';
+
+					   var reference = {};
+
+					   if (doc.message[i][j].DOI) {
+
+							// DOI is id for citation
+							reference_id = "https://doi.org/" + doc.message[i][j].DOI.toLowerCase();
+
+							// DOI cleaning (sigh)
+							/* Sometimes publishes make a mess of this, e.g. 
+							http://dx.doi.org/10.1111/j.1096-0031.2007.00176.x
+							{
+							  key: "b129_103",
+							  DOI: "10.1636/H05-14 SC.1",
+							  doi-asserted-by: "publisher"
+							}
+							*/
+							reference_id = reference_id.replace(/sc.1?/g, '');
+							reference_id = reference_id.replace(/\s/g, '');
+
+							// Add DOI as identifier (to do)
+
+						} else {
+							// No (known) DOI for cited work
+
+							// identifier for cited reference
+							var key = doc.message[i][j].key;
+
+							key = key.replace(/\t/g, '');
+							key = key.replace(/\n/g, '');
+
+							// replace characters not allowed
+							key = key.replace(/\|/g, '-');
+							key = key.replace(/\//g, '-');
+							key = key.replace(/\./g, '-');
+							key = key.replace(/\s/g, '-');
+
+							reference_id = jsonld['@id'] + "/reference" + "#" + key;
+						}
+
+						reference['@id'] = reference_id;
+						reference['@type'] = 'CreativeWork';
+
+						var reference_container = null;
+
+						// add semi-structured data if we have it
+						for (var k in doc.message[i][j]) {
+							switch (k) {
+								case 'article-title':
+									reference.name = doc.message[i][j][k];
+									break;
+
+								case 'author':
+									reference.creator = doc.message[i][j][k];
+									break;
+
+								case 'first-page':
+									reference.pageStart = doc.message[i][j][k];
+									break;
+									
+								case 'ISSN':
+									var issn = doc.message[i][j][k];
+									issn = issn.replace('http://id.crossref.org/issn/', '');
+
+									if (!reference_container) {
+										reference_container = {};
+										reference_container['@type'] = 'Periodical';
+									}
+								
+									if (!reference_container.issn) {
+										reference_container.issn = [];
+										reference_container['@id'] = 'http://worldcat.org/issn/' + issn;
+									}
+									reference_container.issn.push(issn);
+									break;
+									
+								case 'issue':
+									reference.issueNumber = doc.message[i][j][k];
+									break;
+
+								case 'journal-title':
+									if (!reference_container) {
+										reference_container = {};
+										reference_container['@type'] = 'Periodical';
+										reference_container.name = doc.message[i][j][k];
+
+										if (!reference_container['@id']) {
+											reference_container['@id'] = reference['@id'] + '_container';
+										}
+									}
+									break;
+
+								case 'unstructured':
+									reference.name = doc.message[i][j][k];
+									break;
+
+								case 'volume':
+									reference.volumeNumber = doc.message[i][j][k];
+									break;
+
+								case 'year':
+									reference.datePublished = doc.message[i][j][k];
+									reference.datePublished = reference.datePublished.replace(/[a-z]$/, '');
+									break;
+
+								default:
+									break;
+							}
+						}
+
+						if (reference_container) {
+							reference.isPartOf = reference_container;
+						}
+
+						jsonld.citation.push(reference);
+					}
+				}
+				break;
+
+			default:
+				break;
+		}
+	}
+
+	if (container) {
+		jsonld.isPartOf = container;
+	}
+
+	// output
+	$('#jsonld').html('<pre>' + JSON.stringify(jsonld, null, 2) + '</pre>');
+
+
+  return jsonld;
+}
+
+function couchdb(doc) {
+	if (doc['message-format'] == 'application/vnd.citationstyles.csl+json') {
+	    message(doc);
+	}
+}
+// END COUCHDB VIEW
+
+
+	// output
+	$('#jsonld').html('<pre>' + JSON.stringify(jsonld, null, 2) + '</pre>');
+
+		
+//----------------------------------------------------------------------------------------
+function convert() {
+	var json = $('#json').val();
+	var doc = JSON.parse(json);
+	
+	console.log(JSON.stringify(doc, null, 2));
+	
+	couchdb(doc);
+}
+
+	
+	</script>		
+			
+
+</div>
+</body>
+</html>			

@@ -2,7 +2,7 @@
 
 // Resolve one object
 
-require_once dirname(dirname(__FILE__)) . '/vendor/autoload.php';
+require_once(dirname(dirname(__FILE__)) . '/vendor/autoload.php');
 require_once(dirname(dirname(__FILE__)) . '/documentstore/couchsimple.php');
 
 //----------------------------------------------------------------------------------------
@@ -1047,41 +1047,46 @@ function microcitation_reference ($guid)
 	$data = null;
 	
 	$url = 'http://localhost/~rpage/microcitation/www/rdf.php?guid=' . $guid;
+	$url = 'http://localhost/~rpage/linked-data-fragments/services/rdf.php?guid=' . $guid;
 	
 	//echo $url . "\n";
 	
 	$nt = get($url);
+	
+	if ($nt != '')
+	{
 
-	$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
+		$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
 
-	// Context to set vocab to schema
-	$context = new stdclass;
+		// Context to set vocab to schema
+		$context = new stdclass;
 
-	$context->{'@vocab'} = "http://schema.org/";
+		$context->{'@vocab'} = "http://schema.org/";
 
-	// sameAs is always an array
-	$sameAs = new stdclass;
-	$sameAs->{'@id'} = "http://schema.org/sameAs";
-	$sameAs->{'@container'} = "@set";
+		// sameAs is always an array
+		$sameAs = new stdclass;
+		$sameAs->{'@id'} = "http://schema.org/sameAs";
+		$sameAs->{'@container'} = "@set";
 
-	// issn is always an array
-	$issn = new stdclass;
-	$issn->{'@id'} = "http://schema.org/issn";
-	$issn->{'@container'} = "@set";
-
-
-	$context->sameAs = $sameAs;
-	$context->issn = $issn;
+		// issn is always an array
+		$issn = new stdclass;
+		$issn->{'@id'} = "http://schema.org/issn";
+		$issn->{'@container'} = "@set";
 
 
-	$frame = (object)array(
-		'@context' => $context,
+		$context->sameAs = $sameAs;
+		$context->issn = $issn;
 
-		// Root on article
-		'@type' => 'http://schema.org/ScholarlyArticle',
-	);	
 
-	$data = jsonld_frame($doc, $frame);
+		$frame = (object)array(
+			'@context' => $context,
+
+			// Root on article
+			'@type' => 'http://schema.org/ScholarlyArticle',
+		);	
+
+		$data = jsonld_frame($doc, $frame);
+	}
 	
 	return $data;
 }
@@ -1464,7 +1469,7 @@ function resolve_url($url)
 			$done = true;
 		}
 	}
-		
+	
 	// Microcitation ---------------------------------------------------------------------
 	// My native JSON-LD for bibliographic data
 	if (!$done)
@@ -1503,13 +1508,54 @@ function resolve_url($url)
 				$doc->{'message-source'} = 'http://localhost/~rpage/microcitation/www/rdf.php?guid=' . $guid;
 				$doc->{'message-format'} = 'application/ld+json';
 				$doc->message = $data;
+				
+				$done = true;
 			}
 	
-			$done = true;
+			
 		}
 		
 		
 	}
+	
+	// CrossRef ---------------------------------------------------------------------
+	// CSL+JSON, transform to JSON-LD in CouchDB
+	if (!$done)
+	{	
+	
+		$guid = '';
+	
+		// keep things simple 
+		if (preg_match('/https?:\/\/(dx\.)?doi.org\/(?<guid>.*)/', $url, $m))
+		{
+			$guid = $m['guid'];
+		}
+		
+		if ($guid != '')
+		{
+			$url = 'https://api.crossref.org/v1/works/http://dx.doi.org/' . $guid;
+			
+			$json = get($url);
+			
+			if ($json != '')
+			{
+				$doc = json_decode($json);
+				
+				// CrossRef API returns a message natively, we tweak it slightly
+				if ($doc)
+				{
+					$doc->{'message-source'} = $url;
+					$doc->{'message-format'} = 'application/vnd.crossref-api-message+json';
+				
+					$done = true;
+				}
+			}
+		}
+	}	
+		
+	
+	
+	
 	
 	return $doc;
 }
@@ -1566,6 +1612,12 @@ if (0)
 	
 	$url = 'http://bionames.org/indexfungorum/cluster/568745';
 	
+	$url = 'https://doi.org/10.1080/00275514.2018.1515449';
+	
+	$url = 'https://doi.org/10.6165/tai.2014.59.4.326';
+	
+	$url = 'https://doi.org/10.11646/phytotaxa.208.2.4';
+	$url = 'https://doi.org/10.6165/tai.2012.57(1).55';
 	
 	
 	$doc = resolve_url($url);
