@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77106748-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77106748-1:1.3"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.3</owl:versionInfo>
+<dc:title>Chirita auriculata J.M.Li &amp; S.X.Zhu</dc:title>                        
+<dcterms:created>2010-08-17 09:57:39.0</dcterms:created>
+<dcterms:modified>2012-07-17 15:47:08.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Chirita auriculata</tn:nameComplete>
+<tn:genusPart>Chirita</tn:genusPart>        
+<tn:specificEpithet>auriculata</tn:specificEpithet>                
+<tn:authorship>J.M.Li &amp; S.X.Zhu</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>J.M.Li &amp; S.X.Zhu</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20013466-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20014024-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Ann. Bot. Fenn. 47(3): 222 (221-224; fig. 1). 2010 [30 Jun 2010] </tcom:publishedIn>    
+<tn:year>2010</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Li Jia-Mei 08816, HEAC (holo)</dc:title>
+<tn:typeSpecimen>Li Jia-Mei 08816, HEAC</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

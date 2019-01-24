@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77112890-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77112890-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Henckelia auriculata (J.M.Li &amp; S.X.Zhu) D.J.Middleton &amp; Mich.Möller</dc:title>                        
+<dcterms:created>2011-08-01 09:29:20.0</dcterms:created>
+<dcterms:modified>2011-09-20 14:28:35.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Henckelia auriculata</tn:nameComplete>
+<tn:genusPart>Henckelia</tn:genusPart>        
+<tn:specificEpithet>auriculata</tn:specificEpithet>                
+<tn:authorship>(J.M.Li &amp; S.X.Zhu) D.J.Middleton &amp; Mich.Möller</tn:authorship>
+<tn:basionymAuthorship>J.M.Li &amp; S.X.Zhu</tn:basionymAuthorship>
+<tn:combinationAuthorship>D.J.Middleton &amp; Mich.Möller</tn:combinationAuthorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>(J.M.Li &amp; S.X.Zhu) D.J.Middleton &amp; Mich.Möller</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:35229-1"
+tm:index="1"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20015527-1"
+tm:index="2"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20013466-1" 
+tm:index="1"
+tm:role="Basionym Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20014024-1" 
+tm:index="2"
+tm:role="Basionym Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Taxon 60(3): 774. 2011 [17 Jun 2011] </tcom:publishedIn>    
+<tn:year>2011</tn:year>        
+<tn:hasBasionym rdf:resource="urn:lsid:ipni.org:names:77106748-1"/>
+</tn:TaxonName>  
+</rdf:RDF>
