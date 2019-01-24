@@ -2,6 +2,7 @@
 <head>
 
 	<style>
+		/* taxonomic name */
 		.genusPart {
 			font-style: italic;
 		}
@@ -14,7 +15,16 @@
 		.infraspecificEpithet {
 			font-style: italic;
 		}
+		
+		
+		.abstract {
+			font-size:0.8em;
+		}
 	
+	
+		h1 {
+			font-weight: normal;
+		}
 	
 	</style>
 
@@ -92,11 +102,16 @@ record.creators = {};
 record.creators_display = {};
 record.about = {};
 
+record.references = {};
+record.citations = {};
+
 // taxon name
 record.references = {};
 
 // person
 record.created = {};
+
+var default_language_code = 'en'; // 'und';
 
 
 
@@ -182,10 +197,6 @@ var template_person = `
 		</ul>
 	<% } %>	
 	
-			
-	
-	
-	
 `;
 
 // Article template
@@ -233,25 +244,34 @@ var template_article = `
 				<a href="?uri=<%=encodeURIComponent(i)%>">
 					<%=Object.values(record.creators[i].name).join(' / ')%>
 				</a>	
+				<% if(i.match(/orcid.org/)) {%>
+					<img src="images/orcid_16x16.png" />
+				<% } %>							
 			</li>
 		<%}
 	}%>
 </ul>
 
 <!-- abstract -->
-<h2>Abstract</h2>
 <!-- note use of - in ejs template because we want unescaped output to handle HTML codes in abstract -->
-<% for(var i in record.description) {%>
-	<p><%-record.description[i]%></p><% } %>
+	<% if(record.description) {%>
+		<h2>Abstract</h2>
+		<% for(var i in record.description) {%>
+			<p class="abstract"><%-record.description[i]%></p>
+		<%}
+	}%>
+			
 
 <!-- licensing -->
 <% if (record.license) {%>
-	<p><%=record.license%></p><% } %>
+	<p><%=record.license%></p>
+<% } %>
 	
 <!-- figures -->
-<h2>Images</h2>
-<% if(record.figures) {
-		for(var i in record.figures) {%>
+
+<% if(record.figures) {%>
+	<h2>Images in this work</h2>
+	<% for(var i in record.figures) {%>
 			<div style="padding:10px;">				
 			<img style="border:1px solid rgb(192,192,192);"  src="<%=record.figures[i].thumbnailUrl%> "/> 
 			<br />
@@ -261,7 +281,6 @@ var template_article = `
 	}%>
 	
 <!-- what is this work about? -->
-	
 	<% if(record.about) {%>
 		<h2>About</h2>
 		<ul>
@@ -276,6 +295,85 @@ var template_article = `
 			</li>
 		<% } %>
 	<% } %>
+	
+	<!-- cited by -->
+	<% if(record.citations) {%>
+		<h2>Citations (<%=Object.keys(record.citations).length%>)</h2>
+		<ul>
+		<% for(var i in record.citations) {%>
+			<li>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+			
+			<% if (record.citations[i].name) {%>
+				<%=Object.values(record.citations[i].name).join(' / ')%>
+			<% } %>
+
+			<% if (record.citations[i].publicationTitle) {%>
+				<%=Object.values(record.citations[i].publicationTitle).join(' / ')%>
+			<% } %>
+			
+			<% if (record.citations[i].volumeNumber) {%>
+				<%=record.citations[i].volumeNumber%>
+			<% } %>
+			<% if (record.citations[i].issueNumber) {%>
+				<%=record.citations[i].issueNumber%>
+			<% } %>
+			<% if (record.citations[i].pageStart) {%>
+				<%=record.citations[i].pageStart%>
+			<% } %>
+			<% if (record.citations[i].datePublished) {%>
+				<%=record.citations[i].datePublished%>
+			<% } %>			
+			<% if (record.citations[i].DOI) {%>
+				DOI: <%=record.citations[i].DOI%>
+			<% } %>
+			
+			</a>		
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>	
+	
+			
+	
+	<!-- cites -->
+	<ul>
+	<% if(record.references) {%>
+		<h2>References</h2>
+		<% for(var i in record.references) {%>
+			<li>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+			
+			<% if (record.references[i].name) {%>
+				<%=Object.values(record.references[i].name).join(' / ')%>
+			<% } %>
+
+			<% if (record.references[i].publicationTitle) {%>
+				<%=Object.values(record.references[i].publicationTitle).join(' / ')%>
+			<% } %>
+			
+			<% if (record.references[i].volumeNumber) {%>
+				<%=record.references[i].volumeNumber%>
+			<% } %>
+			<% if (record.references[i].issueNumber) {%>
+				<%=record.references[i].issueNumber%>
+			<% } %>
+			<% if (record.references[i].pageStart) {%>
+				<%=record.references[i].pageStart%>
+			<% } %>
+			<% if (record.references[i].datePublished) {%>
+				<%=record.references[i].datePublished%>
+			<% } %>			
+			<% if (record.references[i].DOI) {%>
+				DOI: <%=record.references[i].DOI%>
+			<% } %>
+			
+			</a>		
+			</li>
+		<% } %>	
+	<% } %>	
+	
+	</ul>	
 	
 `;
 
@@ -351,8 +449,8 @@ var template_taxon_name = `
 				<%=record.references[i].pagination%>
 			<% } %>
 						
-			<% if (record.references[i].doi) {%>
-				DOI: <%=record.references[i].doi%>
+			<% if (record.references[i].DOI) {%>
+				DOI: <%=record.references[i].DOI%>
 			<% } %>
 			
 			</a>		
@@ -473,7 +571,7 @@ function get_core (uri) {
 					var kv = Object.entries(value)[0];
 					record[key][kv[0]] = kv[1];
 				} else {
-					record[key]['und'] = value;
+					record[key][default_language_code] = value;
 				}
 				break;
 								
@@ -494,7 +592,7 @@ function get_core (uri) {
 					var kv = Object.entries(value)[0];
 					record[key][kv[0]] = kv[1];
 				} else {
-					record[key]['und'] = value;
+					record[key][default_language_code] = value;
 				}
 				break;
 			
@@ -512,7 +610,7 @@ function get_core (uri) {
 					var kv = Object.entries(value)[0];
 					record[key][kv[0]] = kv[1];
 				} else {
-					record[key]['und'] = value;
+					record[key][default_language_code] = value;
 				}
 				break;
 
@@ -530,7 +628,7 @@ function get_core (uri) {
 					var kv = Object.entries(value)[0];
 					record[key][kv[0]] = kv[1];
 				} else {
-					record[key]['und'] = value;
+					record[key][default_language_code] = value;
 				}
 				break;
 
@@ -579,7 +677,7 @@ function get_core (uri) {
 					var kv = Object.entries(value)[0];
 					record[key][kv[0]] = kv[1];
 				} else {
-					record[key]['und'] = value;
+					record[key][default_language_code] = value;
 				}
 				break;
 				
@@ -735,8 +833,12 @@ tm:role="Publishing Author"/>
 					get_creators(uri, function (uri) { 	
 						get_container(uri, function (uri) { 
 							get_identifiers(uri, function (uri) { 
-								get_names_published(uri, function (uri) { 
-									last(uri); 
+								get_cites(uri, function (uri) { // very time consuming query
+									get_cited_by(uri, function (uri) { 
+										get_names_published(uri, function (uri) { 									
+											last(uri); 
+										});
+									});
 								});
 							});
 						});				
@@ -765,13 +867,10 @@ OPTIONAL {
    ?pub <http://schema.org/name> ?name .
 }
 UNION {
-?pub dc:title ?name .
+	?pub dc:title ?name .
 }
 OPTIONAL {
 ?pub <http://schema.org/datePublished> ?datePublished .
-}
-OPTIONAL {
-?pub <http://schema.org/name> ?name .
 }
 
 OPTIONAL {
@@ -794,8 +893,7 @@ OPTIONAL {
 OPTIONAL {
 ?pub <http://schema.org/identifier> ?identifier .
 ?identifier <http://schema.org/propertyID> ?propertyID .
-?identifier <http://schema.org/value> ?doi .
-FILTER (?propertyID = "doi")
+?identifier <http://schema.org/value> ?value .
 }
 }
 
@@ -806,8 +904,10 @@ FILTER (?propertyID = "doi")
 		results.on('data', function (result) { 
 
 			console.log(result); 
-		
-			record.references[result['?pub']] = {};
+			
+			if (!record.references[result['?pub']]) {
+				record.references[result['?pub']] = {};
+			}
 			
 			record.references[result['?pub']].name = {};
 			record.references[result['?pub']].publicationTitle = {};
@@ -819,7 +919,7 @@ FILTER (?propertyID = "doi")
 					var kv = Object.entries(value)[0];
 					record.references[result['?pub']].name[kv[0]] = kv[1];
 				} else {
-					record.references[result['?pub']].name['und'] = value;
+					record.references[result['?pub']].name[default_language_code] = value;
 				}
 			}
 			
@@ -830,7 +930,7 @@ FILTER (?propertyID = "doi")
 					var kv = Object.entries(value)[0];
 					record.references[result['?pub']].publicationTitle[kv[0]] = kv[1];
 				} else {
-					record.references[result['?pub']].publicationTitle['und'] = value;
+					record.references[result['?pub']].publicationTitle[default_language_code] = value;
 				}
 			}
 			
@@ -841,7 +941,6 @@ FILTER (?propertyID = "doi")
 				'issueNumber',
 				'pagination',
 				'datePublished',
-				'doi'
 				];
 				
 			for(var i in keys) {
@@ -849,6 +948,15 @@ FILTER (?propertyID = "doi")
 					value = result['?' + keys[i]];
 					record.references[result['?pub']][keys[i]] = clean_value(value);										
 				}		
+			}
+			
+			// DOI
+			if (result['?value']) {
+				var propertyID = clean_value(result['?propertyID']);							
+				if (propertyID == 'doi') {				
+					value = result['?value'];
+					record.references[result['?pub']].DOI = clean_value(value);	
+				}
 			}
 
 			
@@ -1017,7 +1125,7 @@ UNION
 				var kv = Object.entries(value)[0];
 				record.creators[result['?person']].name[kv[0]] = kv[1];
 			} else {
-				record.creators[result['?person']].name['und'] = value;
+				record.creators[result['?person']].name[default_language_code] = value;
 			}
 			});
 	
@@ -1068,7 +1176,7 @@ OPTIONAL {
 					var kv = Object.entries(value)[0];
 					record.publicationTitle[kv[0]] = kv[1];
 				} else {
-					record.publicationTitle['und'] = value;
+					record.publicationTitle[default_language_code] = value;
 				}
 			}			
 			
@@ -1185,7 +1293,7 @@ WHERE {
 					var kv = Object.entries(value)[0];
 					record.created[result['?work']].name[kv[0]] = kv[1];
 				} else {
-					record.created[result['?work']].name['und'] = value;
+					record.created[result['?work']].name[default_language_code] = value;
 				}	
 			}
 			
@@ -1193,6 +1301,192 @@ WHERE {
 	
 		results.on('end', function (result) { 		
 			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+// What does this work cite?
+function get_cites (uri, cb) {
+	//cb(uri);
+	var query = `PREFIX schema: <http://schema.org/>
+SELECT * where {
+	<` + uri + `> schema:citation ?cites .
+	OPTIONAL 
+	{
+	   ?cites schema:name ?name 
+	}
+	OPTIONAL 
+	{
+	   ?cites schema:datePublished ?datePublished 
+	}
+	OPTIONAL 
+	{
+	   ?cites schema:volumeNumber ?volumeNumber
+	}
+	OPTIONAL 
+	{
+	   ?cites schema:pageStart ?pageStart
+	}
+
+	OPTIONAL 
+	{
+	   ?cites schema:isPartOf ?container .
+	   ?container schema:name ?publicationTitle .
+	}
+	
+	OPTIONAL 
+	{
+	   ?cites schema:identifier ?identifier .
+	   ?identifier schema:propertyID ?propertyID  .
+	   ?identifier schema:value ?value .
+	}	
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+		
+			if (!record.references[result['?cites']]) {
+				record.references[result['?cites']] = {};
+				record.references[result['?cites']].name = {};
+			}			
+			
+			var value;		
+						
+			if (result['?name']) {
+				value = clean_value(result['?name']);
+				record.references[result['?cites']].name[default_language_code] = value;
+			}
+					
+			
+			if (result['?publicationTitle']) {
+				value = result['?publicationTitle'];
+				record.references[result['?cites']].publicationTitle = [clean_value(value)];
+			}	
+											
+			
+			if (result['?volumeNumber']) {
+				var value = result['?volumeNumber'];				
+				record.references[result['?cites']].volumeNumber = clean_value(value);		
+			}			
+
+			if (result['?pageStart']) {
+				var value = result['?pageStart'];				
+				record.references[result['?cites']].pageStart = clean_value(value);		
+			}			
+
+			if (result['?datePublished']) {
+				var value = result['?datePublished'];				
+				record.references[result['?cites']].datePublished = clean_value(value);		
+			}			
+
+			// DOI
+			if (result['?value']) {
+				var propertyID = clean_value(result['?propertyID']);							
+				if (propertyID == 'doi') {				
+					value = result['?value'];
+					record.references[result['?cites']].DOI = clean_value(value);	
+				}
+			}
+			
+			
+			});
+	
+		results.on('end', function (result) { 		
+			cb(uri);			
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+// What cites this work?
+function get_cited_by (uri, cb) {
+
+		var query = `PREFIX schema: <http://schema.org/>
+SELECT * where {
+	?cited_by schema:citation  <` + uri + `> .
+	OPTIONAL 
+	{
+	   ?cited_by schema:name ?name 
+	}
+	OPTIONAL 
+	{
+	   ?cited_by schema:datePublished ?datePublished 
+	}
+	OPTIONAL 
+	{
+	   ?cited_by schema:volumeNumber ?volumeNumber
+	}
+	OPTIONAL 
+	{
+	   ?cited_by schema:pageStart ?pageStart
+	}
+
+	OPTIONAL 
+	{
+	   ?cited_by schema:isPartOf ?container .
+	   ?container schema:name ?publicationTitle .
+	}
+	
+	OPTIONAL 
+	{
+	   ?cited_by schema:identifier ?identifier .
+	   ?identifier schema:propertyID ?propertyID  .
+	   ?identifier schema:value ?value .
+	}	
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+		
+			if (!record.citations[result['?cited_by']]) {
+				record.citations[result['?cited_by']] = {};
+			}
+			
+			var value;		
+			
+			if (result['?name']) {
+				value = result['?name'];
+				record.citations[result['?cited_by']].name = [clean_value(value)];
+			}		
+			
+			if (result['?publicationTitle']) {
+				value = result['?publicationTitle'];
+				record.citations[result['?cited_by']].publicationTitle = [clean_value(value)];
+			}									
+			
+			if (result['?volumeNumber']) {
+				var value = result['?volumeNumber'];				
+				record.citations[result['?cited_by']].volumeNumber = clean_value(value);		
+			}			
+
+			if (result['?pageStart']) {
+				var value = result['?pageStart'];				
+				record.citations[result['?cited_by']].pageStart = clean_value(value);		
+			}			
+
+			if (result['?datePublished']) {
+				var value = result['?datePublished'];				
+				record.citations[result['?cited_by']].datePublished = clean_value(value);		
+			}			
+
+			// DOI
+			if (result['?value']) {
+				var propertyID = clean_value(result['?propertyID']);							
+				if (propertyID == 'doi') {				
+					value = result['?value'];
+					record.citations[result['?cited_by']].DOI = clean_value(value);	
+				}
+			}
+			
+			});
+	
+		results.on('end', function (result) { 		
+			cb(uri);			
 			});	
 }
 
