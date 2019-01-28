@@ -30,6 +30,30 @@ Can test using [jQuery widget to query Triple Pattern Fragments interfaces](http
 
 RDFa https://rdfa.info/play/
 
+## Elasticsearch
+
+Use a CouchDB view to generate Elasticsearch schema documents, then upload these to Elasticsearch.
+
+### Get JSONL dump of Elastic documents
+
+```
+curl http://127.0.0.1:5984/fragments/_design/export/_list/jsonl/elastic > elastic.jsonl
+```
+
+Then we need to chunk it and add metadata:
+
+```
+php chunk-elastic.php
+```
+
+```
+chmod 777 upload-elastic.sh 
+```
+
+```
+./upload-elastic.sh
+```
+
 
 ## Web 
 
@@ -88,5 +112,97 @@ select * where { ?s ?p "10.1111/j.1756-1051.2008.00162.x"^^xsd:string }
 
 http://ma-graph.org/sparql?default-graph-uri=&query=select+*+where+%7B+%3Fs+%3Fp+%2210.1111%2Fj.1756-1051.2008.00162.x%22%5E%5Exsd%3Astring+%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+
 
+### Google Knowledge Graph
 
+```
+{
+    "@context": {
+        "@vocab": "http://schema.org/",
+        "goog": "http://schema.googleapis.com/",
+        "EntitySearchResult": "goog:EntitySearchResult",
+        "detailedDescription": "goog:detailedDescription",
+        "resultScore": "goog:resultScore",
+        "kg": "http://g.co/kg"
+    },
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "EntitySearchResult",
+            "result": {
+                "@id": "kg:/g/11c80r37lv",
+                "name": "Sara A. Lourie",
+                "@type": [
+                    "Thing",
+                    "Person"
+                ],
+                "description": "Canadian ichthyologist"
+            },
+            "resultScore": 149.065659
+        },
+        {
+            "@type": "EntitySearchResult",
+            "result": {
+                "@id": "kg:/m/064l2q7",
+                "name": "Satomi's pygmy seahorse",
+                "@type": [
+                    "Thing"
+                ],
+                "description": "Fish",
+                "image": {
+                    "contentUrl": "http://t1.gstatic.com/images?q=tbn:ANd9GcTnxVm3-RLfVTVpSiNYj3sL0r3P-0Kz8SvR6EtIVdQUtwfaYUuG",
+                    "url": "https://en.wikipedia.org/wiki/Satomi's_pygmy_seahorse"
+                },
+                "detailedDescription": {
+                    "articleBody": "Satomi's pygmy seahorse is the smallest known seahorse in the world with an average length of 13.8 millimetres and an approximate height of 11.5 millimetres.\nThis member of the family Syngnathidae is found at the Derawan Islands off Kalimantan. ",
+                    "url": "https://en.wikipedia.org/wiki/Satomi's_pygmy_seahorse",
+                    "license": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+                }
+            },
+            "resultScore": 17.578156
+        },
+        {
+            "@type": "EntitySearchResult",
+            "result": {
+                "@id": "kg:/m/02wy1zv",
+                "name": "Denise's pygmy seahorse",
+                "@type": [
+                    "Thing"
+                ],
+                "description": "Fish",
+                "image": {
+                    "contentUrl": "http://t0.gstatic.com/images?q=tbn:ANd9GcThshzSDgirh2kM3SpYdTsQjzEhgJsN17ecAFOq-abvqnFtYhfI",
+                    "url": "https://en.wikipedia.org/wiki/Denise's_pygmy_seahorse"
+                },
+                "detailedDescription": {
+                    "articleBody": "Hippocampus denise, also known as Denise's pygmy seahorse or the yellow pygmy seahorse, is a seahorse of the family Syngnathidae native to the western Pacific.",
+                    "url": "https://en.wikipedia.org/wiki/Denise's_pygmy_seahorse",
+                    "license": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+                }
+            },
+            "resultScore": 11.528545
+        },
+        {
+            "@type": "EntitySearchResult",
+            "result": {
+                "@id": "kg:/m/0nybt",
+                "name": "Seahorse",
+                "@type": [
+                    "Thing"
+                ],
+                "description": "Fish",
+                "image": {
+                    "contentUrl": "http://t2.gstatic.com/images?q=tbn:ANd9GcTGqElvq6GUKH-PITRnlcf-007r8wPRPl92AMzdTJms5avaTDBy",
+                    "url": "https://en.wikipedia.org/wiki/Seahorse"
+                },
+                "detailedDescription": {
+                    "articleBody": "Seahorse is the name given to 45 species of small marine fishes in the genus Hippocampus. \"Hippocampus\" comes from the Ancient Greek hippokampos, itself from hippos meaning \"horse\" and kampos meaning \"sea monster\". ",
+                    "url": "https://en.wikipedia.org/wiki/Seahorse",
+                    "license": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+                }
+            },
+            "resultScore": 8.4383
+        }
+    ]
+}
+```
 
