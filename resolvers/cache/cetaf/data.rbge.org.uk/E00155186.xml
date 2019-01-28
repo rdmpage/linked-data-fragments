@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+		xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/"
+        xmlns:dc="http://purl.org/dc/terms/"
+        xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+		xmlns:owl ="http://www.w3.org/2002/07/owl#"
+		>
+
+    <!--This is metadata about this metadata document-->
+    <rdf:Description
+        rdf:about="https://data.rbge.org.uk:443/service/rdf/herb.php?guid=http://data.rbge.org.uk/herb/E00155186">
+        <dc:creator>Simple PHP RDF Script</dc:creator>
+        <dc:created>2019-01-27T16:28:37+00:00</dc:created>
+    
+        <dc:hasVersion rdf:resource="https://data.rbge.org.uk/search/herbarium?cfg=fulldetails.cfg&amp;specimen_num=E00155186" />
+<dc:hasVersion rdf:resource="http://plants.jstor.org/specimen/e00155186" />
+    
+    </rdf:Description>
+    
+
+    <!--This is metadata about this specimen-->
+    <rdf:Description rdf:about="https://data.rbge.org.uk/herb/E00155186">
+		
+		<owl:sameAs rdf:resource="http://data.rbge.org.uk/herb/E00155186"/>
+    
+        <!-- Assertions made in simple Dublin Core -->
+        <dc:publisher rdf:resource="http://www.rbge.org.uk" />
+                
+        <dc:title>A. Weber &amp; S. Anthonysamy #840711-1/1 Codonoboea nitida (Kiew &amp; A.Weber) Kiew</dc:title>
+        
+                <dc:description>A herbarium specimen of Codonoboea nitida (Kiew &amp; A.Weber) Kiew collected by A. Weber &amp; S. Anthonysamy #840711-1/1 </dc:description>
+        
+                       <dc:creator>A. Weber &amp; S. Anthonysamy</dc:creator>
+                
+                
+        
+                
+        <!-- Assertions based on Darwin Core -->
+        <dwc:sampleID>http://data.rbge.org.uk/herb/E00155186</dwc:sampleID>
+        <dc:modified>2012-11-21 00:00:00</dc:modified>
+        <dwc:basisOfRecord>Specimen</dwc:basisOfRecord>
+        <dc:type>Specimen</dc:type>
+        <dwc:institutionCode>http://biocol.org/urn:lsid:biocol.org:col:15670</dwc:institutionCode>
+        <dwc:collectionCode>E</dwc:collectionCode>
+        <dwc:catalogNumber>E00155186</dwc:catalogNumber>";
+        <dwc:scientificName>Codonoboea nitida (Kiew &amp; A.Weber) Kiew</dwc:scientificName>
+        <dwc:family>Gesneriaceae</dwc:family>
+        <dwc:genus>Codonoboea</dwc:genus>
+        <dwc:specificEpithet>nitida</dwc:specificEpithet>
+        <dwc:higherGeography>Malay Peninsula</dwc:higherGeography>
+
+            <dwc:country>MY</dwc:country>
+        <dwc:countryCode>MY</dwc:countryCode>
+        
+            <dwc:stateProvince>Selangor</dwc:stateProvince>
+            
+            
+            <dwc:locality>Selangor, Gunung Bunga Buah, on ridge E of summit</dwc:locality>
+            
+           
+        
+            <dwc:minimumElevationInMeters>1300</dwc:minimumElevationInMeters>
+        <dwc:maximumElevationInMeters>1900</dwc:maximumElevationInMeters>
+        
+        
+            <dwc:recordedBy>A. Weber &amp; S. Anthonysamy</dwc:recordedBy>
+    
+            <dwc:recordNumber>840711-1/1</dwc:recordNumber>
+    
+    <dc:relation><rdf:Description  rdf:about="https://data.rbge.org.uk/images/71497" ><dc:identifier rdf:resource="https://data.rbge.org.uk/images/71497" /><dc:type rdf:resource="http://purl.org/dc/dcmitype/Image" /><dc:subject rdf:resource="http://data.rbge.org.uk/herb/E00155186" /><dc:format>image/jpeg</dc:format><dc:description xml:lang="en">Image of herbarium specimen</dc:description><dc:created>2010-03-04T18:28:02Z</dc:created></rdf:Description></dc:relation><dwc:associatedMedia rdf:resource="https://data.rbge.org.uk/images/71497" />        
+    </rdf:Description>
+    
+</rdf:RDF>    
+   
+
+    
+    
