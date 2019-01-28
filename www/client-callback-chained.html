@@ -1,6 +1,10 @@
 <html>
 <head>
 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
 	<style>
 		/* taxonomic name */
 		.genusPart {
@@ -16,17 +20,128 @@
 			font-style: italic;
 		}
 		
+		body {
+			font-weight:lighter;
+			font-size: 1em;
+		}
+		
 		
 		.abstract {
-			font-size:0.8em;
+			font-size:0.9em;
+			color: rgb(64,64,64);
 		}
 	
 	
 		h1 {
-			font-weight: normal;
+			font-weight: bold;
+			font-size:1.6em;
 		}
+
+		h2 {
+			font-weight: bold;
+			font-size:1.0em;
+		}
+		
+
+		a {
+			text-decoration: none; 
+			color: #309;
+		}
+
+		a:hover { 
+			text-decoration: underline; 
+		}		
+		
+
+		
+/* -------------------------------------------------------------------------------------*/
+/* list of "cards" */
+.list-item {
+	margin-bottom:40px;
+	min-height:100px;
+	background-color:white;
+	padding-top:10px;
+}
+
+.list-item-thumbnail {
+	width:100px;height:100px;
+	float:left;
+	overflow:hidden; /* make sure we hide overflow of images that are wider than 100px */
+	
+	/* if thumbnails shown in a grey box */
+	border:1px solid rgb(242,242,242); 
+	/* background-color:rgb(229,229,229); */
+	background-color:white;
+	border-radius:2px;
+
+}
+
+/* Ensure we can fit a document thumbnail */
+/* centre image in middle, object-fit: contain; normally does this but I need white background
+   to handle page images that have transparent backgrounds */
+.list-item-thumbnail img {
+	background-color:white; /* so PDF thumbnails that are transparent look good */
+	object-fit: contain;
+	display:block;
+	margin:auto;	
+	
+	/* if adding border to image */
+	/* height:98px; 
+	border:1px solid rgb(192,192,192); */
+	/* if no border around image */
+	height:100px;
+	
+}
+
+.list-item-body {
+	margin-left:100px;
+	line-height:0.8em;
+	padding-right:10px;
+	padding-left:20px;
+}
+
+.list-item-title {
+	font-size: 1.2em;
+	margin-bottom:0.3em;
+	line-height:1.2em;	
+	font-weight:bold;
+}
+
+.list-item a {
+	text-decoration: none; 
+	color: #309;
+}
+
+.list-item a:hover { 
+	text-decoration: underline; 
+}
+
+.list-item-description {
+	font-size: 1.0em;
+	line-height:1.0em;
+}
+
+.list-item-description span {
+	color: #393;
+}	
+
+.list-item-tags {
+	padding-top:12px;
+}
+
+.tag  {
+	border:1px solid #096;
+	padding:4px;
+	border-radius:4px;
+}
+
+.search-highlight {
+	font-weight: bold;
+}
 	
 	</style>
+	
+	<script src="js/jquery-1.11.2.min.js"></script>
 
 	<script src="js/ldf-client-browser.js"></script>
 	<script src="js/jsonld.js"></script>
@@ -35,10 +150,11 @@
 	<script>
 	
 	//----------------------------------------------------------------------------------------
-// http://stackoverflow.com/a/25715455
-function isObject (item) {
-  return (typeof item === "object" && !Array.isArray(item) && item !== null);
-}
+	// http://stackoverflow.com/a/25715455
+	function isObject (item) {
+	  return (typeof item === "object" && !Array.isArray(item) && item !== null);
+	}
+	
 	</script>
 	
 	<style>
@@ -47,6 +163,141 @@ function isObject (item) {
 		padding:20px;
 	}
 	</style>
+	
+	
+	<script>
+	
+        //--------------------------------------------------------------------------------
+		// http://stackoverflow.com/a/11407464
+		$(document).keypress(function(event){
+			var keycode = (event.keyCode ? event.keyCode : event.which);
+			if(keycode == '13'){
+				$('#search').click();   
+			}
+		});    
+	
+	
+		function search() {
+			var query = document.getElementById('query').value;
+			
+			//alert(query);
+			document.getElementById('output').innerHTML = '';
+			document.getElementById('record').innerHTML = '';
+			
+			var q = {
+"size":20,
+    "query": {
+       "multi_match" : {
+      "query": "",
+      "fields":["search_data.fulltext", "search_data.fulltext_boosted^4"] 
+    }
+},
+
+"highlight": {
+      "pre_tags": [
+         "<span class=\"search-highlight\">"
+      ],
+      "post_tags": [
+         "<\/span>"
+      ],
+      "fields": {
+         "search_data.fulltext": {},
+         "search_data.fulltext_boosted": {}
+      }
+   }
+    
+};
+			q.query.multi_match.query = query;
+			
+			$.getJSON('proxy.php?url=' 
+					+ encodeURI('http://127.0.0.1:32769/ldf/_search?pretty')
+					+ '&postdata=' + JSON.stringify(q)
+					+ '&callback=?',
+				function(data){
+					document.getElementById('record').innerHTML = JSON.stringify(data, null, 2);
+					
+					
+					var template_search = `	
+					<% if (data.hits.hits) {%>
+						<!-- <ul> -->
+						<div>
+						<% for (var i in data.hits.hits) {%>
+							<div  class="list-item">
+							
+								<div class="list-item-thumbnail">
+							
+								<% if (data.hits.hits[i]._source.search_result_data.image) {%>
+										<% if (data.hits.hits[i]._source.search_result_data.image.thumbnailUrl) {%>
+											<img src="<%=data.hits.hits[i]._source.search_result_data.image.thumbnailUrl%>" />
+										<% } %>	
+								<% } %>	
+								</div>	
+									
+								<div class="list-item-body">
+								
+									<div class="list-item-title">
+										<a href="?uri=<%=encodeURI(data.hits.hits[i]._source.id)%>">
+										<%- Object.values(data.hits.hits[i]._source.search_result_data.name).join(' / ') %>
+										</a>
+									</div>
+									
+									<div class="list-item-description">
+									<% if (data.hits.hits[i].highlight['search_data.fulltext_boosted']) {%>
+										<span>
+											<%- data.hits.hits[i].highlight['search_data.fulltext_boosted'].join(' ... ') %>
+										</span>								
+									<% } else {%>	
+										<% if (data.hits.hits[i].highlight['search_data.fulltext']) {%>
+											<span>
+												<%- data.hits.hits[i].highlight['search_data.fulltext'].join(' ... ') %>
+											</span>								
+										<% } %>									
+									<% } %>	
+									
+										<div class="list-item-tags">
+											<% for (var j in data.hits.hits[i]._source.search_result_data['@type']) {%>
+											<span class="tag">
+												<%- data.hits.hits[i]._source.search_result_data['@type'][j] %>
+											</span>								
+											<% } %>													
+										</div>
+									
+									
+									</div>
+									
+								</div>
+								
+							</div>
+						<% } %>	
+						<!-- </ul> -->	
+						<div>
+					<% } %>						
+					`;
+					
+					// Render template 	
+					html = ejs.render(template_search, { data: data });
+	
+					// Display
+					document.getElementById('output').innerHTML = html;
+
+					
+					
+					
+				
+				});
+			
+		
+		
+		
+		}
+	
+	
+	
+	</script>
+	
+	
+	
+	
 	
 </head>
 <body>
@@ -82,10 +333,20 @@ zbib
 
 -->
 
-<div id="output">Template output goes here</div>
+
+<!-- search box -->
+		<div style="width:100%;padding-bottom:20px;">
+			<input style="font-size:2em;" type="text" id="query" value="Nothovernonia" placeholder="Nothovernonia">
+			<button style="font-size:2em;" id="search" onclick="search();">Find</button>
+		</div>
+
+
+
+
+<div style="min-height:100px;" id="output"></div>
 
 <!-- json -->
-<div style="border:1px solid rgb(192,192,192);font-family:Courier;font-size:10px;white-space:pre;overflow:auto;" id="record">Data object goes here</div>
+<div style="border:1px solid rgb(242,242,242);font-family:Courier;font-size:10px;white-space:pre;overflow:auto;background-color:rgb(242,242,242);min-height:100px;" id="record"></div>
 
 
 
@@ -226,9 +487,14 @@ var template_article = `
 </div>
 
 <!-- title -->
-<% for(var i in record.name) {%>
-	<h1><%=record.name[i]%></h1>
-<% } %>
+
+<!--<% for(var i in record.name) {%> -->
+	<!-- note use of - in ejs template because we want unescaped output to handle HTML codes in title -->
+<!--	<h1><%-record.name[i]%></h1> -->
+<!--<% } %> -->
+
+
+<h1><%-Object.values(record.name).join(' / ')%></h1>
 	
 <!-- identifiers -->
 <ul>
@@ -294,6 +560,7 @@ var template_article = `
 			</a>
 			</li>
 		<% } %>
+		</ul>
 	<% } %>
 	
 	<!-- cited by -->
@@ -424,9 +691,10 @@ var template_taxon_name = `
 <% } %>
 
 <!-- Reference(s) that published this name  -->
-	<ul>
+
 	<% if(record.references) {%>
 		<h2>References</h2>
+		<ul>
 		<% for(var i in record.references) {%>
 			<li>
 			<a href="?uri=<%=encodeURIComponent(i)%>">
@@ -456,9 +724,8 @@ var template_taxon_name = `
 			</a>		
 			</li>
 		<% } %>	
+		</ul>
 	<% } %>	
-	
-	</ul>
 
 
 `;
@@ -507,6 +774,7 @@ function get_core (uri) {
 		
 			// type-----------------------------------------------------------------------
 			case 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type':
+			case 'http://purl.org/dc/terms/type':
 				var value = clean_value(result['?o']);
 				
 				// schema.org type
@@ -520,7 +788,7 @@ function get_core (uri) {
 
 				// FOAF
 				value = value.replace('http://xmlns.com/foaf/0.1/', '');
-				
+								
 				record['type'].push(value);
 				break;
 		
@@ -777,6 +1045,50 @@ tm:role="Publishing Author"/>
 				record[key] = value;
 				break;
 				
+				
+			// CETAF specimens -----------------------------------------------------------
+			case 'http://purl.org/dc/terms/title':
+			
+				var key = 'name';
+				
+				if (!record[key]) {
+					record[key] = {};
+				}
+			
+				var value = clean_value(result['?o']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record[key][kv[0]] = kv[1];
+				} else {
+					record[key][default_language_code] = value;
+				}
+				break;
+				
+			// Occurrence Darwin Core-----------------------------------------------------
+			case'http://rs.tdwg.org/dwc/terms/basisOfRecord':
+			case'http://rs.tdwg.org/dwc/terms/catalogNumber':
+			case'http://rs.tdwg.org/dwc/terms/collectionCode':
+			case'http://rs.tdwg.org/dwc/terms/country':
+			case'http://rs.tdwg.org/dwc/terms/countryCode':
+			case'http://rs.tdwg.org/dwc/terms/family':
+			case'http://rs.tdwg.org/dwc/terms/genus':
+			case'http://rs.tdwg.org/dwc/terms/higherGeography':
+			case'http://rs.tdwg.org/dwc/terms/institutionCode':
+			case'http://rs.tdwg.org/dwc/terms/locality':
+			case'http://rs.tdwg.org/dwc/terms/maximumElevationInMeters':
+			case'http://rs.tdwg.org/dwc/terms/minimumElevationInMeters':
+			case'http://rs.tdwg.org/dwc/terms/recordedBy':
+			case'http://rs.tdwg.org/dwc/terms/recordNumber':
+			case'http://rs.tdwg.org/dwc/terms/sampleID':
+			case'http://rs.tdwg.org/dwc/terms/scientificName':
+			case'http://rs.tdwg.org/dwc/terms/specificEpithet':
+			case'http://rs.tdwg.org/dwc/terms/stateProvince':
+				var key = result['?p'].replace(/http:\/\/rs.tdwg.org\/dwc\/terms\//, '');
+				var value = clean_value(result['?o']);
+				record[key] = value;
+				break;
+							
 
 			
 			default:
@@ -1161,7 +1473,9 @@ OPTIONAL {
 				if (!record.ISSN) {
 					record.ISSN = [];
 				}
-				record.ISSN.push (value);
+				if (record.ISSN.indexOf(value) === -1) {				
+					record.ISSN.push (value);
+				}
 			}
 			
 			if (result['?name']) {
@@ -1350,20 +1664,36 @@ SELECT * where {
 		
 			if (!record.references[result['?cites']]) {
 				record.references[result['?cites']] = {};
-				record.references[result['?cites']].name = {};
+				record.references[result['?cites']].name = {};				
 			}			
 			
 			var value;		
 						
 			if (result['?name']) {
 				value = clean_value(result['?name']);
-				record.references[result['?cites']].name[default_language_code] = value;
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record.references[result['?cites']].name[kv[0]] = kv[1];
+				} else {
+					record.references[result['?cites']].name[default_language_code] = value;
+				}	
 			}
 					
 			
 			if (result['?publicationTitle']) {
-				value = result['?publicationTitle'];
-				record.references[result['?cites']].publicationTitle = [clean_value(value)];
+				value = clean_value(result['?publicationTitle']);
+				
+				if (!record.references[result['?cites']].publicationTitle) {
+					record.references[result['?cites']].publicationTitle = {};
+				}
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record.references[result['?cites']].publicationTitle[kv[0]] = kv[1];
+				} else {
+					record.references[result['?cites']].publicationTitle[default_language_code] = value;
+				}	
 			}	
 											
 			
@@ -1572,6 +1902,8 @@ var uri = getUrlParam('uri', 'https://doi.org/10.6165/tai.2014.59.4.326');
 });*/
 
 get_core(uri);
+
+//search()
 
 
 	
