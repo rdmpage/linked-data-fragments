@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseURL</key>
+	<string>http://127.0.0.1:32769/ldf/_doc/https%3A%2F%2Fdoi.org%2F10.11646%2Fphytotaxa.343.3.10</string>
+	<key>bodyString</key>
+	<string>{
+  "id": "https://doi.org/10.11646/phytotaxa.343.3.10",
+  "search_result_data": {
+    "name": "Begonia adamsensis (sect. Baryandra , Begoniaceae), a new species from Luzon Island, the Philippines",
+    "description": "Begonia adamsensis from the northern part of Luzon Island is described as a new species endemic to the Philippines. This is the latest addition to the Begonia sect. Baryandra, making the total of Philippine begonias in this section to 56 species. It resembles Begonia hernandioides because its leaves are peltate, with a broad base, acuminate tip, nearly entire margin, and a glabrous peduncle; however, it differs significantly from B. hernandioides because of its broadly ovate red stipule, pubescent petiole, elliptic peltate leaf, pubescent abaxial lamina, and 4 perianth segments in the carpellate flower. Only about 200 individuals were found in a 100-m area that is being developed as a tourist spot in the locality, hence Begonia adamsensis is hereby proposed as critically endangered."
+  },
+  "search_data": {
+    "fulltext": "1 2 3 2018 Begonia adamsensis from the northern part of Luzon Island is described as a new species endemic to the Philippines. This is the latest addition to the Begonia sect. Baryandra, making the total of Philippine begonias in this section to 56 species. It resembles Begonia hernandioides because its leaves are peltate, with a broad base, acuminate tip, nearly entire margin, and a glabrous peduncle; however, it differs significantly from B. hernandioides because of its broadly ovate red stipule, pubescent petiole, elliptic peltate leaf, pubescent abaxial lamina, and 4 perianth segments in the carpellate flower. Only about 200 individuals were found in a 100-m area that is being developed as a tourist spot in the locality, hence Begonia adamsensis is hereby proposed as critically endangered. sici 1179-3155(2018)343&lt;289&gt; doi 10.11646/phytotaxa.343.3.10 1179-3155 1179-3163 289-292 https://doi.org/10.11646/phytotaxa.343.3.10 https://biotaxa.org/Phytotaxa/article/view/phytotaxa.343.3.10 https://biotaxa.org/Phytotaxa/article/download/phytotaxa.343.3.10/31991 343",
+    "fulltext_boosted": "Magtoto, Liezel M Rubite, Rosario R Austria, Celia M Phytotaxa Begonia adamsensis (sect. Baryandra , Begoniaceae), a new species from Luzon Island, the Philippines"
+  }
+}</string>
+	<key>followRedirect</key>
+	<true/>
+	<key>handleJSONPCallbacks</key>
+	<false/>
+	<key>headers</key>
+	<array>
+		<dict>
+			<key>header</key>
+			<string>Content-Type</string>
+			<key>inUse</key>
+			<true/>
+			<key>value</key>
+			<string>application/json</string>
+		</dict>
+	</array>
+	<key>httpMethod</key>
+	<string>PUT</string>
+	<key>jsonpScript</key>
+	<string></string>
+	<key>paramBodyUIChoice</key>
+	<integer>0</integer>
+	<key>parameters</key>
+	<array/>
+	<key>parametersType</key>
+	<integer>1</integer>
+	<key>presentBeforeChallenge</key>
+	<true/>
+	<key>stringEncoding</key>
+	<integer>4</integer>
+	<key>username</key>
+	<string>user</string>
+	<key>usingHTTPBody</key>
+	<true/>
+</dict>
+</plist>
