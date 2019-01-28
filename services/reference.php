@@ -379,7 +379,7 @@ function reference_to_rdf($reference)
 	{
 		foreach ($reference->citation as $citation)
 		{
-			$citation_id = '';
+			$cite_id = '';
 			
 			if (isset($citation->doi))
 			{
@@ -388,7 +388,17 @@ function reference_to_rdf($reference)
 				$citation->doi = trim($citation->doi);
 				$cite_id = 'https://doi.org/' . $citation->doi;
 			}
-			else
+
+			if (isset($citation->url))
+			{
+				$citation->url = $citation->url;
+				if ($cite_id == '')
+				{
+					$cite_id = $citation->url;
+				}
+			}
+			
+			if ($cite_id == '')
 			{
 				$cite_id = $subject_id . '/reference#' . $citation->key;
 			}

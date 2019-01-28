@@ -475,10 +475,12 @@ if ($result->NumRows() == 1)
 				
 				$delimiter = ';';
 				
+				/*
 				if ($issn == '1000-470X')
 				{
 					$delimiter = ',';
 				}
+				*/
 				
 				$authors = explode($delimiter, trim($value));
 				
@@ -554,10 +556,16 @@ if ($result->NumRows() == 1)
 		
 		$citation->key =  $result->fields['key'];
 
+		// identifiers 
 		if ($result->fields['doi'] != '')
 		{
 			$citation->doi = $result->fields['doi'];
 		}	
+
+		if ($result->fields['url'] != '')
+		{
+			$citation->url = $result->fields['url'];
+		}		
 
 		if ($result->fields['author'] != '')
 		{
