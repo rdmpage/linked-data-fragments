@@ -440,6 +440,76 @@ $urls=array(
 'http://bionames.org/indexfungorum/cluster/814659',
 );
 
+$urls=array(
+'http://www.repository.naturalis.nl/record/534866'
+);
+
+// CrossRef URL to resolve using CrossRef
+$urls=array(
+'https://doi.org/10.1080/00275514.2018.1515449'
+);
+
+$urls=array(
+'https://doi.org/10.1139/b05-107'
+);
+
+$urls = array(
+'10.5735/085.047.0307',
+'http://bionames.org/ipni/cluster/77106748-1',
+'http://bionames.org/ipni/cluster/77112890-1',
+'http://www.ingentaconnect.com/content/iapt/tax/2011/00000060/00000003/art00012',
+);
+
+$urls = array(
+'https://doi.org/10.6165/tai.2012.57(1).55',
+'https://doi.org/10.11646/phytotaxa.208.2.4',
+'https://doi.org/10.11646/phytotaxa.177.4.6'
+
+);
+
+$urls = array(
+'https://doi.org/10.1600/036364407783390764'
+);
+
+$urls = array(
+'https://doi.org/10.1111/j.1759-6831.2010.00113.x',
+'https://doi.org/10.1111/nph.12726',
+'https://doi.org/10.11646/phytotaxa.92.2.2',
+);
+
+
+$urls = array(
+//'http://www.whzwxyj.cn/CN/abstract/abstract1762.shtml',
+'https://doi.org/10.11646/phytotaxa.177.4.6'
+);
+
+
+$urls = array(
+'https://doi.org/10.3969/j.issn.2095-0845.2004.02.006',
+'https://doi.org/10.11646/phytotaxa.177.4.6'
+);
+
+$urls=array(
+'http://bionames.org/ipni/cluster/77064877-1'
+);
+
+$urls=array(
+'http://bbr.nefu.edu.cn/CN/abstract/abstract1775.shtml'
+);
+
+// CETAF
+$urls=array(
+'http://data.rbge.org.uk/herb/E00435919',
+'http://herbarium.bgbm.org/object/B100241392',
+'http://coldb.mnhn.fr/catalognumber/mnhn/p/p05036298',
+);
+
+$urls=array(
+'http://data.rbge.org.uk/herb/E00155121',
+'http://data.rbge.org.uk/herb/E00155186',
+);
+
+
 $force = false;
 $force = true;
 

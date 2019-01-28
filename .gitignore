@@ -1,6 +1,12 @@
 
-documentstore/.DS_Store
 .DS_Store
+
+documentstore/.DS_Store
+documentstore/junk
+
+elastic/*.json
+elastic/*.jsonl
+
 junk
 vendor
 *.lock
