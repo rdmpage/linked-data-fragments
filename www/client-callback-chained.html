@@ -127,12 +127,14 @@
 
 .list-item-tags {
 	padding-top:12px;
+	
 }
 
 .tag  {
 	border:1px solid #096;
 	padding:4px;
 	border-radius:4px;
+	margin-right:8px;
 }
 
 .search-highlight {
@@ -336,7 +338,7 @@ zbib
 
 <!-- search box -->
 		<div style="width:100%;padding-bottom:20px;">
-			<input style="font-size:2em;" type="text" id="query" value="Nothovernonia" placeholder="Nothovernonia">
+			<input style="font-size:2em;" type="text" id="query" value="" placeholder="Search">
 			<button style="font-size:2em;" id="search" onclick="search();">Find</button>
 		</div>
 
@@ -354,8 +356,13 @@ zbib
 
 var fragmentsClient = new ldf.FragmentsClient('fragments.php');
 
+// Object that we construct based on triple store info,
+// use this object to store values and to help render web page
 var record = {};
 record.type = [];
+
+// generic thing
+record.isPartOf = {};
 
 // work
 record.figures = {};
@@ -368,6 +375,10 @@ record.citations = {};
 
 // taxon name
 record.references = {};
+record.notes = {};
+record.nomenclaturalTypes = {};
+record.related = [];
+record.bibliography = {};
 
 // person
 record.created = {};
@@ -378,8 +389,8 @@ var default_language_code = 'en'; // 'und';
 
 //----------------------------------------------------------------------------------------
 // Convert ISO data to a human-readable string (PubMed-style)
-// My databases use -00 to indicate no month or no day, and this confuses Javascript
-// Date so we need to set the options appropriately
+// My databases may use -00 to indicate unknown month or unknown day, and this confuses Javascript
+// Date class so we need to set the options appropriately
 function isodate_to_string(datestring) {
 
 	// By default assume datestring is a year only
@@ -432,6 +443,71 @@ function isodate_to_string(datestring) {
 // Templates
 
 var template;
+
+// Image template
+var template_image = `
+	<% if(record.name) {%>
+	<h1><%=Object.values(record.name).join(' / ')%><% } %></h1>
+
+	<% if (record.id) {%>
+		<div><%=record.id%></div>
+	<% } %>	
+	
+	<!-- creators -->
+	<ul>
+	<% if(record.creators) {
+			for(var i in record.creators) {%>
+				<li>
+					<a href="?uri=<%=encodeURIComponent(i)%>">
+						<%=Object.values(record.creators[i].name).join(' / ')%>
+					</a>	
+					<% if(i.match(/orcid.org/)) {%>
+						<img src="images/orcid_16x16.png" />
+					<% } %>							
+				</li>
+			<%}
+		}%>
+	</ul>	
+	
+	<% if(record.thumbnailUrl) {%>
+		<div style="padding:10px;">				
+			<img style="border:1px solid rgb(192,192,192);"  src="<%=record.thumbnailUrl%> "/> 
+			<br />
+			<% if(record.description) {%>
+				<span><%-Object.values(record.description).join(' / ')%></span>
+			<% } %>	
+		</div>
+	<% } %>	
+	
+	<% if(record.isPartOf) {%>
+		<h2>Part of</h2>
+		<ul>
+		<% for(var i in record.isPartOf) {%>
+			<li>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+				<%-record.isPartOf[i].name%>
+			</a>
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>	
+	
+
+	
+	<% if(record.keywords) {%>
+		<h2>Keywords</h2>
+		<ul>
+		<% for(var i in record.keywords) {%>
+			<li>
+			<a href="?q=<%=encodeURIComponent(record.keywords[i])%>">
+				<%=record.keywords[i]%>
+			</a>
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>	
+	
+`;
 
 // Person template
 var template_person = `
@@ -541,7 +617,9 @@ var template_article = `
 			<div style="padding:10px;">				
 			<img style="border:1px solid rgb(192,192,192);"  src="<%=record.figures[i].thumbnailUrl%> "/> 
 			<br />
-			<span><%=record.figures[i].caption%></span>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+				<span><%=record.figures[i].caption%></span>
+			</a>
 			</div>
 		<%}
 	}%>
@@ -604,9 +682,9 @@ var template_article = `
 			
 	
 	<!-- cites -->
-	<ul>
 	<% if(record.references) {%>
 		<h2>References</h2>
+		<ul>
 		<% for(var i in record.references) {%>
 			<li>
 			<a href="?uri=<%=encodeURIComponent(i)%>">
@@ -638,9 +716,10 @@ var template_article = `
 			</a>		
 			</li>
 		<% } %>	
+		</ul>	
 	<% } %>	
 	
-	</ul>	
+	
 	
 `;
 
@@ -690,10 +769,10 @@ var template_taxon_name = `
 	<div><%=record.publishedIn%></div>
 <% } %>
 
-<!-- Reference(s) that published this name  -->
+	<!-- Reference(s) that published this name  -->
 
 	<% if(record.references) {%>
-		<h2>References</h2>
+		<h2>Published in</h2>
 		<ul>
 		<% for(var i in record.references) {%>
 			<li>
@@ -726,7 +805,124 @@ var template_taxon_name = `
 		<% } %>	
 		</ul>
 	<% } %>	
+	
+	<!-- notes -->
+	<% if(record.notes) {%>
+		<h2>Notes</h2>
+		<ul>
+		<% for(var i in record.notes) {%>
+			<li>
+				
+			<% if (record.notes[i].noteType) {%>
+				<%=record.notes[i].noteType%>:
+			<% } %>
+			
+			<% if (record.notes[i].note) {%>
+				<%=record.notes[i].note%>
+			<% } %>
+			
+			<% if (record.notes[i].objectTaxonName) {%>
+				<a href="?uri=<%=encodeURIComponent(record.notes[i].objectTaxonName)%>">
+					<%=record.notes[i].nameComplete%>
+				</a>
+			<% } %>
+			
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>	
+	
+	<!-- types -->
+	<% if(record.nomenclaturalTypes) {%>
+		<h2>Types</h2>
+		<ul>
+		<% for(var i in record.nomenclaturalTypes) {%>
+			<li>
+				
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+				<%=record.nomenclaturalTypes[i].name%>
+			</a>
+			
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>	
+	
+	
+	<!-- related names -->
+	<% if(record.related) {%>
+		<h2>Related names</h2>
+		<ul>
+		<% for(var i in record.related) {%>
+			<li>
+				<% if (record.id != record.related[i].source) {%>
+					<a href="?uri=<%=encodeURIComponent(record.related[i].source)%>">
+				<% } %>	
+				
+				<%=record.related[i].sourcename%>
+				
+				<% if (record.id != record.related[i].source) {%>
+					</a>
+				<% } %>	
 
+				→
+
+				[<%=record.related[i].note%>]
+
+				→
+
+				<% if (record.id != record.related[i].target) {%>
+					<a href="?uri=<%=encodeURIComponent(record.related[i].target)%>">
+				<% } %>	
+
+				<%=record.related[i].targetname%>
+				
+				<% if (record.id != record.related[i].target) {%>
+					</a>
+				<% } %>	
+								
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>	
+	
+	<!-- Bibliography including references from related names   -->
+
+	<% if(record.bibliography) {%>
+		<h2>Bibliography</h2>
+		<ul>
+		<% for(var i in record.bibliography) {%>
+			<li>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+			
+			<% if (record.bibliography[i].name) {%>
+				<%=Object.values(record.bibliography[i].name).join(' / ')%>
+			<% } %>
+
+			<% if (record.bibliography[i].publicationTitle) {%>
+				<%=Object.values(record.bibliography[i].publicationTitle).join(' / ')%>
+			<% } %>
+			
+			<% if (record.bibliography[i].volumeNumber) {%>
+				<%=record.bibliography[i].volumeNumber%>
+			<% } %>
+			<% if (record.bibliography[i].issueNumber) {%>
+				<%=record.bibliography[i].issueNumber%>
+			<% } %>
+			<% if (record.bibliography[i].pagination) {%>
+				<%=record.bibliography[i].pagination%>
+			<% } %>
+						
+			<% if (record.bibliography[i].DOI) {%>
+				DOI: <%=record.bibliography[i].DOI%>
+			<% } %>
+			
+			</a>		
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>		
+	
 
 `;
 
@@ -768,7 +964,7 @@ function get_core (uri) {
 
 	results.on('data', function (result) { 
 
-		console.log(result); 
+		//console.log(result); 
 	
 		switch (result['?p']) {
 		
@@ -800,6 +996,9 @@ function get_core (uri) {
 			case 'http://schema.org/issueNumber':
 			case 'http://schema.org/datePublished':
 			case 'http://schema.org/license':
+
+			case 'http://schema.org/thumbnailUrl':
+			case 'http://schema.org/contentUrl':
 			
 				var key = result['?p'].replace(/http:\/\/schema.org\//, '');
 				var value = clean_value(result['?o']);
@@ -807,6 +1006,7 @@ function get_core (uri) {
 				break;
 				
 			// may have multiple values
+			case 'http://schema.org/keywords':
 			case 'http://schema.org/sameAs':
 			case 'http://schema.org/url':
 			
@@ -1103,14 +1303,20 @@ tm:role="Publishing Author"/>
 		
 		template = template_article;
 		
-		// Schema
+		// Article
 		if (record.type.indexOf('ScholarlyArticle') !== -1) {
 			template = template_article;
 	 	}
 
+		// Person
 		if (record.type.indexOf('Person') !== -1) {
 			template = template_person;
 	 	}
+	 	
+		// Image
+		if (record.type.indexOf('ImageObject') !== -1) {
+			template = template_image;
+	 	}	 	
 	 	
 	 	// CiNii
 		if (record.type.indexOf('Article') !== -1) {
@@ -1125,6 +1331,15 @@ tm:role="Publishing Author"/>
 
 		switch (template) {
 		
+			case template_image:
+				get_creators(uri, function (uri) { 
+					get_is_part_of(uri, function (uri) { 
+						last(uri); 
+					});
+				});			
+				break;		
+		
+		
 			case template_person:
 				get_works_created(uri, function (uri) { 
 						last(uri); 
@@ -1134,7 +1349,19 @@ tm:role="Publishing Author"/>
 			case template_taxon_name:
 				get_published_in(uri, function (uri) { 
 					get_published_in_indexfungorum(uri, function (uri) { 
-							last(uri); 
+						get_names_notes(uri, function (uri) { 
+							get_names_types(uri, function (uri) { 
+								get_related_names_by_annotations(uri, function (uri) { 
+									get_related_names_by_basionym(uri, function (uri) { 
+										get_related_references_by_annotations(uri, function (uri) { 
+											get_related_references_by_basionym(uri, function (uri) { 
+												last(uri);
+											});	 
+										});	 
+									});	 
+								});	 
+							});	 
+						});	
 					});			
 				});
 				break;
@@ -1215,7 +1442,7 @@ OPTIONAL {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			if (!record.references[result['?pub']]) {
 				record.references[result['?pub']] = {};
@@ -1270,6 +1497,12 @@ OPTIONAL {
 					record.references[result['?pub']].DOI = clean_value(value);	
 				}
 			}
+			
+			// also add to bibliography
+			
+			if (!record.bibliography[result['?pub']]) {
+				record.bibliography[result['?pub']] = record.references[result['?pub']];
+			}
 
 			
 			});
@@ -1313,7 +1546,7 @@ WHERE {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 		
 			record.references[result['?pub']] = {};
 			
@@ -1372,7 +1605,7 @@ SELECT * WHERE {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 		
 			record.figures[result['?image']] = {};
 		
@@ -1422,7 +1655,7 @@ UNION
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			if (!record.creators[result['?person']]) {
 				record.creators[result['?person']] = {};
@@ -1464,7 +1697,7 @@ OPTIONAL {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			if (result['?issn']) {
 				value = result['?issn'];
@@ -1516,7 +1749,7 @@ function get_identifiers (uri, cb) {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 		
 			if (result['?id'] == "\"doi\"") {
 				var value = clean_value(result['?value']);
@@ -1543,7 +1776,7 @@ WHERE {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			if (!record.about[result['?id']]) {
 				record.about[result['?id']] = {};
@@ -1590,7 +1823,7 @@ WHERE {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			if (!record.created[result['?work']]) {
 				record.created[result['?work']] = {};
@@ -1660,7 +1893,7 @@ SELECT * where {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 		
 			if (!record.references[result['?cites']]) {
 				record.references[result['?cites']] = {};
@@ -1771,7 +2004,7 @@ SELECT * where {
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 		
 			if (!record.citations[result['?cited_by']]) {
 				record.citations[result['?cited_by']] = {};
@@ -1812,6 +2045,548 @@ SELECT * where {
 					record.citations[result['?cited_by']].DOI = clean_value(value);	
 				}
 			}
+			
+			});
+	
+		results.on('end', function (result) { 		
+			cb(uri);			
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_names_notes (uri, cb) {
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+SELECT *
+WHERE 
+{
+	<` + uri +`> tn:hasAnnotation ?hasAnnotation .
+	?hasAnnotation tn:noteType ?noteType .
+	OPTIONAL
+	{
+		?hasAnnotation tn:objectTaxonName ?objectTaxonName .
+		?objectTaxonName  tn:nameComplete ?nameComplete .
+	}
+	OPTIONAL
+	{
+		?hasAnnotation tn:note ?note .
+	}
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			//console.log(result); 
+			
+			if (!record.notes[result['?hasAnnotation']]) {
+				record.notes[result['?hasAnnotation']] = {};
+			}	
+			
+			if (result['?noteType']) {
+				var value = clean_value(result['?noteType']);
+				
+				value = value.replace('http://rs.tdwg.org/ontology/voc/TaxonName#', '');
+				
+				record.notes[result['?hasAnnotation']].noteType = value;
+			}
+
+			if (result['?objectTaxonName']) {
+				var value = clean_value(result['?objectTaxonName']);
+				record.notes[result['?hasAnnotation']].objectTaxonName = value;
+			}
+
+			if (result['?nameComplete']) {
+				var value = clean_value(result['?nameComplete']);
+				record.notes[result['?hasAnnotation']].nameComplete = value;
+			}					
+		
+			if (result['?note']) {
+				var value = clean_value(result['?note']);
+				record.notes[result['?hasAnnotation']].note = value;
+			}
+	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_names_types (uri, cb) {
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT *
+WHERE {
+<` + uri + `> tn:typifiedBy ?typifiedBy . 
+?typifiedBy dc:title ?name .
+?typifiedBy tn:typeOfType ?typeOfType .
+?typifiedBy tn:typeSpecimen ?typeSpecimen .
+?typifiedBy rdf:type ?type .
+}`;
+
+	//console.log(query); 
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			//console.log(result); 
+			
+			if (!record.nomenclaturalTypes[result['?typifiedBy']]) {
+				record.nomenclaturalTypes[result['?typifiedBy']] = {};
+			}	
+			
+			
+			if (result['?typeOfType']) {
+				var value = clean_value(result['?typeOfType']);
+				
+				value = value.replace('http://rs.tdwg.org/ontology/voc/TaxonName#', '');
+				
+				record.nomenclaturalTypes[result['?typifiedBy']].typeOfType = value;
+			}
+			
+
+			if (result['?name']) {
+				var value = clean_value(result['?name']);
+				record.nomenclaturalTypes[result['?typifiedBy']].name = value;
+			}
+
+			if (result['?typeSpecimen']) {
+				var value = clean_value(result['?typeSpecimen']);
+				record.nomenclaturalTypes[result['?typifiedBy']].typeSpecimen = value;
+			}
+	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_related_names_by_annotations (uri, cb) {
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+SELECT *
+WHERE {
+
+	<` + uri + `> tn:nameComplete ?name .
+{
+	<` + uri + `> tn:hasAnnotation ?hasAnnotation .
+	?hasAnnotation tn:noteType ?noteType .
+	?hasAnnotation tn:objectTaxonName ?target .
+	?target  tn:nameComplete ?targetname .
+}
+UNION
+{
+	?source tn:hasAnnotation ?hasAnnotation .
+	?hasAnnotation tn:noteType ?noteType .
+	?hasAnnotation tn:objectTaxonName <` + uri + `> .
+	?source tn:nameComplete ?sourcename .
+}
+
+}`;
+
+	console.log(query); 
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			var relationship = {};
+			
+			if (result['?target']) {
+				relationship.source = uri;
+				relationship.sourcename = clean_value(result['?name']);	
+							
+				relationship.target = clean_value(result['?target']);
+				relationship.targetname = clean_value(result['?targetname']);
+
+				relationship.note = clean_value(result['?noteType']);
+				
+				relationship.note = relationship.note.replace('http://rs.tdwg.org/ontology/voc/TaxonName#', '');
+
+				record.related.push(relationship);				
+			}
+			
+			if (result['?source']) {
+				relationship.source = clean_value(result['?source']);
+				relationship.sourcename = clean_value(result['?sourcename']);	
+							
+				relationship.target = uri;
+				relationship.targetname = clean_value(result['?name']);
+
+				relationship.note = clean_value(result['?noteType']);
+				
+				relationship.note = relationship.note.replace('http://rs.tdwg.org/ontology/voc/TaxonName#', '');
+
+				record.related.push(relationship);
+			}
+			
+	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_related_names_by_basionym (uri, cb) {
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+SELECT *
+WHERE {
+<` + uri + `> tn:nameComplete ?name .
+# basionym
+{
+<` + uri + `> tn:hasBasionym ?basionym .
+?basionym tn:nameComplete ?basionymName .
+}
+UNION 
+{
+?basionymFor tn:hasBasionym  <` + uri + `> .
+?basionymFor tn:nameComplete ?basionymForName .
+}
+}`;
+
+	console.log(query); 
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			var relationship = {};
+			
+			if (result['?basionym']) {
+				relationship.source = uri;
+				relationship.sourcename = clean_value(result['?name']);	
+							
+				relationship.target = clean_value(result['?basionym']);
+				relationship.targetname = clean_value(result['?basionymName']);
+
+				relationship.note = 'hasBasionym';
+
+				record.related.push(relationship);
+			}
+			
+			if (result['?basionymFor']) {
+				relationship.source = clean_value(result['?basionymFor']);
+				relationship.sourcename = clean_value(result['?basionymForName']);	
+							
+				relationship.target = uri;
+				relationship.targetname = clean_value(result['?name']);
+
+				relationship.note = 'hasBasionym';
+
+
+				record.related.push(relationship);
+			}
+			
+	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_related_references_by_annotations (uri, cb) {
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>	
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX schema: <http://schema.org/>		
+SELECT *
+WHERE {
+{
+	<` + uri + `> tn:hasAnnotation ?hasAnnotation .
+	?hasAnnotation tn:objectTaxonName ?target .
+	?target tcom:publishedInCitation ?pub .
+}
+UNION
+{
+	?source tn:hasAnnotation ?hasAnnotation .
+	?hasAnnotation tn:objectTaxonName <` + uri + `> .
+	?source tcom:publishedInCitation ?pub .
+}
+
+OPTIONAL {
+{
+   ?pub <http://schema.org/name> ?name .
+}
+UNION {
+	?pub dc:title ?name .
+}
+OPTIONAL {
+?pub <http://schema.org/datePublished> ?datePublished .
+}
+
+OPTIONAL {
+?pub schema:volumeNumber ?volumeNumber .
+}
+
+OPTIONAL {
+?pub schema:issueNumber ?issueNumber .
+}
+
+OPTIONAL {
+?pub schema:pagination ?pagination .
+}
+
+OPTIONAL {
+?pub schema:isPartOf ?container .
+?container schema:name ?journal .
+}
+
+OPTIONAL {
+?pub schema:identifier ?identifier .
+?identifier schema:propertyID ?propertyID .
+?identifier schema:value ?value .
+}
+}
+
+}`;
+
+	console.log(query); 
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			
+			if (result['?pub']) {
+				
+				if (!record.bibliography[result['?pub']]) {
+					record.bibliography[result['?pub']] = {};
+				}
+				
+				record.bibliography[result['?pub']].name = {};
+				record.bibliography[result['?pub']].publicationTitle = {};
+		
+				if (result['?name']) {
+					var value = clean_value(result['?name']);	
+				
+					if (isObject(value)) {
+						var kv = Object.entries(value)[0];
+						record.bibliography[result['?pub']].name[kv[0]] = kv[1];
+					} else {
+						record.bibliography[result['?pub']].name[default_language_code] = value;
+					}
+				}
+			
+				if (result['?journal']) {
+					var value = clean_value(result['?journal']);	
+				
+					if (isObject(value)) {
+						var kv = Object.entries(value)[0];
+						record.bibliography[result['?pub']].publicationTitle[kv[0]] = kv[1];
+					} else {
+						record.bibliography[result['?pub']].publicationTitle[default_language_code] = value;
+					}
+				}
+			
+				var value;		
+			
+				var keys = [
+					'volumeNumber',
+					'issueNumber',
+					'pagination',
+					'datePublished',
+					];
+				
+				for(var i in keys) {
+					if (result['?' + keys[i]]) {
+						value = result['?' + keys[i]];
+						record.bibliography[result['?pub']][keys[i]] = clean_value(value);										
+					}		
+				}
+			
+				// DOI
+				if (result['?value']) {
+					var propertyID = clean_value(result['?propertyID']);							
+					if (propertyID == 'doi') {				
+						value = result['?value'];
+						record.bibliography[result['?pub']].DOI = clean_value(value);	
+					}
+				}				
+				
+				
+			}			
+	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+function get_related_references_by_basionym (uri, cb) {
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>	
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX schema: <http://schema.org/>
+SELECT *
+WHERE {
+{
+<` + uri + `> tn:hasBasionym ?basionym .
+?basionym tcom:publishedInCitation ?pub .
+}
+UNION 
+{
+?basionymFor tn:hasBasionym  <` + uri + `> .
+?basionymFor tcom:publishedInCitation ?pub .
+}
+
+
+OPTIONAL {
+{
+   ?pub <http://schema.org/name> ?name .
+}
+UNION {
+	?pub dc:title ?name .
+}
+OPTIONAL {
+?pub <http://schema.org/datePublished> ?datePublished .
+}
+
+OPTIONAL {
+?pub schema:volumeNumber ?volumeNumber .
+}
+
+OPTIONAL {
+?pub schema:issueNumber ?issueNumber .
+}
+
+OPTIONAL {
+?pub schema:pagination ?pagination .
+}
+
+OPTIONAL {
+?pub schema:isPartOf ?container .
+?container schema:name ?journal .
+}
+
+OPTIONAL {
+?pub schema:identifier ?identifier .
+?identifier schema:propertyID ?propertyID .
+?identifier schema:value ?value .
+}
+}
+
+}`;
+
+	console.log(query); 
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			if (result['?pub']) {
+				
+				if (!record.bibliography[result['?pub']]) {
+					record.bibliography[result['?pub']] = {};
+				}
+				
+				record.bibliography[result['?pub']].name = {};
+				record.bibliography[result['?pub']].publicationTitle = {};
+		
+				if (result['?name']) {
+					var value = clean_value(result['?name']);	
+				
+					if (isObject(value)) {
+						var kv = Object.entries(value)[0];
+						record.bibliography[result['?pub']].name[kv[0]] = kv[1];
+					} else {
+						record.bibliography[result['?pub']].name[default_language_code] = value;
+					}
+				}
+			
+				if (result['?journal']) {
+					var value = clean_value(result['?journal']);	
+				
+					if (isObject(value)) {
+						var kv = Object.entries(value)[0];
+						record.bibliography[result['?pub']].publicationTitle[kv[0]] = kv[1];
+					} else {
+						record.bibliography[result['?pub']].publicationTitle[default_language_code] = value;
+					}
+				}
+			
+				var value;		
+			
+				var keys = [
+					'volumeNumber',
+					'issueNumber',
+					'pagination',
+					'datePublished',
+					];
+				
+				for(var i in keys) {
+					if (result['?' + keys[i]]) {
+						value = result['?' + keys[i]];
+						record.bibliography[result['?pub']][keys[i]] = clean_value(value);										
+					}		
+				}
+			
+				// DOI
+				if (result['?value']) {
+					var propertyID = clean_value(result['?propertyID']);							
+					if (propertyID == 'doi') {				
+						value = result['?value'];
+						record.bibliography[result['?pub']].DOI = clean_value(value);	
+					}
+				}				
+				
+				
+			}				
+			
+
+			
+	
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+//----------------------------------------------------------------------------------------
+// What is this a part of?
+function get_is_part_of (uri, cb) {
+
+		var query = `PREFIX schema: <http://schema.org/>
+SELECT * where {
+	<` + uri + `> schema:isPartOf ?part .
+	?part schema:name ?name .	
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			//console.log(result); 
+		
+			if (!record.isPartOf[result['?part']]) {
+				record.isPartOf[result['?part']] = {};
+			}
+			
+			var value;		
+			
+			if (result['?name']) {
+				value = result['?name'];
+				record.isPartOf[result['?part']].name = [clean_value(value)];
+			}		
+
 			
 			});
 	
@@ -1884,26 +2659,19 @@ https://doi.org/10.3897/phytokeys.3.1131 // Figures from Zenodo
 */
 
 
-var uri = getUrlParam('uri', 'https://doi.org/10.6165/tai.2014.59.4.326');
 
-// nested callbacks? yes, nested callbacks
+var query = getUrlParam('q', '');
 
-// article
-/*get_core(uri, function (uri) { 
-	get_figures(uri, function (uri) { 
-		get_creators(uri, function (uri) { 	
-			get_container(uri, function (uri) { 
-				get_identifiers(uri, function (uri) { 
-					last(uri); 
-				});
-			});				
-		});
-	});
-});*/
+if (query != '') {
+	document.getElementById('query').value = query;
+	search();
 
-get_core(uri);
+} else {
+	var uri = getUrlParam('uri', 'https://doi.org/10.6165/tai.2014.59.4.326');
+	get_core(uri);
+}
 
-//search()
+
 
 
 	
