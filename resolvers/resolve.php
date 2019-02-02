@@ -86,7 +86,7 @@ function fetch_zenodo_json($id, &$jsonld)
 	{
 		$obj = json_decode($data);
 		
-		//print_r($obj);
+		print_r($obj);
 		
 		// image URL
 		if (isset($obj->files[0]->links->self))
@@ -962,15 +962,12 @@ function cinii_rdf($url, $cache_dir = '')
 	{
 		// fix
 		
-	
-		
 		// convert
 		$nt = rdf_to_triples($xml);
 		$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
 
 		// Context 
 		$context = new stdclass;
-
 
 		$context->rdf 		= "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 		$context->rdfs 		= "http://www.w3.org/2000/01/rdf-schema#";
@@ -991,8 +988,8 @@ function cinii_rdf($url, $cache_dir = '')
 			'@type' => 'http://purl.org/ontology/bibo/Article',
 			
 		);	
+		
 		$data = jsonld_frame($doc, $frame);
-
 	}
 	
 	return $data;	
@@ -1003,7 +1000,6 @@ function cinii_rdf($url, $cache_dir = '')
 function fetch_jsonld($url, $cache_name = 'jsonid', $id = 0, $content_type = '')
 {
 	$data = null;
-	
 	
 	$cache_dir = dirname(__FILE__) . "/cache/" . $cache_name;
 	if (!file_exists($cache_dir))
@@ -1055,7 +1051,6 @@ function microcitation_reference ($guid)
 	
 	if ($nt != '')
 	{
-
 		$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
 
 		// Context to set vocab to schema
@@ -1073,10 +1068,8 @@ function microcitation_reference ($guid)
 		$issn->{'@id'} = "http://schema.org/issn";
 		$issn->{'@container'} = "@set";
 
-
 		$context->sameAs = $sameAs;
 		$context->issn = $issn;
-
 
 		$frame = (object)array(
 			'@context' => $context,
@@ -1127,8 +1120,6 @@ function resolve_url($url)
 			$done = true;
 		}
 	}
-	
-	
 	
 	// Index Fungorum  -------------------------------------------------------------------
 	// Import RDF XML and convert to JSON-LD
@@ -1231,8 +1222,7 @@ function resolve_url($url)
 	if (!$done)
 	{
 		if (preg_match('/https?:\/\/biostor.org\/reference\/(?<id>\d+)/', $url, $m))
-		{
-			
+		{			
 			$id = $m['id'];
 			$jsonld_url = 'https://biostor.org/api.php?id=biostor/' . $id . '&format=jsonld';
 			
@@ -1259,7 +1249,7 @@ function resolve_url($url)
 			
 			$url = 'http://localhost/~rpage/ipni-names/jsonld-clusters.php?id=' . $id;
 			$json = get($url);
-			
+						
 			if ($json != '')
 			{
 				$data = json_decode($json);
@@ -1442,8 +1432,7 @@ function resolve_url($url)
 			
 			$done = true;
 		}
-	}
-	
+	}	
 	
 	// DBPedia ---------------------------------------------------------------------------
 	// JSON-LD (not compacted)
@@ -1510,15 +1499,12 @@ function resolve_url($url)
 				$doc->message = $data;
 				
 				$done = true;
-			}
-	
+			}	
 			
-		}
-		
-		
+		}		
 	}
 	
-	// CrossRef ---------------------------------------------------------------------
+	// CrossRef --------------------------------------------------------------------------
 	// CSL+JSON, transform to JSON-LD in CouchDB
 	if (!$done)
 	{	
@@ -1553,9 +1539,6 @@ function resolve_url($url)
 		}
 	}	
 		
-	
-	
-	
 	
 	return $doc;
 }
@@ -1619,6 +1602,11 @@ if (0)
 	$url = 'https://doi.org/10.11646/phytotaxa.208.2.4';
 	$url = 'https://doi.org/10.6165/tai.2012.57(1).55';
 	
+	$url = 'https://zenodo.org/record/918933';
+	
+	$url = 'https://doi.org/10.26492/gbs69(2).2017-09';
+	
+	$url = 'https://doi.org/10.1007/s00606-002-0033-y';
 	
 	$doc = resolve_url($url);
 	print_r($doc);
