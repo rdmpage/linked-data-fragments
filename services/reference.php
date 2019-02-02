@@ -126,6 +126,17 @@ function reference_to_rdf($reference)
 			else
 			{
 				$triples[] = $author_id . ' <http://schema.org/name> ' . '"' . addcslashes($reference->author[$i]->name, '"') . '" .';					
+				
+				// name parts
+				if (isset($reference->author[$i]->firstname))
+				{
+					$triples[] = $author_id . ' <http://schema.org/givenName> ' . '"' . addcslashes($reference->author[$i]->firstname, '"') . '" .';					
+				}
+				if (isset($reference->author[$i]->lastname))
+				{
+					$triples[] = $author_id . ' <http://schema.org/familyName> ' . '"' . addcslashes($reference->author[$i]->lastname, '"') . '" .';					
+				}
+				
 			}
 			
 			// assume is a person, need to handle cases where this is not true
@@ -160,8 +171,7 @@ function reference_to_rdf($reference)
 		$journal_id = $subject_id . '#container';
 		
 		$sici = array();
-		
-		
+				
 		$issns = array();
 		if (isset($reference->journal->identifier))
 		{
@@ -248,17 +258,19 @@ function reference_to_rdf($reference)
 		}
 		
 		
-		// sici to help reference linking
-		if (count($sici) == 4)
+		// sici to help reference linking (do we still want these?)
+		if (0)
 		{
-			$identifier_id = '<' . $subject_id . '#sici' . '>';
+			if (count($sici) == 4)
+			{
+				$identifier_id = '<' . $subject_id . '#sici' . '>';
 
-			$triples[] = $s . ' <http://schema.org/identifier> ' . $identifier_id . '.';			
-			$triples[] = $identifier_id . ' <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .';
-			$triples[] = $identifier_id . ' <http://schema.org/propertyID> ' . '"sici"' . '.';
-			$triples[] = $identifier_id . ' <http://schema.org/value> ' . '"' . addcslashes(join('', $sici), '"') . '"' . '.';		
-		}
-		
+				$triples[] = $s . ' <http://schema.org/identifier> ' . $identifier_id . '.';			
+				$triples[] = $identifier_id . ' <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .';
+				$triples[] = $identifier_id . ' <http://schema.org/propertyID> ' . '"sici"' . '.';
+				$triples[] = $identifier_id . ' <http://schema.org/value> ' . '"' . addcslashes(join('', $sici), '"') . '"' . '.';		
+			}
+		}		
 		
 		
 	}
