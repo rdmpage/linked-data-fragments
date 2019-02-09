@@ -40,6 +40,17 @@ function querySPO($query)
 	
 	$url = $base_url . '&group_level=3';
 	
+	// pagination
+	if (isset($query['skip']))
+	{
+		$url .= '&skip=' . $query['skip'];
+	
+	}
+	if (isset($query['limit']))
+	{
+		$url .= '&limit=' . $query['limit'];	
+	}	
+	
 	$resp = $couch->send("GET", "/" . $config['couchdb_options']['database'] . "/" . $url);
 
 	$response_obj = json_decode($resp);
@@ -75,6 +86,17 @@ function querySPX($query)
 	. '&endkey=' . urlencode(json_encode($endkey, JSON_UNESCAPED_SLASHES));
 	
 	$url = $base_url . '&group_level=3';
+	
+	// pagination
+	if (isset($query['skip']))
+	{
+		$url .= '&skip=' . $query['skip'];
+	
+	}
+	if (isset($query['limit']))
+	{
+		$url .= '&limit=' . $query['limit'];	
+	}	
 	
 	$resp = $couch->send("GET", "/" . $config['couchdb_options']['database'] . "/" . $url);
 	
@@ -112,6 +134,17 @@ function querySXX($query)
 	
 	$url = $base_url . '&group_level=3';
 	
+	// pagination
+	if (isset($query['skip']))
+	{
+		$url .= '&skip=' . $query['skip'];
+	
+	}
+	if (isset($query['limit']))
+	{
+		$url .= '&limit=' . $query['limit'];	
+	}	
+	
 	$resp = $couch->send("GET", "/" . $config['couchdb_options']['database'] . "/" . $url);
 
 	$response_obj = json_decode($resp);	
@@ -147,6 +180,17 @@ function queryXPX($query)
 	. '&endkey=' . urlencode(json_encode($endkey, JSON_UNESCAPED_SLASHES));
 	
 	$url = $base_url . '&group_level=3';	
+	
+	// pagination
+	if (isset($query['skip']))
+	{
+		$url .= '&skip=' . $query['skip'];
+	
+	}
+	if (isset($query['limit']))
+	{
+		$url .= '&limit=' . $query['limit'];	
+	}	
 	
 	$resp = $couch->send("GET", "/" . $config['couchdb_options']['database'] . "/" . $url);
 
@@ -186,6 +230,17 @@ function queryXPO($query)
 	. '&endkey=' . urlencode(json_encode($endkey, JSON_UNESCAPED_SLASHES));
 	
 	$url = $base_url . '&group_level=3';
+	
+	// pagination
+	if (isset($query['skip']))
+	{
+		$url .= '&skip=' . $query['skip'];
+	
+	}
+	if (isset($query['limit']))
+	{
+		$url .= '&limit=' . $query['limit'];	
+	}	
 	
 	$resp = $couch->send("GET", "/" . $config['couchdb_options']['database'] . "/" . $url);
 
@@ -228,6 +283,17 @@ function queryXXO($query)
 
 	$url = $base_url . '&group_level=3';
 	
+	// pagination
+	if (isset($query['skip']))
+	{
+		$url .= '&skip=' . $query['skip'];
+	
+	}
+	if (isset($query['limit']))
+	{
+		$url .= '&limit=' . $query['limit'];	
+	}	
+	
 	$resp = $couch->send("GET", "/" . $config['couchdb_options']['database'] . "/" . $url);
 
 	$response_obj = json_decode($resp);
@@ -256,6 +322,17 @@ function queryXXX($query)
 	
 	$base_url = '_design/triples/_view/spo';
 	$url = $base_url . '?group_level=3';
+	
+	// pagination
+	if (isset($query['skip']))
+	{
+		$url .= '&skip=' . $query['skip'];
+	
+	}
+	if (isset($query['limit']))
+	{
+		$url .= '&limit=' . $query['limit'];	
+	}	
 	
 	$resp = $couch->send("GET", "/" . $config['couchdb_options']['database'] . "/" . $url);
 
