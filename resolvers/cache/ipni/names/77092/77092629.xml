@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77092629-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77092629-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Acacia latior (R.S.Cowan &amp; Maslin) Maslin &amp; Buscumb</dc:title>                        
+<dcterms:created>2008-10-09 15:46:27.0</dcterms:created>
+<dcterms:modified>2008-10-09 15:46:27.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Acacia latior</tn:nameComplete>
+<tn:genusPart>Acacia</tn:genusPart>        
+<tn:specificEpithet>latior</tn:specificEpithet>                
+<tn:authorship>(R.S.Cowan &amp; Maslin) Maslin &amp; Buscumb</tn:authorship>
+<tn:basionymAuthorship>R.S.Cowan &amp; Maslin</tn:basionymAuthorship>
+<tn:combinationAuthorship>Maslin &amp; Buscumb</tn:combinationAuthorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>(R.S.Cowan &amp; Maslin) Maslin &amp; Buscumb</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:6190-1"
+tm:index="1"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20013178-1"
+tm:index="2"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:1850-1" 
+tm:index="1"
+tm:role="Basionym Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:6190-1" 
+tm:index="2"
+tm:role="Basionym Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Nuytsia 18: 119. 2008 [21 Aug 2008] </tcom:publishedIn>    
+<tn:year>2008</tn:year>        
+<tn:hasBasionym rdf:resource="urn:lsid:ipni.org:names:981000-1"/>
+</tn:TaxonName>  
+</rdf:RDF>

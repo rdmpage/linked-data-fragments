@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://127.0.0.1:5984/fragments/_design/triples/_view/spo</string>
+	<string>http://127.0.0.1:5984/fragments/_design/export/_view/elastic</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
@@ -20,7 +20,7 @@
 	<array>
 		<dict>
 			<key>inUse</key>
-			<true/>
+			<false/>
 			<key>parameter</key>
 			<string>startkey</string>
 			<key>value</key>
@@ -28,7 +28,7 @@
 		</dict>
 		<dict>
 			<key>inUse</key>
-			<true/>
+			<false/>
 			<key>parameter</key>
 			<string>endkey</string>
 			<key>value</key>
@@ -36,11 +36,35 @@
 		</dict>
 		<dict>
 			<key>inUse</key>
-			<true/>
+			<false/>
 			<key>parameter</key>
 			<string>group_level</string>
 			<key>value</key>
 			<string>3</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<true/>
+			<key>parameter</key>
+			<string>key</string>
+			<key>value</key>
+			<string>"http://data.rbge.org.uk/herb/E00155121"</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<false/>
+			<key>parameter</key>
+			<string>key</string>
+			<key>value</key>
+			<string>"10.5735/085.047.0307"</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<false/>
+			<key>parameter</key>
+			<string>key</string>
+			<key>value</key>
+			<string>"https://biostor.org/reference/246525"</string>
 		</dict>
 	</array>
 	<key>parametersType</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://127.0.0.1:32769/ldf/_doc/https%3A%2F%2Fdoi.org%2F10.11646%2Fphytotaxa.343.3.10</string>
+	<string>http://127.0.0.1:32769/ldf/_doc/https:%2F%2Fbiostor.org%2Freference%2F246525</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77133177-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77133177-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Oreocharis glandulosa Y.H.Tan &amp; J.W.Li</dc:title>                        
+<dcterms:created>2013-10-23 14:36:25.0</dcterms:created>
+<dcterms:modified>2013-11-15 11:41:31.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Oreocharis glandulosa</tn:nameComplete>
+<tn:genusPart>Oreocharis</tn:genusPart>        
+<tn:specificEpithet>glandulosa</tn:specificEpithet>                
+<tn:authorship>Y.H.Tan &amp; J.W.Li</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Y.H.Tan &amp; J.W.Li</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20020199-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:40266-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Phytotaxa 131(1): 30. 2013 [13 Sep 2013] [epublished]</tcom:publishedIn>    
+<tn:year>2013</tn:year>        
+<tn:hasAnnotation>
+<tn:NomenclaturalNote>
+<tn:noteType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#laterHomonymOf"/>
+<tn:objectTaxonName rdf:resource="urn:lsid:ipni.org:names:77111843-1"/>
+</tn:NomenclaturalNote>
+</tn:hasAnnotation>                                            
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Yun-Hong Tan 6925, HITBC (holo)</dc:title>
+<tn:typeSpecimen>Yun-Hong Tan 6925, HITBC</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Yun-Hong Tan 6925, HITBC (iso)</dc:title>
+<tn:typeSpecimen>Yun-Hong Tan 6925, HITBC</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:hasAnnotation>
+<tn:NomenclaturalNote>
+<tn:noteType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#publicationStatus"/>
+<tn:note>nom. illeg. later homonym</tn:note>
+</tn:NomenclaturalNote>        
+</tn:hasAnnotation>	
+</tn:TaxonName>  
+</rdf:RDF>

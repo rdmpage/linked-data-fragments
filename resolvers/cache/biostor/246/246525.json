@@ -12,17 +12,17 @@
   },
   "@graph": [
     {
-      "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525",
+      "@id": "https:\/\/biostor.org\/reference\/246525",
       "@type": [
         "ScholarlyArticle",
         "itemList"
       ],
       "creator": [
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#role\/1",
+          "@id": "https:\/\/biostor.org\/reference\/246525#role\/1",
           "@type": "Role",
           "creator": {
-            "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#creator\/1",
+            "@id": "https:\/\/biostor.org\/reference\/246525#creator\/1",
             "@type": "Person",
             "familyName": "Lin",
             "givenName": "C-W ",
@@ -31,10 +31,10 @@
           "roleName": "1"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#role\/2",
+          "@id": "https:\/\/biostor.org\/reference\/246525#role\/2",
           "@type": "Role",
           "creator": {
-            "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#creator\/2",
+            "@id": "https:\/\/biostor.org\/reference\/246525#creator\/2",
             "@type": "Person",
             "familyName": "Thomas",
             "givenName": "D C",
@@ -43,10 +43,10 @@
           "roleName": "2"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#role\/3",
+          "@id": "https:\/\/biostor.org\/reference\/246525#role\/3",
           "@type": "Role",
           "creator": {
-            "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#creator\/3",
+            "@id": "https:\/\/biostor.org\/reference\/246525#creator\/3",
             "@type": "Person",
             "familyName": "Ardi",
             "givenName": "W H ",
@@ -55,10 +55,10 @@
           "roleName": "3"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#role\/4",
+          "@id": "https:\/\/biostor.org\/reference\/246525#role\/4",
           "@type": "Role",
           "creator": {
-            "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#creator\/4",
+            "@id": "https:\/\/biostor.org\/reference\/246525#creator\/4",
             "@type": "Person",
             "familyName": "Peng",
             "givenName": "C-I",
@@ -70,13 +70,13 @@
       "datePublished": "2017-00-00",
       "identifier": [
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#biostor",
+          "@id": "https:\/\/biostor.org\/reference\/246525#biostor",
           "@type": "PropertyValue",
           "propertyID": "biostor",
           "value": "246525"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#doi",
+          "@id": "https:\/\/biostor.org\/reference\/246525#doi",
           "@type": "PropertyValue",
           "propertyID": "doi",
           "value": "10.26492\/gbs69(1).2017-06"
@@ -92,7 +92,7 @@
       "issueNumber": "1",
       "itemListElement": [
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_1",
+          "@id": "https:\/\/biostor.org\/reference\/246525#listitem_1",
           "@type": "ListItem",
           "item": {
             "@id": "https:\/\/biodiversitylibrary.org\/page\/56622825",
@@ -101,7 +101,7 @@
           "position": "1"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_2",
+          "@id": "https:\/\/biostor.org\/reference\/246525#listitem_2",
           "@type": "ListItem",
           "item": {
             "@id": "https:\/\/biodiversitylibrary.org\/page\/56622826",
@@ -110,7 +110,7 @@
           "position": "2"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_3",
+          "@id": "https:\/\/biostor.org\/reference\/246525#listitem_3",
           "@type": "ListItem",
           "item": {
             "@id": "https:\/\/biodiversitylibrary.org\/page\/56622827",
@@ -119,7 +119,7 @@
           "position": "3"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_4",
+          "@id": "https:\/\/biostor.org\/reference\/246525#listitem_4",
           "@type": "ListItem",
           "item": {
             "@id": "https:\/\/biodiversitylibrary.org\/page\/56622828",
@@ -128,7 +128,7 @@
           "position": "4"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_5",
+          "@id": "https:\/\/biostor.org\/reference\/246525#listitem_5",
           "@type": "ListItem",
           "item": {
             "@id": "https:\/\/biodiversitylibrary.org\/page\/56622829",
@@ -137,7 +137,7 @@
           "position": "5"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_6",
+          "@id": "https:\/\/biostor.org\/reference\/246525#listitem_6",
           "@type": "ListItem",
           "item": {
             "@id": "https:\/\/biodiversitylibrary.org\/page\/56622830",
@@ -146,7 +146,7 @@
           "position": "6"
         },
         {
-          "@id": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525#listitem_7",
+          "@id": "https:\/\/biostor.org\/reference\/246525#listitem_7",
           "@type": "ListItem",
           "item": {
             "@id": "https:\/\/biodiversitylibrary.org\/page\/56622831",
@@ -162,8 +162,8 @@
         "https:\/\/biostor.org\/reference\/246525",
         "https:\/\/doi.org\/10.26492\/gbs69(1).2017-06"
       ],
-      "url": "http:\/\/localhost\/~rpage\/biostor\/reference\/246525",
-      "volume": "69"
+      "url": "https:\/\/biostor.org\/reference\/246525",
+      "volumeNumber": "69"
     }
   ]
 }

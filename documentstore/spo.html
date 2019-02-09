@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>JSON-LD or CSL to Elastic</title>
+		<title>JSON-LD to SPO</title>
 		<meta charset="UTF-8"/>
 		<script src="jquery.js"></script>
 		<!-- stuff below needs to go into CouchDB views -->
@@ -73,71 +73,12 @@
   }
 }
 
-
-			{
-  "_id": "https://zenodo.org/record/918933",
-  "_rev": "8-325d8293aa77684f08f650fd355e6300",
-  "message-timestamp": "2019-01-11T17:03:02+00:00",
-  "message-modified": "2019-01-11T17:03:07+00:00",
-  "message-format": "application/ld+json",
-  "message-source": "https://zenodo.org/api/records/918933",
-  "message": {
-    "@context": "http://schema.org/",
-    "@id": "https://doi.org/10.3897/phytokeys.3.1131.figure1",
-    "@type": "ImageObject",
-    "creator": [
-      {
-        "@type": "Person",
-        "affiliation": "Smithsonian Institution, Washington, DC, United States of America",
-        "name": "Robinson, Harold"
-      },
-      {
-        "@type": "Person",
-        "affiliation": "Smithsonian Institution, Washington DC, United States of America",
-        "name": "Funk, Vicki"
-      }
-    ],
-    "datePublished": "2011-05-30",
-    "description": "Figure 1 -  Nothovernonia purpurea (Sch.Bip. ex Walp.) H. Rob. and V.A. Funk: habit. [Illustration by Alice Tangerini (US)]",
-    "identifier": "https://doi.org/10.3897/phytokeys.3.1131.figure1",
-    "isPartOf": [
-      {
-        "@id": "https://doi.org/10.3897/phytokeys.3.1131",
-        "@type": "CreativeWork"
-      }
-    ],
-    "keywords": [
-      "Plantae",
-      "Tracheophyta",
-      "Magnoliopsida",
-      "Asterales",
-      "Asteraceae",
-      "Nothovernonia",
-      "Nothovernonia purpurea",
-      "Compositae",
-      "Nothovernonia",
-      "new genus",
-      "tropical Africa",
-      "Centrapalinae",
-      "Erlangineae",
-      "phylogeny"
-    ],
-    "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
-    "name": "Figure 1 from: Funk V, Robinson H (2011) A new genus, Nothovernonia, from tropical Africa (Asteraceae or Compositae: Vernonieae). PhytoKeys 3: 21-34. https://doi.org/10.3897/phytokeys.3.1131",
-    "url": "https://zenodo.org/record/918933",
-    "contentUrl": "https://zenodo.org/api/files/cfa06568-f61b-4235-8699-a189782a8bc2/oo_9863.jpg",
-    "thumbnailUrl": "https://zenodo.org/api/iiif/v2/cfa06568-f61b-4235-8699-a189782a8bc2:17838d2b-2b61-4bc6-aaeb-09836c4df6f9:oo_9863.jpg/full/250,/0/default.jpg"
-  }
-}
-
 -->		
 		
 		
 		
 			<!-- JSON for data object goes below -->
-			<textarea id="json" style="width:100%;background-color:#224FBC;color:#FFFF66;" rows="20">
-			
-			{
+			<textarea id="json" style="width:100%;background-color:#224FBC;color:#FFFF66;" rows="20">{
   "_id": "https://biostor.org/reference/246525",
   "_rev": "2-7c919c6ccc9cc56a492bdee6213a5e86",
   "message-timestamp": "2019-01-08T15:04:32+00:00",
@@ -313,9 +254,7 @@
       }
     ]
   }
-}
-
-			</textarea>
+}</textarea>
 			<br />
 			<button onclick="convert()">Convert JSON to JSON-LD</button>
 	</div>
@@ -334,10 +273,9 @@
 	
 //----------------------------------------------------------------------------------------
 // START COUCHDB VIEW
+var triples = [];
 
 var bnode_count = 0;
-
-var elastic_search_doc = {};
 
 //----------------------------------------------------------------------------------------
 function bnode() {
@@ -396,6 +334,34 @@ function detect_language(s) {
     return language;
 }
 
+//----------------------------------------------------------------------------------------
+// Store a triple with optional language code
+function triple(subject, predicate, object, language) {
+    var triple = [];
+    
+    subject = subject.replace(/</g, '%3C');
+    subject = subject.replace(/>/g, '%3E');
+    
+    triple[0] = subject;
+    triple[1] = predicate;
+
+    // Object may be URI or literal
+    if (object.match(/^(http|urn|_:)/)) {
+    
+    	object = object.replace(/</g, '%3C');
+    	object = object.replace(/>/g, '%3E');    
+    
+        triple[2] = object;
+    } else {
+        var literal = object;
+        if (typeof language === 'undefined') {} else {
+            literal += '@' + language;
+        }
+        triple[2] = literal;
+    }
+
+    return triple;
+}
 
 //----------------------------------------------------------------------------------------
 function property_to_uri(context, property) {
@@ -422,192 +388,9 @@ function property_to_uri(context, property) {
 }
 
 //----------------------------------------------------------------------------------------
-function add_to_elastic(subject, key, value, language) {
-	var done = false;
-	
-	// type
-	if (!done) {
-
-		if (key == '@type') {
-		
-			// Is this the "main" topic of the graph?
-			if (subject == elastic_search_doc.search_result_data['@id']) {
-				
-				elastic_search_doc.search_result_data['@type'].push(value);
-			}
-		
-			done = true
-		}
-	}
-	
-	// CETAF	
-	if (!done) {
-
-		if (key == 'http://purl.org/dc/terms/type') {
-			// Is this the "main" topic of the graph?
-			if (subject == elastic_search_doc.search_result_data['@id']) {
-				
-				elastic_search_doc.search_result_data['@type'].push(value);
-			}
-		
-			done = true
-		}
-	}		
-	
-	if (!done) {
-
-		if (key == 'http://schema.org/thumbnailUrl') {
-		
-			// Is this the "main" topic of the graph?
-			if (subject == elastic_search_doc.search_result_data['@id']) {
-		
-				if (!elastic_search_doc.search_result_data.image) {
-					elastic_search_doc.search_result_data.image = {};
-				}
-				elastic_search_doc.search_result_data.image.thumbnailUrl = value;
-			}
-		
-			done = true
-		}
-	}
-
-	if (!done) {
-
-		if (key == 'http://schema.org/contentUrl') {
-		
-			// Is this the "main" topic of the graph?
-			if (subject == elastic_search_doc.search_result_data['@id']) {
-		
-				if (!elastic_search_doc.search_result_data.image) {
-					elastic_search_doc.search_result_data.image = {};
-				}
-				elastic_search_doc.search_result_data.image.contentUrl = value;
-			}
-		
-			done = true
-		}
-	}
-	
-
-	if (!done) {
-
-		if (key == 'http://schema.org/name') {
-
-			console.log(subject, value);
-		
-			// Is this the "main" topic of the graph?
-			if (subject == elastic_search_doc.search_result_data['@id']) {
-		
-				// yes, so store values and add to boosted search
-				if (typeof language === 'undefined') {
-					language = 'und';
-				}
-				
-				elastic_search_doc.search_result_data.name[language] = value;
-				elastic_search_doc.search_data.fulltext_boosted_values.push(value);
-			} else {
-				// just add to normal search_data
-				elastic_search_doc.search_data.fulltext_values.push(value);			
-			}
-		
-			done = true
-		}
-	}
-	
-	// CETAF
-	if (!done) {
-
-		if (key == 'http://purl.org/dc/terms/title') {
-
-			//console.log(subject, value);
-		
-			// Is this the "main" topic of the graph?
-			if (subject == elastic_search_doc.search_result_data['@id']) {
-		
-				// yes, so store values and add to boosted search
-				if (typeof language === 'undefined') {
-					language = 'und';
-				}
-				
-				elastic_search_doc.search_result_data.name[language] = value;
-				elastic_search_doc.search_data.fulltext_boosted_values.push(value);
-			} else {
-				// just add to normal search_data
-				elastic_search_doc.search_data.fulltext_values.push(value);			
-			}
-		
-			done = true
-		}
-	}
-	
-	
-	if (!done) {
-
-		if (key == 'http://schema.org/description') {
-
-			console.log(subject, value);
-		
-			// Is this the "main" topic of the graph?
-			if (subject == elastic_search_doc.search_result_data['@id']) {
-		
-				// yes, so store values and add to boosted search
-				if (typeof language === 'undefined') {
-					language = 'und';
-				}
-				
-				elastic_search_doc.search_result_data.description[language] = value;
-				elastic_search_doc.search_data.fulltext_boosted_values.push(value);
-			} else {
-				// just add to normal search_data
-				elastic_search_doc.search_data.fulltext_values.push(value);			
-			}
-		
-			done = true
-		}
-	}
-	
-	// CETAF
-	if (!done) {
-
-		if (key == 'http://purl.org/dc/terms/description') {
-
-			// Is this the "main" topic of the graph?
-			if (subject == elastic_search_doc.search_result_data['@id']) {
-		
-				// yes, so store values and add to boosted search
-				if (typeof language === 'undefined') {
-					language = 'und';
-				}
-				
-				elastic_search_doc.search_result_data.description[language] = value;
-				elastic_search_doc.search_data.fulltext_boosted_values.push(value);
-			} else {
-				// just add to normal search_data
-				elastic_search_doc.search_data.fulltext_values.push(value);			
-			}
-		
-			done = true
-		}
-	}
-	
-	
-	if (!done) {
-		console.log(subject + ': ' + key + '=' + value);
-		if (elastic_search_doc.search_data.fulltext_values.indexOf(value) == -1) {
-			elastic_search_doc.search_data.fulltext_values.push(value);
-		}
-	}
-
-
-
-}
-
-//----------------------------------------------------------------------------------------
 function subtree(context, root, subject) {
 
     for (var i in root) {
-
-        //console.log(i);
 
         // Simple literal
         if (typeof root[i] === 'string') {
@@ -616,15 +399,21 @@ function subtree(context, root, subject) {
                 case '@id':
                     break;
 
-                case '@type':  
-                	add_to_elastic(subject, i, root[i]);               	
+                case '@type':                
+                    // triples.push(triple(subject, 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', property_to_uri(context, root[i])));
                     break;
 
                 default:
+                	
                     // simple literal
-                    var key = property_to_uri(context, i);
-                    var value = root[i];
-                    add_to_elastic(subject, key, value); 
+                    triples.push(
+                        triple(
+                            subject,
+                            property_to_uri(context, i),
+                            '"' + root[i].replace(/"/g, '\\"') + '"'
+                        )
+                    );
+                    
                     break;
             }
         }
@@ -632,11 +421,15 @@ function subtree(context, root, subject) {
         if (isObject(root[i])) {
             if (root[i]['@value'] && root[i]['@language']) {
                 // literal with language code
-                
-                    var key = property_to_uri(context, i);
-                    var value = root[i]['@value'];
-                    var language = root[i]['@language'];
-                    add_to_elastic(subject, key, value, language); 
+
+                triples.push(
+                    triple(
+                        subject,
+                        property_to_uri(context, i),
+                        '"' + root[i]['@value'].replace(/"/g, '\\"') + '"',
+                        root[i]['@language']
+                    )
+                );
 
             } else {
                 // object
@@ -656,6 +449,17 @@ function subtree(context, root, subject) {
                         id = subject + '#' + bnode();
                     }
 
+					/*
+                    triples.push(
+                        triple(
+                            subject,
+                            property_to_uri(context, i),
+                            id
+                        )
+                    );
+                    */
+                    
+
                     subtree(context, root[i], id);
                 }
             }
@@ -669,10 +473,14 @@ function subtree(context, root, subject) {
 					// literal with language code
                     if (root[i][j]['@value'] && root[i][j]['@language']) {
 
-                    	var key = property_to_uri(context, i);
-                    	var value = root[i][j]['@value'];
-                    	var language = root[i][j]['@language'];
-                  		add_to_elastic(subject, key, value, language); 
+                        triples.push(
+                            triple(
+                                subject,
+                                property_to_uri(context, i),
+                                '"' + root[i][j]['@value'].replace(/"/g, '\\"') + '"',
+                                root[i][j]['@language']
+                            )
+                        );
 
                     }
                     
@@ -681,23 +489,37 @@ function subtree(context, root, subject) {
                     	switch (root[i][j]['type']) {
                     	
                     		case 'uri':
+								triples.push(
+									triple(
+										subject,
+										property_to_uri(context, i),
+										root[i][j]['value']
+									)
+								);                    		
                     			break;
 
                     		case 'literal':
                     			if (root[i][j]['lang']) {
                     				// string
-									var key = property_to_uri(context, i);
-									var value = root[i][j]['@value'];
-									var language = root[i][j]['@language'];
-									add_to_elastic(subject, key, value, language); 
- 
+									triples.push(
+										triple(
+											subject,
+											property_to_uri(context, i),
+											'"' + root[i][j]['value'].replace(/"/g, '\\"') + '"',
+											root[i][j]['lang']
+										)
+									);                    		
                     			} else {
                     				// other datatype, e.g. integer
-									var key = property_to_uri(context, i);
-									var value = String(root[i][j]['value']);
-									add_to_elastic(subject, key, value); 
-								
-                   				}
+									triples.push(
+										triple(
+											subject,
+											property_to_uri(context, i),
+											'"' + String(root[i][j]['value']).replace(/"/g, '\\"') + '"'
+											
+										)
+									);                    		                    			
+                    			}
                     			break;
                     	
                     		default:
@@ -722,27 +544,45 @@ function subtree(context, root, subject) {
 							id = subject + '#' + bnode();
 						}
 
+						/*
+						triples.push(
+							triple(
+								subject,
+								property_to_uri(context, i),
+								id
+							)
+						);
+						*/
+						
+
 						subtree(context, root[i][j], id);
 					}
 
                 }
 
                 if (typeof root[i][j] === 'string') {
-					// simple literal                    
+                    // simple literal                    
                     switch (i) {
                     
                     	case '@type':
-                    		add_to_elastic(subject, i, root[i][j]);       
+                    		triples.push(
+                    			triple(subject, 
+                    			'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', 
+                    			property_to_uri(context, root[i][j]))
+                    		);
                     		break;
-                    		
-                    	default:               
-		                    var key = property_to_uri(context, i);
-                    		var value = root[i][j];
-							add_to_elastic(subject, key, value); 
-							break;
-					}                   					
+                    
+                    	default:
+                    	    triples.push(
+								triple(
+									subject,
+									property_to_uri(context, i),
+									'"' + root[i][j].replace(/"/g, '\\"') + '"'
+								)
+							); 
+                    		break;                   
+                    }
                 }
-
             }
         }
 
@@ -754,56 +594,8 @@ function subtree(context, root, subject) {
 
 //----------------------------------------------------------------------------------------
 function ldjson(doc) {
-
-	// output
-	$('#jsonld').html('<pre>' + JSON.stringify(doc.message, null, 2) + '</pre>');
-	
-    elastic_search_doc = {};
-    
-    // we need the id for the "main" entity of this graph
-    var id = '';
-    
-    if (id == '') {
-    	if (doc.message['@id']) {
-	        id = doc.message['@id'];
-	    }
-    }
-    
-    // Get @graph @id that corresponds to document as this is the "main"
-    // entity, but note that we may need to handle http versus https issues
-    if (id == '') {
-    	if (doc.message['@graph']) {
- 	        id = doc._id;
- 	        
- 	        for (var j in doc.message['@graph']) {
- 	        	var s1 = doc.message['@graph'][j]['@id'];
- 	        	var s2 = doc._id;
- 	        	
- 	        	s1 = s1.replace(/https?:\/\//, '');
- 	        	s2 = s2.replace(/https?:\/\//, '');
- 	        	
- 	        	if (s1 === s2) {
- 	        		id = doc.message['@graph'][j]['@id'];
- 	        	} 	        	
- 	        } 	        
-	    }
-    }
-
-    elastic_search_doc.id = id;
-    
-	// output to display in list of hits
-	elastic_search_doc.search_result_data = {};
-	elastic_search_doc.search_result_data['@id'] = id;
-	elastic_search_doc.search_result_data['@type'] = [];
-	elastic_search_doc.search_result_data.name = {};
-	elastic_search_doc.search_result_data.description = {};
-	
-	// fields that will be searched on
-	elastic_search_doc.search_data = {};
-	
-	// text fields for searching on
-	elastic_search_doc.search_data.fulltext_values = [];
-	elastic_search_doc.search_data.fulltext_boosted_values = [];	
+  	triples=[];
+  	bnode_count = 0;
   	
 	var done = false;
 	
@@ -823,6 +615,7 @@ function ldjson(doc) {
 	        subtree(doc.message['@context'], doc.message, doc.message['@id']);
 	        done = true;
 	    }
+	    
     }
 
 	// DBPedia-style JSON-LD
@@ -832,20 +625,41 @@ function ldjson(doc) {
 		}
 	    done = true;
     }
+  	
     
-    // cleanup
-	elastic_search_doc.search_data.fulltext = elastic_search_doc.search_data.fulltext_values.join(' ');
-	delete elastic_search_doc.search_data.fulltext_values;
+    var index_type = 'spo';
+ 
+    for (var i in triples) {
+      switch (index_type) {
+      	/*
+        case 'osp':
+          emit([triples[i][2], triples[i][0], triples[i][1]], 1);
+          break;
 
-	elastic_search_doc.search_data.fulltext_boosted = elastic_search_doc.search_data.fulltext_boosted_values.join(' ');
-	delete elastic_search_doc.search_data.fulltext_boosted_values;
-    
-    
-	$('#jsonld').html('<pre>' + JSON.stringify(elastic_search_doc, null, 2) + '</pre>');
-	
-	//emit(doc._id, elastic_search_doc);
-    
-
+        case 'ops':
+          emit([triples[i][2], triples[i][1], triples[i][0]], 1);
+          break;
+      
+        case 'pso':
+          emit([triples[i][1], triples[i][0], triples[i][2]], 1);
+          break;
+          
+        case 'pos':
+          emit([triples[i][1], triples[i][2], triples[i][0]], 1);
+          break;
+          
+        case 'sop':
+          emit([triples[i][0], triples[i][2], triples[i][1]], 1);
+          break;
+          */
+          
+        case 'spo':
+        default:
+          //emit(triples[i], 1);
+          console.log(JSON.stringify(triples[i], null, 2));
+          break;
+      }
+    }
 }
 
 //----------------------------------------------------------------------------------------
@@ -1288,7 +1102,6 @@ function couchdb(doc) {
  	    if (doc['message-format'] == 'application/vnd.crossref-api-message+json') {
 	    	// convert CSL-JSON to JSON-LD, then process
 	        var d = {};
-	        d._id = doc._id;
 	        d.message = message(doc);
 	        
 	       ldjson(d);
@@ -1298,7 +1111,6 @@ function couchdb(doc) {
 	    if (doc['message-format'] == 'application/vnd.citationstyles.csl+json') {
 	    	// convert CSL-JSON to JSON-LD, then process
 	        var d = {};
-	        d._id = doc._id;
 	        d.message = message(doc);
 	        
 	       ldjson(d);
@@ -1309,9 +1121,6 @@ function couchdb(doc) {
 
 
 // END COUCHDB VIEW	
-//----------------------------------------------------------------------------------------
-
-
 
 		
 //----------------------------------------------------------------------------------------

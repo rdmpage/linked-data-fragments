@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.19.3968.figure4", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "The Royal Botanic Gardens, Kew, Richmond, United Kingdom", 
+      "name": "Monro, Alex"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Chinese Academy of Sciences, Guangxi, China", 
+      "name": "Wei, Y.G."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Chinese Academy of Sciences, Beijing, China", 
+      "name": "Chen, C.J."
+    }
+  ], 
+  "datePublished": "2012-12-28", 
+  "description": "Figure 4 - Pilea shizongensis. A Habit B Close up of pistillate inflorescence C Close up of a staminate flower. Based on Monro &amp; Wei 6727.", 
+  "identifier": "https://doi.org/10.3897/phytokeys.19.3968.figure4", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/phytokeys.19.3968", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Plantae", 
+    "Tracheophyta", 
+    "Magnoliopsida", 
+    "Rosales", 
+    "Urticaceae", 
+    "Pilea", 
+    "Pilea shizongensis", 
+    "Urticaceae", 
+    "Pilea", 
+    "China", 
+    "Guizhou", 
+    "Yunnan", 
+    "limestone karst", 
+    "caves"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 4 from: Monro A, Wei Y, Chen C (2012) Three new species of Pilea (Urticaceae) from\u00a0limestone\u00a0karst in China. PhytoKeys 19: 51-66. https://doi.org/10.3897/phytokeys.19.3968", 
+  "url": "https://zenodo.org/record/919530"
+}

@@ -509,6 +509,64 @@ $urls=array(
 'http://data.rbge.org.uk/herb/E00155186',
 );
 
+$urls=array(
+'https://doi.org/10.11646/phytotaxa.23.1.1',
+'https://doi.org/10.11646/phytotaxa.131.1.5',
+'http://bionames.org/ipni/cluster/77111843-1', // name Phytotaxa
+'http://bionames.org/ipni/cluster/315984-1', // basionym (BHL and BioStor - to do)
+'http://bionames.org/ipni/cluster/77133177-1', // homonym
+);
+
+$urls=array(
+'https://biostor.org/reference/246525'
+);
+
+$urls=array(
+'http://bionames.org/ipni/cluster/77123889-1'
+);
+
+// zenodo
+$urls=array(
+'https://zenodo.org/record/576152',
+'https://zenodo.org/record/919528',
+'https://zenodo.org/record/919526',
+'https://zenodo.org/record/919536',
+'https://zenodo.org/record/919524',
+'https://zenodo.org/record/919534',
+'https://zenodo.org/record/919532',
+'https://zenodo.org/record/919530',
+);
+
+$urls=array(
+'http://bionames.org/ipni/cluster/77148196-1',
+);
+
+$urls=array(
+'https://doi.org/10.26492/gbs69(2).2017-09'
+);
+
+// replacement name
+$urls=array(
+'http://bionames.org/ipni/cluster/77140287-1'
+);
+
+// Poissonia
+$urls=array(
+'http://bionames.org/ipni/cluster/20012729-1'
+);
+
+$urls=array(
+'http://bionames.org/ipni/cluster/487377-1',
+);
+
+
+$urls=array(
+'http://bionames.org/ipni/cluster/60441193-2',
+'http://bionames.org/ipni/cluster/469833-1',
+'http://bionames.org/ipni/cluster/77092629-1',
+'http://bionames.org/ipni/cluster/981000-1',
+);
+
 
 $force = false;
 $force = true;

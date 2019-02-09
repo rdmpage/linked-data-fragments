@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:67324-2">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:67324-2:1.2.2.1.1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2.2.1.1.2</owl:versionInfo>
+<dc:title>Coursetia weberbaueri Harms</dc:title>                        
+<dcterms:created>2004-01-20 00:00:00.0</dcterms:created>
+<dcterms:modified>2016-01-29 21:18:11.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Coursetia weberbaueri</tn:nameComplete>
+<tn:genusPart>Coursetia</tn:genusPart>        
+<tn:specificEpithet>weberbaueri</tn:specificEpithet>                
+<tn:authorship>Harms</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Harms</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:3667-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Bot. Jahrb. Syst. 42(1): 95. 1908 [28 Jul 1908] </tcom:publishedIn>    
+<tn:year>1908</tn:year>        
+</tn:TaxonName>  
+</rdf:RDF>

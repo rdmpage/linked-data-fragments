@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77123889-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77123889-1:1.4"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.4</owl:versionInfo>
+<dc:title>Pilea shizongensis A.K.Monro, C.J.Chen &amp; Y.G.Wei</dc:title>                        
+<dcterms:created>2012-12-20 17:30:32.0</dcterms:created>
+<dcterms:modified>2013-01-02 08:56:08.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Pilea shizongensis</tn:nameComplete>
+<tn:genusPart>Pilea</tn:genusPart>        
+<tn:specificEpithet>shizongensis</tn:specificEpithet>                
+<tn:authorship>A.K.Monro, C.J.Chen &amp; Y.G.Wei</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>A.K.Monro, C.J.Chen &amp; Y.G.Wei</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:37266-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:13718-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:37149-1"
+tm:index="3"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>PhytoKeys 19: 58. 2012 [28 Dec 2012] [epublished]</tcom:publishedIn>    
+<tn:year>2012</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>A. K.Monro &amp; Y. G.Wei 6727, IBK (holo)</dc:title>
+<tn:typeSpecimen>A. K.Monro &amp; Y. G.Wei 6727, IBK</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>A. K.Monro &amp; Y. G.Wei 6727, BM (iso)</dc:title>
+<tn:typeSpecimen>A. K.Monro &amp; Y. G.Wei 6727, BM</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>A. K.Monro &amp; Y. G.Wei 6727, MO (iso)</dc:title>
+<tn:typeSpecimen>A. K.Monro &amp; Y. G.Wei 6727, MO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>A. K.Monro &amp; Y. G.Wei 6727, PE (iso)</dc:title>
+<tn:typeSpecimen>A. K.Monro &amp; Y. G.Wei 6727, PE</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

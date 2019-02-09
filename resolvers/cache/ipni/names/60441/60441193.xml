@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:60441193-2">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:60441193-2:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Vachellia biaciculata (S.Watson) Seigler &amp; Ebinger</dc:title>                        
+<dcterms:created>2006-02-19 11:28:17.0</dcterms:created>
+<dcterms:modified>2006-02-19 11:28:17.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Vachellia biaciculata</tn:nameComplete>
+<tn:genusPart>Vachellia</tn:genusPart>        
+<tn:specificEpithet>biaciculata</tn:specificEpithet>                
+<tn:authorship>(S.Watson) Seigler &amp; Ebinger</tn:authorship>
+<tn:basionymAuthorship>S.Watson</tn:basionymAuthorship>
+<tn:combinationAuthorship>Seigler &amp; Ebinger</tn:combinationAuthorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>(S.Watson) Seigler &amp; Ebinger</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:26489-1"
+tm:index="1"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:2456-1"
+tm:index="2"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:11437-1" 
+tm:index="1"
+tm:role="Basionym Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Phytologia 87(3): 145. 2006 [dt. Dec 2005; publ. 4 Jan 2006] </tcom:publishedIn>    
+<tn:year>2006</tn:year>        
+<tn:hasBasionym rdf:resource="urn:lsid:ipni.org:names:424-2"/>
+</tn:TaxonName>  
+</rdf:RDF>

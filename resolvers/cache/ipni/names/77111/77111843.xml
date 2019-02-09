@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77111843-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77111843-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Oreocharis glandulosa (Batalin) Mich.Möller &amp; A.Weber</dc:title>                        
+<dcterms:created>2011-06-03 10:18:27.0</dcterms:created>
+<dcterms:modified>2011-06-03 10:18:27.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Oreocharis glandulosa</tn:nameComplete>
+<tn:genusPart>Oreocharis</tn:genusPart>        
+<tn:specificEpithet>glandulosa</tn:specificEpithet>                
+<tn:authorship>(Batalin) Mich.Möller &amp; A.Weber</tn:authorship>
+<tn:basionymAuthorship>Batalin</tn:basionymAuthorship>
+<tn:combinationAuthorship>Mich.Möller &amp; A.Weber</tn:combinationAuthorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>(Batalin) Mich.Möller &amp; A.Weber</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20015527-1"
+tm:index="1"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:28603-1"
+tm:index="2"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:535-1" 
+tm:index="1"
+tm:role="Basionym Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Phytotaxa 23: 21. 2011 [16 May 2011] </tcom:publishedIn>    
+<tn:year>2011</tn:year>        
+<tn:hasBasionym rdf:resource="urn:lsid:ipni.org:names:315984-1"/>
+</tn:TaxonName>  
+</rdf:RDF>

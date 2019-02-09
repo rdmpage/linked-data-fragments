@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:981000-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:981000-1:1.1.2.2.1.5"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1.2.2.1.5</owl:versionInfo>
+<dc:title>Acacia coolgardiensis subsp. latior R.S.Cowan &amp; Maslin</dc:title>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2016-01-28 12:44:02.0</dcterms:modified>
+<tn:rankString>subsp.</tn:rankString>
+<tn:nameComplete>Acacia coolgardiensis subsp. latior</tn:nameComplete>
+<tn:genusPart>Acacia</tn:genusPart>
+<tn:specificEpithet>coolgardiensis</tn:specificEpithet>
+<tn:infraspecificEpithet>latior</tn:infraspecificEpithet>
+<tn:authorship>R.S.Cowan &amp; Maslin</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>R.S.Cowan &amp; Maslin</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:1850-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:6190-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Nuytsia 10(1): 22 (1995). </tcom:publishedIn>    
+<tn:year>1995</tn:year>        
+</tn:TaxonName>  
+</rdf:RDF>
