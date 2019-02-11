@@ -78,7 +78,7 @@ if ($parameters['o'] == '')
 }
 
 // pagination
-if ($page == 0)
+if ($page < 2)
 {
 	$parameters['skip'] = 0;
 }
@@ -220,7 +220,14 @@ if ($page > 1)
 
 if ($total_triples > ($pagesize * $page))
 {
-	$next =  $fragment_uri . $page_delimiter . 'page=' . ($page + 1);
+	if ($page < 2)
+	{
+		$next =  $fragment_uri . $page_delimiter . 'page=2';	
+	}
+	else
+	{
+		$next =  $fragment_uri . $page_delimiter . 'page=' . ($page + 1);
+	}
 	$triples[] = array('<' . $page_uri . '>', '<http://www.w3.org/ns/hydra/core#next>', '<' . $next . '>', '<' . $meta_uri . '>');	
 }
 
