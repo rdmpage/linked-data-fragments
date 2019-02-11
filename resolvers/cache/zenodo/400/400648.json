@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.400648", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Peng-Fei Fan"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Kai He"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Xing Chen"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Alejandra Ortiz"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Bin Zhang"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Chao Zhao"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Yun-Qiao"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Hai-Bo Zhang"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Clare Kimock"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Wen-Zhi Wang"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Colin Groves"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Samuel T. Turvey"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Christian Roos"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Kristofer M. Helgen"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Kristofer M. Helgen"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Xue-Long Jiang"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURE 6 Bayesian tree of various catarrhines estimated using complete mitochondrial genome sequence data. Branch lengths represent time. Node bars indicate the 95%CI for the clade age. Unless specified, all interspecific relationships are strongly supported (PP = 1.0). PPs lower than 1.0 are shown in gray. Numbers above the nodes indicate Bayesian posterior probabilities, numbers below the nodes refer to median ages", 
+  "identifier": "https://doi.org/10.5281/zenodo.400648", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.1002/ajp.22631", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/400642", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Chordata", 
+    "Mammalia", 
+    "Primates", 
+    "Hylobatidae", 
+    "Hoolock"
+  ], 
+  "license": "", 
+  "name": "FIGURE 6 in Description of a new species of Hoolock gibbon (Primates: Hylobatidae) based on integrative taxonomy", 
+  "url": "https://zenodo.org/record/400648"
+}

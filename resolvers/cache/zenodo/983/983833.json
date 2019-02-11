@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.73.9737.figure2", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Forest Research Institute Malaysia, Selangor, Malaysia", 
+      "name": "Sam, Yen Yen"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "University of Malaya, Kuala Lumpur, Malaysia", 
+      "name": "Ibrahim, Halijah"
+    }
+  ], 
+  "datePublished": "2016-10-25", 
+  "description": "Figure 2 - \n              \n          Globba magnibracteata Y.Y.Sam A Habit B Inflorescence C Sterile bract D Bracteole E Flower F Ovary and calyx G Dorsal corolla lobe in front and side view H Lateral corolla lobe in ventral and side view I Lateral staminodes in ventral and side view J Labellum K Anther appendages L Stigma. Drawn by M.N. Aidil from Sam &amp; Aidil FRI 68959 (KEP).", 
+  "identifier": "https://doi.org/10.3897/phytokeys.73.9737.figure2", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/phytokeys.73.9737", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Plantae", 
+    "Tracheophyta", 
+    "Liliopsida", 
+    "Zingiberales", 
+    "Zingiberaceae", 
+    "Globba", 
+    "Endemic", 
+    "ginger", 
+    "Globbeae", 
+    "taxonomy", 
+    "Terengganu", 
+    "Zingiberaceae"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 2 from: Sam YY, Ibrahim H (2016) A new Globba with large white floral bracts from Peninsular Malaysia. PhytoKeys 73: 117-124. https://doi.org/10.3897/phytokeys.73.9737", 
+  "url": "https://zenodo.org/record/983833"
+}

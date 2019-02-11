@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.925131", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Philippe Vieira Alves"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Alain de Chambrier"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Jos\u00e9 Luis Luque"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Tom\u00e1\u0161 Scholz"
+    }
+  ], 
+  "datePublished": "2017-02-20", 
+  "description": "Fig. 2 Scanning electron micrographs of representatives of c monticelliine proteocephalideans. Chambriella megacephala (Woodland, 1934) ex Sorubimichthys planiceps (MHNG-PLAT 54608): A, B, Scoleces, dorsoventral and apical views, respectively; C, D, G, Microtriches on the apex of the scolex, external upper surface of the suckers and between suckers, respectively. Riggenbachiella amazonense n. sp. ex S. planiceps (MHNG-PLAT 54609): E, F, Scoleces, dorsoventral and apical views, respectively; H, K, L, Microtriches on the apex of the scolex, external upper surface of the suckers and between suckers, respectively. Riggenbachiella paranaense (Pavanelli &amp; Rego, 1989) ex Hemisorubim platyrhynchos (MHNG-PLAT 36430): I, J, Scoleces, dorsoventral and apical views, respectively; M \u2013 O, Microtriches on the apex of the scolex, external upper surface of the suckers and between suckers, respectively. Scale-bars: A, B, E, F, I, J, 100 l m; C, D, G, H, K \u2013 O, 1 l m", 
+  "identifier": "https://doi.org/10.5281/zenodo.925131", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.1007/s11230-017-9700-1", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/925123", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Platyhelminthes", 
+    "Cestoda", 
+    "Proteocephalidea", 
+    "Proteocephalidae", 
+    "Chambriella", 
+    "Metazoa", 
+    "Monticelliidae", 
+    "Riggenbachiella"
+  ], 
+  "license": "", 
+  "name": "Fig. 2 in Untangling convoluted taxonomy of Chambriella Rego, Chubb & Pavanelli, 1999 (Cestoda: Proteocephalidae), with erection of Riggenbachiella n. g. and the description of a new species from pimelodid catfishes in the Neotropical Region", 
+  "url": "https://zenodo.org/record/925131"
+}

@@ -1,0 +1,59 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/zookeys.643.10543.figure4", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Hubei University, Hubei, China", 
+      "name": "Xu, Xin"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Hubei University, Hubei, China", 
+      "name": "Xu, Chen"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Hubei University, Hubei, China", 
+      "name": "Liu, Fengxiang"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Hubei University, Hubei, China", 
+      "name": "Zhang, Zengtao"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "National University of Singapore, Singapore, Singapore", 
+      "name": "Li, Daiqin"
+    }
+  ], 
+  "datePublished": "2017-01-05", 
+  "description": "Figure 4 - \n              \n          A General somatic morphology of Conothele yundingensis Xu, Xu &amp; Li, sp. n. (female, XUC-2014-001+) B chelicerae, labium, coxae of palp and sternum, ventral view C left leg III, prolateral view D spinnerets, ventral view E female genitalia, ventral view. Scale bars: A\u2013D 1 mm, E 0.5 mm.", 
+  "identifier": "https://doi.org/10.3897/zookeys.643.10543.figure4", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/zookeys.643.10543", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Ctenizidae", 
+    "Conothele", 
+    "Conothele yundingensis", 
+    "Araneae", 
+    "China", 
+    "Conothele", 
+    "Ctenizidae", 
+    "Laos", 
+    "taxonomy"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 4 from: Xu X, Xu C, Liu F, Zhang Z, Li D (2017) Four new species of the trapdoor spider genus Conothele Thorell, 1878 from Mainland China and Laos (Araneae, Ctenizidae). ZooKeys 643: 63-74. https://doi.org/10.3897/zookeys.643.10543", 
+  "url": "https://zenodo.org/record/986862"
+}

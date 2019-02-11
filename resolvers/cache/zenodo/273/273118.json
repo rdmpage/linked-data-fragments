@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273118", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURE 283. Known distribution of the Calapnita vermiformis group, part 1 (cf. Fig. 284). The Java record of C. lawangan is based on specimens assigned tentatively.", 
+  "identifier": "https://doi.org/10.5281/zenodo.273118", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURE 283 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273118"
+}

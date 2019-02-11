@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273107", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 142\u2013155. Calapnita bariengi sp. nov. from Niah (142\u2013149; ZFMK, Ar 16024) and from Kapit (150\u2013155; ZFMK, Ar 16025). 142\u2013143, 150\u2013151. Left procursi, prolateral and retrolateral views. 144, 152. Left palpal femora, prolateral views. 145, 153. Left palpal trochanters, retrolateral views. 146\u2013147, 154\u2013155. Right male chelicerae, frontal and lateral views. 148. Epigynum, ventral view. 149. Cleared female genitalia, dorsal view. Scale lines: 0.5 mm (142\u2013143, 150\u2013151), 0.3 mm (144\u2013 149, 152\u2013155).", 
+  "identifier": "https://doi.org/10.5281/zenodo.273107", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 142\u2013155 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273107"
+}

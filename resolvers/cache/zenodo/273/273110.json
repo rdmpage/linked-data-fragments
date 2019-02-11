@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273110", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 188\u2013203. Calapnita saluang Huber (188\u2013195; ZFMK, Ar 16031) and C. vermiformis Simon from Mount Isarog (196\u2013203; ZFMK, Ar 16041). 188\u2013189, 196\u2013197. Left procursi, prolateral and retrolateral views (arrow points at distinctive sclerite). 190, 198. Left palpal trochanters, retrolateral views. 191, 199. Left palpal femora, prolateral views. 192\u2013193, 200\u2013 201. Right male chelicerae, frontal and lateral views. 194, 202. Cleared female genitalia, dorsal views. 195, 203. Epigyna, ventral views. Scale lines: 0.3 mm.", 
+  "identifier": "https://doi.org/10.5281/zenodo.273110", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 188\u2013203 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273110"
+}

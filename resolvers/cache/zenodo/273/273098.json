@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273098", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 72\u201380. Calapnita semengoh Huber, SEM micrographs (ZFMK, Ar 15999\u201316000). 72. Male chelicerae, oblique frontal view. 73. Male palpal tarsal organ. 74. Basis of left bulb, prolateral view (arrow points at membranous process; asterisk marks unidentified structure). 75. Detail of embolus, showing serrated edge. 76. Tips of procursus and embolus (arrow points at sperm duct opening). 77. Split hair on procursus. 78. Male ALS. 79. Female prosoma, frontal view. 80. Epigynum, ventral view. b, genital bulb; e, embolus; p, procursus. Scale lines: 10 \u00b5m (73, 75, 77, 78), 50 \u00b5m (74), 100 \u00b5m (72, 76, 79, 80).", 
+  "identifier": "https://doi.org/10.5281/zenodo.273098", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 72\u201380 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273098"
+}

@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273090", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 13\u201319. Live specimens, Calapnita phyllicola group. 13\u201315. C. phyllicola Deeleman-Reinhold, \u2642\u2642 from Bako and Ulu Dong, \u2640 with parasitized egg-sac from Gunung Liang. 16\u201317. C. bidayuh sp. nov., \u2642\u2642 from Kapit. 18. C. bankirai sp. nov., \u2642 (with mite; arrow) from Niah. 19. C. semengoh Huber, \u2642 from Semengoh.", 
+  "identifier": "https://doi.org/10.5281/zenodo.273090", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 13\u201319. Live specimens, Calapnita phyllicola group. 13\u201315. C in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273090"
+}

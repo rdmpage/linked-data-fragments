@@ -1,0 +1,435 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273086", 
+  "@type": "ScholarlyArticle", 
+  "citation": [
+    {
+      "@id": "https://doi.org/10.1016/j.ympev.2005.08.016", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.1111/j.1096-0031.2012.00419.x", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.1111/j.1096-0031.2008.00217.x", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.1206/0003-0090(2000)254", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.1206/0003-0090(2001)260", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5962/bhl.title.51973", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.1111/j.1469-7998.1901.tb08164.x", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "Bernhard A. Huber (2017): Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae). Zootaxa 4219 (1): 1-63, DOI: 10.5281/zenodo.273086", 
+  "hasPart": [
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F688537073BFF6AFBBB2FD3FE0E", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F688539073BFF6AFE7A2BB4FD20", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68853C0720FF6AFF122F54FC79", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885220722FF6AFBA9286DFAAE", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885200725FF6AFAD028B2FE2B", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885270726FF6AFE592F8EFEE3", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885240726FF6AFE112F54FB1D", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885240728FF6AFA942F78FE73", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68852A0728FF6AFDA12A79F875", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68852B072CFF6AFA7B2E3CFD9E", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68852E072DFF6AFD002E72F8DF", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68852D072FFF6AFF122995FEB8", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68852D0712FF6AFEE12F6CFC9B", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885100714FF6AFC0128E0FDBB", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885160714FF6AFDE92F59F875", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885140716FF6AFF122BA5F915", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885140717FF6AF88C2A30F98F", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885150719FF6AF9FA2804FAAF", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68851B071BFF6AFADA2871FADB", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F688519071CFF6AFA492AD3FB96", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68851E071FFF6AFB0228D9FD27", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68851D0700FF6AFD522832FE0F", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885020700FF6AFE7A2F79F884", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F6885000706FF6AFF122AF0FF77", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://treatment.plazi.org/id/03B66F68850B0709FF6AFF122F5BFA38", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273087", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273087", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273088", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273088", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273089", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273089", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273090", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273090", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273091", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273091", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273092", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273092", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273093", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273093", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273094", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273094", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273095", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273095", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273096", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273096", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273097", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273097", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273098", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273098", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273099", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273099", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273100", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273100", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273101", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273101", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273102", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273102", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273103", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273103", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273104", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273104", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273105", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273105", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273106", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273106", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273107", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273107", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273108", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273108", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273109", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273109", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273110", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273110", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273111", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273111", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273112", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273112", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273113", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273113", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273114", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273114", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273115", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273115", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273116", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273116", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273117", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273117", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273118", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273118", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273119", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273119", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273120", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "http://zenodo.org/record/273120", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "headline": "Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "identifier": "https://doi.org/10.5281/zenodo.273086", 
+  "image": "https://zenodo.org/static/img/logos/zenodo-gradient-round.svg", 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae"
+  ], 
+  "name": "Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273086"
+}

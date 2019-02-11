@@ -1,0 +1,88 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/zookeys.672.10624.figure9", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Joint Russian-Vietnamese Tropical Research and Technological Center, Hanoi, Vietnam", 
+      "name": "Poyarkov Jr., Nikolay A."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Lomonosov Moscow State University, Moscow, Russia", 
+      "name": "Duong, Tang Van"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Russian Academy of Sciences, St. Petersburg, Russia", 
+      "name": "Orlov, Nikolai L."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Joint Russian-Vietnamese Tropical Research and Technological Center, Hanoi, Vietnam", 
+      "name": "Gogoleva, Svetlana S."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Joint Russian-Vietnamese Tropical Research and Technological Center, Hanoi, Vietnam", 
+      "name": "Vassilieva, Anna B."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Vietnam Academy of Science and Technology, Ho Chi Minh City, Vietnam", 
+      "name": "Nguyen, Luan Thanh"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Vietnam Academy of Science and Technology, Ho Chi Minh City, Vietnam", 
+      "name": "Nguyen, Vu Dang Hoang"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Vietnam Academy of Science and Technology, Ho Chi Minh City, Vietnam", 
+      "name": "Nguyen, Sang Ngoc"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Chinese Academy of Sciences, Kunming, China", 
+      "name": "Che, Jing"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "The Natural History Museum, London, United Kingdom", 
+      "name": "Mahony, Stephen"
+    }
+  ], 
+  "datePublished": "2017-05-03", 
+  "description": "Figure 9 - \n                Holotype of Ophryophryne elfina sp. n. in life (ZMMU A-5669, male, field number NAP-02658), dorsolateral view. Photos by N.A. Poyarkov.", 
+  "identifier": "https://doi.org/10.3897/zookeys.672.10624.figure9", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/zookeys.672.10624", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Animalia", 
+    "Chordata", 
+    "Amphibia", 
+    "Anura", 
+    "Megophryidae", 
+    "Ophryophryne", 
+    "12S rRNA", 
+    "16S rRNA", 
+    "advertisement call", 
+    "amphibian", 
+    "biodiversity", 
+    "Da Lat Plateau", 
+    "frog", 
+    "Indochina", 
+    "southeast Asia", 
+    "taxonomy", 
+    "Truong Son"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 9 from: Poyarkov Jr NA, Duong TV, Orlov NL, Gogoleva SS, Vassilieva AB, Nguyen LT, Nguyen VDH, Nguyen SN, Che J, Mahony S (2017) Molecular, morphological and acoustic assessment of the genus Ophryophryne (Anura, Megophryidae) from Langbian Plateau, southern Vietnam, with description of a new species. ZooKeys 672: 49-120. https://doi.org/10.3897/zookeys.672.10624", 
+  "url": "https://zenodo.org/record/986990"
+}

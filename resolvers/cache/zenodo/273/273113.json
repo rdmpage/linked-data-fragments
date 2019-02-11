@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273113", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 236\u2013253. Calapnita dinagat sp. nov. (236\u2013244; ZFMK, Ar 16053) and C. mae sp. nov. (245\u2013253; ZFMK, Ar 16056). 236\u2013238, 245\u2013247. Left procursi, prolateral, dorsal, and retrolateral views (arrow points at distinctive ridge on ventrodistal sclerite). 239, 251. Left palpal trochanters, retrolateral views. 240, 248. Left palpal femora, prolateral views (arrow points at additional ventral process). 241\u2013242, 249\u2013250. Right male chelicerae, frontal and lateral views. 243, 252. Epigyna, ventral views. 244, 253. Cleared female genitalia, dorsal views. Scale lines: 0.3 mm.", 
+  "identifier": "https://doi.org/10.5281/zenodo.273113", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 236\u2013253 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273113"
+}

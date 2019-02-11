@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.925143", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Philippe Vieira Alves"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Alain de Chambrier"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Jos\u00e9 Luis Luque"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Tom\u00e1\u0161 Scholz"
+    }
+  ], 
+  "datePublished": "2017-02-20", 
+  "description": "Fig. 5 Riggenbachiella paranaense (Pavanelli &amp; Rego, 1989) n. comb. ex Hemisorubim platyrhynchos. A, Scolex, dorsoventral view (MHNH-PLAT 19514); B, Mature proglottis, ventral view (MHNH-PLAT 19514); C, Pregravid proglottis, dorsal view (MHNH-PLAT 19519); D, Terminal genitalia, ventral view (holotype, CHIOC 32490); E, Cross-section, detail at posterior level of proglottides (MHNH-PLAT 19514); F, Cross-section at level of ovary (paratype, CHIOC 32492 a); G, Eggs drawn from whole-mounted specimen (MHNH-PLAT 19514). Abbreviations: al, anterior sucker loculus; cc, chromophilic cells; ci, cirrus; cs, cirrus-sac; do, dorsal osmoregulatory canal; em, bi-layered embryophore; gc, glandular cells; idc, internal sperm duct chambers; ln, longitudinal nerve cord; mg, Mehlis' gland; od, oviduct; on, oncosphere; ov, ovary; pl, posterior sucker loculus; te, testes; ut, uterus; vi, vitelline follicles; vo, ventral osmoregulatory canal; vs, vaginal sphincter; vt, vitelloduct. Scale-bars: A, 200 l m; B, C, 500 l m; D, F, 100 l m; E, 50 l m; G, 20 l m", 
+  "identifier": "https://doi.org/10.5281/zenodo.925143", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.1007/s11230-017-9700-1", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/925123", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Metazoa", 
+    "Platyhelminthes", 
+    "Cestoda", 
+    "Proteocephalidea", 
+    "Monticelliidae", 
+    "Riggenbachiella"
+  ], 
+  "license": "", 
+  "name": "Fig. 5 in Untangling convoluted taxonomy of Chambriella Rego, Chubb & Pavanelli, 1999 (Cestoda: Proteocephalidae), with erection of Riggenbachiella n. g. and the description of a new species from pimelodid catfishes in the Neotropical Region", 
+  "url": "https://zenodo.org/record/925143"
+}

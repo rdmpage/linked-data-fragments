@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273103", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 112\u2013119. Calapnita anai sp. nov., SEM micrographs (ZFMK, Mal 207). 112. Male cheliceral apophysis. 113. Tip of right procursus, prolateral view. 114. Tip of left procursus, retrolateral view. 115. Tips of left embolus and appendix (arrow points at sperm duct opening). 116\u2013117. Male and female ALS (asterisk marks area where one spigot it absent). 118. Male gonopore. 119. Epigynum, ventral view. a, appendix; e, embolus. Scale lines: 10 \u00b5m (112, 116, 117), 50 \u00b5m (113, 114, 118), 100 \u00b5m (115, 119).", 
+  "identifier": "https://doi.org/10.5281/zenodo.273103", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 112\u2013119 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273103"
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.925127", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Philippe Vieira Alves"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Alain de Chambrier"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Jos\u00e9 Luis Luque"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Tom\u00e1\u0161 Scholz"
+    }
+  ], 
+  "datePublished": "2017-02-20", 
+  "description": "Fig. 1 Tree resulting from Bayesian Inference (BI) analysis of partial (D 1 - D 3 domains) of lsr DNA data for selected members of the Proteocephalidae, including Riggenbachiella amazonense n. sp. and Chambriella megacephala (Woodland, 1934) n. comb. Bayesian inference posterior probabilities / Maximum likelihood (ML) bootstrap support values are shown at the nodes. Branches with posterior probability support \\ 0.90 (BI) are collapsed and support values \\ 70 (ML) are not shown. The scale-bar indicates the number of substitutions per site", 
+  "identifier": "https://doi.org/10.5281/zenodo.925127", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.1007/s11230-017-9700-1", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/925123", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Platyhelminthes", 
+    "Cestoda", 
+    "Proteocephalidea", 
+    "Proteocephalidae", 
+    "Chambriella", 
+    "Metazoa", 
+    "Monticelliidae", 
+    "Riggenbachiella"
+  ], 
+  "license": "", 
+  "name": "Fig. 1 in Untangling convoluted taxonomy of Chambriella Rego, Chubb & Pavanelli, 1999 (Cestoda: Proteocephalidae), with erection of Riggenbachiella n. g. and the description of a new species from pimelodid catfishes in the Neotropical Region", 
+  "url": "https://zenodo.org/record/925127"
+}

@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273114", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 254\u2013271. Calapnita nunezae sp. nov. (254\u2013262; ZFMK, Ar 16064\u201365) and C. maragusan sp. nov. (263\u2013271; ZFMK, Ar 16098). 254\u2013256, 263\u2013265. Left procursi, prolateral, dorsal, and retrolateral views. 257, 269. Left palpal trochanters, retrolateral views. 258, 266. Left palpal femora, prolateral views. 259\u2013260, 267\u2013268. Right male chelicerae, frontal and lateral views. 261, 270. Epigyna, ventral views. 262, 271. Cleared female genitalia, dorsal views. Scale lines: 0.3 mm.", 
+  "identifier": "https://doi.org/10.5281/zenodo.273114", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 254\u2013271 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273114"
+}

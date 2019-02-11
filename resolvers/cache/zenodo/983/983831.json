@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/phytokeys.73.9737.figure1", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Forest Research Institute Malaysia, Selangor, Malaysia", 
+      "name": "Sam, Yen Yen"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "University of Malaya, Kuala Lumpur, Malaysia", 
+      "name": "Ibrahim, Halijah"
+    }
+  ], 
+  "datePublished": "2016-10-25", 
+  "description": "Figure 1 - \n              \n          A\u2013D Globba magnibracteata A Habit B Ligule C Inflorescence D Sterile floral bracts E Flower F Bulbils G Flowers of Globba corneri, Globba nawawii and Globba magnibracteata H Globba albobracteata I Globba cernua J Globba corneri K Globba nawawii. (Photographs A\u2013G, I and K by Y.Y. Sam, H by A. Takano, J by Y.M. Chan).", 
+  "identifier": "https://doi.org/10.3897/phytokeys.73.9737.figure1", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/phytokeys.73.9737", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Plantae", 
+    "Tracheophyta", 
+    "Liliopsida", 
+    "Zingiberales", 
+    "Zingiberaceae", 
+    "GlobbaPlantae", 
+    "Globba", 
+    "Globba corneriPlantae", 
+    "Globba nawawiiPlantae", 
+    "Globba albobracteataPlantae", 
+    "Globba cernuaPlantae", 
+    "Globba nawawii", 
+    "Endemic", 
+    "ginger", 
+    "Globbeae", 
+    "taxonomy", 
+    "Terengganu", 
+    "Zingiberaceae"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 1 from: Sam YY, Ibrahim H (2016) A new Globba with large white floral bracts from Peninsular Malaysia. PhytoKeys 73: 117-124. https://doi.org/10.3897/phytokeys.73.9737", 
+  "url": "https://zenodo.org/record/983831"
+}

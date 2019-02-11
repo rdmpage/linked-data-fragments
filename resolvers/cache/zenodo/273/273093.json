@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273093", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 33\u201337. Calapnita kubah sp. nov. (ZFMK, Ar 15970\u201371). 33\u201334. Left male palp, prolateral and retrolateral views (asterisk marks membranous process). 35. Male chelicerae, frontal view. 36\u201337. Cleared female genitalia, ventral and dorsal views. a, appendix; b, genital bulb; e, embolus; f, femur; p, procursus; tr, trochanter. Scale lines: 0.3 mm (35\u201337), 0.5 mm (33\u2013 34).", 
+  "identifier": "https://doi.org/10.5281/zenodo.273093", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 33\u201337 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273093"
+}

@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.3897/zookeys.672.10624.figure1", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "affiliation": "Joint Russian-Vietnamese Tropical Research and Technological Center, Hanoi, Vietnam", 
+      "name": "Poyarkov Jr., Nikolay A."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Lomonosov Moscow State University, Moscow, Russia", 
+      "name": "Duong, Tang Van"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Russian Academy of Sciences, St. Petersburg, Russia", 
+      "name": "Orlov, Nikolai L."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Joint Russian-Vietnamese Tropical Research and Technological Center, Hanoi, Vietnam", 
+      "name": "Gogoleva, Svetlana S."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Joint Russian-Vietnamese Tropical Research and Technological Center, Hanoi, Vietnam", 
+      "name": "Vassilieva, Anna B."
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Vietnam Academy of Science and Technology, Ho Chi Minh City, Vietnam", 
+      "name": "Nguyen, Luan Thanh"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Vietnam Academy of Science and Technology, Ho Chi Minh City, Vietnam", 
+      "name": "Nguyen, Vu Dang Hoang"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Vietnam Academy of Science and Technology, Ho Chi Minh City, Vietnam", 
+      "name": "Nguyen, Sang Ngoc"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "Chinese Academy of Sciences, Kunming, China", 
+      "name": "Che, Jing"
+    }, 
+    {
+      "@type": "Person", 
+      "affiliation": "The Natural History Museum, London, United Kingdom", 
+      "name": "Mahony, Stephen"
+    }
+  ], 
+  "datePublished": "2017-05-03", 
+  "description": "Figure 1 - \n          Distribution of Ophryophryne species in southern Indochina (Langbian Plateau in Vietnam, and adjacent regions of Camodia), indicating localities sampled in this study. Black dot in the center of an icon indicates the type locality of the new species. Locality information. 1 O Chung Chry stream, Samling Logging Concession, O'Rang Dist., Mondolkiri Prov., Cambodia (500 m a.s.l.) (Stuart et al. 2006; type locality of O. synoria; Mahony et al. 2017) 2 Bu Gia Map N.P., Binh Phuoc Prov., Vietnam (400 m a.s.l.) (Vassilieva et al. 2016; this study) 3 Nam Cat Tien sector of Dong Nai Biosphere Reserve, Dong Nai Prov., Vietnam (200 m a.s.l.) (Vassilieva et al. 2016; this study) 4 Loc Bac forest, Bao Loc Dist., Lam Dong Prov., Vietnam (830 m a.s.l.) (this study) 5 Cam Ly River (Ohler 2003: type locality of O. gerti) and Nui Ba Mt. in environs of Dalat city, Lam Dong Prov., Vietnam (ca. 1000\u20131800 m a.s.l.) (this study) 6 Environs of Bidoup Mt. (2000 m a.s.l.), and Giang Ly Ranger Station (1500 m a.s.l.), Bidoup\u2013Nui Ba N.P., Lam Dong Prov., Vietnam (Poyarkov [Paiarkov] and Vassilieva 2011; this study) 7 Hon Giao Mt., Bidoup\u2013Nui Ba N.P., Lam Dong and Khanh Hoa provincial border, Vietnam (1900\u20132000 m a.s.l.) (this study) 8 Hon Ba Mt., Hon Ba N.R., Dien Khanh Dist., Khanh Hoa Prov., Vietnam (950\u20131510 m a.s.l.) (Nguyen et al. 2014; this study) 9 Nui Chua Mt., Nui Chua N.P., Ninh Hai Dist., Ninh Thuan Prov., Vietnam (780 m a.s.l.) (this study) 10 Chu Pan Fan Mt., Chu Yang Sin N.P., Lak Dist., Dak Lak Prov., Vietnam (1900 m a.s.l.) (type locality of Ophryophryne elfina sp. n.; this study) 11 Chu Yang Sin Mt. environs, Krong Kmar Commune, Krong Bong Dist., Dak Lak Prov., Vietnam (700\u20132000 m a.s.l.) (Orlov et al. 2008; this study) 12 Tay Hoa Dist., Phu Yen Prov., Vietnam (700 m a.s.l.) (this study).", 
+  "identifier": "https://doi.org/10.3897/zookeys.672.10624.figure1", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.3897/zookeys.672.10624", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Animalia", 
+    "Chordata", 
+    "Amphibia", 
+    "Anura", 
+    "Megophryidae", 
+    "OphryophryneAnimalia", 
+    "Ophryophryne", 
+    "12S rRNA", 
+    "16S rRNA", 
+    "advertisement call", 
+    "amphibian", 
+    "biodiversity", 
+    "Da Lat Plateau", 
+    "frog", 
+    "Indochina", 
+    "southeast Asia", 
+    "taxonomy", 
+    "Truong Son"
+  ], 
+  "license": "http://creativecommons.org/licenses/by/4.0/legalcode", 
+  "name": "Figure 1 from: Poyarkov Jr NA, Duong TV, Orlov NL, Gogoleva SS, Vassilieva AB, Nguyen LT, Nguyen VDH, Nguyen SN, Che J, Mahony S (2017) Molecular, morphological and acoustic assessment of the genus Ophryophryne (Anura, Megophryidae) from Langbian Plateau, southern Vietnam, with description of a new species. ZooKeys 672: 49-120. https://doi.org/10.3897/zookeys.672.10624", 
+  "url": "https://zenodo.org/record/986962"
+}

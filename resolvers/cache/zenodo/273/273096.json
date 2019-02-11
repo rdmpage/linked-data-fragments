@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273096", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 55\u201364. Calapnita bidayuh sp. nov. (55\u201359; ZFMK, Ar 15992\u201393) and C. bankirai sp. nov. (60\u201364; ZFMK, Ar 15995). 55\u201356, 60\u201361. Left procursi, prolateral and retrolateral views (arrows point at split hairs). 57, 62. Left bulbal appendices, prolateral views. 58, 63. Epigyna, ventral views. 59, 64. Cleared female genitalia, dorsal views (arrows point at membranous sacs). Scale lines 0.3 mm.", 
+  "identifier": "https://doi.org/10.5281/zenodo.273096", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 55\u201364 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273096"
+}

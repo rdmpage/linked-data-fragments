@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.400649", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Peng-Fei Fan"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Kai He"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Xing Chen"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Alejandra Ortiz"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Bin Zhang"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Chao Zhao"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Yun-Qiao"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Hai-Bo Zhang"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Clare Kimock"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Wen-Zhi Wang"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Colin Groves"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Samuel T. Turvey"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Christian Roos"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Kristofer M. Helgen"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Kristofer M. Helgen"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Xue-Long Jiang"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURE 7 Mitochondrial gene tree for hoolocks, showing two major clades within Hoolock leuconedys sensu lato. Specimens shaded in gray were originally identified as H. hoolock. Node numbers indicate Bayesian posterior probabilities. Branch lengths represent substitutions/site", 
+  "identifier": "https://doi.org/10.5281/zenodo.400649", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.1002/ajp.22631", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/400642", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Chordata", 
+    "Mammalia", 
+    "Primates", 
+    "Hylobatidae", 
+    "Hoolock"
+  ], 
+  "license": "", 
+  "name": "FIGURE 7 in Description of a new species of Hoolock gibbon (Primates: Hylobatidae) based on integrative taxonomy", 
+  "url": "https://zenodo.org/record/400649"
+}

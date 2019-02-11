@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273095", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 45\u201354. Calapnita phyllicola Deeleman-Reinhold, specimens from Bukit Bankirai (45\u201349; ZFMK, Ar 15973) and Bako (50\u201354; ZFMK, Ar 15976\u201377). 45\u201346, 50\u201351. Left procursi, prolateral and retrolateral views. 47, 52. Left bulbal appendices, prolateral views (arrow points at shallow depression). 48, 53. Epigyna, ventral views. 49, 54. Cleared female genitalia, dorsal views (arrows point at membranous sacs). Scale lines 0.3 mm.", 
+  "identifier": "https://doi.org/10.5281/zenodo.273095", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 45\u201354 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273095"
+}

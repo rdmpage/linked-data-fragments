@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.273101", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Bernhard A. Huber"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "FIGURES 98\u2013106. Calapnita phasmoides Deeleman-Reinhold (98\u2013102; \u2642 from Tumbang Tahai, RMNH, ARA 17451, \u2640 from Sepaku, RMNH, ARA 17379) and C. sp. from Ulu Senegang (103\u2013106; RMNH, ARA 17810, 17812). 98\u2013100, 103\u2013105. Left procursi, prolateral, dorsal, and retrolateral views. 101, 106. Left bulbal appendices (a), prolateral views (e, embolus; arrow points at membranous process). 102. Cleared female genitalia, dorsal view (arrow points at membranous sac). Scale lines: 0.5 mm (98\u2013101, 103\u2013106; all male structures at same scale), 0.3 mm (102).", 
+  "identifier": "https://doi.org/10.5281/zenodo.273101", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.273086", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/273086", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Animalia", 
+    "Arthropoda", 
+    "Arachnida", 
+    "Araneae", 
+    "Pholcidae", 
+    "Calapnita"
+  ], 
+  "license": "", 
+  "name": "FIGURES 98\u2013106 in Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)", 
+  "url": "https://zenodo.org/record/273101"
+}
