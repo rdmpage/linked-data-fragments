@@ -567,6 +567,30 @@ $urls=array(
 'http://bionames.org/ipni/cluster/981000-1',
 );
 
+// DOI that has figures in Zenodo
+$urls=array(
+'https://doi.org/10.1002/ajp.22631'
+);
+
+$urls=array(
+'https://doi.org/10.1007/s11230-017-9700-1'
+);
+
+$urls=array(
+'https://doi.org/10.11646/zootaxa.3931.1.3'
+);
+
+$urls=array(
+'https://doi.org/10.3897/phytokeys.73.9737'
+);
+$urls=array(
+'https://doi.org/10.3897/zookeys.643.10543'
+);
+
+
+$urls=array(
+'https://zenodo.org/record/273086'
+);
 
 $force = false;
 $force = true;
