@@ -23,6 +23,8 @@
 		body {
 			font-weight:lighter;
 			font-size: 1em;
+			font-family:sans-serif;
+			padding:2em;
 		}
 		
 		
@@ -158,13 +160,6 @@
 	}
 	
 	</script>
-	
-	<style>
-	body {
-		font-family:sans-serif;
-		padding:20px;
-	}
-	</style>
 	
 	
 	<script>
@@ -383,6 +378,10 @@ record.bibliography = {};
 // person
 record.created = {};
 
+// container
+record.parts = {};
+
+
 var default_language_code = 'en'; // 'und';
 
 
@@ -444,7 +443,35 @@ function isodate_to_string(datestring) {
 
 var template;
 
-// Image template
+// Periodical template
+var template_periodical = `
+	<% if(record.name) {%>
+	<h1><%=Object.values(record.name).join(' / ')%><% } %></h1>
+
+	<% if (record.id) {%>
+		<div><%=record.id%></div>
+	<% } %>	
+	
+	
+	<% if(record.parts) {%>
+		<h2>Works</h2>
+		<ul>
+		<% for(var i in record.parts) {%>
+			<li>
+			<a href="?uri=<%=encodeURIComponent(i)%>">
+			
+			<% if (record.parts[i].name) {%>
+				<%=Object.values(record.parts[i].name).join(' / ')%>
+			<% } %>
+			</li>
+		<% } %>	
+		</ul>
+	<% } %>	
+	
+`;
+
+
+// Image template-------------------------------------------------------------------------
 var template_image = `
 	<% if(record.name) {%>
 	<h1><%=Object.values(record.name).join(' / ')%><% } %></h1>
@@ -509,7 +536,7 @@ var template_image = `
 	
 `;
 
-// Person template
+// Person template------------------------------------------------------------------------
 var template_person = `
 	<% if(record.name) {%>
 	<h1><%=Object.values(record.name).join(' / ')%><% } %></h1>
@@ -536,30 +563,45 @@ var template_person = `
 	
 `;
 
-// Article template
+// Article template-----------------------------------------------------------------------
 var template_article = `
 <!-- journal, date, volume, pagination -->
 <div>
 	<% if(record.publicationTitle) {%>
-	<span><%=Object.values(record.publicationTitle).join(' / ')%><% } %></span>
+	<span>
+		<% if(record.ISSN) {%>
+			<a href="?uri=http://worldcat.org/issn/<%=record.ISSN[0]%>">
+		<%}%>
+		<%=Object.values(record.publicationTitle).join(' / ')%>
+		<% if(record.ISSN) {%>
+			</a>
+		<%}%>		
+	</span>
+	<%}%>
 
 	<% if(record.datePublished) {%>
-	<span><%=isodate_to_string(record.datePublished)%><% } %></span>
+		<span><%=isodate_to_string(record.datePublished)%></span> 
+	<%}%></span>
 
 	<% if(record.volumeNumber) {%>
-	<span><%=record.volumeNumber%><% } %></span>
+		<span><%=record.volumeNumber%></span>
+	<%}%></span>
 
 	<% if(record.issueNumber) {%>
-	<span>(<%=record.issueNumber%>)<% } %></span>
+		<span>(<%=record.issueNumber%>)</span>
+	<%}%></span>
 
 	<% if(record.pagination) {%>
-	<span>: <%=record.pagination%><% } %></span>
+		<span>: <%=record.pagination%></span>
+	<%}%></span>
 
 	<% if(record.pageStart) {%>
-	<span>: <%=record.pageStart%><% } %></span>
+		<span>: <%=record.pageStart%></span>
+	<%}%></span>
 
 	<% if(record.pageEnd) {%>
-	<span>-<%=record.pageEnd%><% } %></span>
+		<span>-<%=record.pageEnd%></span>
+	<%}%></span>
 </div>
 
 <!-- title -->
@@ -724,7 +766,7 @@ var template_article = `
 `;
 
 
-// Taxon name template
+// Taxon name template--------------------------------------------------------------------
 var template_taxon_name = `
 <!-- title -->
 <h1>
@@ -958,13 +1000,13 @@ function get_core (uri) {
 
 	var query = 'SELECT * { <' + uri + '> ?p ?o . }';
 	
-	//alert(uri);
 
     results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
 
 	results.on('data', function (result) { 
 
-		//console.log(result); 
+		console.log(result); 
+		
 	
 		switch (result['?p']) {
 		
@@ -978,6 +1020,7 @@ function get_core (uri) {
 				
 				// TDWG LSID types
 				value = value.replace('http://rs.tdwg.org/ontology/voc/TaxonName#', '');
+				value = value.replace('http://rs.tdwg.org/ontology/voc/Person#', '');
 				
 				// Bibo
 				value = value.replace('http://purl.org/ontology/bibo/', '');
@@ -1327,9 +1370,22 @@ tm:role="Publishing Author"/>
 	 	if (record.type.indexOf('TaxonName') !== -1) {
 			template = template_taxon_name;
 	 	}
+	 	
+		// Periodical
+		if (record.type.indexOf('Periodical') !== -1) {
+			template = template_periodical;
+	 	}
+	 	
 
 
 		switch (template) {
+		
+			case template_periodical:
+				get_container_parts(uri, function (uri) { 
+						last(uri); 
+				});			
+				break;		
+		
 		
 			case template_image:
 				get_creators(uri, function (uri) { 
@@ -1372,13 +1428,13 @@ tm:role="Publishing Author"/>
 					get_creators(uri, function (uri) { 	
 						get_container(uri, function (uri) { 
 							get_identifiers(uri, function (uri) { 
-								get_cites(uri, function (uri) { // very time consuming query
+								//get_cites(uri, function (uri) { // very time consuming query
 									get_cited_by(uri, function (uri) { 
 										get_names_published(uri, function (uri) { 									
 											last(uri); 
 										});
 									});
-								});
+								//});
 							});
 						});				
 					});
@@ -1590,6 +1646,8 @@ WHERE {
 }
 
 //----------------------------------------------------------------------------------------
+// Get figures, I don't know why we need OPTIONAL but it seems need for queries for
+// https://doi.org/10.3897/phytokeys.73.9737
 function get_figures (uri, cb) {
 		var query = `PREFIX schema: <http://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -1598,7 +1656,9 @@ SELECT * WHERE {
   ?image schema:isPartOf <` + uri + `>  .
   ?image rdf:type <http://schema.org/ImageObject> .
   ?image schema:thumbnailUrl ?thumbnailUrl .
-  ?image schema:description ?caption .
+  OPTIONAL {
+  	?image schema:description ?caption .
+  }
 }`;
 
 		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
@@ -1611,10 +1671,13 @@ SELECT * WHERE {
 		
 			var thumbnailUrl = result['?thumbnailUrl'];
 		
-			var caption = result['?caption'];
 				
 			record.figures[result['?image']].thumbnailUrl = clean_value(thumbnailUrl);
-			record.figures[result['?image']].caption = clean_value(caption);
+			
+			if (result['?caption']) {
+				var caption = result['?caption'];
+				record.figures[result['?image']].caption = clean_value(caption);
+			}
 			});
 	
 		results.on('end', function (result) { 		
@@ -2055,6 +2118,10 @@ SELECT * where {
 
 //----------------------------------------------------------------------------------------
 function get_names_notes (uri, cb) {
+
+console.log('get_names_notes');
+
+
 		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
 SELECT *
 WHERE 
@@ -2114,6 +2181,10 @@ WHERE
 
 //----------------------------------------------------------------------------------------
 function get_names_types (uri, cb) {
+
+console.log('get_names_types');
+
+
 		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -2167,6 +2238,10 @@ WHERE {
 
 //----------------------------------------------------------------------------------------
 function get_related_names_by_annotations (uri, cb) {
+
+console.log('get_related_names_by_annotations');
+
+
 		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
 SELECT *
 WHERE {
@@ -2194,7 +2269,7 @@ UNION
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			var relationship = {};
 			
@@ -2236,6 +2311,9 @@ UNION
 
 //----------------------------------------------------------------------------------------
 function get_related_names_by_basionym (uri, cb) {
+
+console.log('get_related_names_by_basionym');
+
 		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
 SELECT *
 WHERE {
@@ -2258,7 +2336,7 @@ UNION
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			var relationship = {};
 			
@@ -2297,6 +2375,10 @@ UNION
 
 //----------------------------------------------------------------------------------------
 function get_related_references_by_annotations (uri, cb) {
+
+console.log('get_related_references_by_annotations');
+
+
 		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
 PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>	
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -2352,13 +2434,13 @@ OPTIONAL {
 
 }`;
 
-	console.log(query); 
+	//console.log(query); 
 
 		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			
 			if (result['?pub']) {
@@ -2429,6 +2511,10 @@ OPTIONAL {
 
 //----------------------------------------------------------------------------------------
 function get_related_references_by_basionym (uri, cb) {
+
+console.log('get_related_references_by_basionym');
+
+
 		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
 PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>	
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -2483,13 +2569,13 @@ OPTIONAL {
 
 }`;
 
-	console.log(query); 
+	//console.log(query); 
 
 		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
 
 		results.on('data', function (result) { 
 
-			console.log(result); 
+			//console.log(result); 
 			
 			if (result['?pub']) {
 				
@@ -2564,6 +2650,8 @@ OPTIONAL {
 // What is this a part of?
 function get_is_part_of (uri, cb) {
 
+console.log('get_is_part_of');
+
 		var query = `PREFIX schema: <http://schema.org/>
 SELECT * where {
 	<` + uri + `> schema:isPartOf ?part .
@@ -2596,6 +2684,60 @@ SELECT * where {
 }
 
 //----------------------------------------------------------------------------------------
+function get_container_parts (uri, cb) {
+		var query = `PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#> 
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>	
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT *
+WHERE {
+	<` + uri + `> rdf:type ?type .
+	{
+		?work schema:isPartOf <` + uri + `> .
+		?work schema:name ?name .
+	}
+	UNION
+	{
+		?work schema:isPartOf <` + uri + `> .
+		?work dc:title ?name .
+	}
+}`;
+
+		results = new ldf.SparqlIterator(query, { fragmentsClient: fragmentsClient });
+
+		results.on('data', function (result) { 
+
+			console.log(result); 
+			
+			if (!record.parts[result['?work']]) {
+				record.parts[result['?work']] = {};
+				record.parts[result['?work']].name = {};
+			}			
+				
+			if (result['?name']) {
+			
+				
+			
+				var value = clean_value(result['?name']);
+				
+				if (isObject(value)) {
+					var kv = Object.entries(value)[0];
+					record.parts[result['?work']].name[kv[0]] = kv[1];
+				} else {
+					record.parts[result['?work']].name[default_language_code] = value;
+				}	
+			}
+			
+		});
+	
+		results.on('end', function (result) { 		
+			cb(uri);	
+			});	
+}
+
+
+//----------------------------------------------------------------------------------------
 // Remove any keys that lack data
 function clean_record() {
 
@@ -2604,7 +2746,14 @@ function clean_record() {
 			if (Object.keys(record[i]).length == 0)	{
 				delete record[i];
 			}
-		}	
+		}
+		
+		if (Array.isArray(record[i])) {
+			if (record[i].length == 0)	{
+				delete record[i];
+			}
+		}
+			
 	}
 
 	return record;
