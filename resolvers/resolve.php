@@ -30,6 +30,29 @@ function get($url, $user_agent='', $content_type = '')
 	return $data;
 }
 
+//--------------------------------------------------------------------------------------------------
+// Get part for a Zenodo record, $id can be a DOI, uses local CouchDB version of BLR
+function get_zenodo_parts_from_work_doi($id)
+{
+	$links = array();
+	
+	$url = 'http://127.0.0.1:5984/zenodo/_design/parts/_view/whole-part'
+		. '?key=' . urlencode('"' . $id . '"');
+		
+	$json = get($url);
+	if ($json != '')
+	{
+		$obj = json_decode($json);
+		
+		foreach ($obj->rows as $row)
+		{
+			$links[] = str_replace('oai:zenodo.org:', 'https://zenodo.org/record/', $row->id);
+		}
+	}
+	
+	return $links;
+}
+
 
 //----------------------------------------------------------------------------------------
 function rdf_to_triples($xml)
@@ -1092,7 +1115,7 @@ function resolve_url($url)
 	
 	$done = false;
 	
-	// Zenodo JSON-LD ------------------------------------------------------------------
+	// Zenodo JSON-LD --------------------------------------------------------------------
 	if (!$done)
 	{
 		if (preg_match('/https?:\/\/zenodo.org\/record\/(?<id>\d+)/', $url, $m))
@@ -1108,13 +1131,28 @@ function resolve_url($url)
 				// force use of http for schema (Zenodo uses https FFS)
 				$data->{'@context'} = 'http://schema.org/';
 			
-				// enhance with links to image and thumbnail (if present)
+				// enhance with links to image and thumbnail (maybe present if this is an image)
 				fetch_zenodo_json($id, $data);
 
 				$doc = new stdclass;
 				$doc->{'message-source'} = $jsonld_url;
 				$doc->{'message-format'} = 'application/ld+json';
 				$doc->message = $data;
+				
+				// Check for Zenodo figures linked to this record
+				$doc->links = get_zenodo_parts_from_work_doi($id);
+											
+				if (count($doc->links) == 0)
+				{
+					unset($doc->links);
+				}
+				else
+				{
+					$doc->links = array_unique($doc->links);
+				}
+				
+				
+				
 			}
 			
 			$done = true;
@@ -1498,6 +1536,22 @@ function resolve_url($url)
 				$doc->{'message-format'} = 'application/ld+json';
 				$doc->message = $data;
 				
+				// is guid a DOI and do we have Zenodo images?
+				if (preg_match('/^10\./', $guid))
+				{
+					// Check for Zenodo figures linked to this DOI
+					$doc->links = get_zenodo_parts_from_work_doi($guid);
+												
+					if (count($doc->links) == 0)
+					{
+						unset($doc->links);
+					}
+					else
+					{
+						$doc->links = array_unique($doc->links);
+					}
+				}													
+				
 				$done = true;
 			}	
 			
@@ -1515,6 +1569,7 @@ function resolve_url($url)
 		if (preg_match('/https?:\/\/(dx\.)?doi.org\/(?<guid>.*)/', $url, $m))
 		{
 			$guid = $m['guid'];
+			$guid = strtolower($guid);
 		}
 		
 		if ($guid != '')
@@ -1532,6 +1587,18 @@ function resolve_url($url)
 				{
 					$doc->{'message-source'} = $url;
 					$doc->{'message-format'} = 'application/vnd.crossref-api-message+json';
+					
+					// Check for Zenodo figures linked to this DOI
+					$doc->links = get_zenodo_parts_from_work_doi($guid);
+												
+					if (count($doc->links) == 0)
+					{
+						unset($doc->links);
+					}
+					else
+					{
+						$doc->links = array_unique($doc->links);
+					}					
 				
 					$done = true;
 				}
@@ -1607,6 +1674,10 @@ if (0)
 	$url = 'https://doi.org/10.26492/gbs69(2).2017-09';
 	
 	$url = 'https://doi.org/10.1007/s00606-002-0033-y';
+	
+	// CrossRef DOI that also has Zenodo record and figures
+	
+	$url = 'https://doi.org/10.1002/ajp.22631';
 	
 	$doc = resolve_url($url);
 	print_r($doc);
