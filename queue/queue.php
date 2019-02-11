@@ -133,13 +133,18 @@ function fetch($item, $add_links = false)
 			// Think about how many, if any, links from this item we put in the queue
 			if (isset($data->links))
 			{				
-				/*
+				
 				// Add links for DOIs (e.g., ORCIDs and ISSNs)
 				if (preg_match('/doi.org/', $item->value))
 				{
 					$add_links = true;
 				}
-				*/
+				
+				// Zenodo
+				if (preg_match('/zenodo.org/', $item->value))
+				{
+					$add_links = true;
+				}
 				
 				// Add links for name clusters (names and publications, for example)
 				if (preg_match('/bionames.org/', $item->value))
