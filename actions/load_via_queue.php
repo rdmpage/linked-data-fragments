@@ -592,6 +592,19 @@ $urls=array(
 'https://zenodo.org/record/273086'
 );
 
+$urls=array(
+'urn:lsid:ipni.org:names:77177604-1'
+);
+
+$urls=array(
+'https://doi.org/10.11646/phytotaxa.343.3.10'
+);
+
+$urls=array(
+'http://bionames.org/ipni/cluster/77146175-1',
+'https://doi.org/10.1007/s12225-015-9569-6',
+);
+
 $force = false;
 $force = true;
 

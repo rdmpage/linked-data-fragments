@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77177604-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77177604-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Begonia adamsensis Magtoto &amp; Rubite</dc:title>                        
+<dcterms:created>2018-03-26 17:18:47.0</dcterms:created>
+<dcterms:modified>2018-03-26 17:18:47.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia adamsensis</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>adamsensis</tn:specificEpithet>                
+<tn:authorship>Magtoto &amp; Rubite</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>Magtoto &amp; Rubite</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20024574-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20024916-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Phytotaxa 343(3): 290. 2018 [12 Mar 2018] [epublished]</tcom:publishedIn>    
+<tn:year>2018</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>L.M.Magtoto et al. 242, NLUH (holo)</dc:title>
+<tn:typeSpecimen>L.M.Magtoto et al. 242, NLUH</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

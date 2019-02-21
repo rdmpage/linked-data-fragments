@@ -787,19 +787,20 @@ function ipni_lsid($lsid, $cache_dir = '')
 	$mode = 'names';
 	$id = '';
 	
-	if (preg_match('/urn:lsid:ipni.org:names:(?<id>\d+)/', $lsid, $m))
+	if (preg_match('/urn:lsid:ipni.org:names:(?<id>\d+-\d+)/', $lsid, $m))
 	{
 		$mode = 'names';
 		$id = $m['id'];
 	}
 	
-	if (preg_match('/urn:lsid:ipni.org:authors:(?<id>\d+)/', $lsid, $m))
+	if (preg_match('/urn:lsid:ipni.org:authors:(?<id>\d+-\d+)/', $lsid, $m))
 	{
 		$mode = 'authors';
 		$id = $m['id'];
 	}
 
-	$id = preg_replace('/-\d+$/', '', $id);
+	// remove version from id so we can compute a directory to cache the files in
+	$main_id = preg_replace('/-\d+$/', '', $id);
 
 	// Either use an existing cache (e.g., on external hard drive)
 	// or cache locally
@@ -836,7 +837,7 @@ function ipni_lsid($lsid, $cache_dir = '')
 		
 	}
 		
-	$dir = $cache_dir . '/' . floor($id / 1000);
+	$dir = $cache_dir . '/' . floor($main_id / 1000);
 	if (!file_exists($dir))
 	{
 		$oldumask = umask(0); 
@@ -865,10 +866,29 @@ function ipni_lsid($lsid, $cache_dir = '')
 	
 		if (($xml != '') && preg_match('/<\?xml/', $xml))
 		{
-			// fix
-		
+			// fix		
+			
+			// Person vocab is missing hash #
 			$xml = str_replace('xmlns:p="http://rs.tdwg.org/ontology/voc/Person"', 'xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"', $xml);
+			
+			// tm:hasMember is not represented properly, this hack fixes this
+			if (preg_match_all('/<tm:hasMember rdf:resource="(?<lsid>.*)"\s+tm:index="(?<index>\d+)"\s+tm:role="(?<role>.*)"\/>/U', $xml, $m))
+			{
+				$n = count($m[0]);
 		
+				for ($i = 0; $i < $n; $i++)
+				{
+					$member = '<tm:hasMember>';
+					$member .= '<rdf:Description>';
+					$member .= '<tm:index>' . $m['index'][$i] . '</tm:index>';
+					$member .= '<tm:role>' . $m['role'][$i] . '</tm:role>';
+					$member .= '<tm:member rdf:resource="' . $m['lsid'][$i] . '"/>';
+					$member .= '</rdf:Description>';
+					$member .= '</tm:hasMember>';
+			
+					$xml = str_replace($m[0][$i], $member, $xml);
+				}
+			}
 			//echo $xml;
 		
 			// convert
@@ -1424,14 +1444,20 @@ function resolve_url($url)
 				
 				// process possible links
 				$doc->links = array();
+				
+				// authors
 				if (isset($data->{'@graph'}[0]->authorteam))
 				{
-					foreach ($data->{'@graph'}[0]->authorteam->{'tm:hasMember'} as $hasMember)
+					if (isset($data->{'@graph'}[0]->authorteam->{'tm:hasMember'}))
 					{
-						$doc->links[] = $hasMember->{'@id'};
+						foreach ($data->{'@graph'}[0]->authorteam->{'tm:hasMember'} as $member)
+						{
+							$doc->links[] = $member->{'tm:member'}->{'@id'};
+						}
 					}
 				}
 				
+				// basionym
 				if (isset($data->{'@graph'}[0]->{'hasBasionym'}))
 				{
 					$doc->links[] = $data->{'@graph'}[0]->{'hasBasionym'}->{'@id'};
@@ -1679,6 +1705,8 @@ if (0)
 	
 	$url = 'https://doi.org/10.1002/ajp.22631';
 	
+	$url = 'urn:lsid:ipni.org:names:77177604-1';
+		
 	$doc = resolve_url($url);
 	print_r($doc);
 	
