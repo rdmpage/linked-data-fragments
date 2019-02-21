@@ -458,11 +458,11 @@ var template_periodical = `
 		<ul>
 		<% for(var i in record.parts) {%>
 			<li>
-			<a href="?uri=<%=encodeURIComponent(i)%>">
-			
+			<a href="?uri=<%=encodeURIComponent(i)%>">			
 			<% if (record.parts[i].name) {%>
 				<%=Object.values(record.parts[i].name).join(' / ')%>
 			<% } %>
+			</a>
 			</li>
 		<% } %>	
 		</ul>
