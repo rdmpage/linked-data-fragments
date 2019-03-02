@@ -5,6 +5,9 @@
 require_once(dirname(dirname(__FILE__)) . '/vendor/autoload.php');
 require_once(dirname(dirname(__FILE__)) . '/documentstore/couchsimple.php');
 
+require_once(dirname(__FILE__) . '/csl2jsonld.php');
+require_once(dirname(__FILE__) . '/fingerprint.php');
+
 //----------------------------------------------------------------------------------------
 function get($url, $user_agent='', $content_type = '')
 {	
@@ -19,7 +22,7 @@ function get($url, $user_agent='', $content_type = '')
 	if ($content_type != '')
 	{
 		$opts[CURLOPT_HTTPHEADER] = array("Accept: " . $content_type);
-	}
+	}	
 	
 	$ch = curl_init();
 	curl_setopt_array($ch, $opts);
@@ -1127,6 +1130,281 @@ function microcitation_reference ($guid)
 	return $data;
 }
 
+//----------------------------------------------------------------------------------------
+// Fetch an individual work from an ORCID profile
+function orcid_work_fetch($orcid, $work, $lookup_works = false)
+{
+	$data = null;
+	
+	$cache_dir = dirname(__FILE__) . '/cache/orcid' . '/' . $orcid;
+	$filename = $cache_dir . '/' . $work . '.json';
+
+	if (!file_exists($filename))
+	{
+		$url = 'https://pub.orcid.org/v2.1/' . $orcid . '/work/' . $work;
+		
+		$json = get($url, '', 'application/vnd.citationstyles.csl+json');
+		
+		file_put_contents($filename, $json);	
+	}
+		
+	$json = file_get_contents($filename);
+			
+	if ($json != '')
+	{
+		$data = json_decode($json);	
+		
+		$data->_id = $url;
+	}
+	
+	return $data;
+}
+
+//----------------------------------------------------------------------------------------
+function orcid_fetch($orcid, $lookup_works = false)
+{
+	$message = null;
+	
+	$cache_dir = dirname(__FILE__) . "/cache/" . 'orcid';
+	if (!file_exists($cache_dir))
+	{
+		$oldumask = umask(0); 
+		mkdir($cache_dir, 0777);
+		umask($oldumask);
+	}
+			
+	$dir = $cache_dir;
+	
+	$filename = $dir . '/' . $orcid . '.json';
+
+	if (!file_exists($filename))
+	{
+		$url = 'https://pub.orcid.org/v2.1/' . $orcid;	
+		
+		$json = get($url, '', 'application/orcid+json');
+		
+		file_put_contents($filename, $json);	
+	}
+	
+	$json = file_get_contents($filename);
+	
+	// create cache for individual works
+	$dir = $cache_dir . '/' . $orcid;
+	if (!file_exists($dir))
+	{
+		$oldumask = umask(0); 
+		mkdir($dir, 0777);
+		umask($oldumask);
+	}	
+	
+	$data = json_decode($json);		
+	
+	if ($data)
+	{
+		$message = new stdclass;
+		$message->{'@context'} = 'http://schema.org/';
+		$message->{'@graph'} = array();
+		
+		// get author details
+		$person = new stdclass;		
+		$person->orcid = $orcid;
+		
+		$parts = array();		
+		if (isset($data->person))
+		{
+			if (isset($data->person->name->{'given-names'}))
+			{
+				$person->given = $data->person->name->{'given-names'}->value;
+				
+				$parts[] = $person->given;
+			}
+			if (isset($data->person->name->{'family-name'}))
+			{
+				$person->family = $data->person->name->{'family-name'}->value;
+				$parts[] =  $person->family;
+			}
+			
+		}
+		
+		$person->literal = join(' ', $parts);
+		
+		$find_doi = false; // true to do lookup of works without DOIs
+		
+		// API 2.1 has API to access individual works via "putcode"
+		if (isset($data->{'activities-summary'}))
+		{
+			if (isset($data->{'activities-summary'}->{'works'}))
+			{
+				foreach ($data->{'activities-summary'}->{'works'}->{'group'} as $work)
+				{					
+					foreach ($work->{'work-summary'} as $summary)
+					{						
+						$doi = '';
+						
+						if (isset($work->{'external-ids'}))
+						{
+							if (isset($work->{'external-ids'}->{'external-id'}))
+							{
+								foreach ($work->{'external-ids'}->{'external-id'} as $external_id)
+								{
+									if ($external_id->{'external-id-type'} == 'doi')
+									{
+										$doi = $external_id->{'external-id-value'};
+									}
+								}
+							}
+						}
+												
+						// fetch individual works						
+						$work = orcid_work_fetch($orcid, $summary->{'put-code'});
+						
+						// cleaning...						
+						if (isset($work->title))
+						{
+							$work->title = str_replace('\less', '<', $work->title);
+							$work->title = str_replace('\greater', '>', $work->title);
+							
+							$work->title = str_replace('{\&}amp\mathsemicolon', '&', $work->title);
+							$work->title = str_replace('{HeadingRunIn}', '"HeadingRunIn"', $work->title);
+														
+							$work->title = str_replace('$', '', $work->title);	
+							
+							$work->title = strip_tags($work->title, '<em>');						
+						}					
+						
+						// do we need to look for a DOI?						
+						if (!isset($work->DOI) && $find_doi)
+						{
+							$terms = array();
+						
+							if (isset($work->author))
+							{
+								foreach ($work->author as $author)
+								{
+									if (isset($author->family))
+									{
+										$terms[] = $author->family;
+									}							
+								}					
+							}
+					
+							if (isset($work->issued))
+							{
+								if (isset($work->issued->{'date-parts'}))
+								{
+									$terms[] = $work->issued->{'date-parts'}[0][0];
+								}
+							}
+											
+							if (isset($work->title))
+							{
+								$terms[] = strip_tags($work->title);
+							}
+							if (isset($work->{'container-title'}))
+							{
+								$terms[] = $work->{'container-title'};
+							}
+							if (isset($work->volume))
+							{
+								$terms[] = $work->volume;
+							}
+							if (isset($work->page))
+							{
+								$terms[] = $work->page;
+							}
+												
+							//echo join(' ', $terms);
+							
+							/*
+							$doi = find_doi(join(' ', $terms));
+							if ($doi != '')
+							{
+								$work->DOI = strtolower($doi);
+							}
+							*/							
+							
+						}
+						
+						// figure out which author gets ORCID
+						if (isset($work->author))
+						{
+							$n = count($work->author);
+							
+							if ($n == 1)
+							{
+								$work->author[0]->ORCID = $orcid;
+							}
+							else
+							{
+								$min_d = 100;
+								$hit = -1;
+								
+								for ($i = 0; $i < $n; $i++)
+								{
+									$parts = array();
+									
+									if (isset($work->author[$i]->given))
+									{
+										$parts[] = $work->author[$i]->given;
+									}
+									if (isset($work->author[$i]->family))
+									{
+										$parts[] = $work->author[$i]->family;
+									}
+									
+									$work->author[$i]->literal = join(' ', $parts);
+									
+									// try both orderings of name parts to handle cases 
+									// such as Chinese names where ordering is different
+									
+									$literal = join(' ', $parts);
+									$d = levenshtein(finger_print($person->literal), finger_print($literal));
+
+									if ($d < $min_d)
+									{
+										$min_d = $d;
+										$hit = $i;
+									}
+
+									// reverse
+									
+									$parts = array_reverse($parts);
+									$literal = join(' ', $parts);
+									$d = levenshtein(finger_print($person->literal), finger_print($literal));
+
+									if ($d < $min_d)
+									{
+										$min_d = $d;
+										$hit = $i;
+									}
+
+								}
+								
+								if ($hit != -1)
+								{
+									$work->author[$hit]->ORCID = $orcid;
+								}
+										
+							}
+						
+						
+						}
+												
+						//print_r($work);
+						
+						$message->{'@graph'}[] = csl_to_json($work);
+					}
+				}
+			}
+		}		
+		
+		
+	}		
+	
+	return $message;	
+}
+
+
 	
 //----------------------------------------------------------------------------------------
 function resolve_url($url)
@@ -1134,6 +1412,25 @@ function resolve_url($url)
 	$doc = null;	
 	
 	$done = false;
+	
+	// ORCID -----------------------------------------------------------------------------
+	if (!$done)
+	{
+		if (preg_match('/https?:\/\/orcid.org\/(?<id>.*)/', $url, $m))
+		{			
+			$orcid = $m['id'];
+			
+			$message = orcid_fetch($orcid, false);
+			
+			$doc = new stdclass;
+			$doc->{'message-source'} = $url;
+			$doc->{'message-format'} = 'application/ld+json';
+			$doc->message = $message;
+						
+			$done = true;			
+		}
+	}
+	
 	
 	// Zenodo JSON-LD --------------------------------------------------------------------
 	if (!$done)
@@ -1706,6 +2003,8 @@ if (0)
 	$url = 'https://doi.org/10.1002/ajp.22631';
 	
 	$url = 'urn:lsid:ipni.org:names:77177604-1';
+	
+	$url = 'https://orcid.org/0000-0002-0876-3286';
 		
 	$doc = resolve_url($url);
 	print_r($doc);
