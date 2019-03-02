@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77084961-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77084961-1:1.3"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.3</owl:versionInfo>
+<dc:title>Drepanostachyum stoloniforme S.H.Chen &amp; Zhen Z.Wang</dc:title>                        
+<dcterms:created>2007-11-26 11:26:41.0</dcterms:created>
+<dcterms:modified>2019-01-10 17:45:47.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Drepanostachyum stoloniforme</tn:nameComplete>
+<tn:genusPart>Drepanostachyum</tn:genusPart>        
+<tn:specificEpithet>stoloniforme</tn:specificEpithet>                
+<tn:authorship>S.H.Chen &amp; Zhen Z.Wang</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>S.H.Chen &amp; Zhen Z.Wang</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20012329-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20012330-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Acta Phytotax. Sin. 45(3): 308 (307-310; f. 1). 2007 [18 May 2007] </tcom:publishedIn>    
+<tn:year>2007</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>S.H.Chen 2004-002, PE (holo)</dc:title>
+<tn:typeSpecimen>S.H.Chen 2004-002, PE</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>S.H.Chen 2004-002, XMBG (iso)</dc:title>
+<tn:typeSpecimen>S.H.Chen 2004-002, XMBG</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

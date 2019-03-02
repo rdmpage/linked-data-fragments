@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.321249", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Peter Watson Moonlight"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Carlos Reynel"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Mark Tebbitt"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "Fig 2. Begonia elachista Moonlight &amp; Tebbitt sp. nov. A. Habit. B. Male Fower, front view. C. Branch of infructescence.D.Female Fower, side view.E. Stamens, frontand side view.F. Style,front and back view. Scale bars: A\u2013D = 1 cm; E\u2013F = 1 mm. Drawn by Claire Banks. From P. Moonlight &amp; A. Daza 318 (E).", 
+  "identifier": "https://doi.org/10.5281/zenodo.321249", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5852/ejt.2017.281", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/321247", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/321247", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy", 
+    "Plantae", 
+    "Tracheophyta", 
+    "Magnoliopsida", 
+    "Cucurbitales", 
+    "Begoniaceae", 
+    "Begonia"
+  ], 
+  "license": "", 
+  "name": "Fig 2 in Begonia elachista Moonlight & Tebbitt sp. nov., an enigmatic new species and a new section of Begonia (Begoniaceae) from Peru", 
+  "url": "https://zenodo.org/record/321249"
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77133624-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77133624-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Ampelocalamus stoloniformis (S.H.Chen &amp; Zhen Z.Wang) C.H.Zheng, N.H.Xia &amp; Y.F.Deng</dc:title>                        
+<dcterms:created>2013-11-07 14:23:17.0</dcterms:created>
+<dcterms:modified>2013-11-07 14:23:17.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Ampelocalamus stoloniformis</tn:nameComplete>
+<tn:genusPart>Ampelocalamus</tn:genusPart>        
+<tn:specificEpithet>stoloniformis</tn:specificEpithet>                
+<tn:authorship>(S.H.Chen &amp; Zhen Z.Wang) C.H.Zheng, N.H.Xia &amp; Y.F.Deng</tn:authorship>
+<tn:basionymAuthorship>S.H.Chen &amp; Zhen Z.Wang</tn:basionymAuthorship>
+<tn:combinationAuthorship>C.H.Zheng, N.H.Xia &amp; Y.F.Deng</tn:combinationAuthorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>(S.H.Chen &amp; Zhen Z.Wang) C.H.Zheng, N.H.Xia &amp; Y.F.Deng</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20024010-1"
+tm:index="1"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:36194-1"
+tm:index="2"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:39880-1"
+tm:index="3"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20012329-1" 
+tm:index="1"
+tm:role="Basionym Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20012330-1" 
+tm:index="2"
+tm:role="Basionym Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Phytotaxa 135(1): 62. 2013 [1 Oct 2013] [epublished]</tcom:publishedIn>    
+<tn:year>2013</tn:year>        
+<tn:hasBasionym rdf:resource="urn:lsid:ipni.org:names:77084961-1"/>
+</tn:TaxonName>  
+</rdf:RDF>

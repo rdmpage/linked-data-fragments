@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77163088-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77163088-1:1.2"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dc:title>Begonia ignita C.W.Lin &amp; C.I Peng</dc:title>                        
+<dcterms:created>2017-05-30 13:18:22.0</dcterms:created>
+<dcterms:modified>2017-05-30 13:18:50.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Begonia ignita</tn:nameComplete>
+<tn:genusPart>Begonia</tn:genusPart>        
+<tn:specificEpithet>ignita</tn:specificEpithet>                
+<tn:authorship>C.W.Lin &amp; C.I Peng</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>C.W.Lin &amp; C.I Peng</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20027529-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:15619-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Gard. Bull. Singapore 69(1): 90. 2017 [24 May 2017] [epublished]</tcom:publishedIn>    
+<tn:year>2017</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Wisnu H.Ardi WI 117, BO (holo)</dc:title>
+<tn:typeSpecimen>Wisnu H.Ardi WI 117, BO</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title>Wisnu H.Ardi WI 117, SING (iso)</dc:title>
+<tn:typeSpecimen>Wisnu H.Ardi WI 117, SING</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#iso"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>

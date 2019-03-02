@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org/", 
+  "@id": "https://doi.org/10.5281/zenodo.321248", 
+  "@type": "ImageObject", 
+  "creator": [
+    {
+      "@type": "Person", 
+      "name": "Peter Watson Moonlight"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Carlos Reynel"
+    }, 
+    {
+      "@type": "Person", 
+      "name": "Mark Tebbitt"
+    }
+  ], 
+  "datePublished": "2017-12-31", 
+  "description": "Fig1.50% majority ruleconsensus tree of MrBayesanalysisof Neotropical Clade 2(NC2) of Begonia. Dotted lines indicate posterior clade probabilities &lt;0.85. P, perenniation of species in NC2: blue, tuberous;green,rhizomatous;yellow,uprightstems.G,geographicrangeofspeciesinNC2:red,western SouthAmerican; pink, eastern SouthAmerica; light blue, CentralAmerica and Mexico.", 
+  "identifier": "https://doi.org/10.5281/zenodo.321248", 
+  "isPartOf": [
+    {
+      "@id": "https://doi.org/10.5852/ejt.2017.281", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/321247", 
+      "@type": "CreativeWork"
+    }, 
+    {
+      "@id": "https://zenodo.org/record/321247", 
+      "@type": "CreativeWork"
+    }
+  ], 
+  "keywords": [
+    "Biodiversity", 
+    "Taxonomy"
+  ], 
+  "license": "", 
+  "name": "Fig1.50 in Begonia elachista Moonlight & Tebbitt sp. nov., an enigmatic new species and a new section of Begonia (Begoniaceae) from Peru", 
+  "url": "https://zenodo.org/record/321248"
+}

@@ -1,0 +1,1359 @@
+{
+  "orcid-identifier" : {
+    "uri" : "https://orcid.org/0000-0002-0876-3286",
+    "path" : "0000-0002-0876-3286",
+    "host" : "orcid.org"
+  },
+  "preferences" : {
+    "locale" : "ZH_CN"
+  },
+  "history" : {
+    "creation-method" : "MEMBER_REFERRED",
+    "completion-date" : null,
+    "submission-date" : {
+      "value" : 1423759777621
+    },
+    "last-modified-date" : {
+      "value" : 1535374835193
+    },
+    "claimed" : true,
+    "source" : null,
+    "deactivation-date" : null,
+    "verified-email" : true,
+    "verified-primary-email" : true
+  },
+  "person" : {
+    "last-modified-date" : null,
+    "name" : {
+      "created-date" : {
+        "value" : 1460757025449
+      },
+      "last-modified-date" : {
+        "value" : 1460757025449
+      },
+      "given-names" : {
+        "value" : "Yunfei"
+      },
+      "family-name" : {
+        "value" : "Deng"
+      },
+      "credit-name" : null,
+      "source" : null,
+      "visibility" : "PUBLIC",
+      "path" : "0000-0002-0876-3286"
+    },
+    "other-names" : {
+      "last-modified-date" : null,
+      "other-name" : [ ],
+      "path" : "/0000-0002-0876-3286/other-names"
+    },
+    "biography" : {
+      "created-date" : {
+        "value" : 1460757025452
+      },
+      "last-modified-date" : {
+        "value" : 1460757025452
+      },
+      "content" : null,
+      "visibility" : "PUBLIC",
+      "path" : "/0000-0002-0876-3286/biography"
+    },
+    "researcher-urls" : {
+      "last-modified-date" : null,
+      "researcher-url" : [ ],
+      "path" : "/0000-0002-0876-3286/researcher-urls"
+    },
+    "emails" : {
+      "last-modified-date" : null,
+      "email" : [ ],
+      "path" : "/0000-0002-0876-3286/email"
+    },
+    "addresses" : {
+      "last-modified-date" : null,
+      "address" : [ ],
+      "path" : "/0000-0002-0876-3286/address"
+    },
+    "keywords" : {
+      "last-modified-date" : null,
+      "keyword" : [ ],
+      "path" : "/0000-0002-0876-3286/keywords"
+    },
+    "external-identifiers" : {
+      "last-modified-date" : null,
+      "external-identifier" : [ ],
+      "path" : "/0000-0002-0876-3286/external-identifiers"
+    },
+    "path" : "/0000-0002-0876-3286/person"
+  },
+  "activities-summary" : {
+    "last-modified-date" : {
+      "value" : 1437794669591
+    },
+    "educations" : {
+      "last-modified-date" : null,
+      "education-summary" : [ ],
+      "path" : "/0000-0002-0876-3286/educations"
+    },
+    "employments" : {
+      "last-modified-date" : null,
+      "employment-summary" : [ ],
+      "path" : "/0000-0002-0876-3286/employments"
+    },
+    "fundings" : {
+      "last-modified-date" : null,
+      "group" : [ ],
+      "path" : "/0000-0002-0876-3286/fundings"
+    },
+    "peer-reviews" : {
+      "last-modified-date" : null,
+      "group" : [ ],
+      "path" : "/0000-0002-0876-3286/peer-reviews"
+    },
+    "works" : {
+      "last-modified-date" : {
+        "value" : 1437794669591
+      },
+      "group" : [ {
+        "last-modified-date" : {
+          "value" : 1437794669071
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.197.4.7",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657728,
+          "created-date" : {
+            "value" : 1432607680538
+          },
+          "last-modified-date" : {
+            "value" : 1437794669071
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<p><strong>Second-step lectotypification of the name <em>Taxus chienii</em> (Taxaceae)</strong></p>"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.197.4.7",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : {
+              "value" : "02"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657728",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669009
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.178.3.3",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657727,
+          "created-date" : {
+            "value" : 1432607677424
+          },
+          "last-modified-date" : {
+            "value" : 1437794669009
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<p><strong><em>Carex longicolla</em> (Cyperaceae), a new sedge from China</strong></p>"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.178.3.3",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : {
+              "value" : "09"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657727",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669211
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.172.1.9",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657730,
+          "created-date" : {
+            "value" : 1432607708040
+          },
+          "last-modified-date" : {
+            "value" : 1437794669211
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<p><strong>Nomenclatural notes on the name <em>Asarum</em> <em>longerhizomatosum</em> (Aristolochiaceae)</strong></p>"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.172.1.9",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : {
+              "value" : "06"
+            },
+            "day" : {
+              "value" : "11"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657730",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669268
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.163.1.5",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657731,
+          "created-date" : {
+            "value" : 1432607714194
+          },
+          "last-modified-date" : {
+            "value" : 1437794669268
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<strong>A new species of <em>Primulina</em> (Gesneriaceae) from Guangdong, China</strong>"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.163.1.5",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : {
+              "value" : "03"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657731",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668524
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.188.5.10",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657718,
+          "created-date" : {
+            "value" : 1432607637388
+          },
+          "last-modified-date" : {
+            "value" : 1437794668524
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<strong>Lectotypification of <em>Pyrus astateria</em> Cardot (Rosaceae)</strong>"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.188.5.10",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657718",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668944
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.146.1.2",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657726,
+          "created-date" : {
+            "value" : 1432607671207
+          },
+          "last-modified-date" : {
+            "value" : 1437794668944
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<p class=\"HeadingRunIn\"><strong>Valid publication of the name <em>Carex henryi </em>(Cyperaceae) from Asia</strong></p>"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.146.1.2",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : {
+              "value" : "11"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657726",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669129
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.135.1.7",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657729,
+          "created-date" : {
+            "value" : 1432607704753
+          },
+          "last-modified-date" : {
+            "value" : 1437794669129
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<strong><em>Ampelocalamus stoloniformis</em>, a new combination for Chinese Bambusoideae (Poaceae) </strong>"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.135.1.7",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : {
+              "value" : "10"
+            },
+            "day" : {
+              "value" : "01"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657729",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669340
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3417/2010098",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657732,
+          "created-date" : {
+            "value" : 1432607732153
+          },
+          "last-modified-date" : {
+            "value" : 1437794669340
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Validation of the Name Ulmus kunmingensis (Ulmaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3417/2010098",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : {
+              "value" : "10"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657732",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668891
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3897/phytokeys.23.3497",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657725,
+          "created-date" : {
+            "value" : 1432607668309
+          },
+          "last-modified-date" : {
+            "value" : 1437794668891
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "The rediscovery of Passiflora kwangtungensis Merr. (subgenus Decaloba supersection Disemma): a critically endangered Chinese endemic"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3897/phytokeys.23.3497",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : {
+              "value" : "06"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657725",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668418
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.104.1.9",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657716,
+          "created-date" : {
+            "value" : 1432607625385
+          },
+          "last-modified-date" : {
+            "value" : 1437794668418
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<i>Phlogacanthus yangtsekiangensis</i>, a new combination in Chinese Acanthaceae"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.104.1.9",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : {
+              "value" : "05"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657716",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668719
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.81.1.11",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657721,
+          "created-date" : {
+            "value" : 1432607651204
+          },
+          "last-modified-date" : {
+            "value" : 1437794668719
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Validation of the name <i>Pogostemon petelotii</i> (Lamiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.81.1.11",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : {
+              "value" : "02"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657721",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669404
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3417/2007009",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657733,
+          "created-date" : {
+            "value" : 1432607742481
+          },
+          "last-modified-date" : {
+            "value" : 1437794669404
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "A New Combination in Mackaya (Acanthaceae), with Lectotypification for Mackaya tapingensis"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3417/2007009",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2009"
+            },
+            "month" : {
+              "value" : "09"
+            },
+            "day" : {
+              "value" : "11"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657733",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669529
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3417/2007151",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657735,
+          "created-date" : {
+            "value" : 1432607747536
+          },
+          "last-modified-date" : {
+            "value" : 1437794669529
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Aristolochia wuana, a New Name in Chinese Aristolochia (Aristolochiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3417/2007151",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2009"
+            },
+            "month" : {
+              "value" : "09"
+            },
+            "day" : {
+              "value" : "11"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657735",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669457
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3417/2007036",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657734,
+          "created-date" : {
+            "value" : 1432607745228
+          },
+          "last-modified-date" : {
+            "value" : 1437794669457
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Validation of the Name Pararuellia Alata (acanthaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3417/2007036",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : {
+              "value" : "02"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657734",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794669591
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3767/000651906x622111",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657736,
+          "created-date" : {
+            "value" : 1432607781693
+          },
+          "last-modified-date" : {
+            "value" : 1437794669591
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "<I>Pertusadina metcalfii</I>, a new combination in Chinese Rubiaceae"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3767/000651906x622111",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2006"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657736",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668608
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.2307/25065397",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657719,
+          "created-date" : {
+            "value" : 1432607641012
+          },
+          "last-modified-date" : {
+            "value" : 1437794668608
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "(1695) Proposal to Conserve the Name Canarium pimela (Burseraceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.2307/25065397",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2005"
+            },
+            "month" : {
+              "value" : "05"
+            },
+            "day" : {
+              "value" : "01"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657719",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668472
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.2307/3647365",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657717,
+          "created-date" : {
+            "value" : 1432607633708
+          },
+          "last-modified-date" : {
+            "value" : 1437794668472
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "(1602) Proposal to Reject the Name Cynoxylon elliptica (Cornaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.2307/3647365",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2003"
+            },
+            "month" : {
+              "value" : "11"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657717",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668367
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.2307/3393262",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657715,
+          "created-date" : {
+            "value" : 1432607620251
+          },
+          "last-modified-date" : {
+            "value" : 1437794668367
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Eleutherococcus humillimus, a New Combination in Chinese Araliaceae"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.2307/3393262",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2003"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657715",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1437794668665
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.2307/3393157",
+            "external-id-url" : {
+              "value" : ""
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16657720,
+          "created-date" : {
+            "value" : 1432607647258
+          },
+          "last-modified-date" : {
+            "value" : 1437794668665
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "A New Species of Pittosporum (Pittosporaceae) from China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.2307/3393157",
+              "external-id-url" : {
+                "value" : ""
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2001"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-0876-3286/work/16657720",
+          "display-index" : "0"
+        } ]
+      } ],
+      "path" : "/0000-0002-0876-3286/works"
+    },
+    "path" : "/0000-0002-0876-3286/activities"
+  },
+  "path" : "/0000-0002-0876-3286"
+}
