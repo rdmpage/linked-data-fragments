@@ -1138,13 +1138,12 @@ function orcid_work_fetch($orcid, $work, $lookup_works = false)
 	
 	$cache_dir = dirname(__FILE__) . '/cache/orcid' . '/' . $orcid;
 	$filename = $cache_dir . '/' . $work . '.json';
+	
+	$url = 'https://pub.orcid.org/v2.1/' . $orcid . '/work/' . $work;
 
 	if (!file_exists($filename))
 	{
-		$url = 'https://pub.orcid.org/v2.1/' . $orcid . '/work/' . $work;
-		
-		$json = get($url, '', 'application/vnd.citationstyles.csl+json');
-		
+		$json = get($url, '', 'application/vnd.citationstyles.csl+json');		
 		file_put_contents($filename, $json);	
 	}
 		
@@ -1176,7 +1175,7 @@ function orcid_fetch($orcid, $lookup_works = false)
 	$dir = $cache_dir;
 	
 	$filename = $dir . '/' . $orcid . '.json';
-
+	
 	if (!file_exists($filename))
 	{
 		$url = 'https://pub.orcid.org/v2.1/' . $orcid;	
@@ -1258,6 +1257,9 @@ function orcid_fetch($orcid, $lookup_works = false)
 						// fetch individual works						
 						$work = orcid_work_fetch($orcid, $summary->{'put-code'});
 						
+						//echo $summary->{'put-code'} . "\n";
+						//print_r($work);
+						
 						// cleaning...						
 						if (isset($work->title))
 						{
@@ -1269,8 +1271,16 @@ function orcid_fetch($orcid, $lookup_works = false)
 														
 							$work->title = str_replace('$', '', $work->title);	
 							
-							$work->title = strip_tags($work->title, '<em>');						
-						}					
+							$work->title = strip_tags($work->title, '<em>');
+							
+							if ($work->title == '')
+							{
+								unset($work->title);
+							}
+						}		
+						
+						
+									
 						
 						// do we need to look for a DOI?						
 						if (!isset($work->DOI) && $find_doi)
@@ -1389,10 +1399,20 @@ function orcid_fetch($orcid, $lookup_works = false)
 						
 						
 						}
-												
-						//print_r($work);
 						
-						$message->{'@graph'}[] = csl_to_json($work);
+						// sanity checks
+						
+						$go = true;
+						
+						if (!isset($work->title))
+						{
+							$go = false;
+						}
+						
+						if ($go)
+						{
+							$message->{'@graph'}[] = csl_to_json($work);
+						}
 					}
 				}
 			}
@@ -2005,11 +2025,14 @@ if (0)
 	$url = 'urn:lsid:ipni.org:names:77177604-1';
 	
 	$url = 'https://orcid.org/0000-0002-0876-3286';
+	
+	$url = 'https://orcid.org/0000-0002-7643-2112';
 		
 	$doc = resolve_url($url);
-	print_r($doc);
 	
-	echo json_encode($doc->message, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+	//print_r($doc);
+	
+	//echo json_encode($doc->message, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 	echo "\n";
 
 
