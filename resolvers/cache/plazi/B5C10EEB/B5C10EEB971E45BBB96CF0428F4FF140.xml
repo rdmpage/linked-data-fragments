@@ -1,0 +1,234 @@
+<rdf:RDF xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:cnt="http://www.w3.org/2011/content#" xmlns:spm="http://rs.tdwg.org/ontology/voc/SpeciesProfileModel" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:sdo="http://schema.org/" xmlns:trt="http://plazi.org/vocab/treatment#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:fabio="http://purl.org/spar/fabio/" xmlns:cito="http://purl.org/spar/cito/" xmlns:sdd="http://tdwg.org/sdd#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dwcFP="http://filteredpush.org/ontologies/oa/dwcFP#">
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Treatment"/>
+<trt:definesTaxonConcept rdf:resource="http://zoobank.org/NomenclaturalActs/B5C10EEB-971E-45BB-B96C-F0428F4FF140"/>
+<trt:publishedIn rdf:resource="http://dx.doi.org/10.5852/ejt.2019.512"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_1"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_2"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_3"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_4"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_5"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_1"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_2"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_3"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_4"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_5"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_6"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_7"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2628843/files/figure.png"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://dx.doi.org/10.5852/ejt.2019.512">
+<dc:title>New Ptiliidae (Coleoptera) from Sarawak in the spirit collection of the Natural History Museum, London</dc:title>
+<dc:creator>Darby, Michael</dc:creator>
+<rdf:type rdf:resource="fabio:JournalArticle"/>
+<bibo:journal>European Journal of Taxonomy</bibo:journal>
+<dc:date>2019</dc:date>
+<bibo:pubDate>2019-04-04</bibo:pubDate>
+<bibo:volume>512</bibo:volume>
+<bibo:pageStart>1</bibo:pageStart>
+<bibo:pageEnd>50</bibo:pageEnd>
+</rdf:Description>
+<rdf:Description rdf:about="http://zoobank.org/NomenclaturalActs/B5C10EEB-971E-45BB-B96C-F0428F4FF140">
+<rdf:type rdf:resource="http://filteredpush.org/ontologies/oa/dwcFP#Taxon"/>
+<dwc:box>[621,868,1780,1807]</dwc:box>
+<dwc:class>Insecta</dwc:class>
+<dwc:family>Ptiliidae</dwc:family>
+<dwc:genus>Storicricha</dwc:genus>
+<dwc:higherTaxonomySource>GBIF</dwc:higherTaxonomySource>
+<dwc:kingdom>Animalia</dwc:kingdom>
+<dwc:order>Coleoptera</dwc:order>
+<dwc:pageId>44</dwc:pageId>
+<dwc:pageNumber>45</dwc:pageNumber>
+<dwc:phylum>Arthropoda</dwc:phylum>
+<dwc:rank>species</dwc:rank>
+<dwc:species>resticula</dwc:species>
+<dwc:status>sp. nov.</dwc:status>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_1">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>  Fig. 23</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_2">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Diagnosis The bifid termination of the metaventrum and form of the spermatheca distinguish this species.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_3">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Etymology From the Latin ‘  resticula’, meaning ‘rope’, and referring to the form of the spermatheca duct.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_4">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Type material    HolotypeMALAYSIA-BORNEO • ♀; Sarawak, 4 thdivision, Gunung Mulu National Park; May–Aug. 1978; P.M. Hammondand J.E. Marshallleg., BM 1978-49; litter below comp 4; BMNH.   Paratypes MALAYSIA-BORNEO • 1 spec.; Sarawak, 4 thdivision, Gunung Mulu National Park;  29 Apr. 1978; I. Hanskileg.; pitfall trapfish bait LMR forest, slope 10-12; BMNH• 1 spec. (mounted disarticulated on the slide); same data as for preceding; above  1700 ma.s.l.; UMR forest, traps 1–6; BMNH• 2 specs; Sarawak, Mulu;  16 Mar. 1978; N.M. Collinsleg.; MDF pitfalls; BMNH• 1 ♂, 1 ♀(one mounted disarticulated on the slide); same data as for preceding; May–Aug.1978; P. M. Hammondand J.E. Marshallleg., BM 1978-491; comp 4, human faeces; BMNH• 1 spec.; same data as for preceding; under bark of log; BMNH• 2 specs; same data as for precedings; moss; BMNH.   Fig. 23.  Storicricha resticula sp. nov. A. Habitus. B. Hind angle of pronotum viewed at 45°. C. Antennomeres III–XI. D. Spermatheca. E. Aedeagus. F. Mentum and submentum ×1000. G. Meso- and metaventra ×320. H. Bifid process between metacoxae ×1700. I. Pygidium.   Note Many further examples from the Gunung Mulu National Park determined by association, not classed as paratypes, retained in alcohol.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#section_5">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Description SIZE. Habitus ( Fig. 23A), length 0.81 mm. COLOUR. Yellow brown, head darker, antennae, and legs yellow, dorsal surface covered with overlapping yellow pubescence. HEAD. Distance across eyes 0.27 mm; antennomeres III–XI, length 0.36 mm; mentum and submentum chaetotaxy ( Fig. 23G). PRONOTUM. Length 0.23 mm, width 0.46 mm, hind angles right angled ( Fig. 23B). ELYTRA. Length 0.47 mm, width 0.46 mm. VENTRUM. Mesoventrum reticulate, without pubescence, keel obliterated anteriorly before meeting collar, narrowing to a point between the mesocoxae ( Fig. 23F). Metaventrum reticulate and pubescent throughout, posterior margin between metacoxae reduced to two sharp points, adjacent cells with microtrichiae ( Fig. 23G). ABDOMEN. Pygidium lateral teeth obscured, apical point extended forwards, anterior border with row of setae ( Fig. 23H). FEMALE GENITALIA. Spermatheca ( Fig. 23D). MALE GENITALIA. Aedeagus ( Fig. 23E).</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_1">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_1"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_2">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_2"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_3">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_3"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_4">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_4"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_5">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_5"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_6">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_6"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#materialCitation_7">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_7"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_1">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectionCode>BMNH</dwc:collectionCode>
+<dwc:collectorName>P. M. Hammond &amp; J. E. Marshall</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:location>Gunung Mulu National Park</dwc:location>
+<dwc:pageId>45</dwc:pageId>
+<dwc:pageNumber>46</dwc:pageNumber>
+<dwc:specimenCode>BM 1978-49</dwc:specimenCode>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:specimenCount-female>1</dwc:specimenCount-female>
+<dwc:typeStatus>holotype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_2">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>1978-04-29</dwc:collectingDate>
+<dwc:collectionCode>BMNH</dwc:collectionCode>
+<dwc:collectorName>I. Hanski</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:location>Gunung Mulu National Park</dwc:location>
+<dwc:pageId>45</dwc:pageId>
+<dwc:pageNumber>46</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:typeStatus>paratype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_3">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>1978-04-29</dwc:collectingDate>
+<dwc:collectionCode>BMNH</dwc:collectionCode>
+<dwc:collectorName>I. Hanski</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:elevation>1700</dwc:elevation>
+<dwc:location>Gunung Mulu National Park</dwc:location>
+<dwc:pageId>45</dwc:pageId>
+<dwc:pageNumber>46</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:typeStatus>paratype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_4">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>1978-03-16</dwc:collectingDate>
+<dwc:collectionCode>BMNH</dwc:collectionCode>
+<dwc:collectorName>N. M. Collins</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:location>Mulu</dwc:location>
+<dwc:pageId>45</dwc:pageId>
+<dwc:pageNumber>46</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:typeStatus>paratype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_5">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>1978-03-16</dwc:collectingDate>
+<dwc:collectionCode>BMNH</dwc:collectionCode>
+<dwc:collectorName>M. Hammond &amp; J. E. Marshall</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:location>May-Aug.</dwc:location>
+<dwc:pageId>45</dwc:pageId>
+<dwc:pageNumber>46</dwc:pageNumber>
+<dwc:specimenCode>BM 1978-491</dwc:specimenCode>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:specimenCount-female>1</dwc:specimenCount-female>
+<dwc:typeStatus>paratype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_6">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>1978-03-16</dwc:collectingDate>
+<dwc:collectionCode>BMNH</dwc:collectionCode>
+<dwc:collectorName>M. Hammond &amp; J. E. Marshall</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:location>May-Aug.</dwc:location>
+<dwc:pageId>45</dwc:pageId>
+<dwc:pageNumber>46</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:typeStatus>paratype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/BE2487B5FFBFFFFA6D617BA64F4BFB68#material_7">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:box>[446,1055,808,834]</dwc:box>
+<dwc:collectingDate>1978-03-16</dwc:collectingDate>
+<dwc:collectionCode>BMNH</dwc:collectionCode>
+<dwc:collectorName>M. Hammond &amp; J. E. Marshall</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:location>May-Aug.</dwc:location>
+<dwc:pageId>45</dwc:pageId>
+<dwc:pageNumber>46</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:typeStatus>paratype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2628843/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+</rdf:RDF>
+

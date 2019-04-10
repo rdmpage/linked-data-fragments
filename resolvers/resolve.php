@@ -1425,6 +1425,110 @@ function orcid_fetch($orcid, $lookup_works = false)
 }
 
 
+//----------------------------------------------------------------------------------------
+// Plazi RDF
+//
+// http://treatment.plazi.org/GgServer/rdf/03B66F688539073DFF6AFD53289AFF5B
+// 
+function plazi_fetch($uuid, $cache_dir = '')
+{
+	$data = null;
+	
+	$parts = parse_url($url);
+	
+	$id = $uuid;
+	
+	// Either use an existing cache (e.g., on external hard drive)
+	// or cache locally
+	if ($cache_dir != '')
+	{
+	}
+	else
+	{
+		$cache_dir = dirname(__FILE__) . "/cache";
+		if (!file_exists($cache_dir))
+		{
+			$oldumask = umask(0); 
+			mkdir($cache_dir, 0777);
+			umask($oldumask);
+		}
+	
+		$cache_dir .= '/plazi';
+	
+		if (!file_exists($cache_dir))
+		{
+			$oldumask = umask(0); 
+			mkdir($cache_dir, 0777);
+			umask($oldumask);
+		}
+		
+		$cache_dir .= '/' . substr($uuid, 0, 8);
+	
+		if (!file_exists($cache_dir))
+		{
+			$oldumask = umask(0); 
+			mkdir($cache_dir, 0777);
+			umask($oldumask);
+		}
+
+	}
+		
+	$dir = $cache_dir;
+	
+	$filename = $dir . '/' . $id . '.xml';
+
+	if (!file_exists($filename))
+	{
+		$url = 'http://treatment.plazi.org/GgServer/rdf/' . $uuid;
+		$xml = get($url);
+		
+		file_put_contents($filename, $xml);	
+	}
+	
+	$xml = file_get_contents($filename);
+	
+	if (($xml != '') && preg_match('/<rdf/', $xml))
+	{
+		// Clean (sigh)
+		// remove double prefixes
+		$xml = preg_replace('/http:\/\/dx.doi.org\/https?:/u', 'https:', $xml);
+
+		// Update old DOI prefixes
+		$xml = preg_replace('/http:\/\/dx.doi.org\/10/u', 'https://doi.org/10', $xml);
+
+	
+		// convert
+		$nt = rdf_to_triples($xml);
+				
+		$doc = jsonld_from_rdf($nt, array('format' => 'application/nquads'));
+
+		// Context 
+		$context = new stdclass;
+		
+		$context->dwc 			= "http://rs.tdwg.org/dwc/terms/";
+		$context->cnt 			= "http://www.w3.org/2011/content#";
+		
+		$context->spm			= "http://rs.tdwg.org/ontology/voc/SpeciesProfileModel";
+		$context->bibo			= "http://purl.org/ontology/bibo/";
+		$context->sdo			= "http://schema.org/";
+		$context->trt			= "http://plazi.org/vocab/treatment#";
+
+		$context->rdfs			= "http://www.w3.org/2000/01/rdf-schema#";
+		$context->rdf			= "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+		$context->xsd			= "http://www.w3.org/2001/XMLSchema#";
+		$context->fabio			= "http://purl.org/spar/fabio/";
+		$context->cito			= "http://purl.org/spar/cito/";
+		$context->sdd			= "http://tdwg.org/sdd#";
+		$context->dc			= "http://purl.org/dc/elements/1.1/";
+		$context->dwcFP			= "http://filteredpush.org/ontologies/oa/dwcFP#";
+				
+		$data = jsonld_compact($doc, $context);
+
+	}
+	
+	return $data;	
+}
+
 	
 //----------------------------------------------------------------------------------------
 function resolve_url($url)
@@ -1432,6 +1536,25 @@ function resolve_url($url)
 	$doc = null;	
 	
 	$done = false;
+	
+	// PLAZI -----------------------------------------------------------------------------
+	if (!$done)
+	{
+		if (preg_match('/https?:\/\/treatment.plazi.org\/id\/(?<id>.*)/', $url, $m))
+		{			
+			$uuid = $m['id'];
+			
+			$message = plazi_fetch($uuid, false);
+			
+			$doc = new stdclass;
+			$doc->{'message-source'} = $url;
+			$doc->{'message-format'} = 'application/ld+json';
+			$doc->message = $message;
+						
+			$done = true;			
+		}
+	}
+	
 	
 	// ORCID -----------------------------------------------------------------------------
 	if (!$done)
@@ -2027,12 +2150,15 @@ if (0)
 	$url = 'https://orcid.org/0000-0002-0876-3286';
 	
 	$url = 'https://orcid.org/0000-0002-7643-2112';
+	
+	$url = 'http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B';
+	$url = 'http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C';
 		
 	$doc = resolve_url($url);
 	
 	//print_r($doc);
 	
-	//echo json_encode($doc->message, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+	echo json_encode($doc->message, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 	echo "\n";
 
 

@@ -605,6 +605,73 @@ $urls=array(
 'https://doi.org/10.1007/s12225-015-9569-6',
 );
 
+$urls=array(
+'http://bionames.org/ipni/cluster/77160201-1'
+);
+
+$urls=array(
+'http://bionames.org/ipni/cluster/77161332-1',
+'http://bionames.org/ipni/cluster/77163088-1',
+'http://bionames.org/ipni/cluster/77163536-1'
+);
+
+$urls=array(
+'https://orcid.org/0000-0002-0876-3286'
+);
+
+/*
+$urls=array(
+'http://bionames.org/ipni/cluster/77133624-1'
+);
+*/
+
+
+// Good ORCID
+$urls=array(
+'https://orcid.org/0000-0002-0876-3286'
+);
+
+// Full of bad records (e.g., nearly empty)
+$urls=array(
+'https://orcid.org/0000-0002-7643-2112'
+);
+
+
+$urls=array(
+'https://orcid.org/0000-0003-1376-0028'
+);
+
+$urls=array(
+'https://orcid.org/0000-0003-4551-2432'
+);
+
+// Full of bad records (e.g., nearly empty)
+$urls=array(
+'https://orcid.org/0000-0002-7643-2112'
+);
+
+$urls=array(
+'https://doi.org/10.11646/phytotaxa.217.1.4'
+);
+
+$urls=array(
+'https://doi.org/10.3969/j.issn.2095-0845.1999.01.002'
+);
+
+
+$urls=array(
+'https://doi.org/10.1017/s0960428610000302'
+);
+
+// Plazi
+$urls=array(
+//'http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B'
+//'http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C'
+//'http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A'
+'http://treatment.plazi.org/id/B5C10EEB971E45BBB96CF0428F4FF140'
+);
+
+
 $force = false;
 $force = true;
 

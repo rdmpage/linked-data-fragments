@@ -1,0 +1,242 @@
+<rdf:RDF xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:cnt="http://www.w3.org/2011/content#" xmlns:spm="http://rs.tdwg.org/ontology/voc/SpeciesProfileModel" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:sdo="http://schema.org/" xmlns:trt="http://plazi.org/vocab/treatment#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:fabio="http://purl.org/spar/fabio/" xmlns:cito="http://purl.org/spar/cito/" xmlns:sdd="http://tdwg.org/sdd#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dwcFP="http://filteredpush.org/ontologies/oa/dwcFP#">
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Treatment"/>
+<trt:definesTaxonConcept rdf:resource="http://taxon-concept.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B"/>
+<trt:publishedIn rdf:resource="http://dx.doi.org/10.5281/zenodo.273086"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#section_1"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#section_2"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#section_3"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#section_4"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_1"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_2"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_3"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_4"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_5"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273089/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273091/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273091/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273092/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273091/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273091/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273089/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273091/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273092/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273091/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273092/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273091/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273092/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273091/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/273116/files/figure.png"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://dx.doi.org/10.5281/zenodo.273086">
+<dc:title>Revision and cladistic analysis of the Southeast Asian leaf-dwelling spider genus Calapnita Simon (Araneae, Pholcidae)</dc:title>
+<dc:creator>Bernhard A. Huber</dc:creator>
+<rdf:type rdf:resource="fabio:JournalArticle"/>
+<bibo:journal>Zootaxa</bibo:journal>
+<dc:date>2017</dc:date>
+<bibo:volume>4219</bibo:volume>
+<bibo:issue>1</bibo:issue>
+<bibo:pageStart>1</bibo:pageStart>
+<bibo:pageEnd>63</bibo:pageEnd>
+</rdf:Description>
+<rdf:Description rdf:about="http://taxon-concept.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B">
+<rdf:type rdf:resource="http://filteredpush.org/ontologies/oa/dwcFP#Taxon"/>
+<dwc:box>[151,322,726,752]</dwc:box>
+<dwc:class>Arachnida</dwc:class>
+<dwc:family>Pholcidae</dwc:family>
+<dwc:genus>Calapnita</dwc:genus>
+<dwc:kingdom>Animalia</dwc:kingdom>
+<dwc:order>Araneae</dwc:order>
+<dwc:pageId>11</dwc:pageId>
+<dwc:pageNumber>12</dwc:pageNumber>
+<dwc:phylum>Arthropoda</dwc:phylum>
+<dwc:rank>species</dwc:rank>
+<dwc:species>lehi</dwc:species>
+<dwc:status>sp. nov.</dwc:status>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#section_1">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>  Diagnosis.Males are easily distinguished from congeners by modified male palpal femur (distinctive ventral process; Fig. 21), by shape of appendix (bifid, i.e. with long subdistal branch; Figs 20, 29) and by shape of procursus tip (with seemingly hinged prolatero-ventral process; Figs 20–22); females are difficult to distinguish externally from other representatives of the  phyllicolagroup; internally they can be distinguished by almost round pore plates and absence of membranous ‘sac’ ( Fig. 25).</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#section_2">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>  Etymology.The species is named for Dr. Charles Leh Moi Ung from  SarawakMuseum Kuching, in recognition of his help before and during the Borneo expedition 2014.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#section_3">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Material examined. Holotype. MALAYSIA-BORNEO: ♂, ZFMK( Ar15964), Sarawak, Lambir Hills National Park(4.198– 4.207°N, 114.034– 114.045°E),  60–150 ma.s.l., underside of leaves,  22.vii.2014( B.A. Huber, S.B. Huber).   Other material. MALAYSIA-BORNEO: 4♂ 9♀, ZFMK(Ar 15965–66), and 1♂ 1♀, SMK, same data as holotype;  2♀ 1 juv.in absolute ethanol, ZFMK( Bor199), same data.  8♂ 5♀ 1 juv., ZFMK( Ar15967–68), Sarawak, Gunung Mulu National Park, forest near Lagang Cave( 4.051°N, 114.822°E),  60 ma.s.l., undersides of leaves,  24.vii.2014( B.A. Huber, S.B. Huber);  1♂ 1♀7 juvs in absolute ethanol, ZFMK( Bor236), same data.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#section_4">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>  Description. Male( holotype) MEASUREMENTS. Total body length 5.0, carapace width 0.9. Leg 1: 41.7 (9.6 + 0.4 + 9.8 + 19.9 + 2.0), tibia 2: 6.9, tibia 3: 3.9, tibia 4: 5.9; tibia 1 L/d: 122. Distance PME-PME 240 µm, diameter PME 120 µm, distance PME- ALE ~30 µm; no trace of AME.  COLOR. Entire animal mostly whitish to pale ochre-yellow, patellae and tibia-metatarsus joints slightly darker brown, abdomen monochromous whitish.  BODY. Habitus as in Fig. 3; ocular area barely elevated, each triad on very low hump; carapace without median furrow; clypeus unmodified; sternum as wide as long (0.56), unmodified. CHELICERAE. As in Fig. 23, with pair of simple scaly apophyses near lamellae ( Figs 26, 27) and pair of distinct but whitish proximal humps; without modified hairs; without stridulatory ridges.  PALPS. As in Figs 20–21; coxa unmodified; trochanter with simple retrolatero-ventral apophysis; femur with distinctive ventral process proximally; tarsus with short conical whitish process, procursus with small transparent rounded process from ‘knee’, with apparently hinged distal element; bulb with long weakly sclerotized embolus, large appendix with distinctive bifid tip ( Fig. 29), small membranous basal process.  LEGS. Without spines and curved hairs; few vertical hairs; retrolateral trichobothrium on tibia 1 at 3%; prolateral trichobothrium absent on tibia 1, present on other tibiae; tarsus 1 pseudosegments not visible in dissecting microscope.  Male(variation). Tibia 1 in12 other males: 8.4–10.0 (mean 9.2). Males from Gunung Mulu tend to be smaller than males from Lambir Hills (tibia 1 lengths: 8.4–9.2 vs.9.4–10.0).   FIGURES 20–25.  Calapnita lehi  sp. nov.(ZFMK, Ar 15965–66). 20–21. Left male palp, prolateral and retrolateral views (asterisk: membranous bulbal process; arrow points at short membranous process from ‘knee’). 22. Procursus, dorsal view. 23. Male chelicerae, frontal view. 24–25. Cleared female genitalia, ventral and dorsal views. a, appendix; b, genital bulb; e, embolus; f, femur; p, procursus; tr, trochanter. Scale lines: 0.3 mm (23–25), 0.5 mm (20–22).  Female. In general similar to male; eye triads slightly closer together (distance PME-PME 200 µm). Tibia 1 in 14 females: 7.0–8.0 (mean 7.5). Females from Gunung Mulu tend to be smaller than females from Lambir Hills (tibia 1 lengths: 7.0–7.4 vs.7.3–8.0). Epigynum weakly sclerotized, internal anterior arch visible through cuticle ( Fig. 24); with simple short posterior ‘knob’ on extensible wide scape ( Fig. 32); internal genitalia as in Fig. 25.  Natural history. At Lambir, most specimens were collected from palm leaves; at Gunung Mulu, they were found on large leaves of various monocot and dicot species. Two egg-sacs contained 8 and 16 eggs respectively. Distribution. Known from two localities in eastern Sarawak ( Fig. 281).</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_1">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_1"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_2">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_2"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_3">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_3"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_4">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_4"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#materialCitation_5">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_5"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_1">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>2014-07-22</dwc:collectingDate>
+<dwc:collectionCode>ZFMK</dwc:collectionCode>
+<dwc:collectorName>B. A. Huber &amp; S. B. Huber</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:elevation>105</dwc:elevation>
+<dwc:latitude>4.207</dwc:latitude>
+<dwc:location>Ar</dwc:location>
+<dwc:longLatPrecision>78</dwc:longLatPrecision>
+<dwc:longitude>114.045</dwc:longitude>
+<dwc:municipality>Lambir Hills National Park</dwc:municipality>
+<dwc:pageId>11</dwc:pageId>
+<dwc:pageNumber>12</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:specimenCount-male>1</dwc:specimenCount-male>
+<dwc:typeStatus>holotype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_2">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>2014-07-22</dwc:collectingDate>
+<dwc:collectionCode>ZFMK, SMK</dwc:collectionCode>
+<dwc:collectorName>B. A. Huber &amp; S. B. Huber</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:elevation>105</dwc:elevation>
+<dwc:latitude>4.207</dwc:latitude>
+<dwc:location>Ar</dwc:location>
+<dwc:longLatPrecision>78</dwc:longLatPrecision>
+<dwc:longitude>114.045</dwc:longitude>
+<dwc:municipality>Lambir Hills National Park</dwc:municipality>
+<dwc:pageId>11</dwc:pageId>
+<dwc:pageNumber>12</dwc:pageNumber>
+<dwc:specimenCount>15</dwc:specimenCount>
+<dwc:specimenCount-female>10</dwc:specimenCount-female>
+<dwc:specimenCount-male>5</dwc:specimenCount-male>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_3">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:box>[268,974,1229,1254]</dwc:box>
+<dwc:collectingDate>2014-07-22</dwc:collectingDate>
+<dwc:collectionCode>ZFMK</dwc:collectionCode>
+<dwc:collectorName>Bor</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:elevation>105</dwc:elevation>
+<dwc:latitude>4.207</dwc:latitude>
+<dwc:location>Ar</dwc:location>
+<dwc:longLatPrecision>78</dwc:longLatPrecision>
+<dwc:longitude>114.045</dwc:longitude>
+<dwc:municipality>Lambir Hills National Park</dwc:municipality>
+<dwc:pageId>11</dwc:pageId>
+<dwc:pageNumber>12</dwc:pageNumber>
+<dwc:specimenCount>3</dwc:specimenCount>
+<dwc:specimenCount-female>2</dwc:specimenCount-female>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_4">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>2014-07-24</dwc:collectingDate>
+<dwc:collectionCode>ZFMK</dwc:collectionCode>
+<dwc:collectorName>B. A. Huber &amp; S. B. Huber</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:county>Lagang Cave</dwc:county>
+<dwc:elevation>60</dwc:elevation>
+<dwc:latitude>4.051</dwc:latitude>
+<dwc:location>Ar</dwc:location>
+<dwc:longLatPrecision>78</dwc:longLatPrecision>
+<dwc:longitude>114.822</dwc:longitude>
+<dwc:municipality>Gunung Mulu National Park</dwc:municipality>
+<dwc:pageId>11</dwc:pageId>
+<dwc:pageNumber>12</dwc:pageNumber>
+<dwc:specimenCount>14</dwc:specimenCount>
+<dwc:specimenCount-female>5</dwc:specimenCount-female>
+<dwc:specimenCount-male>8</dwc:specimenCount-male>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03B66F688539073DFF6AFD53289AFF5B#material_5">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:box>[671,1378,1301,1326]</dwc:box>
+<dwc:collectingDate>2014-07-24</dwc:collectingDate>
+<dwc:collectionCode>ZFMK</dwc:collectionCode>
+<dwc:collectorName>Bor</dwc:collectorName>
+<dwc:country>Malaysia</dwc:country>
+<dwc:county>Lagang Cave</dwc:county>
+<dwc:elevation>60</dwc:elevation>
+<dwc:latitude>4.051</dwc:latitude>
+<dwc:location>Ar</dwc:location>
+<dwc:longLatPrecision>78</dwc:longLatPrecision>
+<dwc:longitude>114.822</dwc:longitude>
+<dwc:municipality>Gunung Mulu National Park</dwc:municipality>
+<dwc:pageId>11</dwc:pageId>
+<dwc:pageNumber>12</dwc:pageNumber>
+<dwc:specimenCount>2</dwc:specimenCount>
+<dwc:specimenCount-female>1</dwc:specimenCount-female>
+<dwc:specimenCount-male>1</dwc:specimenCount-male>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273089/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273091/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273091/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273092/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273091/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273091/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273089/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273091/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273092/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273091/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273092/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273091/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273092/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273091/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/273116/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+</rdf:RDF>
+

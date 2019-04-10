@@ -1,0 +1,168 @@
+<rdf:RDF xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:cnt="http://www.w3.org/2011/content#" xmlns:spm="http://rs.tdwg.org/ontology/voc/SpeciesProfileModel" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:sdo="http://schema.org/" xmlns:trt="http://plazi.org/vocab/treatment#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:fabio="http://purl.org/spar/fabio/" xmlns:cito="http://purl.org/spar/cito/" xmlns:sdd="http://tdwg.org/sdd#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dwcFP="http://filteredpush.org/ontologies/oa/dwcFP#">
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Treatment"/>
+<trt:definesTaxonConcept rdf:resource="http://taxon-concept.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C"/>
+<trt:publishedIn rdf:resource="http://dx.doi.org/http://doi.org/10.11646/zootaxa.4149.1.1"/>
+<cito:cites>Ardila-Camacho &amp; Noriega, 2014 : 317</cito:cites>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#section_1"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#section_2"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#section_3"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#section_4"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#materialCitation_1"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#materialCitation_2"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#materialCitation_3"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#materialCitation_4"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/256849/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/256819/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/256820/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/256821/files/figure.png"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://dx.doi.org/http://doi.org/10.11646/zootaxa.4149.1.1">
+<dc:title>Neotropical osmylids (Neuroptera, Osmylidae): Three new species of Isostenosmylus Krüger, 1913, new distributional records, redescriptions, checklist and key for the Neotropical species</dc:title>
+<dc:creator>Martins, Caleb Califre</dc:creator>
+<dc:creator>Ardila-Camacho, Adrian</dc:creator>
+<dc:creator>Aspöck, Ulrike</dc:creator>
+<rdf:type rdf:resource="fabio:JournalArticle"/>
+<bibo:journal>Zootaxa</bibo:journal>
+<dc:date>2016</dc:date>
+<bibo:volume>4149</bibo:volume>
+<bibo:issue>1</bibo:issue>
+<bibo:pageStart>1</bibo:pageStart>
+<bibo:pageEnd>66</bibo:pageEnd>
+</rdf:Description>
+<rdf:Description rdf:about="http://taxon-concept.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C">
+<rdf:type rdf:resource="http://filteredpush.org/ontologies/oa/dwcFP#Taxon"/>
+<dwc:authority>Ardila-Camacho &amp; Noriega, 2014</dwc:authority>
+<dwc:authorityName>Ardila-Camacho &amp; Noriega</dwc:authorityName>
+<dwc:authorityYear>2014</dwc:authorityYear>
+<dwc:box>[151,893,1268,1294]</dwc:box>
+<dwc:class>Insecta</dwc:class>
+<dwc:family>Osmylidae</dwc:family>
+<dwc:genus>Isostenosmylus</dwc:genus>
+<dwc:kingdom>Animalia</dwc:kingdom>
+<dwc:order>Neuroptera</dwc:order>
+<dwc:pageId>23</dwc:pageId>
+<dwc:pageNumber>24</dwc:pageNumber>
+<dwc:phylum>Arthropoda</dwc:phylum>
+<dwc:rank>species</dwc:rank>
+<dwc:species>contrerasi</dwc:species>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#section_1">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>    Isostenosmylus contrerasi  Ardila-Camacho &amp; Noriega, 2014: 317, figs. 2b, 3a, d, g–i, 4, 6 (habitus, wings, thorax, head, legs, female terminalia and genitalia, male terminalia and genitalia). Ref. Ardila-Camacho &amp; Noriega (2014). Holotypefemale, IAvH.   Type-locality. Colombia: Huila,NNP Cuevade los Guacharos, Cabaña Cedros, 1°37’N−76°6’W, 1950 m, 0 5 –20.v.2003, C. Cortés, Malaise trap, M.3734.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#section_2">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Material examined. Holotype,“  Colombia: Huila, NNP Cuevade los Guacharos, Cabaña Cedros, 1°37’N−  76°6’W,  1950 m, 05~  20.v.2003, C. Cortés, Malaise trap, M.3734” ( 1 ♀IAvH);  Paratypes,“  Colombia: Huila, NNP Cuevade los Guacharos, Cabaña Cedros, 1°37’N−  76°06’W,  1950 m, 05~  20.v.2003, C. Cortés, Malaise M.3734” ( 1♂, 1♀IAvH); “NNP Cuevade los Guacharos, Cabaña Cedros, 01°37’N−76°06’W, 1950 m, 20.iv~ 05.v.2003, C. Cortés, Malaise trapM.3733”, (1♂ IAvH).</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#section_3">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>  Distribution ( Fig. 43). Colombia( Huila).  Principal characteristics.Head brown with small spots on the frons; antennae with scape and pedicel brown; flagellum with 50 or 51 articles, covered by elongated brown setae; labial palpi three-segmented, the first two amber, the last dark brown; maxillary palpi five-segmented, the first four segments light amber, the last dark amber at distal half. Pronotum brown with two lateral dark brown spots, covered with abundant amber setae arising from protuberant bases, mainly on the side; meso and metanota brown with two dark brown spots. All leg segments pale yellow; anterior coxa of female with a short pointed process near of apex. Wings ( Fig. 13B) hyaline, venation alternating pale yellow and brown; forewing with many dark brown spots, a large spot is observed in the area between the MA or MP and the posterior margin, at level of the second Rs fork; hindwing without large dark spots; pterostigma well-marked. Abdominal tergites 3–7 of male light brown, with two dark brown lateral spots; tergites of female dark brown, light brown and pale yellow.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#section_4">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>  Male ( Fig. 14).Eighth and ninth tergites fused, ninth tergite with a white spot; ectoproct subquadrate, posterodorsally with a process, pointed in lateral view and blunted in dorsal view; complex of ninth gonocoxites and gonapophyses C-shaped in lateral view, medial lobe of ninth gonocoxites in ventral view posteromedially slightly incised; complex of tenth gonocoxites curved with dorsal apex slender and ventral tips bent.  Female ( Fig. 15).Fused ninth gonapophyses short, basal half widened, subtriangular in ventral view, apical lobes bilobed, distal margin medially with a U-shaped concavity; two short lateral lobes in the fused eighth gonocoxites + gonapophyses; ninth gonocoxites acuminate, with ventral edge straight; spermathecae ovoid.  Ecological notes.Flight period of adults is from March to June and also during December, specimens were collected using Malaise traps in high Andean rain forest, between 1980 and 2100m.a.s.l. ( Ardila-Camacho &amp; Noriega 2014).</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#materialCitation_1">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#material_1"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#materialCitation_2">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#material_2"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#materialCitation_3">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#material_3"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#materialCitation_4">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#material_4"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#material_1">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:box>[151,1167,1502,1527]</dwc:box>
+<dwc:country>Colombia</dwc:country>
+<dwc:county>Cueva</dwc:county>
+<dwc:latitude>1.6166667</dwc:latitude>
+<dwc:location>Cabana Cedros</dwc:location>
+<dwc:municipality>Guacharos</dwc:municipality>
+<dwc:pageId>23</dwc:pageId>
+<dwc:pageNumber>24</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:stateProvince>Huila</dwc:stateProvince>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#material_2">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:country>Colombia</dwc:country>
+<dwc:county>Cueva</dwc:county>
+<dwc:latitude>1.6166667</dwc:latitude>
+<dwc:location>Cabana Cedros</dwc:location>
+<dwc:municipality>Guacharos</dwc:municipality>
+<dwc:pageId>23</dwc:pageId>
+<dwc:pageNumber>24</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:stateProvince>Huila</dwc:stateProvince>
+<dwc:typeStatus>holotype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#material_3">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>2003-05-20</dwc:collectingDate>
+<dwc:collectorName>C. Cortes</dwc:collectorName>
+<dwc:country>Colombia</dwc:country>
+<dwc:county>Cueva</dwc:county>
+<dwc:elevation>1950</dwc:elevation>
+<dwc:latitude>1.6166667</dwc:latitude>
+<dwc:location>Cabana Cedros</dwc:location>
+<dwc:longLatPrecision>1308</dwc:longLatPrecision>
+<dwc:longitude>-76.1</dwc:longitude>
+<dwc:municipality>Guacharos</dwc:municipality>
+<dwc:pageId>23</dwc:pageId>
+<dwc:pageNumber>24</dwc:pageNumber>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:specimenCount-female>1</dwc:specimenCount-female>
+<dwc:stateProvince>Huila</dwc:stateProvince>
+<dwc:typeStatus>paratype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/A94487F7E15AFFA5FF682EE9FEB45F2C#material_4">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>2003-05-20</dwc:collectingDate>
+<dwc:collectorName>C. Cortes &amp; Malaise M.</dwc:collectorName>
+<dwc:country>Colombia</dwc:country>
+<dwc:county>Cueva</dwc:county>
+<dwc:elevation>1950</dwc:elevation>
+<dwc:latitude>1.6166667</dwc:latitude>
+<dwc:location>Cabana Cedros</dwc:location>
+<dwc:longLatPrecision>1308</dwc:longLatPrecision>
+<dwc:longitude>-76.1</dwc:longitude>
+<dwc:municipality>Guacharos</dwc:municipality>
+<dwc:pageId>23</dwc:pageId>
+<dwc:pageNumber>24</dwc:pageNumber>
+<dwc:specimenCount>2</dwc:specimenCount>
+<dwc:specimenCount-female>1</dwc:specimenCount-female>
+<dwc:specimenCount-male>1</dwc:specimenCount-male>
+<dwc:stateProvince>Huila</dwc:stateProvince>
+<dwc:typeStatus>paratype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/256849/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/256819/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/256820/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/256821/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+</rdf:RDF>
+

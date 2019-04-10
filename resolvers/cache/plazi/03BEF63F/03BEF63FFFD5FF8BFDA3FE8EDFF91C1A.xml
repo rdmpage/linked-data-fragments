@@ -1,0 +1,165 @@
+<rdf:RDF xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:cnt="http://www.w3.org/2011/content#" xmlns:spm="http://rs.tdwg.org/ontology/voc/SpeciesProfileModel" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:sdo="http://schema.org/" xmlns:trt="http://plazi.org/vocab/treatment#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:fabio="http://purl.org/spar/fabio/" xmlns:cito="http://purl.org/spar/cito/" xmlns:sdd="http://tdwg.org/sdd#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dwcFP="http://filteredpush.org/ontologies/oa/dwcFP#">
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Treatment"/>
+<trt:definesTaxonConcept rdf:resource="http://zoobank.org/NomenclaturalActs/14DBD866-B599-4EBF-945B-5DD990BB4A7C"/>
+<trt:publishedIn rdf:resource="http://dx.doi.org/https://doi.org/10.5852/ejt.2019.513"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_1"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_2"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_3"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_4"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_5"/>
+<spm:hasInformation rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_6"/>
+<trt:hasMaterialCitation rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#materialCitation_1"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+<fabio:hasPart rdf:resource="https://zenodo.org/record/2634503/files/figure.png"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://dx.doi.org/https://doi.org/10.5852/ejt.2019.513">
+<dc:title>Tretogonia Melichar (Hemiptera: Cicadellidae: Proconiini): two new species from South Brazil and a redescription of T. dentalis Emmrich, 1988</dc:title>
+<dc:creator>Mejdalani, Gabriel</dc:creator>
+<dc:creator>Domahovski, Alexandre C.</dc:creator>
+<dc:creator>Rendón-Mera, Diana I.</dc:creator>
+<dc:creator>Cavichioli, Rodney R.</dc:creator>
+<rdf:type rdf:resource="fabio:JournalArticle"/>
+<bibo:journal>European Journal of Taxonomy</bibo:journal>
+<dc:date>2019</dc:date>
+<bibo:pubDate>2019-04-09</bibo:pubDate>
+<bibo:volume>513</bibo:volume>
+<bibo:pageStart>1</bibo:pageStart>
+<bibo:pageEnd>14</bibo:pageEnd>
+</rdf:Description>
+<rdf:Description rdf:about="http://zoobank.org/NomenclaturalActs/14DBD866-B599-4EBF-945B-5DD990BB4A7C">
+<rdf:type rdf:resource="http://filteredpush.org/ontologies/oa/dwcFP#Taxon"/>
+<dwc:authority>Mejdalani &amp; Domahovski &amp; Rendón-Mera &amp; Cavichioli, 2019</dwc:authority>
+<dwc:authorityName>Mejdalani &amp; Domahovski &amp; Rendón-Mera &amp; Cavichioli</dwc:authorityName>
+<dwc:authorityYear>2019</dwc:authorityYear>
+<dwc:box>[620,869,267,294]</dwc:box>
+<dwc:class>Insecta</dwc:class>
+<dwc:family>Cicadellidae</dwc:family>
+<dwc:genus>Tretogonia</dwc:genus>
+<dwc:higherTaxonomySource>GBIF</dwc:higherTaxonomySource>
+<dwc:kingdom>Animalia</dwc:kingdom>
+<dwc:order>Hemiptera</dwc:order>
+<dwc:pageId>3</dwc:pageId>
+<dwc:pageNumber>4</dwc:pageNumber>
+<dwc:phylum>Arthropoda</dwc:phylum>
+<dwc:rank>species</dwc:rank>
+<dwc:species>diminuta</dwc:species>
+<dwc:status>sp. nov.</dwc:status>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_1">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>  Figs 1–9</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_2">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Diagnosis Body short and robust ( Figs 1–2) in comparison to other species of the genus; in dorsal view, head triangular ( Fig. 1); pygofer with process serrated apically ( Fig. 5); aedeagus with distinct dorsoapical lobe ( Fig. 8).</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_3">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Etymology The specific epithet, ʻ  diminutaʼ, refers to the small body size, this being the smallest species of the genus.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_4">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Material examined    Holotype BRAZIL• ♂; “S. [ São] J. [ José] [dos] PINHAIS PR[ Stateof Paraná] / Brasil  II-1982/ CAVICHIOLI Leg”; DZUP 215385.   Type locality São José dos Pinhais, Paraná, South Brazil.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_5">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Measurement Body length: holotype( ♂) 8.2 mm.   Description  Male COLORATION. General coloration ( Figs 1−3) brown. Frons and clypeus yellowish-brown; lorum darker and gena pale yellow. Pronotum with anterior and posterior margins dark brown. Scutellum pale yellow. Forewing with lighter area along costal margin from base to approximately level of apex of clavus; membrane area translucent. Foreleg mostly reddish-brown; middle and hind legs mostly pale brown with darker areas. STRUCTURE. Head in dorsal view ( Figs 1−3): well produced anteriorly, triangular, median length of crown slightly more than ½ of interocular width and almost 3/10 of transocular width; without carina at transition from crown to face; ocelli located slightly before imaginary line between anterior eye angles, each ocellus approximately equidistant between midline of crown and adjacent anterior eye angle; frontogenal suture extending onto crown and almost attaining ocellus; coronal suture distinct basally. Antennal ledge slightly protuberant; in lateral view ( Fig. 2), distinctly bicarinate with surface between dorsal and ventral carinae depressed. Frons ( Figs 2−3) convex with distinct muscle impressions; texture of central portion granular; epistomal suture obsolete medially; clypeus laterally with basal protuberance; apex rounded. Thorax ( Figs 1–2) with pronotal width, between humeri, smaller than transocular width of head; pronotum elongate, attaining scutoscutellar suture; disk, except on anterior portion, with numerous large deep pits, without pubescence. Mesonotum with scutellum slightly transversely striate. Forewing ( Figs 1–2) with texture of clavus and corium coriaceous and coarsely pitted; four apical cells, base of fourth more proximal than base of third. Hind wing with vein R2+3 incomplete. Hind leg with femoral setal formula 2+1+1 or 2+1; knee almost attaining posterior margin of lateral pronotal lobe; first tarsomere with many small setae on plantar surface. TERMINALIA. Pygofer ( Fig. 4) moderately produced posteriorly; broadly rounded distally; with few macrosetae and dispersed microsetae; ventral margin ( Fig. 5) with process near half-length, curving inwards and serrated apically. Subgenital plate ( Fig. 6) not fused to its counterpart; triangular; with numerous dispersed microsetae and few macrosetae near apex; dorsal surface with small tooth at apical third; plate not extending as far posteriorly as pygofer apex. Style ( Fig. 7) elongate, almost attaining tooth of plate; apophysis with apical portion extremely expanded and forming pair of lateral teeth. Connective ( Fig. 7) Y-shaped; very short; stalk without median dorsal keel. Aedeagus symmetrical; shaft ( Fig. 8) short; curved basally upwards and then strongly curved posteriorad; dorsal margin notched near apex; apical margin emarginated, forming dorsal lobe; in ventral view ( Fig. 9), shaft expanded on distal half, constricted preapically and with pair of preapical short acute processes directed anteriorad.   Figs 1–9.  Tretogonia diminuta sp. nov., holotype, ♂ (DZUP 215385). 1. Body, dorsal view. 2. Body, lateral view. 3. Face, frontal view. 4. Pygofer, lateral view. 5. Pygofer, dorsal view. 6. Valve and subgenital plate, ventral view. 7. Connective and style, dorsal view. 8. Aedeagus and basal segment of anal tube, lateral view. 9. Aedeagus, ventral view. Scales in mm.  Female Unknown.</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#section_6">
+<rdf:type rdf:resource="spm:InfoItem"/>
+<spm:hasContent>   Remarks   Tretogonia diminuta sp. nov.can be distinguished from the other species of the genus by the combination of features provided in the diagnosis. The triangular head is useful for distinguishing   T. diminuta sp. nov.from the three species of the genus that are only known from females (   T. albicans,   T. conspicuaand  T. lateritia). In Young’s monograph, the new species keys to couplet six due to the absence of basal aedeagal processes ( Young 1968). This couplet establishes the distinction between   T. cinereaand three species positioned at couplets seven and eight (   T. punctatissima,   T. costalimaiand  T. tomentosa); in   T. cinereathe aedeagus has a pair of minute processes located on the basal half of the shaft ( Young 1968) instead of the preapical processes of  T. diminuta, whereas in   T. punctatissima,  T. costalimaiand   T. tomentosait has no processes ( Young 1968).</spm:hasContent>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#materialCitation_1">
+<rdf:type rdf:resource="cito:CitationAct"/>
+<cito:hasCitingEntity rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A"/>
+<cito:hasCitedEntity rdf:resource="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#material_1"/>
+<cito:hasCitationCharacterization rdf:resource="cito:citesAsEvidence"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://treatment.plazi.org/id/03BEF63FFFD5FF8BFDA3FE8EDFF91C1A#material_1">
+<rdf:type rdf:resource="http://plazi.org/vocab/treatment#Material"/>
+<dwc:collectingDate>1982-02</dwc:collectingDate>
+<dwc:collectionCode>DZUP</dwc:collectionCode>
+<dwc:country>Brazil</dwc:country>
+<dwc:county>Sao</dwc:county>
+<dwc:location>State</dwc:location>
+<dwc:municipality>Jose</dwc:municipality>
+<dwc:pageId>3</dwc:pageId>
+<dwc:pageNumber>4</dwc:pageNumber>
+<dwc:specimenCode>DZUP 215385</dwc:specimenCode>
+<dwc:specimenCount>1</dwc:specimenCount>
+<dwc:stateProvince>Para</dwc:stateProvince>
+<dwc:typeStatus>holotype</dwc:typeStatus>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://zenodo.org/record/2634503/files/figure.png">
+<rdf:type rdf:resource="http://purl.org/spar/fabio/Figure"/>
+</rdf:Description>
+</rdf:RDF>
+
