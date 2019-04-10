@@ -12,28 +12,44 @@ function reference_to_rdf($reference)
 	
 	$guid = $reference->guid;
 	
-	// DOI
-	if (preg_match('/^10\./', $guid))
+	$matched = false;
+	
+	if (!$matched)
 	{
-		$guid = 'https://doi.org/' . strtolower($guid);
+	
+		// DOI
+		if (preg_match('/^10\./', $guid))
+		{
+			$guid = 'https://doi.org/' . strtolower($guid);
 		
-		$sameAs[] = $guid;
-	}
-
-	// jstor
-	if (preg_match('/http:\/\/www.jstor.org/', $guid))
-	{
-		$guid = str_replace('http', 'https', $guid);
-		
-		$sameAs[] = $guid;
+			$sameAs[] = $guid;
+			$matched = true;
+		}
 	}
 	
-	// handle
-	if (preg_match('/^\d+\/[a-z0-9]+$/', $guid))
-	{
-		$guid = 'https://hdl.handle.net/' . strtolower($guid);
+	
+	if (!$matched)
+	{	
+		// jstor
+		if (preg_match('/https?:\/\/www.jstor.org/', $guid))
+		{
+			$guid = str_replace('http:', 'https:', $guid);
 		
-		$sameAs[] = $guid;
+			$sameAs[] = $guid;
+			$matched = true;
+		}
+	}
+	
+	if (!$matched)
+	{	
+		// handle
+		if (preg_match('/^\d+\/[a-z0-9]+$/', $guid))
+		{
+			$guid = 'https://hdl.handle.net/' . strtolower($guid);
+		
+			$sameAs[] = $guid;
+			$matched = true;
+		}
 	}
 	
 	
@@ -284,12 +300,12 @@ function reference_to_rdf($reference)
 			{
 				case 'LINK':
 					$triples[] = $s . ' <http://schema.org/url> ' . '"' . $link->url . '" .';				
-					$sameAs[] = $link->url;
+					//$sameAs[] = $link->url;
 					break;
 
 				// eventually handle this difefrently, cf Ozymandias
 				case 'PDF':
-					$sameAs[] = $link->url;
+					//$sameAs[] = $link->url;
 					break;
 			
 				default:
@@ -318,7 +334,7 @@ function reference_to_rdf($reference)
 					$triples[] = $identifier_id . ' <http://schema.org/value> ' . '"' . $identifier->id . '"' . '.';
 				
 					// Consistent with CiNii RDF
-					$sameAs[]  = 'https://ci.nii.ac.jp/naid/' . $identifier->id . '#article';
+					//$sameAs[]  = 'https://ci.nii.ac.jp/naid/' . $identifier->id . '#article';
 					break;
 			
 			
@@ -328,7 +344,7 @@ function reference_to_rdf($reference)
 					$triples[] = $identifier_id . ' <http://schema.org/propertyID> ' . '"doi"' . '.';
 					$triples[] = $identifier_id . ' <http://schema.org/value> ' . '"' . $identifier->id . '"' . '.';
 				
-					$sameAs[]  = 'https://doi.org/' . $identifier->id;
+					//$sameAs[]  = 'https://doi.org/' . $identifier->id;
 					break;
 					
 				case 'handle':
@@ -337,7 +353,7 @@ function reference_to_rdf($reference)
 					$triples[] = $identifier_id . ' <http://schema.org/propertyID> ' . '"handle"' . '.';
 					$triples[] = $identifier_id . ' <http://schema.org/value> ' . '"' . $identifier->id . '"' . '.';
 				
-					$sameAs[]  = 'https://hdl.handle.net/' . $identifier->id;
+					//$sameAs[]  = 'https://hdl.handle.net/' . $identifier->id;
 					break;
 
 				case 'jstor':
@@ -346,7 +362,7 @@ function reference_to_rdf($reference)
 					$triples[] = $identifier_id . ' <http://schema.org/propertyID> ' . '"jstor"' . '.';
 					$triples[] = $identifier_id . ' <http://schema.org/value> ' . '"' . $identifier->id . '"' . '.';
 				
-					$sameAs[]  = 'https://www.jstor.org/stable/' . $identifier->id;
+					//$sameAs[]  = 'https://www.jstor.org/stable/' . $identifier->id;
 					break;
 			
 			

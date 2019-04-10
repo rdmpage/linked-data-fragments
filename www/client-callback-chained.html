@@ -551,11 +551,11 @@ var template_person = `
 		<ul>
 		<% for(var i in record.created) {%>
 			<li>
-			<a href="?uri=<%=encodeURIComponent(i)%>">
-			
+			<a href="?uri=<%=encodeURIComponent(i)%>">			
 			<% if (record.created[i].name) {%>
 				<%=Object.values(record.created[i].name).join(' / ')%>
 			<% } %>
+			</a>
 			</li>
 		<% } %>	
 		</ul>
@@ -628,7 +628,7 @@ var template_article = `
 				<a href="?uri=<%=encodeURIComponent(i)%>">
 					<%=Object.values(record.creators[i].name).join(' / ')%>
 				</a>	
-				<% if(i.match(/orcid.org/)) {%>
+				<% if(i.match('orcid.org/0000')) {%>
 					<img src="images/orcid_16x16.png" />
 				<% } %>							
 			</li>
@@ -970,6 +970,42 @@ var template_taxon_name = `
 
 
 //----------------------------------------------------------------------------------------
+function  detect_language(s) {
+  var language = null;
+  var matched = 0;
+  var parts =[];
+  
+  var regexp = [];
+  
+  // https://gist.github.com/ryanmcgrath/982242
+  regexp['ja'] = /[\u3000-\u303F]|[\u3040-\u309F]|[\u30A0-\u30FF]|[\uFF00-\uFFEF]|[\u4E00-\u9FAF]|[\u2605-\u2606]|[\u2190-\u2195]|\u203B/g; 
+  // http://hjzhao.blogspot.co.uk/2015/09/javascript-detect-chinese-character.html
+  regexp['zh'] = /[\u4E00-\uFA29]/g; 
+  // http://stackoverflow.com/questions/32709687/js-check-if-string-contains-only-cyrillic-symbols-and-spaces
+  regexp['ru'] = /[\u0400-\u04FF]/g; 
+  
+  for (var i in regexp) {
+    parts = s.match(regexp[i]);
+    
+	  if (parts != null) {
+		if (parts.length > matched) {
+		  language = i;
+		  matched = parts.length;
+		}
+	  }
+  }
+  
+  // require a minimum matching
+  if (matched < 2) {
+    language = null;
+  }
+  
+  return language;
+  
+}
+
+
+//----------------------------------------------------------------------------------------
 function render() {
 
 	// Render template 	
@@ -988,6 +1024,14 @@ function clean_value(value) {
 	if (m) {
 		value = {};
 		value[m[2]] = m[1];
+	} else {
+		// Handle cases (e.g., CiNii) where language flag isn't set by default
+		var str = value;
+		var language = detect_language(str);
+		if (language) {		
+			value = {};
+			value[language] = str;
+		}
 	}
 	
 	return value;

@@ -1,0 +1,2231 @@
+{
+  "orcid-identifier" : {
+    "uri" : "https://orcid.org/0000-0003-1376-0028",
+    "path" : "0000-0003-1376-0028",
+    "host" : "orcid.org"
+  },
+  "preferences" : {
+    "locale" : "EN"
+  },
+  "history" : {
+    "creation-method" : "MEMBER_REFERRED",
+    "completion-date" : null,
+    "submission-date" : {
+      "value" : 1432932941532
+    },
+    "last-modified-date" : {
+      "value" : 1550645669286
+    },
+    "claimed" : true,
+    "source" : null,
+    "deactivation-date" : null,
+    "verified-email" : true,
+    "verified-primary-email" : true
+  },
+  "person" : {
+    "last-modified-date" : {
+      "value" : 1517873256636
+    },
+    "name" : {
+      "created-date" : {
+        "value" : 1460763636401
+      },
+      "last-modified-date" : {
+        "value" : 1460763636401
+      },
+      "given-names" : {
+        "value" : "Yaowu"
+      },
+      "family-name" : {
+        "value" : "Yuan"
+      },
+      "credit-name" : null,
+      "source" : null,
+      "visibility" : "PUBLIC",
+      "path" : "0000-0003-1376-0028"
+    },
+    "other-names" : {
+      "last-modified-date" : null,
+      "other-name" : [ ],
+      "path" : "/0000-0003-1376-0028/other-names"
+    },
+    "biography" : {
+      "created-date" : {
+        "value" : 1460763636403
+      },
+      "last-modified-date" : {
+        "value" : 1460763636403
+      },
+      "content" : null,
+      "visibility" : "PUBLIC",
+      "path" : "/0000-0003-1376-0028/biography"
+    },
+    "researcher-urls" : {
+      "last-modified-date" : {
+        "value" : 1484838853354
+      },
+      "researcher-url" : [ {
+        "created-date" : {
+          "value" : 1433523662853
+        },
+        "last-modified-date" : {
+          "value" : 1484838853354
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0003-1376-0028",
+            "path" : "0000-0003-1376-0028",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Yaowu Yuan"
+          }
+        },
+        "url-name" : "Yuan Lab",
+        "url" : {
+          "value" : "http://monkeyflower.uconn.edu/"
+        },
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0003-1376-0028/researcher-urls/468199",
+        "put-code" : 468199,
+        "display-index" : 1
+      } ],
+      "path" : "/0000-0003-1376-0028/researcher-urls"
+    },
+    "emails" : {
+      "last-modified-date" : null,
+      "email" : [ ],
+      "path" : "/0000-0003-1376-0028/email"
+    },
+    "addresses" : {
+      "last-modified-date" : null,
+      "address" : [ ],
+      "path" : "/0000-0003-1376-0028/address"
+    },
+    "keywords" : {
+      "last-modified-date" : {
+        "value" : 1433522803137
+      },
+      "keyword" : [ {
+        "created-date" : {
+          "value" : 1433522803137
+        },
+        "last-modified-date" : {
+          "value" : 1433522803137
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0003-1376-0028",
+            "path" : "0000-0003-1376-0028",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Yaowu Yuan"
+          }
+        },
+        "content" : "Flower development, evolution, pigmentation, speciation, adaptation, genetics/genomics, plant phylogenetics, transposable elements, plant-pollinator interactions",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0003-1376-0028/keywords/92007",
+        "put-code" : 92007,
+        "display-index" : 0
+      } ],
+      "path" : "/0000-0003-1376-0028/keywords"
+    },
+    "external-identifiers" : {
+      "last-modified-date" : {
+        "value" : 1517873256636
+      },
+      "external-identifier" : [ {
+        "created-date" : {
+          "value" : 1433523650411
+        },
+        "last-modified-date" : {
+          "value" : 1517873256636
+        },
+        "source" : {
+          "source-orcid" : null,
+          "source-client-id" : {
+            "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+            "path" : "0000-0002-5982-8983",
+            "host" : "orcid.org"
+          },
+          "source-name" : {
+            "value" : "Scopus - Elsevier"
+          }
+        },
+        "external-id-type" : "Scopus Author ID",
+        "external-id-value" : "15062064700",
+        "external-id-url" : {
+          "value" : "http://www.scopus.com/inward/authorDetails.url?authorID=15062064700&partnerID=MN8TOARS"
+        },
+        "external-id-relationship" : "SELF",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0003-1376-0028/external-identifiers/282743",
+        "put-code" : 282743,
+        "display-index" : 0
+      } ],
+      "path" : "/0000-0003-1376-0028/external-identifiers"
+    },
+    "path" : "/0000-0003-1376-0028/person"
+  },
+  "activities-summary" : {
+    "last-modified-date" : {
+      "value" : 1543087066133
+    },
+    "educations" : {
+      "last-modified-date" : {
+        "value" : 1484838939278
+      },
+      "education-summary" : [ {
+        "created-date" : {
+          "value" : 1432947980957
+        },
+        "last-modified-date" : {
+          "value" : 1484838939278
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0003-1376-0028",
+            "path" : "0000-0003-1376-0028",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Yaowu Yuan"
+          }
+        },
+        "department-name" : "Biology",
+        "role-title" : "Ph.D",
+        "start-date" : {
+          "year" : {
+            "value" : "2004"
+          },
+          "month" : {
+            "value" : "09"
+          },
+          "day" : {
+            "value" : "15"
+          }
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2008"
+          },
+          "month" : {
+            "value" : "12"
+          },
+          "day" : {
+            "value" : "15"
+          }
+        },
+        "organization" : {
+          "name" : "University of Washington",
+          "address" : {
+            "city" : "Seattle",
+            "region" : "WA",
+            "country" : "US"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "7284",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 942205,
+        "path" : "/0000-0003-1376-0028/education/942205"
+      }, {
+        "created-date" : {
+          "value" : 1432947914715
+        },
+        "last-modified-date" : {
+          "value" : 1432947934697
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0003-1376-0028",
+            "path" : "0000-0003-1376-0028",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Yaowu Yuan"
+          }
+        },
+        "department-name" : null,
+        "role-title" : "Bachelor of Science",
+        "start-date" : {
+          "year" : {
+            "value" : "2000"
+          },
+          "month" : {
+            "value" : "09"
+          },
+          "day" : {
+            "value" : "01"
+          }
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2004"
+          },
+          "month" : {
+            "value" : "07"
+          },
+          "day" : {
+            "value" : "01"
+          }
+        },
+        "organization" : {
+          "name" : "Sichuan University",
+          "address" : {
+            "city" : "Chengdu",
+            "region" : "Sichuan",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "12530",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 942202,
+        "path" : "/0000-0003-1376-0028/education/942202"
+      } ],
+      "path" : "/0000-0003-1376-0028/educations"
+    },
+    "employments" : {
+      "last-modified-date" : {
+        "value" : 1484838901891
+      },
+      "employment-summary" : [ {
+        "created-date" : {
+          "value" : 1432948131894
+        },
+        "last-modified-date" : {
+          "value" : 1432948131894
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0003-1376-0028",
+            "path" : "0000-0003-1376-0028",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Yaowu Yuan"
+          }
+        },
+        "department-name" : "Ecology and Evolutionary Biology",
+        "role-title" : "Assistant Professor",
+        "start-date" : {
+          "year" : {
+            "value" : "2013"
+          },
+          "month" : {
+            "value" : "08"
+          },
+          "day" : {
+            "value" : "23"
+          }
+        },
+        "end-date" : null,
+        "organization" : {
+          "name" : "University of Connecticut",
+          "address" : {
+            "city" : "Storrs",
+            "region" : "CT",
+            "country" : "US"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "7712",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 942209,
+        "path" : "/0000-0003-1376-0028/employment/942209"
+      }, {
+        "created-date" : {
+          "value" : 1432948084122
+        },
+        "last-modified-date" : {
+          "value" : 1484838901891
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0003-1376-0028",
+            "path" : "0000-0003-1376-0028",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Yaowu Yuan"
+          }
+        },
+        "department-name" : "Biology",
+        "role-title" : "Research Associate",
+        "start-date" : {
+          "year" : {
+            "value" : "2011"
+          },
+          "month" : {
+            "value" : "01"
+          },
+          "day" : {
+            "value" : "05"
+          }
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2013"
+          },
+          "month" : {
+            "value" : "08"
+          },
+          "day" : {
+            "value" : "22"
+          }
+        },
+        "organization" : {
+          "name" : "University of Washington",
+          "address" : {
+            "city" : "Seattle",
+            "region" : "WA",
+            "country" : "US"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "7284",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 942207,
+        "path" : "/0000-0003-1376-0028/employment/942207"
+      }, {
+        "created-date" : {
+          "value" : 1432948045223
+        },
+        "last-modified-date" : {
+          "value" : 1432948045223
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0003-1376-0028",
+            "path" : "0000-0003-1376-0028",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Yaowu Yuan"
+          }
+        },
+        "department-name" : "Plant Biology",
+        "role-title" : "Post-Doctoral Associate",
+        "start-date" : {
+          "year" : {
+            "value" : "2009"
+          },
+          "month" : {
+            "value" : "01"
+          },
+          "day" : {
+            "value" : "05"
+          }
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2010"
+          },
+          "month" : {
+            "value" : "11"
+          },
+          "day" : {
+            "value" : "15"
+          }
+        },
+        "organization" : {
+          "name" : "University of Georgia",
+          "address" : {
+            "city" : "Athens",
+            "region" : "GA",
+            "country" : "US"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "1355",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 942206,
+        "path" : "/0000-0003-1376-0028/employment/942206"
+      } ],
+      "path" : "/0000-0003-1376-0028/employments"
+    },
+    "fundings" : {
+      "last-modified-date" : null,
+      "group" : [ ],
+      "path" : "/0000-0003-1376-0028/fundings"
+    },
+    "peer-reviews" : {
+      "last-modified-date" : null,
+      "group" : [ ],
+      "path" : "/0000-0003-1376-0028/peer-reviews"
+    },
+    "works" : {
+      "last-modified-date" : {
+        "value" : 1543087066133
+      },
+      "group" : [ {
+        "last-modified-date" : {
+          "value" : 1543087066133
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/nph.15560",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1111/nph.15560"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 51001308,
+          "created-date" : {
+            "value" : 1543087066133
+          },
+          "last-modified-date" : {
+            "value" : 1543087066133
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Monkeyflowers (Mimulus ): new model for plant developmental genetics and evo-devo"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/nph.15560",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1111/nph.15560"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2018"
+            },
+            "month" : {
+              "value" : "11"
+            },
+            "day" : {
+              "value" : "24"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/51001308",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1512695957058
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1534/g3.117.300336",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1534/g3.117.300336"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 39295847,
+          "created-date" : {
+            "value" : 1512395907382
+          },
+          "last-modified-date" : {
+            "value" : 1512695957058
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Molecular Basis of Overdominance at a Flower Color Locus"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1534/g3.117.300336",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1534/g3.117.300336"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2017"
+            },
+            "month" : {
+              "value" : "12"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/39295847",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1512136766028
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1105/tpc.17.00010",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1105/tpc.17.00010"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 39209153,
+          "created-date" : {
+            "value" : 1512136766028
+          },
+          "last-modified-date" : {
+            "value" : 1512136766028
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Subgenome Dominance in an Interspecific Hybrid, Synthetic Allopolyploid, and a 140-Year-Old Naturally Established Neo-Allopolyploid Monkeyflower"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1105/tpc.17.00010",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1105/tpc.17.00010"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2017"
+            },
+            "month" : {
+              "value" : "09"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/39209153",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1536181591518
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1101/171249",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1101/171249"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 39209152,
+          "created-date" : {
+            "value" : 1512136765893
+          },
+          "last-modified-date" : {
+            "value" : 1536181591518
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "A Tetratricopeptide Repeat Protein Regulates Carotenoid Biosynthesis and Chromoplast Development in Monkeyflowers (Mimulus)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1101/171249",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1101/171249"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "OTHER",
+          "publication-date" : {
+            "year" : {
+              "value" : "2017"
+            },
+            "month" : {
+              "value" : "08"
+            },
+            "day" : {
+              "value" : "01"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/39209152",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1513949724923
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/nph.14281",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1111/nph.14281"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 39898069,
+          "created-date" : {
+            "value" : 1513949724921
+          },
+          "last-modified-date" : {
+            "value" : 1513949724923
+          },
+          "source" : {
+            "source-orcid" : {
+              "uri" : "https://orcid.org/0000-0003-1376-0028",
+              "path" : "0000-0003-1376-0028",
+              "host" : "orcid.org"
+            },
+            "source-client-id" : null,
+            "source-name" : {
+              "value" : "Yaowu Yuan"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "A dominant-negative actin mutation alters corolla tube width and pollinator visitation in Mimulus lewisii"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/nph.14281",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1111/nph.14281"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2017"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/39898069",
+          "display-index" : "1"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291478590
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/nph.13647",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84954395771",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 27117076,
+          "created-date" : {
+            "value" : 1475291478590
+          },
+          "last-modified-date" : {
+            "value" : 1475291478590
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "An R2R3-MYB transcription factor regulates carotenoid pigmentation in Mimulus lewisii flowers"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/nph.13647",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84954395771",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2016"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/27117076",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291478573
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84959452196",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1073/pnas.1515294113",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 27117074,
+          "created-date" : {
+            "value" : 1475291478573
+          },
+          "last-modified-date" : {
+            "value" : 1475291478573
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Competition between anthocyanin and flavonol biosynthesis produces spatial pattern variation of floral pigments between Mimulus species"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1073/pnas.1515294113",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84959452196",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2016"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/27117074",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291478582
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1007/s00299-015-1919-1",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84955241822",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 27117075,
+          "created-date" : {
+            "value" : 1475291478582
+          },
+          "last-modified-date" : {
+            "value" : 1475291478582
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Testing the utility of fluorescent proteins in Mimulus lewisii by an Agrobacterium-mediated transient assay"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1007/s00299-015-1919-1",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84955241822",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2016"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/27117075",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477343
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1016/j.abb.2015.03.006",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84925355786",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819088,
+          "created-date" : {
+            "value" : 1433523292478
+          },
+          "last-modified-date" : {
+            "value" : 1475291455686
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Carotenoid composition of the flowers of Mimulus lewisii and related species: Implications regarding the prevalence and origin of two unique, allenic pigments"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1016/j.abb.2015.03.006",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : {
+              "value" : "05"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819088",
+          "display-index" : "0"
+        }, {
+          "put-code" : 16819153,
+          "created-date" : {
+            "value" : 1433523662951
+          },
+          "last-modified-date" : {
+            "value" : 1475291477343
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Carotenoid composition of the flowers of Mimulus lewisii and related species: Implications regarding the prevalence and origin of two unique, allenic pigments"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1016/j.abb.2015.03.006",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84925355786",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819153",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477415
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84901447503",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1093/aob/mcu061",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819256,
+          "created-date" : {
+            "value" : 1433523664122
+          },
+          "last-modified-date" : {
+            "value" : 1475291477415
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Phylogenetic analyses provide the first insights into the evolution of OVATE family proteins in land plants"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1093/aob/mcu061",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84901447503",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819256",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477351
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/nph.12968",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84912003599",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819257,
+          "created-date" : {
+            "value" : 1433523664125
+          },
+          "last-modified-date" : {
+            "value" : 1475291477351
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Transcriptional control of floral anthocyanin pigmentation in monkeyflowers (Mimulus)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/nph.12968",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84912003599",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819257",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477445
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1534/genetics.113.151225",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84878545849",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819260,
+          "created-date" : {
+            "value" : 1433523664135
+          },
+          "last-modified-date" : {
+            "value" : 1475291477445
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Bulk segregant analysis of an induced floral mutant identifies a MIXTA-like R2R3 MYB controlling nectar guide formation in Mimulus lewisii"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1534/genetics.113.151225",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84878545849",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819260",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477361
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84888352726",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1073/pnas.1319032110",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819258,
+          "created-date" : {
+            "value" : 1433523664129
+          },
+          "last-modified-date" : {
+            "value" : 1475291477361
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Fine-scale variation in meiotic recombination in Mimulus inferred from population shotgun sequencing"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1073/pnas.1319032110",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84888352726",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819258",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477382
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1534/genetics.112.146852",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84877096714",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819261,
+          "created-date" : {
+            "value" : 1433523664138
+          },
+          "last-modified-date" : {
+            "value" : 1475291477382
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Genetic dissection of a major anthocyanin QTL contributing to pollinator-mediated reproductive isolation between sister species of Mimulus"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1534/genetics.112.146852",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84877096714",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819261",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477437
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1016/j.pbi.2013.05.004",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-84881610136",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819259,
+          "created-date" : {
+            "value" : 1433523664132
+          },
+          "last-modified-date" : {
+            "value" : 1475291477437
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "The genetic control of flower-pollinator specificity"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1016/j.pbi.2013.05.004",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-84881610136",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819259",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477368
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-79956364806",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1073/pnas.1104208108",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819262,
+          "created-date" : {
+            "value" : 1433523664141
+          },
+          "last-modified-date" : {
+            "value" : 1475291477368
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "The catalytic domain of all eukaryotic cut-and-paste transposase superfamilies"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1073/pnas.1104208108",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-79956364806",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819262",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477347
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-78049314173",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3732/ajb.1000144",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819263,
+          "created-date" : {
+            "value" : 1433523664145
+          },
+          "last-modified-date" : {
+            "value" : 1475291477347
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "A molecular phylogeny and classification of Verbenaceae"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3732/ajb.1000144",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-78049314173",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819263",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477451
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1016/j.ympev.2009.08.029",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-70649087039",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819266,
+          "created-date" : {
+            "value" : 1433523664156
+          },
+          "last-modified-date" : {
+            "value" : 1475291477451
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "An empirical demonstration of using pentatricopeptide repeat (PPR) genes as plant phylogenetic tools: Phylogeny of Verbenaceae and the Verbena complex"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1016/j.ympev.2009.08.029",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-70649087039",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819266",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477398
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-76849097778",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1016/j.yqres.2009.10.001",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819264,
+          "created-date" : {
+            "value" : 1433523664148
+          },
+          "last-modified-date" : {
+            "value" : 1475291477398
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Anthropogenic hillslope terraces and swidden agriculture in Jiuzhaigou National Park, northern Sichuan, China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1016/j.yqres.2009.10.001",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-76849097778",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819264",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477339
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-77149121107",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819265,
+          "created-date" : {
+            "value" : 1433523664152
+          },
+          "last-modified-date" : {
+            "value" : 1475291477339
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Further disintegration and redefinition of Clerodendrum (Lamiaceae): Implications for the understanding of the evolution of an intriguing breeding strategy"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-77149121107",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819265",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477456
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1600/036364409790139691",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-73949092035",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819267,
+          "created-date" : {
+            "value" : 1433523664160
+          },
+          "last-modified-date" : {
+            "value" : 1475291477456
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Reassignment of species of paraphyletic Junellia s. l. to the new genus Mulguraea (Verbenaceae) and new circumscription of genus Junellia: Molecular and morphological congruence"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1600/036364409790139691",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-73949092035",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2009"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819267",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477407
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-61649115458",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/j.1469-8137.2008.02739.x",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819268,
+          "created-date" : {
+            "value" : 1433523664164
+          },
+          "last-modified-date" : {
+            "value" : 1475291477407
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "The pentatricopeptide repeat (PPR) gene family, a tremendous resource for plant phylogenetic studies"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/j.1469-8137.2008.02739.x",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-61649115458",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2009"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819268",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477374
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1016/j.ympev.2008.04.004",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-44949253887",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819270,
+          "created-date" : {
+            "value" : 1433523664170
+          },
+          "last-modified-date" : {
+            "value" : 1475291477374
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "A species-level phylogenetic study of the Verbena complex (Verbenaceae) indicates two independent intergeneric chloroplast transfers"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1016/j.ympev.2008.04.004",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-44949253887",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819270",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477430
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-51349110642",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3732/ajb.0800133",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819269,
+          "created-date" : {
+            "value" : 1433523664167
+          },
+          "last-modified-date" : {
+            "value" : 1475291477430
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Evolution and phylogenetic utility of the PHOT gene duplicates in the Verbena complex (Verbenaceae): Dramatic intron size variation and footprint of ancestral recombination"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3732/ajb.0800133",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-51349110642",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819269",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1475291477357
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1093/molbev/msl099",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "eid",
+            "external-id-value" : "2-s2.0-33750961448",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 16819271,
+          "created-date" : {
+            "value" : 1433523664178
+          },
+          "last-modified-date" : {
+            "value" : 1475291477357
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-5982-8983",
+              "path" : "0000-0002-5982-8983",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Scopus - Elsevier"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Tracking ancient polyploids: A retroposon insertion reveals an extinct diploid ancestor in the polyploid origin of belladonna"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1093/molbev/msl099",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "eid",
+              "external-id-value" : "2-s2.0-33750961448",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2006"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0003-1376-0028/work/16819271",
+          "display-index" : "0"
+        } ]
+      } ],
+      "path" : "/0000-0003-1376-0028/works"
+    },
+    "path" : "/0000-0003-1376-0028/activities"
+  },
+  "path" : "/0000-0003-1376-0028"
+}

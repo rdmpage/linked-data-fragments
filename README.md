@@ -64,7 +64,7 @@ CouchDB list view can be used to mimic SPARQL DESCRIBE by simply returning sourc
 
 ### IPNI authors
 
-The problems with IPNI author teams is that the order of an author is treated as a global property of that author (team member), not specific to a particular team for a name. Perhaps could achieve this using named graphs where each IPNI LSID is in its own named graph, but that won’t work for triples. IPNI really needs the notion of a “role”, or we have to use non-RDF means to help do the author matching.
+The problem with IPNI author teams is that the order of an author is treated as a global property of that author (team member), not specific to a particular team for a name. Perhaps could achieve this using named graphs where each IPNI LSID is in its own named graph, but that won’t work for triples. IPNI really needs the notion of a “role”, or we have to use non-RDF means to help do the author matching.
 
 Updated: this is an bug in the way IPNI stores this info, we can program around this.
 
@@ -109,6 +109,69 @@ where
 	FILTER (?ipnirole =  "Publishing Author")
 }
 ```
+
+Match IPNI author to ORCID via publications
+```
+prefix tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+prefix tm: <http://rs.tdwg.org/ontology/voc/Team#>
+prefix tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+prefix tp: <http://rs.tdwg.org/ontology/voc/Person#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>	
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT ?ipniAuthor ?person ?roleName ?familyName ?ipniAuthorName ?name
+WHERE
+{
+	# publication of name
+	<urn:lsid:ipni.org:names:77133624-1> tcom:publishedInCitation ?publication .
+	?publication schema:creator ?role  .
+	?role  rdf:type schema:Role . 
+	?role schema:roleName ?roleName  . # same as IPNI tm:index
+	?role schema:creator ?person  .
+	?person rdf:type schema:Person .
+	?person schema:name ?name .
+	?person schema:givenName ?givenName .
+	?person schema:familyName ?familyName .
+	
+
+	#ipni authors in team
+	<urn:lsid:ipni.org:names:77133624-1> tn:authorteam ?team .
+	?team tm:hasMember ?member .
+	?member tm:role ?ipnirole .
+	?member tm:index ?roleName . # same as roleName
+	?member tm:member ?ipniAuthor .
+
+	?ipniAuthor dc:title ?ipniAuthorName .
+
+	?ipniAuthor tp:alias ?alias .
+	?alias tp:surname ?familyName . # same as publication
+
+	FILTER (?ipnirole =  "Combination Author")
+	FILTER regex(?person ,"orcid")
+}
+```
+
+### Plazi
+
+Plazi RDF is a bit ugly, lots of vocabularies, inconsistent representation of DOIs, doesn't use Zenodo DOIs to link to figures, completely made up Darwin Core terms (dwc:box!?) etc. But could be used to build citation data for collections, e.g.
+
+```
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX trt: <http://plazi.org/vocab/treatment#>
+SELECT *
+WHERE {
+?specimen  dwc:collectionCode ?collectionCode .
+?citation cito:hasCitedEntity ?specimen .
+?citation cito:hasCitingEntity ?work .
+?work trt:publishedIn ?id .
+}
+```
+
+This query gets details on what articles include material from collections (identified by ```dwc:collectionCode```).
 
 
 ## Related projects

@@ -3,6 +3,7 @@
 // Convert CSL-JSON to JSON-LD
 
 //----------------------------------------------------------------------------------------
+// Parse unstructured citation from CrossRef
 function parse_unstructured(&$cited)
 {
 	$matched = false;
@@ -35,12 +36,10 @@ function parse_unstructured(&$cited)
 					}
 				}
 			}
-		
-		
 		}
-	}	
-
-
+	}
+	
+	// to do: other publisher's formats
 }
 
 //----------------------------------------------------------------------------------------
@@ -87,7 +86,7 @@ function csl_to_json($obj)
 					}
 					else
 					{
-						$author_id = $jsonld->{'@id'} . '#author_' . ($i + 1);
+						$author_id = $jsonld->{'@id'} . '#creator/' . ($i + 1);
 					}
 				
 					$creator = new stdclass;				
@@ -115,12 +114,12 @@ function csl_to_json($obj)
 				
 					if (1)
 					{
-						$role_id = $jsonld->{'@id'} . '#role_' . ($i + 1);
+						$role_id = $jsonld->{'@id'} . '#role/' . ($i + 1);
 						$role = new stdclass;
 						$role->{'@id'} = $role_id;
 						$role->{'@type'} = 'Role';
 					
-						$role->roleName = ($i + 1);
+						$role->roleName = (string)($i + 1); // cast to string
 						$role->creator = $creator;
 					
 						$jsonld->creator[] = $role;
@@ -151,6 +150,16 @@ function csl_to_json($obj)
 				break;	
 	
 			case 'DOI':
+				$identifier = new stdclass;
+				$identifier->{'@type'} = 'PropertyValue';
+				$identifier->propertyID = 'doi';
+				$identifier->value = strtolower($v);
+				
+				if (!isset($jsonld->identifier))
+				{
+					$jsonld->identifier = array();
+				}
+				$jsonld->identifier[] = $identifier;
 				break;
 			
 			case 'ISSN':
@@ -361,6 +370,7 @@ function csl_to_json($obj)
 				{
 					$jsonld->name = $v;
 				}
+				$jsonld->name = strip_tags($jsonld->name);
 				break;			
 			
 			case 'type':

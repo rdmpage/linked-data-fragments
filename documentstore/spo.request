@@ -20,7 +20,7 @@
 	<array>
 		<dict>
 			<key>inUse</key>
-			<true/>
+			<false/>
 			<key>parameter</key>
 			<string>startkey</string>
 			<key>value</key>
@@ -28,11 +28,43 @@
 		</dict>
 		<dict>
 			<key>inUse</key>
-			<true/>
+			<false/>
 			<key>parameter</key>
 			<string>endkey</string>
 			<key>value</key>
 			<string>["urn:lsid:ipni.org:names:77111843-1", {}]</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<false/>
+			<key>parameter</key>
+			<string>startkey</string>
+			<key>value</key>
+			<string>["https://orcid.org/0000-0002-7643-2112"]</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<false/>
+			<key>parameter</key>
+			<string>endkey</string>
+			<key>value</key>
+			<string>["https://orcid.org/0000-0002-7643-2112",{}]</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<true/>
+			<key>parameter</key>
+			<string>startkey</string>
+			<key>value</key>
+			<string>["https://orcid.org/0000-0002-0876-3286"]</string>
+		</dict>
+		<dict>
+			<key>inUse</key>
+			<true/>
+			<key>parameter</key>
+			<string>endkey</string>
+			<key>value</key>
+			<string>["https://orcid.org/0000-0002-0876-3286",{}]</string>
 		</dict>
 		<dict>
 			<key>inUse</key>

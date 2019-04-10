@@ -1,0 +1,5988 @@
+{
+  "orcid-identifier" : {
+    "uri" : "https://orcid.org/0000-0002-7643-2112",
+    "path" : "0000-0002-7643-2112",
+    "host" : "orcid.org"
+  },
+  "preferences" : {
+    "locale" : "EN"
+  },
+  "history" : {
+    "creation-method" : "DIRECT",
+    "completion-date" : null,
+    "submission-date" : {
+      "value" : 1392457201504
+    },
+    "last-modified-date" : {
+      "value" : 1540366746431
+    },
+    "claimed" : true,
+    "source" : null,
+    "deactivation-date" : null,
+    "verified-email" : true,
+    "verified-primary-email" : true
+  },
+  "person" : {
+    "last-modified-date" : {
+      "value" : 1517869567419
+    },
+    "name" : {
+      "created-date" : {
+        "value" : 1460761397141
+      },
+      "last-modified-date" : {
+        "value" : 1460761397141
+      },
+      "given-names" : {
+        "value" : "Wen-Bin"
+      },
+      "family-name" : {
+        "value" : "Yu"
+      },
+      "credit-name" : null,
+      "source" : null,
+      "visibility" : "PUBLIC",
+      "path" : "0000-0002-7643-2112"
+    },
+    "other-names" : {
+      "last-modified-date" : null,
+      "other-name" : [ ],
+      "path" : "/0000-0002-7643-2112/other-names"
+    },
+    "biography" : {
+      "created-date" : {
+        "value" : 1460761397143
+      },
+      "last-modified-date" : {
+        "value" : 1460761397143
+      },
+      "content" : "I am very interested in evolutionary biology of flowering plants. Since 2004, the beginning of my Master study, I am working on a large and hemiparasitic genus Pedicularis L. (Orobanchaceae). Pedicualris, approximately 600 species, is a species-rich angiosperm genus, and its flowers are dramatic variations in forms and tube-lengths of corolla. This genus provides outstanding opportunities to study speciation mediated by flower divergence and plant-pollinator co-adaptation. During the graduate studies, I got good training in plant taxonomy and systematics, pollination biology, phylogeny and population genetics. I am also interested in botanical nomenclature. Some nomenclatural issues of Chinese seed plants have been resolved, but some issues I found still need to resolve in the future. Since 2004, I have organized/participated the fieldwork in the Himalaya-Hengduan Mountains more than 10 times, and collected thousands of gatherings of specimens, tissues and seeds. I am familiar with the Floras of alpine region in southwestern China, especially for the taxonomy and distribution of Pedicularis. \n\n　　Recently, I focus on comprehensive phylogeny of worldwide Pedicularis using nuclear (ITS, AroB, AT103 and Eif3E) and plastid (matK, rps16 and trnL-F), collaborating with Dr. Richard Ree. Phylogenetic trees will be employed to trace diversification of morphological characters, and to reconstruct biogeographic history. To date, more than 400 species are sampled and sequenced. In addition, Pedicularis section Cyathophora is a young clade, and phylogenetic relationship is not well resolved, and topologies are conflict between nrITS and plastid genes. Therefore, we perform the high-throughput Genotyping-by-Sequencing to infer phylogeny and detect hybridization for this section, with an emphasis on P. rex complex. The preliminary phylogenetic analysis resolved the systematic status of P. thamnophila and the unknown taxon, and low gene flow has been detected between species. In addition, I am also working on phylogeny and systematics of new Orobanchaceae in China, with an emphasis on the plastid genome evolution transition from autrophism to parasitism.",
+      "visibility" : "PUBLIC",
+      "path" : "/0000-0002-7643-2112/biography"
+    },
+    "researcher-urls" : {
+      "last-modified-date" : {
+        "value" : 1404181412386
+      },
+      "researcher-url" : [ {
+        "created-date" : {
+          "value" : 1404181412386
+        },
+        "last-modified-date" : {
+          "value" : 1404181412386
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "url-name" : null,
+        "url" : {
+          "value" : "www.wbyu.net"
+        },
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/researcher-urls/285165",
+        "put-code" : 285165,
+        "display-index" : 0
+      } ],
+      "path" : "/0000-0002-7643-2112/researcher-urls"
+    },
+    "emails" : {
+      "last-modified-date" : null,
+      "email" : [ ],
+      "path" : "/0000-0002-7643-2112/email"
+    },
+    "addresses" : {
+      "last-modified-date" : null,
+      "address" : [ ],
+      "path" : "/0000-0002-7643-2112/address"
+    },
+    "keywords" : {
+      "last-modified-date" : {
+        "value" : 1450919024981
+      },
+      "keyword" : [ {
+        "created-date" : {
+          "value" : 1450918990999
+        },
+        "last-modified-date" : {
+          "value" : 1450918990999
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "content" : "Pedicularis",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/keywords/246381",
+        "put-code" : 246381,
+        "display-index" : 0
+      }, {
+        "created-date" : {
+          "value" : 1450918991003
+        },
+        "last-modified-date" : {
+          "value" : 1450918991003
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "content" : "Orobanchaceae",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/keywords/246382",
+        "put-code" : 246382,
+        "display-index" : 0
+      }, {
+        "created-date" : {
+          "value" : 1450919024969
+        },
+        "last-modified-date" : {
+          "value" : 1450919024969
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "content" : "Nomenclature",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/keywords/246114",
+        "put-code" : 246114,
+        "display-index" : 0
+      }, {
+        "created-date" : {
+          "value" : 1450919024972
+        },
+        "last-modified-date" : {
+          "value" : 1450919024972
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "content" : "Phylogeny",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/keywords/246115",
+        "put-code" : 246115,
+        "display-index" : 0
+      }, {
+        "created-date" : {
+          "value" : 1450919024974
+        },
+        "last-modified-date" : {
+          "value" : 1450919024974
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "content" : "Pollination",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/keywords/246116",
+        "put-code" : 246116,
+        "display-index" : 0
+      }, {
+        "created-date" : {
+          "value" : 1450919024977
+        },
+        "last-modified-date" : {
+          "value" : 1450919024977
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "content" : "Population genetics",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/keywords/246117",
+        "put-code" : 246117,
+        "display-index" : 0
+      }, {
+        "created-date" : {
+          "value" : 1450919024981
+        },
+        "last-modified-date" : {
+          "value" : 1450919024981
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "content" : "Floral biology",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/keywords/246118",
+        "put-code" : 246118,
+        "display-index" : 0
+      } ],
+      "path" : "/0000-0002-7643-2112/keywords"
+    },
+    "external-identifiers" : {
+      "last-modified-date" : {
+        "value" : 1517869567419
+      },
+      "external-identifier" : [ {
+        "created-date" : {
+          "value" : 1404181412382
+        },
+        "last-modified-date" : {
+          "value" : 1517869567419
+        },
+        "source" : {
+          "source-orcid" : null,
+          "source-client-id" : {
+            "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+            "path" : "0000-0003-1377-5676",
+            "host" : "orcid.org"
+          },
+          "source-name" : {
+            "value" : "ResearcherID"
+          }
+        },
+        "external-id-type" : "ResearcherID",
+        "external-id-value" : "H-8339-2014",
+        "external-id-url" : {
+          "value" : "http://www.researcherid.com/rid/H-8339-2014"
+        },
+        "external-id-relationship" : "SELF",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/external-identifiers/99005",
+        "put-code" : 99005,
+        "display-index" : 1
+      }, {
+        "created-date" : {
+          "value" : 1507777353593
+        },
+        "last-modified-date" : {
+          "value" : 1507777353593
+        },
+        "source" : {
+          "source-orcid" : null,
+          "source-client-id" : {
+            "uri" : "https://orcid.org/client/APP-4DPEW6SVSNQHKC8G",
+            "path" : "APP-4DPEW6SVSNQHKC8G",
+            "host" : "orcid.org"
+          },
+          "source-name" : {
+            "value" : "Loop"
+          }
+        },
+        "external-id-type" : "Loop profile",
+        "external-id-value" : "428973",
+        "external-id-url" : {
+          "value" : "http://loop.frontiersin.org/people/428973/overview?referrer=orcid_profile"
+        },
+        "external-id-relationship" : "SELF",
+        "visibility" : "PUBLIC",
+        "path" : "/0000-0002-7643-2112/external-identifiers/831161",
+        "put-code" : 831161,
+        "display-index" : 0
+      } ],
+      "path" : "/0000-0002-7643-2112/external-identifiers"
+    },
+    "path" : "/0000-0002-7643-2112/person"
+  },
+  "activities-summary" : {
+    "last-modified-date" : {
+      "value" : 1540305308306
+    },
+    "educations" : {
+      "last-modified-date" : {
+        "value" : 1414465910738
+      },
+      "education-summary" : [ {
+        "created-date" : {
+          "value" : 1392457591416
+        },
+        "last-modified-date" : {
+          "value" : 1404181412418
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : null,
+        "role-title" : "Ph.D.",
+        "start-date" : {
+          "year" : {
+            "value" : "2008"
+          },
+          "month" : {
+            "value" : "09"
+          },
+          "day" : null
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2011"
+          },
+          "month" : {
+            "value" : "06"
+          },
+          "day" : null
+        },
+        "organization" : {
+          "name" : "Kunming Institute of Botany Chinese Academy of Sciences",
+          "address" : {
+            "city" : "Kunming",
+            "region" : "Yunnan",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "26445",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 119009,
+        "path" : "/0000-0002-7643-2112/education/119009"
+      }, {
+        "created-date" : {
+          "value" : 1392457660661
+        },
+        "last-modified-date" : {
+          "value" : 1404181412418
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : null,
+        "role-title" : "M.Sc.",
+        "start-date" : {
+          "year" : {
+            "value" : "2004"
+          },
+          "month" : {
+            "value" : "09"
+          },
+          "day" : null
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2007"
+          },
+          "month" : {
+            "value" : "06"
+          },
+          "day" : null
+        },
+        "organization" : {
+          "name" : "Kunming Institute of Botany Chinese Academy of Sciences",
+          "address" : {
+            "city" : "Kunming",
+            "region" : "Yunnan",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "26445",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 119010,
+        "path" : "/0000-0002-7643-2112/education/119010"
+      }, {
+        "created-date" : {
+          "value" : 1392457702529
+        },
+        "last-modified-date" : {
+          "value" : 1404181412418
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : null,
+        "role-title" : "B.Sc.",
+        "start-date" : {
+          "year" : {
+            "value" : "2000"
+          },
+          "month" : {
+            "value" : "09"
+          },
+          "day" : null
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2004"
+          },
+          "month" : {
+            "value" : "06"
+          },
+          "day" : null
+        },
+        "organization" : {
+          "name" : "Nanchang University",
+          "address" : {
+            "city" : "Nanchang",
+            "region" : "Jiangxi",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "47861",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 119011,
+        "path" : "/0000-0002-7643-2112/education/119011"
+      }, {
+        "created-date" : {
+          "value" : 1414465910738
+        },
+        "last-modified-date" : {
+          "value" : 1414465910738
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : "School of Economics and Management",
+        "role-title" : "Minor in Business Administration",
+        "start-date" : {
+          "year" : {
+            "value" : "2002"
+          },
+          "month" : {
+            "value" : "09"
+          },
+          "day" : null
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2003"
+          },
+          "month" : {
+            "value" : "06"
+          },
+          "day" : null
+        },
+        "organization" : {
+          "name" : "Nanchang University",
+          "address" : {
+            "city" : "Nanchang",
+            "region" : "Jiangxi",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "47861",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 543871,
+        "path" : "/0000-0002-7643-2112/education/543871"
+      } ],
+      "path" : "/0000-0002-7643-2112/educations"
+    },
+    "employments" : {
+      "last-modified-date" : {
+        "value" : 1536418838819
+      },
+      "employment-summary" : [ {
+        "created-date" : {
+          "value" : 1414465147099
+        },
+        "last-modified-date" : {
+          "value" : 1414465147099
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : "Center for Integrative Conservation",
+        "role-title" : "Associate Professor",
+        "start-date" : {
+          "year" : {
+            "value" : "2014"
+          },
+          "month" : {
+            "value" : "08"
+          },
+          "day" : {
+            "value" : "01"
+          }
+        },
+        "end-date" : null,
+        "organization" : {
+          "name" : "Xishuangbanna Tropical Botanical Garden",
+          "address" : {
+            "city" : "Menglun",
+            "region" : "Yunnan",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "74740",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 543859,
+        "path" : "/0000-0002-7643-2112/employment/543859"
+      }, {
+        "created-date" : {
+          "value" : 1450915091005
+        },
+        "last-modified-date" : {
+          "value" : 1536418838819
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : "Biology",
+        "role-title" : "Visiting Postdoctral Scholar",
+        "start-date" : {
+          "year" : {
+            "value" : "2015"
+          },
+          "month" : {
+            "value" : "09"
+          },
+          "day" : {
+            "value" : "08"
+          }
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2018"
+          },
+          "month" : {
+            "value" : "07"
+          },
+          "day" : {
+            "value" : "05"
+          }
+        },
+        "organization" : {
+          "name" : "Pennsylvania State University",
+          "address" : {
+            "city" : "University Park",
+            "region" : "PA",
+            "country" : "US"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "8082",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 1427254,
+        "path" : "/0000-0002-7643-2112/employment/1427254"
+      }, {
+        "created-date" : {
+          "value" : 1414465652952
+        },
+        "last-modified-date" : {
+          "value" : 1414465652952
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : "Key Laboratory of Biodiversity and Biogeography",
+        "role-title" : "Research Associate",
+        "start-date" : {
+          "year" : {
+            "value" : "2013"
+          },
+          "month" : {
+            "value" : "01"
+          },
+          "day" : null
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2014"
+          },
+          "month" : {
+            "value" : "07"
+          },
+          "day" : null
+        },
+        "organization" : {
+          "name" : "Kunming Institute of Botany Chinese Academy of Sciences",
+          "address" : {
+            "city" : "Kunming",
+            "region" : "Yunnan",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "26445",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 543866,
+        "path" : "/0000-0002-7643-2112/employment/543866"
+      }, {
+        "created-date" : {
+          "value" : 1392469173343
+        },
+        "last-modified-date" : {
+          "value" : 1404181412418
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : "Botany",
+        "role-title" : "Postdoctoral Researcher",
+        "start-date" : {
+          "year" : {
+            "value" : "2011"
+          },
+          "month" : {
+            "value" : "11"
+          },
+          "day" : null
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2012"
+          },
+          "month" : {
+            "value" : "12"
+          },
+          "day" : null
+        },
+        "organization" : {
+          "name" : "Field Museum of Natural History",
+          "address" : {
+            "city" : "Chicago",
+            "region" : "IL",
+            "country" : "US"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "2415",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 119134,
+        "path" : "/0000-0002-7643-2112/employment/119134"
+      }, {
+        "created-date" : {
+          "value" : 1414465777630
+        },
+        "last-modified-date" : {
+          "value" : 1414465777630
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : "Key Laboratory of Biodiversity and Biogeography",
+        "role-title" : "Research Associte",
+        "start-date" : {
+          "year" : {
+            "value" : "2011"
+          },
+          "month" : {
+            "value" : "07"
+          },
+          "day" : null
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2011"
+          },
+          "month" : {
+            "value" : "11"
+          },
+          "day" : null
+        },
+        "organization" : {
+          "name" : "Kunming Institute of Botany Chinese Academy of Sciences",
+          "address" : {
+            "city" : "Kunming",
+            "region" : "Yunnan",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "26445",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 543869,
+        "path" : "/0000-0002-7643-2112/employment/543869"
+      }, {
+        "created-date" : {
+          "value" : 1414465832094
+        },
+        "last-modified-date" : {
+          "value" : 1414465832094
+        },
+        "source" : {
+          "source-orcid" : {
+            "uri" : "https://orcid.org/0000-0002-7643-2112",
+            "path" : "0000-0002-7643-2112",
+            "host" : "orcid.org"
+          },
+          "source-client-id" : null,
+          "source-name" : {
+            "value" : "Wen-Bin Yu"
+          }
+        },
+        "department-name" : "Key Laboratory of Biodiversity and Biogeography",
+        "role-title" : "Research Assistant",
+        "start-date" : {
+          "year" : {
+            "value" : "2007"
+          },
+          "month" : {
+            "value" : "07"
+          },
+          "day" : null
+        },
+        "end-date" : {
+          "year" : {
+            "value" : "2008"
+          },
+          "month" : {
+            "value" : "08"
+          },
+          "day" : null
+        },
+        "organization" : {
+          "name" : "Kunming Institute of Botany Chinese Academy of Sciences",
+          "address" : {
+            "city" : "Kunming",
+            "region" : "Yunnan",
+            "country" : "CN"
+          },
+          "disambiguated-organization" : {
+            "disambiguated-organization-identifier" : "26445",
+            "disambiguation-source" : "RINGGOLD"
+          }
+        },
+        "visibility" : "PUBLIC",
+        "put-code" : 543870,
+        "path" : "/0000-0002-7643-2112/employment/543870"
+      } ],
+      "path" : "/0000-0002-7643-2112/employments"
+    },
+    "fundings" : {
+      "last-modified-date" : null,
+      "group" : [ ],
+      "path" : "/0000-0002-7643-2112/fundings"
+    },
+    "peer-reviews" : {
+      "last-modified-date" : null,
+      "group" : [ ],
+      "path" : "/0000-0002-7643-2112/peer-reviews"
+    },
+    "works" : {
+      "last-modified-date" : {
+        "value" : 1540305308306
+      },
+      "group" : [ {
+        "last-modified-date" : {
+          "value" : 1540305308306
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1007/s12686-017-0908-9",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1007/s12686-017-0908-9"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 38847315,
+          "created-date" : {
+            "value" : 1511280426766
+          },
+          "last-modified-date" : {
+            "value" : 1540305308306
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Complete chloroplast genome of Firmiana major (Malvaceae), a critically endangered species endemic to southwest China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1007/s12686-017-0908-9",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1007/s12686-017-0908-9"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2018"
+            },
+            "month" : {
+              "value" : "12"
+            },
+            "day" : {
+              "value" : "19"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/38847315",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1540305307969
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1007/s12686-017-0874-2",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1007/s12686-017-0874-2"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 37460325,
+          "created-date" : {
+            "value" : 1507530768009
+          },
+          "last-modified-date" : {
+            "value" : 1540305307969
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Complete chloroplast genome of Anemoclema glaucifolium (Ranunculaceae), a vulnerable and threatened species endemic to the Hengduan Mountains"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1007/s12686-017-0874-2",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1007/s12686-017-0874-2"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2018"
+            },
+            "month" : {
+              "value" : "12"
+            },
+            "day" : {
+              "value" : "09"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/37460325",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1532540245948
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1371/journal.pone.0200372",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1371/journal.pone.0200372"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 46858061,
+          "created-date" : {
+            "value" : 1532540245948
+          },
+          "last-modified-date" : {
+            "value" : 1532540245948
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Phylogenetic approaches resolve taxonomical confusion in Pedicularis (Orobanchaceae): Reinstatement of Pedicularis delavayi and discovering a new species Pedicularis milliana"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1371/journal.pone.0200372",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1371/journal.pone.0200372"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2018"
+            },
+            "month" : {
+              "value" : "07"
+            },
+            "day" : {
+              "value" : "25"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/46858061",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1520918114244
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1101/256479",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1101/256479"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 42482170,
+          "created-date" : {
+            "value" : 1520666591350
+          },
+          "last-modified-date" : {
+            "value" : 1520918114244
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "GetOrganelle: a simple and fast pipeline for de novo assembly of a complete circular chloroplast genome using genome skimming data"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1101/256479",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1101/256479"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "OTHER",
+          "publication-date" : {
+            "year" : {
+              "value" : "2018"
+            },
+            "month" : {
+              "value" : "03"
+            },
+            "day" : {
+              "value" : "09"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/42482170",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1506175659049
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1093/gbe/evx180",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.1093/gbe/evx180"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 37061747,
+          "created-date" : {
+            "value" : 1506175659049
+          },
+          "last-modified-date" : {
+            "value" : 1506175659049
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Evolutionary Comparisons of the Chloroplast Genome in Lauraceae and Insights into Loss Events in the Magnoliids"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1093/gbe/evx180",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.1093/gbe/evx180"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2017"
+            },
+            "month" : {
+              "value" : "09"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/37061747",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1490985701422
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1371/journal.pone.0174792",
+            "external-id-url" : {
+              "value" : "http://dx.doi.org/10.1371/journal.pone.0174792"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 31537494,
+          "created-date" : {
+            "value" : 1490985701422
+          },
+          "last-modified-date" : {
+            "value" : 1490985701422
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Phylogenetic reassessment of tribe Anemoneae (Ranunculaceae): Non-monophyly of Anemone s.l. revealed by plastid datasets"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1371/journal.pone.0174792",
+              "external-id-url" : {
+                "value" : "http://dx.doi.org/10.1371/journal.pone.0174792"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2017"
+            },
+            "month" : {
+              "value" : "03"
+            },
+            "day" : {
+              "value" : "31"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/31537494",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1515842383177
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.7287/peerj.preprints.2645v2",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.7287/peerj.preprints.2645v2"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 40518467,
+          "created-date" : {
+            "value" : 1515842383177
+          },
+          "last-modified-date" : {
+            "value" : 1515842383177
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Reinstatement of Pedicularis delavayi (Orobanchaceae): a species separating from P. siphonantha revealed by phylogenetic analyses"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.7287/peerj.preprints.2645v2",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.7287/peerj.preprints.2645v2"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "OTHER",
+          "publication-date" : {
+            "year" : {
+              "value" : "2017"
+            },
+            "month" : {
+              "value" : "01"
+            },
+            "day" : {
+              "value" : "02"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/40518467",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1515842383305
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.7287/peerj.preprints.2645",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.7287/peerj.preprints.2645"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 40518469,
+          "created-date" : {
+            "value" : 1515842383305
+          },
+          "last-modified-date" : {
+            "value" : 1515842383305
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Reinstatement of Pedicularis delavayi (Orobanchaceae): a species separating from P. siphonantha revealed by phylogenetic analyses"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.7287/peerj.preprints.2645",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.7287/peerj.preprints.2645"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "OTHER",
+          "publication-date" : {
+            "year" : {
+              "value" : "2017"
+            },
+            "month" : {
+              "value" : "01"
+            },
+            "day" : {
+              "value" : "02"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/40518469",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1515842383413
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.7287/peerj.preprints.2645v1",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.7287/peerj.preprints.2645v1"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 40518470,
+          "created-date" : {
+            "value" : 1515842383413
+          },
+          "last-modified-date" : {
+            "value" : 1515842383413
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Reinstatement of Pedicularis delavayi (Orobanchaceae): a species separating from P. siphonantha revealed by phylogenetic analyses"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.7287/peerj.preprints.2645v1",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.7287/peerj.preprints.2645v1"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "OTHER",
+          "publication-date" : {
+            "year" : {
+              "value" : "2016"
+            },
+            "month" : {
+              "value" : "12"
+            },
+            "day" : {
+              "value" : "18"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/40518470",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1490839298911
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/jipb.12477",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 31483102,
+          "created-date" : {
+            "value" : 1490839298911
+          },
+          "last-modified-date" : {
+            "value" : 1490839298911
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Pollen size strongly correlates with stigma depth amongPedicularisspecies"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/jipb.12477",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2016"
+            },
+            "month" : {
+              "value" : "05"
+            },
+            "day" : {
+              "value" : "09"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/31483102",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1490838472571
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1017/s0030605316000016",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 31482886,
+          "created-date" : {
+            "value" : 1490838472571
+          },
+          "last-modified-date" : {
+            "value" : 1490838472571
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Rediscovery of the supposedly extinct Pedicularis humilis in the eastern Himalayas"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1017/s0030605316000016",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2016"
+            },
+            "month" : {
+              "value" : "03"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/31482886",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1523578281539
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.217.1.4",
+            "external-id-url" : {
+              "value" : "https://doi.org/10.11646/phytotaxa.217.1.4"
+            },
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 43579065,
+          "created-date" : {
+            "value" : 1523578281539
+          },
+          "last-modified-date" : {
+            "value" : 1523578281539
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Pedicularis wanghongiae (Orobanchaceae), a new species from Yunnan, southwestern China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.217.1.4",
+              "external-id-url" : {
+                "value" : "https://doi.org/10.11646/phytotaxa.217.1.4"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : {
+              "value" : "06"
+            },
+            "day" : {
+              "value" : "22"
+            },
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/43579065",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684819
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/boj.12288",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000357882200004",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058161,
+          "created-date" : {
+            "value" : 1450918684819
+          },
+          "last-modified-date" : {
+            "value" : 1450918684819
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Floral nectary morphology and evolution in Pedicularis (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/boj.12288",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000357882200004",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058161",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684823
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/njb.00700",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000362577200014",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058162,
+          "created-date" : {
+            "value" : 1450918684823
+          },
+          "last-modified-date" : {
+            "value" : 1450918684823
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural transfer of Chinese Pulsatilla to Anemone (Ranunculaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/njb.00700",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000362577200014",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058162",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684827
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000356603500004",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058163,
+          "created-date" : {
+            "value" : 1450918684827
+          },
+          "last-modified-date" : {
+            "value" : 1450918684827
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Pedicularis wanghongiae (Orobanchaceae), a new species from Yunnan, southwestern China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000356603500004",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058163",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684832
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.217.2.10",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000357850900010",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058164,
+          "created-date" : {
+            "value" : 1450918684832
+          },
+          "last-modified-date" : {
+            "value" : 1450918684832
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Pseudobartsia glandulosa, a new combination to replace Pseudobartsia yunnanensis (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.217.2.10",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000357850900010",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058164",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1453990677202
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000357778700001",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1186/s12870-015-0547-9",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058165,
+          "created-date" : {
+            "value" : 1450918684837
+          },
+          "last-modified-date" : {
+            "value" : 1450918684837
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Towards a comprehensive phylogeny of the large temperate genus Pedicularis (Orobanchaceae), with an emphasis on species from the Himalaya-Hengduan Mountains"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1186/s12870-015-0547-9",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000357778700001",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058165",
+          "display-index" : "0"
+        }, {
+          "put-code" : 21952730,
+          "created-date" : {
+            "value" : 1453990677202
+          },
+          "last-modified-date" : {
+            "value" : 1453990677202
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0001-9884-1913",
+              "path" : "0000-0001-9884-1913",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Towards a comprehensive phylogeny of the large temperate genus Pedicularis (Orobanchaceae), with an emphasis on species from the Himalaya-Hengduan Mountains"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1186/s12870-015-0547-9",
+              "external-id-url" : {
+                "value" : "http://dx.doi.org/10.1186/s12870-015-0547-9"
+              },
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : {
+              "value" : "12"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21952730",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684841
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.5091/plecevo.2015.975",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000350785600017",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058166,
+          "created-date" : {
+            "value" : 1450918684841
+          },
+          "last-modified-date" : {
+            "value" : 1450918684841
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Typification of seven Chinese species of Pedicularis (Orobanchaceae) described by Bureau and Franchet with taxonomic notes"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.5091/plecevo.2015.975",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000350785600017",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2015"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058166",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000335544700017",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.12705/631.10",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009300,
+          "created-date" : {
+            "value" : 1421211874830
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Lectotypification of Linnaean names in Pedicularis (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.12705/631.10",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000335544700017",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009300",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684845
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958656-101",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058167,
+          "created-date" : {
+            "value" : 1450918684845
+          },
+          "last-modified-date" : {
+            "value" : 1450918684845
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural Clarifications of Sinopodophyllum (Berberidaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958656-101",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058167",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000330511500011",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.11646/phytotaxa.158.3.11",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009302,
+          "created-date" : {
+            "value" : 1421211874839
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural note for Pedicularis oederi var. angustiflora (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.11646/phytotaxa.158.3.11",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000330511500011",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009302",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684849
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958657-106",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058168,
+          "created-date" : {
+            "value" : 1450918684849
+          },
+          "last-modified-date" : {
+            "value" : 1450918684849
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of the name Sarcococca longipetiolata (Buxaceae): third time lucky"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958657-106",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058168",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684854
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958657-102",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058169,
+          "created-date" : {
+            "value" : 1450918684854
+          },
+          "last-modified-date" : {
+            "value" : 1450918684854
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "桃儿七属的命名学考订"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958657-102",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2014"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058169",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.12705/625.33",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000335124400031",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009306,
+          "created-date" : {
+            "value" : 1421211874856
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "(2204) Proposal to conserve Pedicularis stenocorys against P. stenantha (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.12705/625.33",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000335124400031",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009306",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000335124400032",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.12705/625.34",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009307,
+          "created-date" : {
+            "value" : 1421211874861
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "(2205) Proposal to conserve the name Pterygiella cylindrica against Brandisia praticola (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.12705/625.34",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000335124400032",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009307",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/jse.12018",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000321621800007",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009308,
+          "created-date" : {
+            "value" : 1421211874867
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Floral ontogeny of Pedicularis (Orobanchaceae), with an emphasis on the corolla upper lip"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/jse.12018",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000321621800007",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009308",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000328703600014",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/j.1756-1051.2013.01672.x",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009309,
+          "created-date" : {
+            "value" : 1421211874872
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Gymnosporia thyrsiflora comb. nov.(Celastraceae), a correct name to replace G. graciliramula from southwest China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/j.1756-1051.2013.01672.x",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000328703600014",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009309",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282188817
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009310,
+          "created-date" : {
+            "value" : 1421211874875
+          },
+          "last-modified-date" : {
+            "value" : 1436282188817
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Incongruence between nuclear and chloroplast DNA phylogenies in Pedicularis section Cyathophora (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009310",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684980
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958659-91",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058171,
+          "created-date" : {
+            "value" : 1450918684980
+          },
+          "last-modified-date" : {
+            "value" : 1450918684980
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Incongruence between nuclear and chloroplast DNA phylogenies in Pedicularis section Cyathophora (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958659-91",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058171",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282188835
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009311,
+          "created-date" : {
+            "value" : 1421211874879
+          },
+          "last-modified-date" : {
+            "value" : 1436282188835
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural clarifications for names in Boschniakia, Kopsiopsis and Xylanche (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009311",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684985
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000314821700001",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058172,
+          "created-date" : {
+            "value" : 1450918684985
+          },
+          "last-modified-date" : {
+            "value" : 1450918684985
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural clarifications for names in Boschniakia, Kopsiopsis and Xylanche (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000314821700001",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058172",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/j.1756-1051.2012.01620.x",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000320555900009",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009312,
+          "created-date" : {
+            "value" : 1421211874884
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural notes on Rhododendron sparsifolium (Ericaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/j.1756-1051.2012.01620.x",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000320555900009",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009312",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282188882
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009313,
+          "created-date" : {
+            "value" : 1421211874888
+          },
+          "last-modified-date" : {
+            "value" : 1436282188882
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Rapid Identification of Plant Species and iFlora: Application of DNA Barcoding in a Large Temperate Genus Pedicularis (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009313",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684989
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958659-95",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058173,
+          "created-date" : {
+            "value" : 1450918684989
+          },
+          "last-modified-date" : {
+            "value" : 1450918684989
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Rapid Identification of Plant Species and iFlora: Application of DNA Barcoding in a Large Temperate Genus Pedicularis (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958659-95",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058173",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1007/s00606-013-0821-y",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000326291200003",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009314,
+          "created-date" : {
+            "value" : 1421211874893
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Seed morphological diversity of Pedicularis (Orobanchaceae) and its taxonomic significance"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1007/s00606-013-0821-y",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000326291200003",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009314",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282188942
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009316,
+          "created-date" : {
+            "value" : 1421211874901
+          },
+          "last-modified-date" : {
+            "value" : 1436282188942
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of Turpinia pomifera var. minor (Staphyleaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009316",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685000
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000322651200006",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058175,
+          "created-date" : {
+            "value" : 1450918685000
+          },
+          "last-modified-date" : {
+            "value" : 1450918685000
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of Turpinia pomifera var. minor (Staphyleaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000322651200006",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058175",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282188926
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009315,
+          "created-date" : {
+            "value" : 1421211874897
+          },
+          "last-modified-date" : {
+            "value" : 1436282188926
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of the name Anaphalis hymenolepis (Asteraceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009315",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918684996
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000325946700007",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058174,
+          "created-date" : {
+            "value" : 1450918684996
+          },
+          "last-modified-date" : {
+            "value" : 1450918684996
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of the name Anaphalis hymenolepis (Asteraceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000325946700007",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058174",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282188962
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009317,
+          "created-date" : {
+            "value" : 1421211874905
+          },
+          "last-modified-date" : {
+            "value" : 1436282188962
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "植物物种的快速鉴定与 iFlora: DNA 条形码在马先蒿属中的应用"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009317",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685004
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958660-96",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058176,
+          "created-date" : {
+            "value" : 1450918685004
+          },
+          "last-modified-date" : {
+            "value" : 1450918685004
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "植物物种的快速鉴定与 iFlora: DNA 条形码在马先蒿属中的应用"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958660-96",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2013"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058176",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/j.1759-6831.2012.00180.x",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000303995300004",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009318,
+          "created-date" : {
+            "value" : 1421211874910
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Highly efficient pollination by bumblebees ensures seed production in Pedicularis lachnoglossa (Orobanchaceae), an early‐flowering Himalayan plant"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/j.1759-6831.2012.00180.x",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000303995300004",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2012"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009318",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1490838397465
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/j.1759-6831.2011.00159_3.x",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 31482885,
+          "created-date" : {
+            "value" : 1490838397465
+          },
+          "last-modified-date" : {
+            "value" : 1490838397465
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0002-3054-1567",
+              "path" : "0000-0002-3054-1567",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "Crossref Metadata Search"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "A new synonym of Pedicularis cyathophylla (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/j.1759-6831.2011.00159_3.x",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : {
+              "value" : "09"
+            },
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/31482885",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1073/pnas.1104551108",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000297683800046",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009320,
+          "created-date" : {
+            "value" : 1421211874919
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Comparative analysis of a large dataset indicates that internal transcribed spacer (ITS) should be incorporated into the core barcode for seed plants"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1073/pnas.1104551108",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000297683800046",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009320",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/j.1759-6831.2011.00154.x",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000295322200006",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009321,
+          "created-date" : {
+            "value" : 1421211874924
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "DNA barcoding of Pedicularis Linn.(Orobanchaceae): Evaluating four universal barcode loci in a large and hemiparasitic genus"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/j.1759-6831.2011.00154.x",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000295322200006",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009321",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351093
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009322,
+          "created-date" : {
+            "value" : 1421211874928
+          },
+          "last-modified-date" : {
+            "value" : 1436282351093
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Names of Chinese seed plants validly published in A Catalogue of Type Specimens (Cormophyta) in the Herbaria of China and its two supplements"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009322",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685013
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000294507000019",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058178,
+          "created-date" : {
+            "value" : 1450918685013
+          },
+          "last-modified-date" : {
+            "value" : 1450918685013
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Names of Chinese seed plants validly published in A Catalogue of Type Specimens (Cormophyta) in the Herbaria of China and its two supplements"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000294507000019",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058178",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351117
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009323,
+          "created-date" : {
+            "value" : 1421211874932
+          },
+          "last-modified-date" : {
+            "value" : 1436282351117
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural notes on Myristica yunnanensis and Cyclobalanopsis yonganensis"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009323",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685017
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000292806500006",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058179,
+          "created-date" : {
+            "value" : 1450918685017
+          },
+          "last-modified-date" : {
+            "value" : 1450918685017
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural notes on Myristica yunnanensis and Cyclobalanopsis yonganensis"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000292806500006",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058179",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351133
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009324,
+          "created-date" : {
+            "value" : 1421211874936
+          },
+          "last-modified-date" : {
+            "value" : 1436282351133
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Species divergence and molecular identification of Pedicularis L.(Orobanchaceae) in the Himalaya-Hengduan Mountains region"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009324",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685021
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958662-87",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058180,
+          "created-date" : {
+            "value" : 1450918685021
+          },
+          "last-modified-date" : {
+            "value" : 1450918685021
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Species divergence and molecular identification of Pedicularis L.(Orobanchaceae) in the Himalaya-Hengduan Mountains region"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958662-87",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058180",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351150
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009325,
+          "created-date" : {
+            "value" : 1421211874939
+          },
+          "last-modified-date" : {
+            "value" : 1436282351150
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid Publication of Asarum longirhizomatosum (Aristolochiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009325",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685026
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958663-70",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058181,
+          "created-date" : {
+            "value" : 1450918685026
+          },
+          "last-modified-date" : {
+            "value" : 1450918685026
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid Publication of Asarum longirhizomatosum (Aristolochiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958663-70",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058181",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351166
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009326,
+          "created-date" : {
+            "value" : 1421211874943
+          },
+          "last-modified-date" : {
+            "value" : 1436282351166
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of the name Callicarpa peichieniana (Lamiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009326",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685030
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958663-73",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058182,
+          "created-date" : {
+            "value" : 1450918685030
+          },
+          "last-modified-date" : {
+            "value" : 1450918685030
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of the name Callicarpa peichieniana (Lamiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958663-73",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058182",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351182
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009327,
+          "created-date" : {
+            "value" : 1421211874947
+          },
+          "last-modified-date" : {
+            "value" : 1436282351182
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of the name Helicia falcata (Proteaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009327",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685034
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958663-71",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058183,
+          "created-date" : {
+            "value" : 1450918685034
+          },
+          "last-modified-date" : {
+            "value" : 1450918685034
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of the name Helicia falcata (Proteaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958663-71",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058183",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351199
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009328,
+          "created-date" : {
+            "value" : 1421211874951
+          },
+          "last-modified-date" : {
+            "value" : 1436282351199
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Validation of the name Callicarpa bodinieri var. iteophylla (Lamiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009328",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685039
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958663-82",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058184,
+          "created-date" : {
+            "value" : 1450918685039
+          },
+          "last-modified-date" : {
+            "value" : 1450918685039
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Validation of the name Callicarpa bodinieri var. iteophylla (Lamiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958663-82",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2011"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058184",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351214
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009329,
+          "created-date" : {
+            "value" : 1421211874956
+          },
+          "last-modified-date" : {
+            "value" : 1436282351214
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "(095-096) Proposals to amend Art. 53 Ex. 9 Ex. 10"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009329",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685043
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958663-78",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058185,
+          "created-date" : {
+            "value" : 1450918685043
+          },
+          "last-modified-date" : {
+            "value" : 1450918685043
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "(095-096) Proposals to amend Art. 53 Ex. 9 Ex. 10"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958663-78",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058185",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351230
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009330,
+          "created-date" : {
+            "value" : 1421211874960
+          },
+          "last-modified-date" : {
+            "value" : 1436282351230
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "(104-108) Proposals to amend Article 9.15, add an example to Article 37, and make additions to Appendices III and IV"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009330",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685047
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958664-79",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058186,
+          "created-date" : {
+            "value" : 1450918685047
+          },
+          "last-modified-date" : {
+            "value" : 1450918685047
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "(104-108) Proposals to amend Article 9.15, add an example to Article 37, and make additions to Appendices III and IV"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958664-79",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058186",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3417/2009023",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000285127600023",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009331,
+          "created-date" : {
+            "value" : 1421211874965
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "A new species of Pedicularis (Orobanchaceae) from the Hengduan Mountains, Southwestern China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3417/2009023",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000285127600023",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009331",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351262
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009333,
+          "created-date" : {
+            "value" : 1421211874973
+          },
+          "last-modified-date" : {
+            "value" : 1436282351262
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Floral traits, pollination ecology and breeding system of three Clematis species (Ranunculaceae) in Yunnan province, southwestern China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009333",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685052
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958664-62",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058187,
+          "created-date" : {
+            "value" : 1450918685052
+          },
+          "last-modified-date" : {
+            "value" : 1450918685052
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Floral traits, pollination ecology and breeding system of three Clematis species (Ranunculaceae) in Yunnan province, southwestern China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958664-62",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058187",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000279479500011",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1007/s11258-010-9739-4",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009334,
+          "created-date" : {
+            "value" : 1421211874978
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Flower heliotropism of Anemone rivularis (Ranunculaceae) in the Himalayas: effects on floral temperature and reproductive fitness"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1007/s11258-010-9739-4",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000279479500011",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009334",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351292
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009335,
+          "created-date" : {
+            "value" : 1421211874982
+          },
+          "last-modified-date" : {
+            "value" : 1436282351292
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Isolation and Characterization of 13 Microsatellite Loci from Pedicularis rex (lousewort)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009335",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685056
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000280041000025",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058188,
+          "created-date" : {
+            "value" : 1450918685056
+          },
+          "last-modified-date" : {
+            "value" : 1450918685056
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Isolation and Characterization of 13 Microsatellite Loci from Pedicularis rex (lousewort)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000280041000025",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058188",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351306
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009336,
+          "created-date" : {
+            "value" : 1421211874986
+          },
+          "last-modified-date" : {
+            "value" : 1436282351306
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural notes on Ferula tunshanica (= F. licentiana var. tunshanica)(Apiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009336",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685061
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000294425500006",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058189,
+          "created-date" : {
+            "value" : 1450918685061
+          },
+          "last-modified-date" : {
+            "value" : 1450918685061
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Nomenclatural notes on Ferula tunshanica (= F. licentiana var. tunshanica)(Apiaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000294425500006",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2010"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058189",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1007/s00606-008-0112-1",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000263063900002",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009338,
+          "created-date" : {
+            "value" : 1421211874995
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Pollen morphology in relation to floral types and pollination syndromes in Pedicularis (Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1007/s00606-008-0112-1",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000263063900002",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2009"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009338",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000272660200008",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/j.1756-1051.2009.00522.x",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009339,
+          "created-date" : {
+            "value" : 1421211875000
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Valid publication of the name Atalantia acuminata (Rutaceae), endemic to southwestern China and northern Vietnam"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/j.1756-1051.2009.00522.x",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000272660200008",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2009"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009339",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.3119/09-7.1",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000274889100004",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009340,
+          "created-date" : {
+            "value" : 1421211875005
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Validation of Atalantia fongkaica and Fortunella bawangica (Rutaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.3119/09-7.1",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000274889100004",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2009"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009340",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351389
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009341,
+          "created-date" : {
+            "value" : 1421211875009
+          },
+          "last-modified-date" : {
+            "value" : 1436282351389
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Advances in floral divergence and reproductive adaptation in Pedicularis L.(Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009341",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685065
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958666-63",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058190,
+          "created-date" : {
+            "value" : 1450918685065
+          },
+          "last-modified-date" : {
+            "value" : 1450918685065
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Advances in floral divergence and reproductive adaptation in Pedicularis L.(Orobanchaceae)"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958666-63",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058190",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351408
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009342,
+          "created-date" : {
+            "value" : 1421211875013
+          },
+          "last-modified-date" : {
+            "value" : 1436282351408
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Flower heliotropism of alpine plants and its adaptive significance"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009342",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685069
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958666-89",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058191,
+          "created-date" : {
+            "value" : 1450918685069
+          },
+          "last-modified-date" : {
+            "value" : 1450918685069
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Flower heliotropism of alpine plants and its adaptive significance"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958666-89",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058191",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351425
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009343,
+          "created-date" : {
+            "value" : 1421211875017
+          },
+          "last-modified-date" : {
+            "value" : 1436282351425
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "New taxa of Pedicularis (Scrophulariaceae) from the Hengduan Mountains, Southwestern China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009343",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685074
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958667-77",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058192,
+          "created-date" : {
+            "value" : 1450918685074
+          },
+          "last-modified-date" : {
+            "value" : 1450918685074
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "New taxa of Pedicularis (Scrophulariaceae) from the Hengduan Mountains, Southwestern China"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958667-77",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058192",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685088
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "doi",
+            "external-id-value" : "10.1111/j.1744-7909.2007.00364.x",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          }, {
+            "external-id-type" : "wosuid",
+            "external-id-value" : "WOS:000253050100014",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009344,
+          "created-date" : {
+            "value" : 1421211875022
+          },
+          "last-modified-date" : {
+            "value" : 1450918685088
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Pollen morphology of Pedicularis sect. Cyathophora, a group endemic to the Eastern Himalaya-Hengduan Mountains region"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "doi",
+              "external-id-value" : "10.1111/j.1744-7909.2007.00364.x",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            }, {
+              "external-id-type" : "wosuid",
+              "external-id-value" : "WOS:000253050100014",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009344",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351472
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009345,
+          "created-date" : {
+            "value" : 1421211875027
+          },
+          "last-modified-date" : {
+            "value" : 1436282351472
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "高山植物花的向日运动及其适应意义"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009345",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1450918685078
+        },
+        "external-ids" : {
+          "external-id" : [ {
+            "external-id-type" : "source-work-id",
+            "external-id-value" : "1223151958667-88",
+            "external-id-url" : null,
+            "external-id-relationship" : "SELF"
+          } ]
+        },
+        "work-summary" : [ {
+          "put-code" : 21058193,
+          "created-date" : {
+            "value" : 1450918685078
+          },
+          "last-modified-date" : {
+            "value" : 1450918685078
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "高山植物花的向日运动及其适应意义"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : {
+            "external-id" : [ {
+              "external-id-type" : "source-work-id",
+              "external-id-value" : "1223151958667-88",
+              "external-id-url" : null,
+              "external-id-relationship" : "SELF"
+            } ]
+          },
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2008"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/21058193",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351490
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009346,
+          "created-date" : {
+            "value" : 1421211875031
+          },
+          "last-modified-date" : {
+            "value" : 1436282351490
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "Closure behavior of the touching-sensitive stigmas in flowering plants and its adaptive significance"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2007"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009346",
+          "display-index" : "0"
+        } ]
+      }, {
+        "last-modified-date" : {
+          "value" : 1436282351507
+        },
+        "external-ids" : {
+          "external-id" : [ ]
+        },
+        "work-summary" : [ {
+          "put-code" : 15009347,
+          "created-date" : {
+            "value" : 1421211875035
+          },
+          "last-modified-date" : {
+            "value" : 1436282351507
+          },
+          "source" : {
+            "source-orcid" : null,
+            "source-client-id" : {
+              "uri" : "https://orcid.org/client/0000-0003-1377-5676",
+              "path" : "0000-0003-1377-5676",
+              "host" : "orcid.org"
+            },
+            "source-name" : {
+              "value" : "ResearcherID"
+            }
+          },
+          "title" : {
+            "title" : {
+              "value" : "有花植物触敏柱头的闭合行为及其适应意义"
+            },
+            "subtitle" : null,
+            "translated-title" : null
+          },
+          "external-ids" : null,
+          "type" : "JOURNAL_ARTICLE",
+          "publication-date" : {
+            "year" : {
+              "value" : "2007"
+            },
+            "month" : null,
+            "day" : null,
+            "media-type" : null
+          },
+          "visibility" : "PUBLIC",
+          "path" : "/0000-0002-7643-2112/work/15009347",
+          "display-index" : "0"
+        } ]
+      } ],
+      "path" : "/0000-0002-7643-2112/works"
+    },
+    "path" : "/0000-0002-7643-2112/activities"
+  },
+  "path" : "/0000-0002-7643-2112"
+}
