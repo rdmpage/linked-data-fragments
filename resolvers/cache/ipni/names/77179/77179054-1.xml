@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:77179054-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:77179054-1:1.1"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dc:title>Bryobium diaphanum (P.O'Byrne &amp; J.J.Verm.) Schuit., Y.P.Ng &amp; H.A.Pedersen</dc:title>                        
+<dcterms:created>2018-05-24 12:38:22.0</dcterms:created>
+<dcterms:modified>2018-05-24 12:38:22.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Bryobium diaphanum</tn:nameComplete>
+<tn:genusPart>Bryobium</tn:genusPart>        
+<tn:specificEpithet>diaphanum</tn:specificEpithet>                
+<tn:authorship>(P.O'Byrne &amp; J.J.Verm.) Schuit., Y.P.Ng &amp; H.A.Pedersen</tn:authorship>
+<tn:basionymAuthorship>P.O'Byrne &amp; J.J.Verm.</tn:basionymAuthorship>
+<tn:combinationAuthorship>Schuit., Y.P.Ng &amp; H.A.Pedersen</tn:combinationAuthorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>(P.O'Byrne &amp; J.J.Verm.) Schuit., Y.P.Ng &amp; H.A.Pedersen</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:26386-1"
+tm:index="1"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:20006032-1"
+tm:index="2"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:36076-1"
+tm:index="3"
+tm:role="Combination Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:36319-1" 
+tm:index="1"
+tm:role="Basionym Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:35414-1" 
+tm:index="2"
+tm:role="Basionym Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Bot. J. Linn. Soc. 186(2): 193. 2018 [25 Jan 2018] [epublished]</tcom:publishedIn>    
+<tn:year>2018</tn:year>        
+<tn:hasBasionym rdf:resource="urn:lsid:ipni.org:names:1019484-1"/>
+</tn:TaxonName>  
+</rdf:RDF>

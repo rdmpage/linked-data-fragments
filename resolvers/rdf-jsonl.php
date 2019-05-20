@@ -663,9 +663,11 @@ if (1)
 	
 	$url = 'urn:lsid:ipni.org:names:981552-1';
 	$url = 'urn:lsid:ipni.org:names:77177604-1';
+	$url = 'urn:lsid:ipni.org:names:77179054-1';
+	$url = 'urn:lsid:ipni.org:names:1019484-1';
 	
-	$url = 'urn:lsid:indexfungorum.org:names:814659';
-	$url = 'urn:lsid:indexfungorum.org:names:814692';
+	//$url = 'urn:lsid:indexfungorum.org:names:814659';
+	//$url = 'urn:lsid:indexfungorum.org:names:814692';
 	
 	//$url = 'urn:lsid:organismnames.com:name:5429322';
 	
@@ -673,7 +675,7 @@ if (1)
 	
 	// World Spider Catalog
 	//$url = 'urn:lsid:nmbe.ch:spidersp:021946';
-	$url = 'urn:lsid:nmbe.ch:spidersp:049015';
+	//$url = 'urn:lsid:nmbe.ch:spidersp:049015';
 		
 	$doc = resolve_url($url);
 	

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lsid.rdf.xsl"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+xmlns:tm="http://rs.tdwg.org/ontology/voc/Team#"    
+xmlns:tcom="http://rs.tdwg.org/ontology/voc/Common#"    
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person#"    
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<tn:TaxonName rdf:about="urn:lsid:ipni.org:names:1019484-1">	
+<tcom:versionedAs rdf:resource="urn:lsid:ipni.org:names:1019484-1:1.6"/>
+<tn:nomenclaturalCode rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#botanical"/>
+<owl:versionInfo>1.6</owl:versionInfo>
+<dc:title>Notheria diaphana P.O'Byrne &amp; J.J.Verm.</dc:title>                        
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2018-06-05 10:18:52.0</dcterms:modified>
+<tn:rankString>spec.</tn:rankString>
+<tn:nameComplete>Notheria diaphana</tn:nameComplete>
+<tn:genusPart>Notheria</tn:genusPart>        
+<tn:specificEpithet>diaphana</tn:specificEpithet>                
+<tn:authorship>P.O'Byrne &amp; J.J.Verm.</tn:authorship>
+<tn:authorteam>
+<tm:Team>
+<tm:name>P.O'Byrne &amp; J.J.Verm.</tm:name>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:36319-1"
+tm:index="1"
+tm:role="Publishing Author"/>
+<tm:hasMember rdf:resource="urn:lsid:ipni.org:authors:35414-1"
+tm:index="2"
+tm:role="Publishing Author"/>
+</tm:Team>
+</tn:authorteam>
+<tcom:publishedIn>Gard. Bull. Singapore 52(2): 286. 2000 </tcom:publishedIn>    
+<tn:year>2000</tn:year>        
+<tn:typifiedBy>
+<tn:NomenclaturalType>
+<dc:title> SBG-O 192, SING (holo)</dc:title>
+<tn:typeSpecimen> SBG-O 192, SING</tn:typeSpecimen>
+<tn:typeOfType rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#holo"/>
+</tn:NomenclaturalType>
+</tn:typifiedBy>
+</tn:TaxonName>  
+</rdf:RDF>
