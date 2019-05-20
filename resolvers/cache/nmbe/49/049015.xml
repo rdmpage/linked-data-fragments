@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#" xmlns:nmbe="urn:lsid:nmbe.ch:predicates:" xmlns:tc="http://rs.tdwg.org/ontology/voc/TaxonConcept#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="urn:lsid:nmbe.ch:spidersp:049015">
+    <dc:date>2019-05-20</dc:date>
+    <dc:type>Scientific Name</dc:type>
+    <dc:creator rdf:resource="http://www.wsc.nmbe.ch"/>
+    <dc:identifier>urn:lsid:nmbe.ch:spidersp:049015</dc:identifier>
+    <dc:title>Ochyrocera jarocha</dc:title>
+    <dc:subject>Ochyrocera jarocha Valdez-Mondragón, 2017</dc:subject>
+    <tn:nameComplete>Ochyrocera jarocha</tn:nameComplete>
+    <tn:genusPart>Ochyrocera</tn:genusPart>
+    <tn:specificEpithet>jarocha</tn:specificEpithet>
+    <tn:infraspecificEpithet/>
+    <tn:authorship>Valdez-Mondragón</tn:authorship>
+    <tn:year>2017</tn:year>
+    <dwc:nomenclaturalCode>ICZN</dwc:nomenclaturalCode>
+    <nmbe:statusString>VALID</nmbe:statusString>
+    <dwc:taxonRank>species</dwc:taxonRank>
+    <tc:hasInformation rdf:resource="https://wsc.nmbe.ch/species/55430"/>
+    <dwc:namePublishedIn>Valdez-Mondragón, A. (2017). On the poorly known haplogynae spiders of the genus Ochyrocera Simon (Araneae, Ochyroceratidae) from Mexico: description of two new species with an updated identification key for Mexican species. Zootaxa 4226(2): 194-204.</dwc:namePublishedIn>
+    <nmbe:publishedOnPage>196</nmbe:publishedOnPage>
+  </rdf:Description>
+</rdf:RDF>
