@@ -85,9 +85,14 @@ function rdf_to_triples($xml)
 		}
 	}
 	
-	//print_r($cleaned_triples);
+	$nt = $parser->toNTriples($cleaned_triples);
 	
-	return $parser->toNTriples($cleaned_triples);
+	// https://stackoverflow.com/a/2934602/9684
+	$nt = preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/', function ($match) {
+    	return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UCS-2BE');
+		}, $nt);
+	
+	return $nt;
 }
 
 //----------------------------------------------------------------------------------------
