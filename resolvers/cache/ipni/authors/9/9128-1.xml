@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:9128-1">
+<dc:title>Roman Nicolaevich Schljakov</dc:title>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2009-12-29 11:41:11.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Schljakov</p:standardForm>
+<p:forenames>Roman Nicolaevich</p:forenames>	
+<p:surname>Schljakov</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Roman Nicolayevich</p:forenames>	
+<p:surname>Schlyakov</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Roman Nicolayevich</p:forenames>	
+<p:surname>Shlyakov</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Roman Nicolaevich</p:forenames>	
+<p:surname>Sljakov</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>1912-1999</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Bryophytes</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+<p:geographicScope>Russian Federation</p:geographicScope>
+</p:Person>
+</rdf:RDF>

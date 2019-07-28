@@ -1,0 +1,10 @@
+<urn:lsid:organismnames.com:name:1609635> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName> .
+<urn:lsid:organismnames.com:name:1609635> <http://purl.org/dc/elements/1.1/identifier> "urn:lsid:organismnames.com:name:1609635" .
+<urn:lsid:organismnames.com:name:1609635> <http://purl.org/dc/elements/1.1/creator> <http://organismnames.com> .
+<urn:lsid:organismnames.com:name:1609635> <http://purl.org/dc/elements/1.1/title> "Paraulopus okamurai" .
+<urn:lsid:organismnames.com:name:1609635> <http://rs.tdwg.org/ontology/voc/TaxonName#nameComplete> "Paraulopus okamurai" .
+<urn:lsid:organismnames.com:name:1609635> <http://rs.tdwg.org/ontology/voc/TaxonName#nomenclaturalCode> <http://rs.tdwg.org/ontology/voc/TaxonName#ICZN> .
+<urn:lsid:organismnames.com:name:1609635> <http://rs.tdwg.org/ontology/voc/Common#publishedIn> "Two new species of Paraulopus (Osteichthyes: Aulopiformes) from New Zealand and eastern Australia and comparisons with P. nigripinnis. Species Diversity, 7(4), November 2002: 393-404.  396 [Zoological Record Volume 139]" .
+<urn:lsid:organismnames.com:name:1609635> <http://rs.tdwg.org/ontology/voc/Common#microreference> "396" .
+<urn:lsid:organismnames.com:name:1609635> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://organismnames.com/namedetails.htm?lsid=1609635> .
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:6769-1">
+<dc:title>Carl Alfred Müller</dc:title>
+<owl:versionInfo>1.1</owl:versionInfo>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2003-07-02 00:00:00.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>C.A.Müll.</p:standardForm>
+<p:forenames>Carl Alfred</p:forenames>	
+<p:surname>Müller</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Karl Alfred Ernst</p:forenames>	
+<p:surname>Müller</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Carolus Alfredus</p:forenames>	
+<p:surname>Mueller</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>1855-1907</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Bryophytes</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+</p:Person>
+</rdf:RDF>

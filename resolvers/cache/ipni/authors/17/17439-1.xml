@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:17439-1">
+<dc:title>Edred John Henry Corner</dc:title>
+<owl:versionInfo>1.1.1.2</owl:versionInfo>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2014-01-06 15:53:50.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Corner</p:standardForm>
+<p:forenames>Edred John Henry</p:forenames>	
+<p:surname>Corner</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:lifeSpan>1906-1996</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Mycology</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+<p:geographicScope>Singapore</p:geographicScope>
+<p:geographicScope>United Kingdom</p:geographicScope>
+</p:Person>
+</rdf:RDF>

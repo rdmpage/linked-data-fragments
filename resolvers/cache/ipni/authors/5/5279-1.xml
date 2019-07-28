@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:5279-1">
+<dc:title>Philippe Picot de Lapeyrouse</dc:title>
+<owl:versionInfo>1.1.1.1</owl:versionInfo>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2013-05-15 11:26:15.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Lapeyr.</p:standardForm>
+<p:forenames>Philippe Picot de</p:forenames>	
+<p:surname>Lapeyrouse</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Philippe Picot de</p:forenames>	
+<p:surname>Lapeirouse</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Philippe Picot de la</p:forenames>	
+<p:surname>Peyrouse</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Philippe</p:forenames>	
+<p:surname>Picot de Lapeyrouse</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Philippe Picot</p:forenames>	
+<p:surname>de Lapeyrouse</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Philippe Picot</p:forenames>	
+<p:surname>de la Peirouse</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Philippe Picot de</p:forenames>	
+<p:surname>la Peirouse</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>1744-1818</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Pteridophytes</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+<p:geographicScope>France</p:geographicScope>
+</p:Person>
+</rdf:RDF>

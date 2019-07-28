@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:458-1">
+<dc:title>Andrej Ivanovič Barbaricz</dc:title>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2007-12-28 11:54:23.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Barbar.</p:standardForm>
+<p:forenames>Andrej Ivanovič</p:forenames>	
+<p:surname>Barbaricz</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Andrej Ivanovich</p:forenames>	
+<p:surname>Barbarich</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Andrej Ivanovič</p:forenames>	
+<p:surname>Barbaryč</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>1903-1979</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+</p:Person>
+</rdf:RDF>

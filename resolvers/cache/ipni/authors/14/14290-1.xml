@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:14290-1">
+<dc:title>(Philippe) Victoire (Lévêque) de Vilmorin</dc:title>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2006-02-13 03:11:21.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>V.Vilm.</p:standardForm>
+<p:forenames>(Philippe) Victoire (Lévêque) de</p:forenames>	
+<p:surname>Vilmorin</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>(Philippe) Victoire (Lévêque)</p:forenames>	
+<p:surname>de Vilmorin</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>(Philippe) Victoire</p:forenames>	
+<p:surname>Lévêque de Vilmorin</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>1746-1840</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+</p:Person>
+</rdf:RDF>

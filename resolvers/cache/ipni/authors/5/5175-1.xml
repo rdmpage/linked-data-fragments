@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:5175-1">
+<dc:title>Jacques Julien Houtou de Labillardière</dc:title>
+<owl:versionInfo>1.1.2.2</owl:versionInfo>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2004-04-29 08:51:51.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Labill.</p:standardForm>
+<p:forenames>Jacques Julien Houtou de</p:forenames>	
+<p:surname>Labillardière</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Jacques Julien Houtou de la</p:forenames>	
+<p:surname>Billardière</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Jacques Julien Houtou de</p:forenames>	
+<p:surname>La Billardière</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>Jacques Julien Houtou</p:forenames>	
+<p:surname>de Labillardière</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>1755-1834</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Pteridophytes</p:subjectScope>
+<p:subjectScope>Mycology</p:subjectScope>
+<p:subjectScope>Algae</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+<p:geographicScope>France</p:geographicScope>
+</p:Person>
+</rdf:RDF>

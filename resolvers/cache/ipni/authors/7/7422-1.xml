@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:7422-1">
+<dc:title>José Antonio Pavon</dc:title>
+<owl:versionInfo>1.2</owl:versionInfo>
+<dcterms:created>2003-07-02 00:00:00.0</dcterms:created>
+<dcterms:modified>2008-02-26 08:04:38.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Pav.</p:standardForm>
+<p:forenames>José Antonio</p:forenames>	
+<p:surname>Pavon</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>José Antonio</p:forenames>	
+<p:surname>Pavon y Jiménez</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>1754-1844</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+<p:geographicScope>Spain</p:geographicScope>
+</p:Person>
+</rdf:RDF>

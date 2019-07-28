@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:20002818-2">
+<dc:title>Ingo Breuer</dc:title>
+<owl:versionInfo>1.1.2.1.1.1</owl:versionInfo>
+<dcterms:created>2004-05-04 08:51:48.0</dcterms:created>
+<dcterms:modified>2012-02-24 11:11:44.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Breuer</p:standardForm>
+<p:forenames>Ingo</p:forenames>	
+<p:surname>Breuer</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:lifeSpan>1955-</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+<p:geographicScope>Germany</p:geographicScope>
+</p:Person>
+</rdf:RDF>

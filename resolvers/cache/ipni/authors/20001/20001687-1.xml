@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:20001687-1">
+<dc:title>M.I. Romero</dc:title>
+<owl:versionInfo>1.3</owl:versionInfo>
+<dcterms:created>2004-11-23 13:51:07.0</dcterms:created>
+<dcterms:modified>2014-03-31 13:43:59.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>M.I.Romero</p:standardForm>
+<p:forenames>M.I.</p:forenames>	
+<p:surname>Romero</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>María Inmaculada</p:forenames>	
+<p:surname>Romero Bujián</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>fl. 2004</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Pteridophytes</p:subjectScope>
+</p:Person>
+</rdf:RDF>

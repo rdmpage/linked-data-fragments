@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:20002029-1">
+<dc:title>Markku Häkkinen</dc:title>
+<owl:versionInfo>1.2.2.2.1.1</owl:versionInfo>
+<dcterms:created>2004-12-22 10:18:05.0</dcterms:created>
+<dcterms:modified>2018-10-01 12:21:54.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Häkkinen</p:standardForm>
+<p:forenames>Markku</p:forenames>	
+<p:surname>Häkkinen</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:lifeSpan>1946-2015</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+<p:geographicScope>Finland</p:geographicScope>
+</p:Person>
+</rdf:RDF>

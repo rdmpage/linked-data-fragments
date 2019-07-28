@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:p="http://rs.tdwg.org/ontology/voc/Person"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+<p:Person rdf:about="urn:lsid:ipni.org:authors:20000145-1">
+<dc:title>Marlene Antoinette Wilhelmina M.C. Hoynck</dc:title>
+<owl:versionInfo>1.1.2.1</owl:versionInfo>
+<dcterms:created>2003-10-22 06:16:29.0</dcterms:created>
+<dcterms:modified>2004-03-31 03:48:36.0</dcterms:modified>
+<p:alias>
+<p:PersonNameAlias>
+<p:isPreferred>true</p:isPreferred>
+<p:standardForm>Hoynck</p:standardForm>
+<p:forenames>Marlene Antoinette Wilhelmina M.C.</p:forenames>	
+<p:surname>Hoynck</p:surname>
+</p:PersonNameAlias>
+</p:alias>    
+<p:alias>	
+<p:PersonNameAlias>
+<p:isPreferred>false</p:isPreferred>
+<p:forenames>M.A.W.M.C.</p:forenames>	
+<p:surname>Hoijnck van Papendrecht</p:surname>
+</p:PersonNameAlias>
+</p:alias>
+<p:lifeSpan>1958-</p:lifeSpan>
+<p:subjectScope>Botany</p:subjectScope>
+<p:subjectScope>Spermatophytes</p:subjectScope>
+</p:Person>
+</rdf:RDF>
