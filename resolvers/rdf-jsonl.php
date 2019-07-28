@@ -129,7 +129,7 @@ function indexfungorum_lsid($lsid, $cache_dir = '')
 	}
 	
 	$filename = $dir . '/' . $id . '.xml';
-
+	
 	if (!file_exists($filename))
 	{
 		$url = 'http://www.indexfungorum.org/IXFWebService/Fungus.asmx/NameByKeyRDF?NameLsid=' . $lsid;
@@ -451,6 +451,8 @@ function ion_lsid($lsid, $cache_dir = '')
 
 			$context->tcom = "http://rs.tdwg.org/ontology/voc/Common#";
 			$context->dc = "http://purl.org/dc/elements/1.1/";
+			
+			$context->rdfs = "http://www.w3.org/2000/01/rdf-schema#";
 
 			$frame = (object)array(
 				'@context' => $context,
@@ -475,6 +477,7 @@ function nmbe_lsid($lsid, $cache_dir = '')
 	if (preg_match('/urn:lsid:nmbe.ch:spidersp:(?<id>\d+)/', $lsid, $m))
 	{
 		$id = $m['id'];
+		$id = preg_replace('/^0+/', '', $id);
 	}
 
 	// Either use an existing cache (e.g., on external hard drive)
@@ -580,6 +583,27 @@ function resolve_url($url)
 	
 	$done = false;
 	
+	$caches = array(
+		'indexfungorum' => '',
+		'ipni' => '',
+		'ion' => '',
+		'wsc' => '',
+	);
+		
+	// Samsung external drive
+	$caches = array(
+		'indexfungorum' => '/Volumes/Samsung_T5/rdf-archive/indexfungorum/rdf',
+		'ipni' => '/Volumes/Samsung_T5/rdf-archive/ipni/rdf',
+		'ion' => '/Volumes/Samsung_T5/rdf-archive/ion/rdf',
+		'wsc' => '/Volumes/Samsung_T5/rdf-archive/nmbe/rdf',
+	);	
+	
+	$caches = array(
+		'indexfungorum' => '',
+		'ipni' => '',
+		'ion' => '',
+		'wsc' => '',
+	);		
 	
 	// Index Fungorum  -------------------------------------------------------------------
 	// Import RDF XML and convert to JSON-LD
@@ -587,7 +611,7 @@ function resolve_url($url)
 	{
 		if (preg_match('/urn:lsid:indexfungorum.org:names:/', $url))
 		{
-			$data = indexfungorum_lsid($url);
+			$data = indexfungorum_lsid($url, $caches['indexfungorum']);
 
 			if ($data)
 			{
@@ -605,7 +629,7 @@ function resolve_url($url)
 	{
 		if (preg_match('/urn:lsid:ipni.org:/', $url))
 		{
-			$data = ipni_lsid($url);
+			$data = ipni_lsid($url, $caches['ipni']);
 
 			if ($data)
 			{
@@ -622,7 +646,7 @@ function resolve_url($url)
 	{
 		if (preg_match('/urn:lsid:organismnames.com:name:/', $url))
 		{
-			$data = ion_lsid($url);
+			$data = ion_lsid($url, $caches['ion']);
 
 			if ($data)
 			{
@@ -639,7 +663,7 @@ function resolve_url($url)
 	{
 		if (preg_match('/urn:lsid:nmbe.ch:spidersp:/', $url))
 		{
-			$data = nmbe_lsid($url);
+			$data = nmbe_lsid($url, $caches['wsc']);
 
 			if ($data)
 			{
@@ -661,21 +685,38 @@ if (1)
 	
 	// core names, IPNI, IndexFungorum, ION, all using TDWG LSID vocab
 	
-	$url = 'urn:lsid:ipni.org:names:981552-1';
-	$url = 'urn:lsid:ipni.org:names:77177604-1';
-	$url = 'urn:lsid:ipni.org:names:77179054-1';
+	//$url = 'urn:lsid:ipni.org:names:981552-1';
+	//$url = 'urn:lsid:ipni.org:names:77177604-1';
+	//$url = 'urn:lsid:ipni.org:names:77179054-1';
 	$url = 'urn:lsid:ipni.org:names:1019484-1';
+	$url = 'urn:lsid:ipni.org:names:17003000-1';
 	
 	//$url = 'urn:lsid:indexfungorum.org:names:814659';
 	//$url = 'urn:lsid:indexfungorum.org:names:814692';
+	//$url = 'urn:lsid:indexfungorum.org:names:814035';
+	//$url = 'urn:lsid:indexfungorum.org:names:489999';
 	
 	//$url = 'urn:lsid:organismnames.com:name:5429322';
+	//$url = 'urn:lsid:organismnames.com:name:5429322';
+	//$url = 'urn:lsid:organismnames.com:name:5341517';
+	$url = 'urn:lsid:organismnames.com:name:5363011';
+	
+	
+	$url = 'urn:lsid:ipni.org:authors:31201-1';
 	
 	// other sources, possibly using other vocabularies	
 	
 	// World Spider Catalog
 	//$url = 'urn:lsid:nmbe.ch:spidersp:021946';
-	//$url = 'urn:lsid:nmbe.ch:spidersp:049015';
+	$url = 'urn:lsid:nmbe.ch:spidersp:049015';
+	
+	//$url = 'urn:lsid:organismnames.com:name:1609635';
+	$url = 'urn:lsid:organismnames.com:name:5323066';
+	
+	$url = 'urn:lsid:ipni.org:names:1019484-1';
+	$url = 'urn:lsid:ipni.org:names:77179054-1';
+	$url = 'urn:lsid:indexfungorum.org:names:489999';
+	$url = 'urn:lsid:indexfungorum.org:names:814035';
 		
 	$doc = resolve_url($url);
 	
@@ -685,4 +726,34 @@ if (1)
 
 }
 
+// bulk fetch IPNI authors
+if (0)
+{
+	$count = 1;
+	
+	$filename = 'author_ids.txt';
+	$filename = 'more_ids.txt';
+	$file_handle = fopen($filename, "r");
+	while (!feof($file_handle)) 
+	{
+		$url = trim(fgets($file_handle));	
+		
+		$url = 'urn:lsid:ipni.org:authors:' . $url;
+		
+		echo $url . "\n";
+		
+		$doc = resolve_url($url);
+	
+		//echo json_encode($doc, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+		//echo "\n";
+		
+		if (($count++ % 20) == 0)
+		{
+			$rand = rand(1000000, 3000000);
+			echo "\n...sleeping for " . round(($rand / 1000000),2) . ' seconds' . "\n\n";
+			usleep($rand);
+		}			
+
+	}
+}
 ?>
