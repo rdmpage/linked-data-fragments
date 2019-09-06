@@ -18,7 +18,10 @@ function get($url, $user_agent='', $content_type = '')
 
 	if ($content_type != '')
 	{
-		$opts[CURLOPT_HTTPHEADER] = array("Accept: " . $content_type);
+		$opts[CURLOPT_HTTPHEADER] = array(
+			"Accept: " . $content_type, 
+			"User-agent: Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405" 
+		);
 	}	
 	
 	$ch = curl_init();
@@ -151,6 +154,8 @@ function indexfungorum_lsid($lsid, $cache_dir = '')
 		if (($xml != '') && preg_match('/<\?xml/', $xml))
 		{
 			// fix
+			// Dublin Core title has wrong case
+			$xml = str_replace('ns:Title', 'ns:title', $xml);
 		
 			//echo $xml;
 		
@@ -717,6 +722,10 @@ if (1)
 	$url = 'urn:lsid:ipni.org:names:77179054-1';
 	$url = 'urn:lsid:indexfungorum.org:names:489999';
 	$url = 'urn:lsid:indexfungorum.org:names:814035';
+	
+	$url = 'urn:lsid:ipni.org:names:77122780-1';
+
+	$url = 'urn:lsid:ipni.org:authors:31201-1';
 		
 	$doc = resolve_url($url);
 	
